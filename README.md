@@ -15,7 +15,7 @@
     2. Definindo uma rota
     3. Registrando um componente
   4. Desenvolvendo uma app de tema do zero
-    1. head.html e body.html
+    1. layout.html
     2. Rotas default
     3. Areas
     4. Roles
