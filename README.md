@@ -1,26 +1,44 @@
-# VTEX Apps Docs
+# VTEX Storefront Docs
 
 1. Apps e Gallery
-  1. Toolbelt
-    1. Sandbox
-    2. Watch
-    3. Publish
-2. Storefront
-  1. Estrutura de uma app
-  2. Tecnologias
-  3. App de tema e componentes
-  4. Storefront SDK
-  5. Desenvolvendo um app de componente
-    1. Criando um componente
-    2. Definindo uma rota
-    3. Registrando um componente
-  4. Desenvolvendo uma app de tema do zero
-    1. layout.html
-    2. Rotas default
-    3. Areas
-    4. Roles
-  4. Avançado
-    1. Resources
-  5. Referência
-    1. Lista de Areas
-    2. Lista de Roles
+   1.1 Aprenda o básico
+    - O que é o Storefront Framework?
+    - O que é a Gallery?
+    - O que são Apps?
+      - Estrutura de uma App
+      - Crie a sua primeira app
+          * Criando um componente
+          * Definindo uma rota
+          * Registrando um componente
+      - Criando uma sandbox
+      - Testando uma app
+      - Publicando sua primeira app
+
+   1.2 Desenvolvendo uma app de tema do zero
+       - layout.html
+       - Rotas default
+       - Areas
+       - Roles
+   1.3 Thinking in VTEX Apps  
+      - Como modelar um problema no paradigma de apps
+   1.4 Distribuição
+       - Como monetizar sua App
+       - Publicando sua app
+
+2. Guias
+   2.1 Tecnologias
+        - React
+        - Flux
+        - Liquid
+   2.2 App de tema e componentes
+   2.4 Resources
+
+3. Storefront SDK
+
+4. Tools
+  4.1 Toolbelt
+
+5. References
+   3.1 Lista de Areas
+   3.2 Lista de Roles
+   3.3 Lista de Resources VTEX
