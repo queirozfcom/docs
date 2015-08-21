@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tortin - Tortin is a responsive theme for GitHub Pages with color options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="VTEX Lab">
+  <meta property="og:site_name" content="Tortin"/>
+  <meta property="og:image" content="img/screeshot.png"/>
+  <meta name="description" content="Tortin is a responsive theme for GitHub Pages with color options" />
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro:200,400,600">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+  <header>
+    <h1>Storefront <small>v0.1</small></h1>
+    <h2>Storefront é o novo framework de desenvolvimento de apps da VTEX</h2>
+    <a href="https://github.com/vtex-apps/" class="btn btn-lg btn-primary">Veja o projeto no GitHub</a>
+
+    <a href="http://basedevmkp.beta.myvtex.com:3000/" target="_blank" class="btn btn-lg btn-primary">LIVE DEMO</a>
+  </header>
+  </div>
+</div>
+
+<div class="social">
+  <div class="container">
+    <!--
+    <ul>
+      <li><iframe class="github-btn" src="//vtex.github.io/tortin/github-btn.html?user=vtex&amp;repo=tortin&amp;type=watch&amp;count=true" allowtransparency="true" width="100" height="20" title="Star on GitHub" frameborder="0"></iframe></li>
+      <li><iframe class="github-btn" src="//vtex.github.io/tortin/github-btn.html?user=vtex&amp;repo=tortin&amp;type=fork&amp;count=true" allowtransparency="true" width="102" height="20" title="Fork on GitHub" frameborder="0"></iframe></li>
+      <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="vtexlab">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </li>
+    </ul>
+     -->
+  </div>
+</div>
+
+<div class="clipper"></div>
+
+<section class="container content">
+  <div class="row">
+    <section class="col-md-offset-2 col-md-7" data-markdown>
+
+      ## Índice
+
+      <ul class="doc_toc">
+          <li><a href="#intro"><span>0.0</span> Intro</a></li>
+          <li><a href="#apps"><span>1.0</span> Apps</a></li>
+          <li><a href="#app-architecture"><span>1.1</span>App Architecture</a></li>
+          <li><a href="#basico"><span>1.2</span> Aprenda o Básico</a></li>
+          <li><a href="#desenvolvendo-um-tema"><span>1.3</span> Desenvolvendo uma App de Tema do Zero</a></li>
+          <li><a href="#guias"><span>2.0</span> Guias</a></li>
+          <li><a href="#tecnologias"><span>2.1</span> Tecnologias</a></li>
+          <li><a href="#app-de-tema-e-componentes"><span>2.2</span> App de tema e componentes</a></li>
+          <li><a href="#resources"><span>2.4</span> Resources</a></li>
+          <li><a href="#storefront-sdk"><span>3.0</span> Storefront SDK</a></li>
+          <li><a href="#tools"><span>4.0</span> Tools</a></li>
+          <li><a href="#toolbelt"><span>4.1</span> Toolbelt</a></li>
+          <li><a href="#references"><span>5.0</span> References</a></li>
+          <li><a href="#lista-de-areas"><span>5.1</span> Lista de Áreas</a></li>
+          <li><a href="#lista-de-roles"><span>5.2</span> Lista de Roles</a></li>
+          <li><a href="#lista-de-resources-vtex"><span>5.3</span> Lista de Resources VTEX</a></li>
+      </ul>
+
+    </section>
+  </div>
+  <hr>
+  <div class="row" id="intro">
+    <div class="col-md-offset-2 col-md-7" data-markdown>
+
+      ## Intro
+
+      Storefront é o novo framework de desenvolvimento de aplicativos e lojas da VTEX.
+
+      Além de oferecer uma gama de novas ferramentas para desenvolvedores, ele vem acompanhado do Storefront CMS, um novo editor que permite aos usuários da plataforma editarem e configurarem suas lojas de maneira rápida e simplificada.
+
+      O Storefront e o Storefront CMS ainda estão em fase de testes, mas substituirão o atual Portal da VTEX.
+
+    </div>
+  </div>
+  <hr>
+  <div class="row" id="apps">
+    <div class="col-md-offset-2 col-md-7" data-markdown>
+
+    ## Apps
+
+    ### O que são Apps
+
+    <p>Para apresentarmos o Storefront, é fundamental falarmos do conceito de App, que é peça-chave na nova arquitetura da VTEX. Uma App é uma aplicação ou sistema que desempenha uma funcionalidade quando instalada em uma loja VTEX. O layout de uma loja nada mais é que uma App de Tema instalada na conta da loja.</p>
+    <p>Apps trazem autonomia para lojistas, ao permitir que adicionem novas funcionalidades e customizem o design da loja sem depender diretamente de desenvolvimento por terceiros: a instalação de apps é no Storefront completamente plug & play.</p>
+    <p>Por outro lado, o desenvolvimento e comercialização de Apps permitem à agências e desenvolvedores diversificar seu portfolio de produtos e serviços com um sistema de instalação e cobrança sem dores de cabeça.</p>
+    <p>As apps podem trazer diversas funcionalidades para o site da loja: uma app de reviews que permite a um cliente avaliar produtos e ler avaliações de terceiros ou até mesmo uma nova app de tema para mudar todo o layout de sua loja em um só clique.</p>
+
+    ### Storefront Framework
+
+    <p>A nova base de desenvolvimento de aplicativos da plataforma VTEX é o StoreFront Framework, que permite a desenvolvedores e agências criar apps e temas editáveis que podem ser instalados automaticamente na loja e configuradas pelo usuário no Storefront CMS.</p>
+
+    ### Storefront CMS
+
+    <p>Com o Storefront CMS, o usuário lojista pode acessar seu site em modo de edição e configurar seus componentes — seja a imagem de um banner, a quantidade de produtos em uma prateleira ou alguma opção de layout do tema.</p>
+    <p>Como o Storefront possui uma natureza modular, o modo de edição de duas lojas podem ser completamente diferentes, dependendo dos apps e componentes instalados por cada uma.</p>
+
+    ### Gallery
+
+    <p>A VTEX Gallery permite que desenvolvedores e agências publiquem apps — gratuitos ou pagos — que podem ser facilmente encontrados e instalados por lojistas da VTEX.</p>
+    <p>Apps disponibilizados na Gallery são mais poderosos que as antigas extensões da VTEX Store, pois oferecem funcionalidades que podem interagir com todos os sistemas da VTEX.</p>
+
+  </div>
+</div>
+
+<hr>
+
+<div class="row" id="app-architecture">
+  <div class="col-md-offset-2 col-md-7" data-markdown>
+
+
+    ## App Architecture
+
+    Uma app no Storefront é estruturada da seguinte maneira:
+
+    ```
+    .
+    ├── storefront/
+    │   ├── assets/
+    │   ├── components/
+    │   ├── resources/
+    │   └── layout.html
+    └── meta.json
+    ```
+
+    ### Assets
+
+    Nessa pasta estão todos os arquivos estáticos necessários para a app. Isso inclui: arquivos Javascript, CSS, imagens, fontes, etc.
+
+    ### Components
+
+    Nessa pasta moram arquivos de definição de componentes que respondem por uma rota.
+
+    Exemplo de um arquivo chamado `ProductPage.json`:
+
+<pre>
+<code>
+{
+ "route": {
+   "name": "product",
+   "path": "/:slug/p"
+ },
+ "resourceBinding": {
+   "locator": "product@vtex.storefront-sdk",
+   "params": {
+     "slug": "{{ route.slug }}"
+   }
+ },
+ "assets": [
+   "storefront-theme.js",
+   "editor/storefront-theme.js"
+ ],
+ "exports": {
+   "product": "{{ route.params.slug }}"
+ }
+}
+</code>
+</pre>
+
+    <p>A rota deve sempre conter <code>name</code> e <code>path</code>, seguindo os moldes do React Router, componente React usado internamente para roteamento da aplicação.</p>
+
+    <p>O parâmetro <code>resourceBinding</code> define o <code>resource</code> que deve ser carregado no lado do servidor. Muitas vezes esse modelo precisa de um parâmetro da rota, como mostrado no exemplo. Carregar os dados do lado do servidor permite com que os componentes consigam renderizar conteúdo que pode ser parseado pelo Google.</p>
+
+    <p>Os dados carregados ficam disponíveis na variável global na página chamada <code>window.storefront.currentRoute.resources</code>.</p>
+
+    <p>Por fim, o parâmetro <code>assets</code> define quais arquivos dentro da pasta <code>assets</code> são necessários para renderizar essa página.</p>
+
+    ### Resources
+
+    <p>Resources definem a configuração de um dado que deve ser requisitado pelo servidor. Ele pode receber alguns parâmetros definidos pela rota.</p>
+
+    <p>Exemplo de um arquivo chamado <code>product.json</code>:</p>
+
+    ```json
+    {
+      "url": "http://api.beta.vtex.com/:account/products/:slug",
+      "cacheDuration": 60,
+      "parameters": {
+        "account": "{{ account.name }}"
+      },
+      "queryString": {
+        "query": "{{ parameters.query }}"
+      }
+    }
+    ```
+
+    ### layout.html
+
+    <p>Esse arquivo é necessário apenas caso seja uma app de tema. Ele define o HTML base de sua loja. Use o arquivo <code>layout.html</code> do storefront-theme como padrão. Em raros casos deve ser necessário alterá-lo.</p>
+
+
+    </div>
+  </div>
+
+<div class="clipper-footer"></div>
+
+  <footer>
+    <div class="container">
+          <div class="pull-left">
+            <a href="http://lab.vtex.com.br" title="Designed and maintained by VTEX Lab and contributors">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="32" height="32" xml:space="preserve" viewbox="0 0 100 100" class="logo">
+              <circle cx="50" cy="49" r="44" class="circle"/>
+              <polygon points="59.9 28.3 75.5 28.3 50 81.6 42.2 65.2" class="polygon v-bigger"/>
+              <polygon points="39.7 60.1 24.5 28.2 40.1 28.2 47.6 43.7" class="polygon"/>
+            </svg>
+            </a>
+          </div><!-- logo -->
+
+          <div class="pull-left">
+            <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="//platform.twitter.com/widgets/follow_button.1403226798.html#_=1403800489144&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=vtexlab&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 237px; height: 20px;"></iframe>
+          </div><!-- twitter -->
+
+          <div class="pull-left">
+            <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a> and documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+          </div><!-- license -->
+
+          <div class="pull-right">
+            <a href="http://vtex.github.io/tortin">Get <strong>Tortin</strong> Theme</a>
+          </div><!-- please? -->
+    </div>
+  </footer>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43760863-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+<script src="script/data-markdown.js"></script>
+</body>
+</html>
