@@ -50,21 +50,34 @@
 
       <ul class="doc_toc">
           <li><a href="#intro"><span>0.0</span> Intro</a></li>
+
           <li><a href="#apps"><span>1.0</span> Apps</a></li>
+
           <li><a href="#app-architecture"><span>1.1</span>App Architecture</a></li>
-          <li><a href="#basico"><span>1.2</span> Aprenda o Básico</a></li>
-          <li><a href="#desenvolvendo-um-tema"><span>1.3</span> Desenvolvendo uma App de Tema do Zero</a></li>
-          <li><a href="#guias"><span>2.0</span> Guias</a></li>
-          <li><a href="#tecnologias"><span>2.1</span> Tecnologias</a></li>
-          <li><a href="#app-de-tema-e-componentes"><span>2.2</span> App de tema e componentes</a></li>
-          <li><a href="#resources"><span>2.4</span> Resources</a></li>
-          <li><a href="#storefront-sdk"><span>3.0</span> Storefront SDK</a></li>
-          <li><a href="#tools"><span>4.0</span> Tools</a></li>
-          <li><a href="#toolbelt"><span>4.1</span> Toolbelt</a></li>
-          <li><a href="#references"><span>5.0</span> References</a></li>
-          <li><a href="#lista-de-areas"><span>5.1</span> Lista de Áreas</a></li>
-          <li><a href="#lista-de-roles"><span>5.2</span> Lista de Roles</a></li>
-          <li><a href="#lista-de-resources-vtex"><span>5.3</span> Lista de Resources VTEX</a></li>
+
+          <li><a href="#app-de-tema-app-de-plugin"><span>1.2</span>App de Tema vs. App de Plugin</a></li>
+
+          <li class="soon"><span>1.3</span>Thinking in VTEX Apps</li>
+
+          <li><a href="#criando-sua-primeira-app"><span>1.4</span>Criando sua primeira App</a></li>
+
+          <li><a href="#ambiente-de-desenvolvimento"><span>1.5</span>Ambiente de Desenvolvimento</a></li>
+
+          <li><a href="#tecnologias"><span>2.0</span> Tecnologias</a></li>
+
+          <li><a href="#resources"><span>2.1</span> Resources</a></li>
+
+          <li><a href="#storefront-sdk"><span>2.2</span>Storefront SDK</a></li>
+
+          <li><a href="#toolbelt"><span>2.3</span>Toolbelt</a></li>
+
+          <li><a href="#references"><span>3.0</span>References</a></li>
+
+          <li class="soon"><span>3.1</span> Lista de Áreas</li>
+
+          <li class="soon"><span>3.2</span> Lista de Roles</li>
+
+          <li class="soon"><span>3.3</span> Lista de Resources VTEX</li>
       </ul>
 
     </section>
@@ -201,6 +214,167 @@
 
     </div>
   </div>
+
+<hr>
+
+  <div class="row" id="app-de-tema-app-de-plugin">
+    <div class="col-md-offset-2 col-md-7" data-markdown>
+
+    ## App de Tema vs. App de Plugin
+
+    <p>Existem dois tipos de apps: app de tema e app de plugin.</p>
+
+    ### App de Tema
+
+    <p><strong>App de Tema</strong> é aquela que define a fundação de toda a loja: a app de tema define as rotas padrão e todo ou grande parte do layout da loja. </p>
+
+    <p>Ela se diferencia de apps de plugins por ser a única app do Storefront instalada que possui o arquivo layout.html e que define o component React chamado App.</p>
+
+    <p>Como tal, isso significa que você só poderá ter um app de tema instalado em sua loja, e sua loja não conseguirá vender se não tiver tema instalado.</p>
+
+    ### App de Plugin
+
+    <p>Uma <strong>App de Plugin</strong> é uma app que fornece novas funcionalidades a loja, podendo oferecer desde novos componentes na interface a novas rotas com sistemas complexos.</p>
+
+    <p>No contexto do StoreFront, o termo componente se refere a um objeto unitário (contido em um arquivo <code>.jsx</code>) que desempenha uma função e renderiza dados na loja.</p>
+
+    <p>Uma App pode estar estruturada em um único componente (caso seja simples) ou possuir vários componentes que juntos desempenham sua funcionalidade.</p>
+
+    ### Quando fazer um app de tema e quando fazer um app de plugin?
+
+    <p>Desenvolva uma app de tema se você quer desenvolver o layout de uma loja específica ou tema para um segmento de mercado — por exemplo, um tema voltado para lojas de eletrônicos para disponibilizar na Gallery.</p>
+
+    <p>Desenvolva uma app de plugin se sua app fornece uma nova funcionalidade a loja de forma independente, podendo ser instalada opcionalmente.</p>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row" id="thinking-in-vtex-apps">
+    <div class="col-md-offset-2 col-md-7" data-markdown>
+
+    ## Thinking in VTEX Apps
+
+    ### Como modelar um problema no paradigma de apps
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row" id="criando-sua-primeira-app">
+    <div class="col-md-offset-2 col-md-7" data-markdown>
+
+    ## Criando sua Primeira App
+
+    ### Estrutura Básica
+
+    <p>Para que sua App seja devidamente configurável dentro do Storefront, ela necessita de uma estrutura de componentes que permita a edição dentro da interface do Storefront.</p>
+
+    <p>Considerando uma App chamada <strong>Banner</strong>, a estrutura ideal contaria com os seguintes componentes mínimos:</p>
+
+    #### components/Banner.jsx
+
+    <p>A renderização padrão do componente — ou seja, a forma como ele irá aparecer na loja quando configurado normalmente. </p>
+
+    <p>Este componente pode estar apenas renderizando outros subcomponentes dentro da App — <code>BannerImage.jsx</code> ou <code>BannerButton.jsx</code>, por exemplo</p>
+
+    #### editors/BannerEditor.jsx
+
+    Componente de admin da sua App — aqui entram os campos e opções cujos dados serão passados para o backend e salvos para alterar a configuração e aparência da loja.
+
+    #### styles/Banner.less
+
+    Para manter a lógica de componentização também no CSS, cada um destes componentes deve possuir um arquivo `.less` com seus estilos específicos: `Banner.less`, `BannerEditor.less`, `BannerButton.less`, etc.
+
+    #### layout.html
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+    #### Registrando um componente
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+    #### Rotas default
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+    #### Definindo uma Rota
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+    #### Areas
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+    #### Roles
+
+    <p><span class="soon-badge">Em breve</span></p>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row" id="ambiente-de-desenvolvimento">
+    <div class="col-md-offset-2 col-md-7" data-markdown>
+
+    ## Ambiente de Desenvolvimento
+
+    <p>O desenvolvimento de uma app é realizado localmente através da ferramenta de linha de comando chamada <a href="https://github.com/vtex/toolbelt">Toolbelt</a>, que observa todos os seus arquivos locais e sincroniza com o servidor quando alguma alteração acontece.</p>
+
+    ### Criando uma Sandbox
+
+    <p>Todas as alterações desenvolvidas localmente são enviadas pelo Toolbelt para uma <strong>Sandbox</strong>, um ambiente privado vinculado ao seu VTEX ID que recebe suas alterações e as renderiza em sua loja.</p>
+
+    <p>A Sandbox permite que você teste sua versão local sem interferir na versão em produção — vendo sua App em desenvolvimento como se estivesse instalada em sua loja.</p>
+
+    Em um terminal no diretório deste repositório, inicie os comandos <code>webpack -w</code>, e <code>vtex watch</code> passando o nome da sandbox como primeiro parâmetro.
+
+    <pre>webpack & vtex watch minhasandbox</pre>
+
+
+    <p>Acesse a URL de desenvolvimento <a href="#">http://sualoja.beta.myvtex.com</a></p>
+
+    <p><strong>Importante</strong>: Substitua <code>sualoja</code> pelo account name de sua loja e <code>minhasandbox</code> pelo nome de sua sandbox.</p>
+
+    ### Testando uma App
+
+    <p>Para usar uma Sandbox, precisamos indicar para o Storefront que iremos utilizar uma nova sandbox. Neste exemplo, usaremos o nome minhasandbox, mas você pode escolher o nome que quiser.</p>
+
+    <p>Faremos isso definindo um cookie especial no seu browser, com o nome <code>vtex_sandbox</code> e o valor <code>vtex/nome-da-sandbox=app-sendo-testado</code>.</p>
+
+    <p>Para isso, baixe uma extensão do navegador que possibilite a alteração dos cookies. Recomendamos o Cookie Inspector. Para criar um novo cookie, abra o Developer Tools e clique na aba Cookies. Clique com o botão direito do mouse e escolha "Add New Cookie".</p>
+    <br>
+    <p>Edite esse cookie colocando as seguintes propriedades:</p>
+    <p><strong>Nome</strong>: <code>vtex_sandbox</code></p>
+    <p><strong>Valor</strong>: <code>{vendor}/{nome-da-sandbox}={nome-da-app}+{nome-da-app2}</code>.</p>
+
+    <h3>Publicando sua primeira App</h3>
+
+    <p>Apps podem ter suas versões distribuídas na VTEX Gallery para todos os clientes da plataforma. Os clientes terão acesso a todas as apps publicadas e poderão escolher quais desejam instalar.</p>
+
+    <p>Para publicar uma app configure o arquivo <code>meta.json</code> com a versão da app e digite o comando <code>vtex publish</code>. Caso não esteja autenticado será necessário inserir seu usuário e senha do VTEX ID.</p>
+
+    <pre>
+    meta.json
+    {
+      “name”: “app-name”,
+      “version”: “0.2.0”,
+       “vendor: : “vtex”
+    }
+    </pre>
+
+    </div>
+  </div>
+
+
+
+
 
 <div class="clipper-footer"></div>
 
