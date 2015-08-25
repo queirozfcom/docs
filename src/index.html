@@ -150,69 +150,19 @@
 
     ### Assets
 
-    Nessa pasta estão todos os arquivos estáticos necessários para a app. Isso inclui: arquivos Javascript, CSS, imagens, fontes, etc.
+    Nessa pasta estão todos os arquivos estáticos públicos necessários para a app. Isso inclui: arquivos Javascript, CSS, imagens, fontes, etc.
 
     ### Components
 
-    Nessa pasta moram arquivos de definição de componentes que respondem por uma rota.
-
-    Exemplo de um arquivo chamado `ProductPage.json`:
-
-<pre>
-<code>
-{
- "route": {
-   "name": "product",
-   "path": "/:slug/p"
- },
- "resourceBinding": {
-   "locator": "product@vtex.storefront-sdk",
-   "params": {
-     "slug": "{{ route.slug }}"
-   }
- },
- "assets": [
-   "storefront-theme.js",
-   "editor/storefront-theme.js"
- ],
- "exports": {
-   "product": "{{ route.params.slug }}"
- }
-}
-</code>
-</pre>
-
-    <p>A rota deve sempre conter <code>name</code> e <code>path</code>, seguindo os moldes do React Router, componente React usado internamente para roteamento da aplicação.</p>
-
-    <p>O parâmetro <code>resourceBinding</code> define o <code>resource</code> que deve ser carregado no lado do servidor. Muitas vezes esse modelo precisa de um parâmetro da rota, como mostrado no exemplo. Carregar os dados do lado do servidor permite com que os componentes consigam renderizar conteúdo que pode ser parseado pelo Google.</p>
-
-    <p>Os dados carregados ficam disponíveis na variável global na página chamada <code>window.storefront.currentRoute.resources</code>.</p>
-
-    <p>Por fim, o parâmetro <code>assets</code> define quais arquivos dentro da pasta <code>assets</code> são necessários para renderizar essa página.</p>
+    Os arquivos aqui guardam as definições de componentes. Esses arquivos são enviados para o servidor a são apenas usados por ele.
 
     ### Resources
 
-    <p>Resources definem a configuração de um dado que deve ser requisitado pelo servidor. Ele pode receber alguns parâmetros definidos pela rota.</p>
-
-    <p>Exemplo de um arquivo chamado <code>product.json</code>:</p>
-
-    ```json
-    {
-      "url": "http://api.beta.vtex.com/:account/products/:slug",
-      "cacheDuration": 60,
-      "parameters": {
-        "account": "{{ account.name }}"
-      },
-      "queryString": {
-        "query": "{{ parameters.query }}"
-      }
-    }
-    ```
+    Esses arquivos definem como certas chamadas a API deverão ser resolvidas no servidor.
 
     ### layout.html
 
-    <p>Esse arquivo é necessário apenas caso seja uma app de tema. Ele define o HTML base de sua loja. Use o arquivo <code>layout.html</code> do storefront-theme como padrão. Em raros casos deve ser necessário alterá-lo.</p>
-
+    <p>Esse arquivo é necessário esteja desenvolvendo uma app de tema. Ele define o HTML base de sua loja. Use o arquivo <code>layout.html</code> do storefront-theme como padrão. Em raros casos deve ser necessário alterá-lo.</p>
 
     </div>
   </div>
