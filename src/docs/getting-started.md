@@ -120,7 +120,7 @@ Para criar o cookie da sandbox, vamos precisar de:
 
 - Nome do `vendor` da app. Nesse caso usamos "alphateam"
 - Nome da sua sandbox. Fique a vontade pra escolher (ele deve ser único!)
-- Nome da sua app. Nesse caso usamo "my-first-app"
+- Nome da sua app. Nesse caso usamos "my-first-app"
 
 O formato do cookie:
 
