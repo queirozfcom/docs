@@ -28,7 +28,7 @@ Rode o seguinte comando para iniciar o `generator-vtex`:
 yo vtex:storefront --simple
 ```
 
-De o nome de sua primeira app como "my-first-app". Use "alphateam" como vendor.
+De o nome de sua primeira app como "my-first-app" e use "alphateam" como vendor.
 
 Algumas pastas e arquivos devem ter sido criados. Vamos entrar mais a fundo na próxima sessão.
 
@@ -46,15 +46,15 @@ Uma app no Storefront tem as seguintes pastas e arquivos:
 └── meta.json
 ```
 
-### assets
+### assets/
 
 Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos Javascript, CSS, imagens, SVG, fontes, etc.
 
-### components
+### components/
 
 Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront. Entraremos em detalhes mais a frente.
 
-### resources
+### resources/
 
 Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de componentes e no código Javascript. Entraremos em detalhes mais a frente.
 
@@ -186,7 +186,7 @@ yo vtex:storefront
 
 ## Usando o SDK
 
-### Aprensentando o Flux
+### Apresentando o Flux
 
 ### Registrando componentes
 
