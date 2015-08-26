@@ -174,9 +174,100 @@ O Toolbelt está escutando qualquer modificação feita nos arquivos de sua app.
 
 ## Melhorando o processo de desenvolvimento
 
+Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa a medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX é bem estranho. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
+
+Para resolver tudo isso, vamos colocar uma ferramenta de build. Hoje, no meio Javascript, existem diversas alternativas: Grunt, Gulp, Webpack, Browserify, etc. Aqui no VTEX Lab já testamos todas essas e acabamos preferindo o Webpack, principalmente para projetos React. Um grande diferencial é o `react-hot-loader`, ele é uma espécie de livereload 2.0, a diferença é que ao invés de recarregar a página (o que as vezes demora), ele apenas recarrega o componente React que foi modificado fazendo com que o ciclo de desenvolvimento fique *muito* mais rápido.
+
+Acabamos construindo uma estrutura de desenvolvimento opinionada baseada em Webpack, LESS, ES7 e eslint. ES7 é a mais recente versão do Javascript que será lançada em 2016, então já estamos escrevendo mirando para o futuro. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES7 para a versão atual do Javascript. eslint é uma ferramenta que padroniza como o código deve ser escrito. LESS é o pré-processador CSS escolhido pelo VTEX Lab, também um dos mais usados pela comunidade front-end. Por fim, o Webpack, que faz tudo isso funcionar como mágica, além de minificar imagens, SVGs, Javascript e CSS.
+
+Não se apague ao seu app agora, vamos apagar todo o seu conteúdo e começa-lo do zero com essa nova estrutura de desenvolvimento.
+
+Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
+
 ```sh
 yo vtex:storefront
 ```
+
+Crie a app com o nome "my-first-app", e "alphateam" como vendor.
+
+Verá que algumas pastas e arquivos devem ter sido criados e as dependências node foram instaladas.
+
+### Nova estrutura de pastas
+
+Agora sua app deve parecer com isso:
+
+```
+.
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── editors/
+│   ├── pages/
+│   ├── styles/
+│   ├── utils/
+│   ├── my-first-app-editor.jsx
+│   └── my-first-app.jsx
+├── storefront/
+│   ├── assets/
+│   ├── components/
+│   └── resources/
+├── .eslintrc
+├── .gitignore
+├── .vtexignore
+├── meta.json
+├── package.json
+└── webpack.config.js
+```
+
+Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, ela será o alvo de arquivos compilados pelo Webpack.
+
+#### src/assets/
+
+Aqui ficam todos os assets que não são Javascript, nem CSS, como imagens e SVGs.
+
+#### src/components/
+
+Nessa pasta moram grande parte dos componentes React.
+
+#### src/editors/
+
+Aqui ficam os componentes que são usados para criar editores, componenetes que o administrador da loja irá usar para editar um componente.
+
+#### src/pages/
+
+Os arquivos aqui são componentes React responsáveis por responder por uma rota.
+
+#### src/styles/
+
+Os arquivos LESS ficam dentro dessa pasta.
+
+#### src/utils/
+
+Aqui ficam arquivos Javascript que não se encaixam nas outras pastas.
+
+#### src/my-first-app.jsx
+
+Esse é o arquivo principal da aplicação.
+
+#### src/my-first-app-editor.jsx
+
+Esse é o arquivo da aplicação voltado para os componentes editores.
+
+#### .eslintrc
+
+Arquivo de configuração do eslint.
+
+#### .gitignore
+
+Arquivo importante caso use git, ferramenta de versionamento de código.
+
+#### package.json
+
+Arquivo necessário para projetos Javascript que usam o npm, o package manager de Javascript.
+
+#### webpack.config.js
+
+Esse arquivo possui todas as configurações do Webpack.
 
 ### React com JSX
 
