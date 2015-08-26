@@ -219,7 +219,7 @@ Agora sua app deve parecer com isso:
 └── webpack.config.js
 ```
 
-Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, ela será o alvo de arquivos compilados pelo Webpack.
+Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, o Webpack se encarregará de colocar os arquivos compilados nela.
 
 #### src/assets/
 
