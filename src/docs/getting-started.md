@@ -19,16 +19,16 @@ Já o pacote `vtex`, é uma ferramenta que chamamos de Toolbelt, ela é essencia
 
 Instale também alguma extensão de edição de cookies no browser, caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
 
-## Criando o primeiro app
+## Criando a primeira app
 
-Vamos criar nosso primeiro app no Storefront. Crie uma pasta com o nome "my-first-app" e abra o terminal nela.
+Vamos criar nossa primeira app no Storefront. Crie uma pasta com o nome "my-first-app" e abra o terminal nela.
 
 Rode o seguinte comando para iniciar o `generator-vtex`:
 ```sh
 yo vtex:storefront --simple
 ```
 
-De o nome de seu primeiro app como "my-first-app". Use "alphateam" como vendor.
+De o nome de sua primeira app como "my-first-app". Use "alphateam" como vendor.
 
 Algumas pastas e arquivos devem ter sido criados. Vamos entrar mais a fundo na próxima sessão.
 
@@ -48,19 +48,19 @@ Uma app no Storefront tem as seguintes pastas e arquivos:
 
 ### assets
 
-Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos Javascript, CSS, imagens, SVG, fontes, o que quiser.
+Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos Javascript, CSS, imagens, SVG, fontes, etc.
 
 ### components
 
-Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront.
+Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront. Entraremos em detalhes mais a frente.
 
 ### resources
 
-Esses arquivos definem chamadas a APIs, o servidor do Storefront irá criar novas rotas para acessar essas APIs em `/_resources/:resourceName/`.
+Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de componentes e no código Javascript. Entraremos em detalhes mais a frente.
 
 ### meta.json
 
-Todos apps na Gallery precisam do arquivo `meta.json`. Nele ficam registrado diversas informações sobre seu app como o nome (`name`), nome amigável (`title`), descrição (`description`), depedências de outras apps (`dependencies`) e quais serviços são usados (`schemas`).
+Todas as apps na Gallery precisam do arquivo `meta.json`. Nele ficam registrado diversas informações sobre sua app como o nome (`name`), nome amigável (`title`), descrição (`description`), depedências de outras apps (`dependencies`) e quais serviços são usados (`schemas`).
 
 ### .vtexignore
 
@@ -86,7 +86,7 @@ Clique em "Novo workspace" e crie um workspace com o seu nome.
 
 - Usuário abre uma página da loja
 - Servidor verifica quais apps estão instaladas
-- Servidor processsa os arquivos das apps que estão armazenados na Gallery
+- Servidor processa os arquivos das apps que estão armazenadas na Gallery
 - Servidor responde a página para o usuário
 
 Quando o desenvolvedor usa uma sandbox, o que acontece é o seguinte:
@@ -95,7 +95,7 @@ Quando o desenvolvedor usa uma sandbox, o que acontece é o seguinte:
 - **Servidor verifica quais apps estão na sandbox**
 - **Servidor processsa os arquivos das apps que estão armazenadas na Sandbox**
 - Servidor verifica quais apps estão instaladas
-- Servidor processsa os arquivos das apps que estão armazenados na Gallery
+- Servidor processa os arquivos das apps que estão armazenadas na Gallery
 - Servidor responde a página para o usuário
 
 A sandbox cria uma espécie de Gallery temporária e privada para facilitar o desenvolvimento de apps. Sem ela, o desenvolvedor teria que lançar uma versão nova de sua app na Gallery, instalar a app e, só assim, ver as mudanças. Ou seja, sandbox é ótima e ela será sua nova amiga!
@@ -160,7 +160,7 @@ O que o Toobelt acabou de fazer foi:
 
 - Leu o arquivo `meta.json` e viu o vendor e o nome da sua app
 - Leu o arquivo `.vtexignore` e guardou quais arquivos ela não deve fazer upload
-- Fez o upload de todos arquivos na pasta e que não estão na lista de arquivos do `.vtexignore`
+- Fez o upload de todos arquivos que não estão na lista de arquivos do `.vtexignore`
 
 Esses arquivos vão parar dentro da pasta "alphateam.my-first-app", que é o identificador único de uma app, dentro da sua sandbox.
 
