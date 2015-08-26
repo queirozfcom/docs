@@ -30,7 +30,7 @@ yo vtex:storefront --simple
 
 De o nome de seu primeiro app como "my-first-app". Use "alphateam" como vendor.
 
-Pronto! Você tem agora tudo que é necessário para uma app no Storefront!
+Algumas pastas e arquivos devem ter sido criados. Vamos entrar mais a fundo na próxima sessão.
 
 ## Estrutura de pastas
 
