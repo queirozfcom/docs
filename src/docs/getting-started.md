@@ -13,9 +13,9 @@ npm install -g vtex
 
 Caso de erro na instalação, use `sudo`.
 
-Os pacotes `yo` e `generator-vtex` são pacotes que geram a estrutura de pastas de apps automaticamente.
+Os pacotes yo ([Yeoman](http://yeoman.io/)) e [generator-vtex](https://github.com/vtex/generator-vtex/) são pacotes que geram a estrutura de pastas de apps automaticamente.
 
-Já o pacote `vtex`, é uma ferramenta que chamamos de Toolbelt, ela é essencial para o desenvolvimento de apps. Com ela você pode publicar apps na Gallery e desenvolver apps localmente.
+Já o pacote `vtex`, é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt), ela é essencial para o desenvolvimento de apps. Com ela você pode publicar apps na Gallery e desenvolver apps localmente.
 
 Instale também alguma extensão de edição de cookies no browser, caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
 
