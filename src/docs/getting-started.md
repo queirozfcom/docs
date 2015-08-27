@@ -231,7 +231,7 @@ Nessa pasta moram grande parte dos componentes React.
 
 #### src/editors/
 
-Aqui ficam os componentes que são usados para criar editores, componenetes que o administrador da loja irá usar para editar um componente.
+Aqui ficam os componentes que são usados para criar editores, componentes que o administrador da loja irá usar para editar um componente.
 
 #### src/pages/
 
