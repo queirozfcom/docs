@@ -308,31 +308,153 @@ Dessa forma, o Toolbelt se encarrega de rodar o Webpack e fazer o upload dos arq
 
 Ainda não estamos rápido o suficiente, vamos usar um dos grandes diferenciais do combo Webpack+React, o hot-loader.
 
-Pare o Toolbelt que está rodando e digite:
+Pare o Toolbelt que está rodando e ligue o novamente com a flag `--server`:
 ```
 vtex watch nomedasandbox --server
 ```
 
-Essa opção liga o Webpack Dev Server, que é um servidor local na sua máquina.
+Essa opção liga um servidor local, o Webpack Dev Server, com ele é possível utilizar o hot-loader. Normalmente quando desenvolvemos em servidores locais acessamos URLs como `http://localhost:3000/`, no nosso caso, vamos usar a URL:
 
+[http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
 
-### React e JSX
+Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja ele realizar as mudanças sem dar reload na página.
 
-### Como adicionar arquivos LESS
+## Criando uma nova página
 
-### Como usar imagens
+Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
 
-## Usando o SDK
+- **route**: O componente com nome "HomePage" da sua app (nesse caso "alphateam.my-first-app") irá atender o path `/` e ela será identificada no código como "home"
+- **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
 
-### Apresentando o Flux
+Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome de "ProductPage.json" e coloque o seguinte JSON:
 
-### Actions
+```json
+{
+  "route": {
+    "name": "product",
+    "path": "/:slug/p"
+  },
+  "assets": [
+    "my-first-app.js"
+  ]
+}
+```
 
-#### Registrando componentes
+Estamos criando uma página chamada "product", ela será aberta quando o usuário digitar algo como "/short-balneario/p", note a notação ":slug", significa que esse valor é variável.
 
-### Stores do SDK
+A propriedade `assets` usa o mesmo arquivo que a "HomePage" pois o Webpack faz o build de toda a aplicação em um único arquivo.
 
-### Pegando dados das stores
+Entre na URL:
+
+[http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
+
+Veja que a página está em branco. Isso acontece pois ainda não escrevemos um componente React para atender a essa rota, vamos cria-lo agora.
+
+Crie o arquivo `ProductPage.jsx` na pasta `src/pages/`, com o seguinte código:
+
+```js
+import React from 'react';
+
+class ProductPage extends React.Component {
+  render() {
+    return (
+      <h1>Essa é a página de produto!</h1>
+    );
+  }
+}
+
+export default ProductPage;
+
+```
+
+Nada deve acontecer, isso acontece pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage". Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
+
+```js
+// Importando componentes que respondem por uma página
+import HomePage from 'pages/HomePage';
+import ProductPage from 'pages/ProductPage';
+// Importando dispatcher do SDK
+import { dispatcher } from 'sdk';
+
+let components = [
+  {
+    name: 'HomePage@vtex.my-first-app',
+    constructor: HomePage
+  },
+  {
+    name: 'ProductPage@vtex.my-first-app',
+    constructor: ProductPage
+  }
+];
+
+// Chamando action que registra os componentes
+dispatcher.actions.ComponentActions.register(components);
+
+// Não preste atenção nisso, é algo que temos que colocar para o hot loader funcionar
+// Enable react hot loading with external React
+// see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
+if (module.hot) {
+  window.RootInstanceProvider = require('react-hot-loader/Injection').RootInstanceProvider;
+}
+
+```
+
+```js
+// Importando componentes que respondem por uma página
+import HomePage from 'pages/HomePage';
+import ProductPage from 'pages/ProductPage';
+```
+
+Primeiro, importamos os componentes de página usando a sintaxe da versão ES6 do Javascript. Ele pega o arquivo em "pages/ProductPage" e coloca o construtor do componente na variável `ProductPage`.
+
+```js
+// Importando dispatcher do SDK
+import { dispatcher } from 'sdk';
+```
+
+Depois pegamos apenas a variável `dispatcher` da biblioteca SDK. Essa variável guarda o *dispatcher*, um objeto conceituado pelo [Flux](https://facebook.github.io/flux/docs/overview.html#structure-and-data-flow).
+
+---
+
+### Uma rápida explicação sobre Flux em 30 segundos
+
+O Flux é uma arquitetura que define como os dados são transmitidos por toda a aplicação.
+
+![Flux](https://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png)
+
+A View são os componentes React. O dispatcher é a unidade centralizadora, ele liga as actions às stores. As stores são onde os dados estão armazenados, os componentes podem ouvir mudanças de um store. As actions fornecem funções que os componentes podem chamar, fazendo com que mude os dados das stores. Atenção: as funções das actions não retornam resultados, elas apenas fazem com que as stores mudem e, como os componentes escutam as mudanças das stores, os componentes pegam os novos dados das stores.
+
+---
+
+```js
+let components = [
+  {
+    name: 'HomePage@vtex.my-first-app',
+    constructor: HomePage
+  },
+  {
+    name: 'ProductPage@vtex.my-first-app',
+    constructor: ProductPage
+  }
+];
+
+// Chamando action que registra os componentes
+dispatcher.actions.ComponentActions.register(components);
+```
+
+Estamos chamando a action `register` da "ComponentActions". Essa action faz com que os componentes sejam registrados na "ComponentStore". Ao registrar os componentes, o SDK consegue pegar o componente na store e quando a rota do componente é aberta, ele renderiza o componente associado.
+
+Atualize a página do browser para ver as modificações (o hot loader funciona apenas para alterações em componentes React). Você deve agora ver a página de produto!
+
+### Recapitulando
+
+Para criar uma nova página você precisa:
+
+- Criar um arquivo JSON com o nome do componente React que irá responder pela rota em `storefront/components/`
+- Criar um componente React em `src/pages/`
+- Registrar o componente React na "ComponentStore" utilizando a action "ComponentActions.register"
+
+## Pegando dados do servidor
 
 
 ## Indo além
