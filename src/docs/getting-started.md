@@ -261,6 +261,10 @@ Arquivo de configuração do eslint.
 
 Arquivo importante caso use git, ferramenta de versionamento de código.
 
+#### .vtexignore
+
+O `.vtexignore` impede que arquivos sejam enviados para a Gallery/Sandbox desnecessariamente. Note que a pasta `src/` está incluida nessa lista, pois esse é o código fonte não processado, o que queremos enviar são apenas os arquivos gerados pelo Webpack, que são arquivos compilados, minificados e otimizados que vão morar dentro da pasta `storefront/assets/`.
+
 #### package.json
 
 Arquivo necessário para projetos Javascript que usam o npm, o package manager de Javascript.
