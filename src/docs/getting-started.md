@@ -180,7 +180,7 @@ Para resolver tudo isso, vamos colocar uma ferramenta de build. Hoje, no meio Ja
 
 Acabamos construindo uma estrutura de desenvolvimento opinionada baseada em Webpack, LESS, ES7 e eslint. ES7 é a mais recente versão do Javascript que será lançada em 2016, então já estamos escrevendo mirando para o futuro. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES7 para a versão atual do Javascript. eslint é uma ferramenta que padroniza como o código deve ser escrito. LESS é o pré-processador CSS escolhido pelo VTEX Lab, também um dos mais usados pela comunidade front-end. Por fim, o Webpack, que faz tudo isso funcionar como mágica, além de minificar imagens, SVGs, Javascript e CSS.
 
-Não se apague ao seu app agora, vamos apagar todo o seu conteúdo e começa-lo do zero com essa nova estrutura de desenvolvimento.
+Não se apegue ao seu app agora, vamos apagar todo o seu conteúdo e começa-lo do zero com essa nova estrutura de desenvolvimento.
 
 Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
 
@@ -284,7 +284,7 @@ webpack
 
 Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. Todos eles são códigos Javascript minificados com respectivos *source maps* (arquivos que facilitam debugar o código em ferramentas como o Chrome Developer Tools). Perceba que mesmo tendo arquivos LESS no código fonte, nos arquivos gerados existem apenas arquivos Javascript. O Webpack coloca todo o código CSS dentro do Javascript para se alavancar do cache do browser, ele também se encarrega de inserir o CSS no código HTML, fazendo com que tudo funcione normalmente.
 
-Agora que temos os arquivos dentro da pasta `storefront/asssts/`, podemos envia-los para a sandbox.
+Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos envia-los para a sandbox.
 
 Digite no terminal:
 ```sh
