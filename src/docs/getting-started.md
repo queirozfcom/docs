@@ -15,9 +15,11 @@ Caso de erro na instalação, use `sudo`.
 
 Os pacotes yo ([Yeoman](http://yeoman.io/)) e [generator-vtex](https://github.com/vtex/generator-vtex/) são pacotes que geram a estrutura de pastas de apps automaticamente.
 
-Já o pacote `vtex`, é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt), ela é essencial para o desenvolvimento de apps. Com ela você pode publicar apps na Gallery e desenvolver apps localmente.
+O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt). O Toolbelt é essencial para o desenvolvimento de apps por permitir que você pode publique apps na Gallery e desenvolva localmente.
 
-Instale também alguma extensão de edição de cookies no browser, caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
+Para desenvolver localmente e ver suas alterações, é necessário instalar um cookie específico em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
+
+Caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
 
 ## Criando a primeira app
 
@@ -28,9 +30,7 @@ Rode o seguinte comando para iniciar o `generator-vtex`:
 yo vtex:storefront --simple
 ```
 
-De o nome de sua primeira app como "my-first-app" e use "alphateam" como vendor.
-
-Algumas pastas e arquivos devem ter sido criados. Vamos entrar mais a fundo na próxima sessão.
+Dê o nome de sua primeira app como `my-first-app` e use `alphateam` como vendor. Este processo irá criar a estrutura de pastas e arquivos iniciais de sua App.
 
 ## Estrutura de pastas
 
@@ -52,63 +52,65 @@ Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos
 
 ### components/
 
-Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront. Entraremos em detalhes mais a frente.
+Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront. Veja mais na seção [blablabla](#).
 
 ### resources/
 
-Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de componentes e no código Javascript. Entraremos em detalhes mais a frente.
+Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de componentes e no código Javascript. Veja mais em [blablabla](#).
 
 ### meta.json
 
-Todas as apps na Gallery precisam do arquivo `meta.json`. Nele ficam registrado diversas informações sobre sua app como o nome (`name`), nome amigável (`title`), descrição (`description`), depedências de outras apps (`dependencies`) e quais serviços são usados (`schemas`).
+Todas as apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas diversas informações sobre sua app como o nome (`name`), nome amigável (`title`), descrição (`description`), depedências de outras apps (`dependencies`) e quais serviços são usados (`schemas`).
 
 ### .vtexignore
 
 Esse arquivo é usado pelo Toolbelt. Aqui estão listados quais arquivos e pastas não devem ser enviados para a Gallery.
 
-## Workspace e Sandbox
+## Workspaces e Sandbox
 
 Precisamos de duas coisas para criar um ambiente de desenvolvimento: um workspace próprio e uma sandbox.
 
 ### Workspace
 
-Uma loja guarda algumas configurações como, por exemplo, quais apps estão instaladas e qual imagem deve aparecer no banner da home. Esse conjunto de configurações ficam em um workspace. O workspace de produção se chama `master`. Para fazer uma alteração no workspace de produção, você precisa fazer as alterações em um novo workspace e, em seguida, promover esse workspace para `master`.
+Uma loja guarda diversas configurações, por exemplo: quais apps estão instaladas e qual imagem deve aparecer no banner da home. Esse conjunto de configurações ficam em um workspace. O workspace de produção se chama `master`. Para fazer uma alteração no workspace de produção, você precisa fazer as alterações em um novo workspace e, em seguida, promover esse workspace para `master`.
 
-Para desenvolvermos nossa primeira app, precisamos criar um novo workspace. Vá até:
+Para desenvolvermos nossa primeira app, precisamos criar um novo workspace.
 
-[http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces)
-
-Clique em "Novo workspace" e crie um workspace com o seu nome.
+Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces), clique em "Novo workspace" e crie um workspace com o seu nome.xw
 
 ### Sandbox
 
 É um ambiente de desenvolvimento de apps. Para entender o como uma sandbox funciona, devemos entender como a Gallery funciona.
 
-- Usuário abre uma página da loja
-- Servidor verifica quais apps estão instaladas
-- Servidor processa os arquivos das apps que estão armazenadas na Gallery
-- Servidor responde a página para o usuário
+Este é o fluxo de dados de uma loja no StoreFront:
 
-Quando o desenvolvedor usa uma sandbox, o que acontece é o seguinte:
+1. Usuário abre uma página da loja
+2. Servidor verifica quais apps estão instaladas
+3. Servidor processa os arquivos das apps que estão armazenadas na Gallery
+4. Servidor responde a página para o usuário
 
-- Usuário abre uma página da loja
-- **Servidor verifica quais apps estão na sandbox**
-- **Servidor processsa os arquivos das apps que estão armazenadas na Sandbox**
-- Servidor verifica quais apps estão instaladas
-- Servidor processa os arquivos das apps que estão armazenadas na Gallery
-- Servidor responde a página para o usuário
+A sandbox cria uma espécie de Gallery temporária e privada para facilitar o desenvolvimento de apps. Sem ela, um desenvolvedor teria que lançar uma versão nova de sua app na Gallery e instalar a app para ver as mudanças.
 
-A sandbox cria uma espécie de Gallery temporária e privada para facilitar o desenvolvimento de apps. Sem ela, o desenvolvedor teria que lançar uma versão nova de sua app na Gallery, instalar a app e, só assim, ver as mudanças. Ou seja, sandbox é ótima e ela será sua nova amiga!
+Quando o desenvolvedor usa uma sandbox, o fluxo é o seguinte:
+
+1. Usuário abre uma página da loja  
+1.1 **Servidor verifica quais apps estão na sandbox**  
+1.2 **Servidor processsa os arquivos das apps que estão armazenadas na Sandbox**  
+2. Servidor verifica quais apps estão instaladas
+3. Servidor processa os arquivos das apps que estão armazenadas na Gallery
+4. Servidor responde a página para o usuário
+
+A sandbox é ótima e ela será sua nova amiga!
 
 ### Ativando o workspace e sandbox
 
-Para ativar o workspace e sua sandbox você deve criar alguns cookies.
+Para ativar o workspace e sua sandbox você deve adicionar dois cookies em seu browser para que o servidor verifique qual sua sandbox e quais apps estão sendo desenvolvidos nela.
 
 Primeiro, entre na URL da loja no ambiente de desenvolvimento:
 
 [http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
 
-Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog) sugerida, abra o Developer Tools do Chrome (F12 ou Command+Option+i) e clique na aba "Cookies", clique com o botão direito do mouse e, em seguida, "Add new cookie".
+Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome ("F12" ou "command+option+i") e clique na aba "Cookies", clique com o botão direito do mouse e, em seguida, "Add new cookie".
 
 Crie o cookie do workspace:
 
@@ -118,21 +120,21 @@ vtex_workspace|nomedomeuworkspace
 
 Para criar o cookie da sandbox, vamos precisar de:
 
-- Nome do `vendor` da app. Nesse caso usamos "alphateam"
-- Nome da sua sandbox. Fique a vontade pra escolher (ele deve ser único!)
-- Nome da sua app. Nesse caso usamos "my-first-app"
+- Nome do `vendor` da app. Neste caso usaremos "alphateam"
+- Nome da sua sandbox. Fique à vontade pra escolher (ele deve ser único!)
+- Nome da sua app. Usaremos "my-first-app"
 
 O formato do cookie:
 
 Nome|Valor
 ---|---
-vtex_sandbox|nomedovendor/nomedasandbox=nomedaapp
+vtex_sandbox|`nome-do-vendor/nome-da-sandbox=nome-da-app`
 
 Logo, deve ficar algo assim (certifique-se de colocar o nome da sua sandbox):
 
 Nome|Valor
 ---|---
-vtex_sandbox|alphateam/nomedasandbox=my-first-app
+vtex_sandbox|alphateam/nome-da-sandbox=my-first-app
 
 ## Hello World!
 
@@ -158,11 +160,11 @@ U storefront/components/HomePage.json
 
 O que o Toobelt acabou de fazer foi:
 
-- Leu o arquivo `meta.json` e viu o vendor e o nome da sua app
-- Leu o arquivo `.vtexignore` e guardou quais arquivos ela não deve fazer upload
+- Ler o arquivo `meta.json` e o vendor e o nome da sua app
+- Ler o arquivo `.vtexignore` e guardar quais arquivos ela não deve fazer upload
 - Fez o upload de todos arquivos que não estão na lista de arquivos do `.vtexignore`
 
-Esses arquivos vão parar dentro da pasta "alphateam.my-first-app", que é o identificador único de uma app, dentro da sua sandbox.
+Estes arquivos vão parar dentro da pasta "alphateam.my-first-app", que é o identificador único de uma app dentro da sua sandbox.
 
 Abra a URL da loja em desenvolvimento:
 
@@ -174,13 +176,23 @@ O Toolbelt está escutando qualquer modificação feita nos arquivos de sua app.
 
 ## Melhorando o processo de desenvolvimento
 
-Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa a medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX é bem estranho. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
+Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX é bem estranho. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
 
-Para resolver tudo isso, vamos colocar uma ferramenta de build. Hoje, no meio Javascript, existem diversas alternativas: Grunt, Gulp, Webpack, Browserify, etc. Aqui no VTEX Lab já testamos todas essas e acabamos preferindo o Webpack, principalmente para projetos React. Um grande diferencial é o `react-hot-loader`, ele é uma espécie de livereload 2.0, a diferença é que ao invés de recarregar a página (o que as vezes demora), ele apenas recarrega o componente React que foi modificado fazendo com que o ciclo de desenvolvimento fique *muito* mais rápido.
+Para resolver tudo isso, usamos a ferramenta de build Webpack e uma estrutura de desenvolvimento opinionada que usa ES7, eslint, LESS, react-hot-loader e Webpack:
 
-Acabamos construindo uma estrutura de desenvolvimento opinionada baseada em Webpack, LESS, ES7 e eslint. ES7 é a mais recente versão do Javascript que será lançada em 2016, então já estamos escrevendo mirando para o futuro. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES7 para a versão atual do Javascript. eslint é uma ferramenta que padroniza como o código deve ser escrito. LESS é o pré-processador CSS escolhido pelo VTEX Lab, também um dos mais usados pela comunidade front-end. Por fim, o Webpack, que faz tudo isso funcionar como mágica, além de minificar imagens, SVGs, Javascript e CSS.
+ - ES7 é a mais recente versão do Javascript que será lançada em 2016, então já estamos escrevendo mirando para o futuro. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES7 para a versão atual do Javascript.
 
-Não se apegue ao seu app agora, vamos apagar todo o seu conteúdo e começa-lo do zero com essa nova estrutura de desenvolvimento.
+ - eslint é uma ferramenta que padroniza como o código deve ser escrito.
+
+ - LESS é o pré-processador CSS escolhido pelo VTEX Lab, também um dos mais usados pela comunidade front-end.
+
+ - O `react-hot-loader` é uma espécie de livereload 2.0 que, ao invés de recarregar toda a página, atualiza apenas o componente React que foi modificado. Isso faz com que o ciclo de desenvolvimento seja *muito* mais rápido.
+
+ - Por fim, o Webpack agrega todas essas ferramentas e faz todas funcionarem como mágica, além de minificar imagens, SVGs, Javascript e CSS.
+
+### Nova estrutura de pastas
+
+Não se apague ao seu app agora, vamos apagar toda essa estrutura e começ-lo do zero com essa nova estrutura de desenvolvimento.
 
 Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
 
@@ -190,11 +202,7 @@ yo vtex:storefront
 
 Crie a app com o nome "my-first-app", e "alphateam" como vendor.
 
-Verá que algumas pastas e arquivos devem ter sido criados e as dependências node foram instaladas.
-
-### Nova estrutura de pastas
-
-Agora sua app deve parecer com isso:
+Você verá que algumas pastas e arquivos foram criados e as dependências do node foram instaladas. Sua app agora deve parecer com isso:
 
 ```
 .
@@ -219,11 +227,11 @@ Agora sua app deve parecer com isso:
 └── webpack.config.js
 ```
 
-Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, o Webpack se encarregará de colocar os arquivos processados nela.
+Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, já que o Webpack se encarregará de colocar os arquivos processados nela.
 
 #### src/assets/
 
-Aqui ficam todos os assets que não são Javascript, nem CSS, como imagens e SVGs.
+Aqui ficam todos os assets que não são Javascript ou CSS — como imagens e SVGs.
 
 #### src/components/
 
@@ -231,11 +239,11 @@ Nessa pasta moram grande parte dos componentes React.
 
 #### src/editors/
 
-Aqui ficam os componentes que são usados para criar editores, componentes que o administrador da loja irá usar para editar um componente.
+Aqui ficam os componentes que são usados para criar editores, componentes que formam as interfaces que o administrador da loja irá usar para configurar um componente.
 
 #### src/pages/
 
-Os arquivos aqui são componentes React responsáveis por responder por uma rota.
+Os arquivos nesta pasta são componentes React responsáveis por responder por uma rota.
 
 #### src/styles/
 
@@ -243,15 +251,15 @@ Os arquivos LESS ficam dentro dessa pasta.
 
 #### src/utils/
 
-Aqui ficam arquivos Javascript que não se encaixam nas outras pastas.
+Arquivos Javascript que não se encaixam nas outras pastas.
 
 #### src/my-first-app.jsx
 
-Esse é o arquivo principal da aplicação.
+O principal arquivo da aplicação, o ponto de partida de sua app.
 
 #### src/my-first-app-editor.jsx
 
-Esse é o arquivo da aplicação voltado para os componentes editores.
+O arquivo da aplicação voltado para os componentes editores.
 
 #### .eslintrc
 
@@ -263,7 +271,7 @@ Arquivo importante caso use git, ferramenta de versionamento de código.
 
 #### .vtexignore
 
-O `.vtexignore` impede que arquivos sejam enviados para a Gallery/Sandbox desnecessariamente. Note que a pasta `src/` está incluida nessa lista, pois esse é o código fonte não processado, o que queremos enviar são apenas os arquivos gerados pelo Webpack, que são arquivos compilados, minificados e otimizados que vão morar dentro da pasta `storefront/assets/`.
+O `.vtexignore` impede que arquivos sejam enviados para a Gallery/Sandbox desnecessariamente. Note que a pasta `src/` está incluida nessa lista, pois esse é o código fonte não processado: o que queremos enviar são apenas os arquivos gerados pelo Webpack, que são arquivos compilados, minificados e otimizados que vão morar dentro da pasta `storefront/assets/`.
 
 #### package.json
 
