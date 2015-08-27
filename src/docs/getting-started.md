@@ -219,7 +219,7 @@ Agora sua app deve parecer com isso:
 └── webpack.config.js
 ```
 
-Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, o Webpack se encarregará de colocar os arquivos compilados nela.
+Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, o Webpack se encarregará de colocar os arquivos processados nela.
 
 #### src/assets/
 
@@ -273,7 +273,50 @@ Arquivo necessário para projetos Javascript que usam o npm, o package manager d
 
 Esse arquivo possui todas as configurações do Webpack.
 
-### React com JSX
+### Buildando o código fonte
+
+Para fazer o build do projeto vamos usar o Webpack.
+
+Abra o terminal na pasta de sua app e digite:
+```sh
+webpack
+```
+
+Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. Todos eles são códigos Javascript minificados com respectivos *source maps* (arquivos que facilitam debugar o código em ferramentas como o Chrome Developer Tools). Perceba que mesmo tendo arquivos LESS no código fonte, nos arquivos gerados existem apenas arquivos Javascript. O Webpack coloca todo o código CSS dentro do Javascript para se alavancar do cache do browser, ele também se encarrega de inserir o CSS no código HTML, fazendo com que tudo funcione normalmente.
+
+Agora que temos os arquivos dentro da pasta `storefront/asssts/`, podemos envia-los para a sandbox.
+
+Digite no terminal:
+```sh
+vtex watch nomedasandbox
+```
+
+Confira tudo funcionando no browser.
+
+### Toolbelt para o resgate
+
+Ganhamos a facilidade de escrever em ES7, JSX, LESS, minificar, etc, mas agora temos dois processos rodando, o watch do Toolbelt e o Webpack. Pensando em facilitar ainda mais o desenvolvimento, o Toobelt possui uma opção para quem usa Webpack.
+
+Abra o terminal na pasta de sua app e digite:
+```sh
+vtex watch nomedasandbox --webpack
+```
+
+Dessa forma, o Toolbelt se encarrega de rodar o Webpack e fazer o upload dos arquivos.
+
+### Mais rápido! Mais rápido!
+
+Ainda não estamos rápido o suficiente, vamos usar um dos grandes diferenciais do combo Webpack+React, o hot-loader.
+
+Pare o Toolbelt que está rodando e digite:
+```
+vtex watch nomedasandbox --server
+```
+
+Essa opção liga o Webpack Dev Server, que é um servidor local na sua máquina.
+
+
+### React e JSX
 
 ### Como adicionar arquivos LESS
 
@@ -283,11 +326,14 @@ Esse arquivo possui todas as configurações do Webpack.
 
 ### Apresentando o Flux
 
-### Registrando componentes
+### Actions
+
+#### Registrando componentes
 
 ### Stores do SDK
 
 ### Pegando dados das stores
+
 
 ## Indo além
 
