@@ -464,6 +464,80 @@ Para criar uma nova página você precisa:
 
 ## Pegando dados do servidor
 
+Temos duas páginas: a home e a página de produto. Mas o que é uma pagina de produto sem produtos? Vamos aprender a pegar dados da API pra preencher essa página.
+
+Copie o seguinte código e coloque no arquivo `src/pages/ProductPage.jsx`:
+```js
+import React from 'react';
+import { dispatcher } from 'sdk';
+
+class ProductPage extends React.Component {
+  render() {
+    // Pegamos o estado atual da ContextStore
+    let context = dispatcher.stores.ContextStore.getState();
+    // Pegamos o parametro slug da rota
+    let slug = context.getIn(['route', 'params', 'slug']);
+
+    // Pegamos o estado atual da ProductStore
+    let ProductStore = dispatcher.stores.ProductStore.getState();
+    // Pegamos o produto com o slug da rota
+    let product = ProductStore.get(slug);
+
+    // Caso o produto exista na ProductStore pegamos o seu nome, caso contrário, deixamos como "carregando..."
+    let productName = product ? product.name : 'carregando...';
+
+    return (
+      <div>
+        <h1>Essa é a página do produto: {productName}</h1>
+      </div>
+    );
+  }
+}
+
+export default ProductPage;
+
+```
+
+Veja que estamos usando a função `getIn`, isso é um método de objetos do Immutable, mas que?
+
+---
+
+### Uma rápida explicação sobre o Immutable em 30 segundos
+
+Todas as stores fornecidas pelo SDK usam a biblioteca [Immutable](http://facebook.github.io/immutable-js/). Como o nome já dá pistas, ela permite criar objetos imutáveis. Com isso ganhamos duas vantagens:
+
+1. Comparação de objetos de forma extremamente eficiente (em tempo O(1))
+2. Segurança de que nenhuma outra parte do código vai alterar o objeto que você está usando
+
+Imagine o seguinte objeto da ContextStore:
+
+```js
+var context = ContextStore.getState();
+// {
+//   "accountName": "basedevmkp",
+//   "route": {
+//     "params": {
+//       "slug": "short-balneario"
+//     }
+//   }
+// }
+```
+
+Para pegarmos o valor da propriedade accountName
+
+Em um JSON| Em um objeto Immutable
+---|---
+`context.accountName`|`context.get('accountName')`
+
+Para pegarmos o valor da propriedade slug
+
+Em um JSON| Em um objeto Immutable
+---|---
+`context.route.params.slug`|`context.getIn(['route', 'params', 'slug'])`
+
+Para este guia, essas informações são o suficiente. Porém, existem outros métodos bastante úteis: você pode ler sobre eles na [documentação do Immutable](http://facebook.github.io/immutable-js/docs/).
+
+---
 
 ## Indo além
 
