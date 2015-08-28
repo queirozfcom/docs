@@ -464,7 +464,11 @@ Para criar uma nova página você precisa:
 
 ## Pegando dados do servidor
 
-Temos duas páginas: a home e a página de produto. Mas o que é uma pagina de produto sem produtos? Vamos aprender a pegar dados da API pra preencher essa página.
+Temos duas páginas: a home e a página de produto. 
+
+> Mas o que é uma pagina de produto sem produtos? 
+
+Vamos aprender a pegar dados da API pra preencher essa página.
 
 Copie o seguinte código e coloque no arquivo `src/pages/ProductPage.jsx`:
 ```js
@@ -498,7 +502,9 @@ export default ProductPage;
 
 ```
 
-Veja que estamos usando a função `getIn`, isso é um método de objetos do Immutable, mas que?
+Veja que estamos usando a função `getIn`. Isso é um método de objetos do Immutable.
+
+> Mas o quê?
 
 ---
 
@@ -523,13 +529,13 @@ var context = ContextStore.getState();
 // }
 ```
 
-Para pegarmos o valor da propriedade accountName
+Para pegarmos o valor da propriedade accountName:
 
 Em um JSON| Em um objeto Immutable
 ---|---
 `context.accountName`|`context.get('accountName')`
 
-Para pegarmos o valor da propriedade slug
+Para pegarmos o valor da propriedade slug:
 
 Em um JSON| Em um objeto Immutable
 ---|---
