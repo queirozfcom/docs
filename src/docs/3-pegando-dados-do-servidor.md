@@ -193,9 +193,16 @@ Entretanto, temos um bug! Siga os passos para reproduzir:
 
 > Por que isso acontece?
 
-Quando o usuário carrega a página de produto, devido ao `resourceBinding` da rota, o servidor coloca os dados na página, o SDK pega esses dados e coloca na "ProductStore". Porém, quando o usuário carrega a página home, como ela não tem nenhum `resourceBinding`, o servidor não coloca nenhum dado na página e com isso, a "ProductStore" fica vazia.
+Quando o usuário carrega a página de produto, o seguinte acontece:
 
+- O servidor coloca os dados diretamente no HTML da página por conta do `resourceBinding`
+- O SDK pega esses dados e coloca na "ProductStore"
 
+Porém, quando o usuário carrega a página home, como ela não tem `resourceBinding`, o servidor não coloca os dados da página de produto que iremos abrir e, com isso, a "ProductStore" fica vazia.
+
+O que precisamos fazer é pegar os recursos associados a rota que iremos abrir, ou seja, quando o usuário abrir a página de produto, fazemos um request AJAX para o servidor pedindo os recursos da rota. Quando o AJAX terminar, a "ProductStore" será automaticamente preenchida com os dados do produto.
+
+Abra o arquivo `src/pages/ProductPage.jsx` e substitua o conteúdo pelo seguinte código:
 
 ```js
 import React from 'react';
@@ -206,12 +213,12 @@ import { Link } from 'react-router';
 class ProductPage extends React.Component {
   // Define o state default do component
   state = {
-    // Pega o estado atual da "ProductStore"
+    // Pega o estado atual da "ProductStore" (provavelmente aqui ela está sem o dado do produto)
     ProductStore: dispatcher.stores.ProductStore.getState()
   }
 
   componentWillMount() {
-    // Escuta as mudanças da "ProductStore"
+    // Escuta as mudanças da "ProductStore", registramos o método "onChange" como callback
     dispatcher.stores.ProductStore.listen(this.onChange);
 
     // Pega o contexto do site
@@ -219,23 +226,27 @@ class ProductPage extends React.Component {
     // Pega o pathname da rota
     let pathname = context.getIn(['route', 'pathname']);
 
-    // Caso a "ResourceStore" não tenha os resources da pagina carregado
+    // Caso a "ResourceStore" não tenha os resources da pagina carregada
     if (!dispatcher.stores.ResourceStore.getState().get(pathname)) {
-      // Pega os parametros da rota
+      // Pega os parametros da página, (o método "toJS" transforma um objeto Immutable em um objeto Javascript)
       let params = context.getIn(['route', 'params']).toJS(); // { slug: 'short-balneario'}
-      // Pede os resources da página "product" passando os parâmetros necessários (slug)
+      // Pede os resources da página "product" passando os parâmetros necessários (neste caso o slug)
+      // Essa action faz uma chamada AJAX ao servidor do Storefront
       dispatcher.actions.ResourceActions.getRouteResources(pathname, 'product', params);
     }
   }
 
+  // O React chamará esse método quando o componente está saindo da tela
   componentWillUnmount() {
-    // Para de escutar as mudanças, componente está saindo da tela
+    // Para de escutar as mudanças
     dispatcher.stores.ProductStore.unlisten(this.onChange);
   }
 
+  // Esse método será chamado toda vez que a "ProductStore" mudar
   onChange = () => {
     // Muda o estado do componente, isso fará com que ele renderize novamente
     this.setState({
+      // Pega o estado atual da store (provavelmente agora ela terá os dados do produto)
       ProductStore: dispatcher.stores.ProductStore.getState()
     });
   }
@@ -261,5 +272,12 @@ class ProductPage extends React.Component {
 }
 
 export default ProductPage;
-
 ```
+
+Bug corrigido! A navegação entre as páginas agora funciona perfeitamente.
+
+Tente exibir outras informações do Produto na página! (Dica: dê um `console.log(product)` para saber quais propriedades estão disponíveis)
+
+---
+
+Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBinding` e como pegar dados de uma página assíncronamente.
