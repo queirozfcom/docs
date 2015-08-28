@@ -78,7 +78,7 @@ Veja que estamos usando a função `getIn`. Isso é um método de objetos do Imm
 
 Todas as stores fornecidas pelo SDK usam a biblioteca [Immutable](http://facebook.github.io/immutable-js/). Como o nome já indica, ela permite criar objetos imutáveis. Com isso ganhamos duas vantagens:
 
-1. Comparação de objetos de forma extremamente eficiente (em tempo O(1))
+1. Comparação de objetos de forma extremamente eficiente (em tempo [O(1)](https://en.wikipedia.org/wiki/Analysis_of_algorithms#Orders_of_growth))
 2. Segurança de que nenhuma outra parte do código vai alterar o objeto que você está usando
 
 Imagine o seguinte objeto da ContextStore:
@@ -158,7 +158,7 @@ O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, p
 
 Também precisamos de um link na home para a página de produto.
 
-Copie o código no arquivo `src/pages/HomePage.jsx`:
+Copie e cole o código abaixo no arquivo `src/pages/HomePage.jsx`:
 
 ```js
 import React from 'react';
