@@ -5,6 +5,8 @@ Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o s
 - **route**: O componente com nome "HomePage" da sua app (nesse caso "alphateam.my-first-app") irá atender o path `/` e ela será identificada no código como "home"
 - **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
 
+### Criando o arquivo de definição do componente
+
 Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome de "ProductPage.json" e coloque o seguinte JSON:
 
 ```json
@@ -29,6 +31,8 @@ Entre na URL:
 
 Veja que a página está em branco. Isso acontece pois ainda não escrevemos um componente React para atender a essa rota — vamos criá-lo agora.
 
+### Criando o componente React da página
+
 Crie o arquivo `ProductPage.jsx` na pasta `src/pages/` com o seguinte código:
 
 ```js
@@ -46,7 +50,11 @@ export default ProductPage;
 
 ```
 
-Nada deve acontecer. Isso acontece, pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage". Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
+Nada deve acontecer. Isso acontece, pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage".
+
+### Registrando um componente
+
+Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
 
 ```js
 // Importa componentes que respondem por uma página

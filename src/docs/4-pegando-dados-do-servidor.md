@@ -6,6 +6,8 @@ Temos duas páginas: a home e a página de produto.
 
 Vamos aprender a pegar dados da API pra preencher essa página.
 
+### Criando o arquivo de definição do componente
+
 Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 
 ```json
@@ -34,6 +36,8 @@ Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetro
 O `resourceBinding` liga uma rota a uma chamada a API.
 
 Carregue a página de produto no browser ([http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
+
+### Criando o componente React da página
 
 Vamos fazer com que o nosso código React acesse essa store e imprima o nome do produto na página.
 
@@ -117,6 +121,8 @@ Finalmente, abra a página no browser e veja o nome na tela:
 
 Conseguimos!
 
+### Criando um link entre as páginas
+
 Vamos criar um link para a home para que possamos testar mais facilmente.
 
 Copie o código:
@@ -184,6 +190,8 @@ Para fazer o link para a página de produto, precisamos informar alguns dados pa
 
 Legal, agora você pode ir de uma página pra outra de forma rápida.
 
+### Ah, não... tem um bug! :
+
 Entretanto, temos um bug! Siga os passos para reproduzir:
 
 - Abra a página home
@@ -201,6 +209,8 @@ Quando o usuário carrega a página de produto, o seguinte acontece:
 Porém, quando o usuário carrega a página home, como ela não tem `resourceBinding`, o servidor não coloca os dados da página de produto que iremos abrir e, com isso, a "ProductStore" fica vazia.
 
 O que precisamos fazer é pegar os recursos associados a rota que iremos abrir, ou seja, quando o usuário abrir a página de produto, fazemos um request AJAX para o servidor pedindo os recursos da rota. Quando o AJAX terminar, a "ProductStore" será automaticamente preenchida com os dados do produto.
+
+### Carregando resources de forma assíncronamente
 
 Abra o arquivo `src/pages/ProductPage.jsx` e substitua o conteúdo pelo seguinte código:
 
@@ -281,3 +291,5 @@ Tente exibir outras informações do Produto na página! (Dica: dê um `console.
 ---
 
 Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBinding` e como pegar dados de uma página de forma assíncrona.
+
+Próximo passo: [Criando um editor](5-criando-um-editor.md)
