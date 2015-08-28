@@ -575,6 +575,92 @@ Para este guia, essas informações são o suficiente. Porém, existem outros m�
 
 ---
 
+Finalmente, abra a página no browser e veja o nome na tela:
+
+[http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
+
+Conseguimos!
+
+Vamos criar um link para a home para que possamos testar mais facilmente.
+
+Copie o código:
+
+```js
+import React from 'react';
+import { dispatcher } from 'sdk';
+// Importa o component Link fornecido pelo React Router
+import { Link } from 'react-router';
+
+class ProductPage extends React.Component {
+  render() {
+    // Pega o estado atual da ContextStore
+    let context = dispatcher.stores.ContextStore.getState();
+    // Pega o parametro slug da rota
+    let slug = context.getIn(['route', 'params', 'slug']);
+
+    // Pega o estado atual da ProductStore
+    let ProductStore = dispatcher.stores.ProductStore.getState();
+    // Pega o produto com o slug da rota
+    let product = ProductStore.get(slug);
+
+    let productName = product ? product.name : 'carregando...';
+
+    return (
+      <div>
+        <h1>Essa é a página do produto: {productName}</h1>
+        <Link to="home">Ir para a home</Link>
+      </div>
+    );
+  }
+}
+
+export default ProductPage;
+
+```
+
+O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, porém, ele intercepta o comportamento do browser e faz com que apenas mude o componente React renderizado na página. Veja funcionando no browser!
+
+Também precisamos de um link na home para a página de produto.
+
+Copie o código no arquivo `src/pages/HomePage.jsx`:
+
+```js
+import React from 'react';
+import style from 'styles/style.less'; // eslint-disable-line
+import { Link } from 'react-router';
+
+class HomePage extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello world!</h1>
+        <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
+      </div>
+    );
+  }
+}
+
+export default HomePage;
+
+```
+
+Para linkar para a página de produto, precisamos informar alguns dados para que o componente `Link` consiga montar a URL.
+
+Legal, agora você pode ir de uma página pra outra de forma rápida.
+
+Entretanto, temos um bug! Siga os passos para reproduzir:
+
+- Abra a página home
+- De um refresh no browser
+- Navegue até a página de produto
+- O página de produto mostra "carregando..." e não mostra a página de produto
+
+> Por que isso acontece?
+
+Quando o usuário carrega a página de produto, devido ao `resourceBinding` da rota, o servidor coloca os dados na página, o SDK pega esses dados e coloca na "ProductStore". Porém, quando o usuário carrega a página home, como ela não tem nenhum `resourceBinding`, o servidor não coloca nenhum dado na página e com isso, a "ProductStore" fica vazia.
+
+
+
 ## Indo além
 
 ### Editors
