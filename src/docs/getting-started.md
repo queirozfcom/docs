@@ -295,13 +295,14 @@ Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. 
 Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos enviá-los para a sandbox.
 
 Digite no terminal:
+
 ```sh
 vtex watch nomedasandbox
 ```
 
-Confira tudo funcionando no browser.
+E confira tudo funcionando no browser.
 
-### Toolbelt para o resgate
+### Toolbelt ao resgate
 
 Ganhamos a facilidade de escrever em ES7, JSX, LESS, minificar, etc, mas agora temos dois processos rodando, o watch do Toolbelt e o Webpack. Pensando em facilitar ainda mais o desenvolvimento, o Toobelt possui uma opção para quem usa Webpack.
 
@@ -321,17 +322,18 @@ Pare o Toolbelt que está rodando e ligue o novamente com a flag `--server`:
 vtex watch nomedasandbox --server
 ```
 
-Essa opção liga um servidor local, o Webpack Dev Server, com ele é possível utilizar o hot-loader. Normalmente quando desenvolvemos em servidores locais acessamos URLs como `http://localhost:3000/`, no nosso caso, vamos usar a URL:
+Essa opção liga um servidor local, o Webpack Dev Server, que permite utilizar o hot-loader. Normalmente quando desenvolvemos em servidores locais acessamos URLs como `http://localhost:3000/`, no nosso caso, vamos usar a URL:
 
 [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
 
-Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja ele realizar as mudanças sem dar reload na página.
+Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja as mudanças aplicadas sem dar reload na página.
 
 ## Criando uma nova página
 
 Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
 
 - **route**: O componente com nome "HomePage" da sua app (nesse caso "alphateam.my-first-app") irá atender o path `/` e ela será identificada no código como "home"
+
 - **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
 
 Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome de "ProductPage.json" e coloque o seguinte JSON:
@@ -348,7 +350,7 @@ Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome d
 }
 ```
 
-Estamos criando uma página chamada "product", ela será aberta quando o usuário digitar algo como "/short-balneario/p", note a notação ":slug", significa que esse valor é variável.
+Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/short-balneario/p". Note a notação ":slug", significa que esse valor é variável.
 
 A propriedade `assets` usa o mesmo arquivo que a "HomePage" pois o Webpack faz o build de toda a aplicação em um único arquivo.
 
@@ -356,9 +358,9 @@ Entre na URL:
 
 [http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
 
-Veja que a página está em branco. Isso acontece pois ainda não escrevemos um componente React para atender a essa rota, vamos cria-lo agora.
+Veja que a página está em branco. Isso acontece pois ainda não escrevemos um componente React para atender a essa rota — vamos criá-lo agora.
 
-Crie o arquivo `ProductPage.jsx` na pasta `src/pages/`, com o seguinte código:
+Crie o arquivo `ProductPage.jsx` na pasta `src/pages/` com o seguinte código:
 
 ```js
 import React from 'react';
@@ -372,7 +374,6 @@ class ProductPage extends React.Component {
 }
 
 export default ProductPage;
-
 ```
 
 Nada deve acontecer. Isso acontece, pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage". Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
