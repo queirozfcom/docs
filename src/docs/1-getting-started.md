@@ -332,4 +332,4 @@ Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja a
 
 Você completou o "Getting Started"! Você já sabe utilizar as ferramentas e está pronto para dar o próximo passo.
 
-Próximo passo: [Criando uma nova página](criando-uma-nova-pagina.md)
+Próximo passo: [Criando uma nova página](2-criando-uma-nova-pagina.md)

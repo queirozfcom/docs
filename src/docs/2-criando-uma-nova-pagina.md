@@ -137,4 +137,4 @@ Para criar uma nova página você precisa:
 
 Você completou o "Criando uma nova página"! Você já sabe como criar uma página e registrar componentes.
 
-Próximo passo: [Pegando dados do servidor](pegando-dados-do-servidor.md)
+Próximo passo: [Pegando dados do servidor](3-pegando-dados-do-servidor.md)
