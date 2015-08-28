@@ -659,7 +659,66 @@ Entretanto, temos um bug! Siga os passos para reproduzir:
 
 Quando o usuário carrega a página de produto, devido ao `resourceBinding` da rota, o servidor coloca os dados na página, o SDK pega esses dados e coloca na "ProductStore". Porém, quando o usuário carrega a página home, como ela não tem nenhum `resourceBinding`, o servidor não coloca nenhum dado na página e com isso, a "ProductStore" fica vazia.
 
+```js
+import React from 'react';
+import { dispatcher } from 'sdk';
+// Importa o component Link fornecido pelo React Router
+import { Link } from 'react-router';
 
+class ProductPage extends React.Component {
+  // Definimos um state default do component
+  state = {
+    // Pegamos o estado atual da "ProductStore"
+    ProductStore: dispatcher.stores.ProductStore.getState()
+  }
+
+  componentWillMount() {
+    // Escutamos as mudanças
+    dispatcher.stores.ProductStore.listen(this.onChange);
+
+    let context = dispatcher.stores.ContextStore.getState();
+    let pathname = context.getIn(['route', 'pathname']);
+
+    if (!dispatcher.stores.ResourceStore.getState().get(pathname)) {
+      let params = context.getIn(['route', 'params']).toJS();
+      dispatcher.actions.ResourceActions.getRouteResources(pathname, 'product', params);
+    }
+  }
+
+  componentWillUnmount() {
+    dispatcher.stores.ProductStore.unlisten(this.onChange);
+  }
+
+  onChange = () => {
+    this.setState({
+      ProductStore: dispatcher.stores.ProductStore.getState()
+    });
+  }
+
+  render() {
+    // Pega o estado atual da ContextStore
+    let context = dispatcher.stores.ContextStore.getState();
+    // Pega o parametro slug da rota
+    let slug = context.getIn(['route', 'params', 'slug']);
+
+    // Pega o estado atual da ProductStore
+    let ProductStore = dispatcher.stores.ProductStore.getState();
+    // Pega o produto com o slug da rota
+    let product = ProductStore.get(slug);
+
+    let productName = product ? product.name : 'carregando...';
+
+    return (
+      <div>
+        <h1>Essa é a página do produto: {productName}</h1>
+        <Link to="home">Ir para a home</Link>
+      </div>
+    );
+  }
+}
+
+export default ProductPage;
+```
 
 ## Indo além
 
