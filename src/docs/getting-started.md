@@ -11,13 +11,13 @@ npm install -g yo generator-vtex
 npm install -g vtex
 ```
 
-Caso de erro na instalação, use `sudo`.
+No caso de erro na instalação, use `sudo`.
 
 Os pacotes yo ([Yeoman](http://yeoman.io/)) e [generator-vtex](https://github.com/vtex/generator-vtex/) são pacotes que geram a estrutura de pastas de apps automaticamente.
 
-O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt). O Toolbelt é essencial para o desenvolvimento de apps por permitir que você pode publique apps na Gallery e desenvolva localmente.
+O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt). O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você publique apps na Gallery e desenvolva localmente.
 
-Para desenvolver localmente e ver suas alterações, é necessário instalar um cookie específico em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
+Para isso e para ver suas alterações, é necessário instalar um cookie específico em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
 
 Caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
 
@@ -72,15 +72,15 @@ Precisamos de duas coisas para criar um ambiente de desenvolvimento: um workspac
 
 ### Workspace
 
-Uma loja guarda diversas configurações, por exemplo: quais apps estão instaladas e qual imagem deve aparecer no banner da home. Esse conjunto de configurações ficam em um workspace. O workspace de produção se chama `master`. Para fazer uma alteração no workspace de produção, você precisa fazer as alterações em um novo workspace e, em seguida, promover esse workspace para `master`.
+Uma loja guarda diversas configurações: quais apps estão instaladas e qual imagem deve aparecer no banner da home, por exemplo. Este conjunto de configurações fica em um workspace. O workspace de produção chama-se `master`. Para fazer uma alteração no workspace de produção, é preciso fazer as alterações em um novo workspace e, em seguida, promover esse workspace para `master`.
 
-Para desenvolvermos nossa primeira app, precisamos criar um novo workspace.
+Para desenvolvermos nossa primeira app, precisaremos criar um novo workspace.
 
 Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces), clique em "Novo workspace" e crie um workspace com o seu nome.xw
 
 ### Sandbox
 
-É um ambiente de desenvolvimento de apps. Para entender o como uma sandbox funciona, devemos entender como a Gallery funciona.
+É um ambiente de desenvolvimento de apps. Para entender como uma sandbox funciona, devemos entender primeiro como a Gallery funciona.
 
 Este é o fluxo de dados de uma loja no StoreFront:
 
@@ -102,15 +102,15 @@ Quando o desenvolvedor usa uma sandbox, o fluxo é o seguinte:
 
 A sandbox é ótima e ela será sua nova amiga!
 
-### Ativando o workspace e sandbox
+### Ativando o workspace e a sandbox
 
-Para ativar o workspace e sua sandbox você deve adicionar dois cookies em seu browser para que o servidor verifique qual sua sandbox e quais apps estão sendo desenvolvidos nela.
+Para ativar o workspace e sua sandbox você deve adicionar dois cookies em seu browser. Isso é necessário para que o servidor verifique qual é a sua sandbox e quais apps estão sendo desenvolvidos nela.
 
 Primeiro, entre na URL da loja no ambiente de desenvolvimento:
 
 [http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
 
-Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome ("F12" ou "command+option+i") e clique na aba "Cookies", clique com o botão direito do mouse e, em seguida, "Add new cookie".
+Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome ("F12" ou "command+option+i") e clique na aba "Cookies", clique com o botão direito do mouse e, em seguida, em "Add new cookie".
 
 Crie o cookie do workspace:
 
@@ -138,7 +138,7 @@ vtex_sandbox|alphateam/nome-da-sandbox=my-first-app
 
 ## Hello World!
 
-Agora que temos tudo pronto para por a mão na massa, vamos ver o tão esperado "Hello World!".
+Agora que temos tudo pronto para pôr a mão na massa, vamos ver o tão esperado "Hello World!".
 
 Abra o terminal na pasta da app e digite:
 
@@ -162,7 +162,7 @@ O que o Toobelt acabou de fazer foi:
 
 - Ler o arquivo `meta.json` e o vendor e o nome da sua app
 - Ler o arquivo `.vtexignore` e guardar quais arquivos ela não deve fazer upload
-- Fez o upload de todos arquivos que não estão na lista de arquivos do `.vtexignore`
+- Upload de todos os arquivos que não estão na lista de arquivos do `.vtexignore`
 
 Estes arquivos vão parar dentro da pasta "alphateam.my-first-app", que é o identificador único de uma app dentro da sua sandbox.
 
@@ -192,7 +192,7 @@ Para resolver tudo isso, usamos a ferramenta de build Webpack e uma estrutura de
 
 ### Nova estrutura de pastas
 
-Não se apague ao seu app agora, vamos apagar toda essa estrutura e começ-lo do zero com essa nova estrutura de desenvolvimento.
+Não se apague ao seu app agora, vamos apagar toda essa estrutura e começá-lo do zero com essa nova estrutura de desenvolvimento.
 
 Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
 
@@ -239,7 +239,7 @@ Nessa pasta moram grande parte dos componentes React.
 
 #### src/editors/
 
-Aqui ficam os componentes que são usados para criar editores, componentes que formam as interfaces que o administrador da loja irá usar para configurar um componente.
+Aqui ficam os componentes que são usados para criar editores: componentes que formam as interfaces que o administrador da loja irá usar para configurar um componente.
 
 #### src/pages/
 
@@ -290,9 +290,9 @@ Abra o terminal na pasta de sua app e digite:
 webpack
 ```
 
-Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. Todos eles são códigos Javascript minificados com respectivos *source maps* (arquivos que facilitam debugar o código em ferramentas como o Chrome Developer Tools). Perceba que mesmo tendo arquivos LESS no código fonte, nos arquivos gerados existem apenas arquivos Javascript. O Webpack coloca todo o código CSS dentro do Javascript para se alavancar do cache do browser, ele também se encarrega de inserir o CSS no código HTML, fazendo com que tudo funcione normalmente.
+Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. Todos eles são códigos Javascript minificados com respectivos *source maps* (arquivos que facilitam debugar o código em ferramentas como o Chrome Developer Tools). Perceba que mesmo tendo arquivos LESS no código fonte, nos arquivos gerados existem apenas arquivos Javascript. O Webpack coloca todo o código CSS dentro do Javascript para se alavancar do cache do browser. Ele também se encarrega de inserir o CSS no código HTML, fazendo com que tudo funcione normalmente.
 
-Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos envia-los para a sandbox.
+Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos enviá-los para a sandbox.
 
 Digite no terminal:
 ```sh
@@ -332,7 +332,7 @@ Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja e
 Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
 
 - **route**: O componente com nome "HomePage" da sua app (nesse caso "alphateam.my-first-app") irá atender o path `/` e ela será identificada no código como "home"
-- **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
+- **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
 
 Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome de "ProductPage.json" e coloque o seguinte JSON:
 
@@ -375,7 +375,7 @@ export default ProductPage;
 
 ```
 
-Nada deve acontecer, isso acontece pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage". Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
+Nada deve acontecer. Isso acontece, pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage". Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
 
 ```js
 // Importando componentes que respondem por uma página
@@ -413,7 +413,7 @@ import HomePage from 'pages/HomePage';
 import ProductPage from 'pages/ProductPage';
 ```
 
-Primeiro, importamos os componentes de página usando a sintaxe da versão ES6 do Javascript. Ele pega o arquivo em "pages/ProductPage" e coloca o construtor do componente na variável `ProductPage`.
+Primeiro, importamos os componentes de página usando a sintaxe da versão ES6 do Javascript. O componente é importado de "pages/ProductPage" e seu construtor é inserido na variável `ProductPage`.
 
 ```js
 // Importando dispatcher do SDK
@@ -430,7 +430,7 @@ O Flux é uma arquitetura que define como os dados são transmitidos por toda a 
 
 ![Flux](https://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png)
 
-A View são os componentes React. O dispatcher é a unidade centralizadora, ele liga as actions às stores. As stores são onde os dados estão armazenados, os componentes podem ouvir mudanças de um store. As actions fornecem funções que os componentes podem chamar, fazendo com que mude os dados das stores. Atenção: as funções das actions não retornam resultados, elas apenas fazem com que as stores mudem e, como os componentes escutam as mudanças das stores, os componentes pegam os novos dados das stores.
+A View representa os componentes React. O dispatcher é a unidade centralizadora: ele liga as actions às stores. As stores são onde os dados estão armazenados, e os componentes podem ouvir mudanças de uma store. As actions fornecem funções que os componentes podem chamar, fazendo com que os dados das stores mudem. Atenção: as funções das actions não retornam resultados, elas apenas fazem com que as stores mudem e, como os componentes escutam as mudanças das stores, os componentes pegam esses novos dados.
 
 ---
 
@@ -450,7 +450,7 @@ let components = [
 dispatcher.actions.ComponentActions.register(components);
 ```
 
-Estamos chamando a action `register` da "ComponentActions". Essa action faz com que os componentes sejam registrados na "ComponentStore". Ao registrar os componentes, o SDK consegue pegar o componente na store e quando a rota do componente é aberta, ele renderiza o componente associado.
+Estamos chamando a action `register` da "ComponentActions". Essa action faz com que os componentes sejam registrados na "ComponentStore". Ao registrar os componentes, o SDK consegue pegar o componente na store e, quando a rota do componente é aberta, ele renderiza o componente associado.
 
 Atualize a página do browser para ver as modificações (o hot loader funciona apenas para alterações em componentes React). Você deve agora ver a página de produto!
 
