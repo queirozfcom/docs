@@ -464,11 +464,42 @@ Para criar uma nova página você precisa:
 
 ## Pegando dados do servidor
 
-Temos duas páginas: a home e a página de produto. 
+Temos duas páginas: a home e a página de produto.
 
-> Mas o que é uma pagina de produto sem produtos? 
+> Mas o que é uma pagina de produto sem produtos?
 
 Vamos aprender a pegar dados da API pra preencher essa página.
+
+Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
+
+```json
+{
+  "route": {
+    "name": "product",
+    "path": "/:slug/p"
+  },
+  "resourceBinding": {
+    "locator": "product@vtex.storefront-sdk",
+    "params": {
+      "slug": "{{ route.slug }}"
+    }
+  },
+  "assets": [
+    "my-first-app.js"
+  ]
+}
+```
+
+Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetros que ele recebe são:
+
+- **locator**: identificador do resource que será usado. Neste caso estamos usando um resource do SDK chamado "product", responsável por pegar um produto da API
+- **params**: são os parâmetros necessários para o resource. O resource "product" precisa do parâmetro "slug", pegamos esse dado fornecido pela rota
+
+O `resourceBinding` liga uma rota a uma chamada a API.
+
+Carregue a página de produto no browser ([http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
+
+Vamos fazer com que o nosso código React acesse essa store e imprima o nome do produto na página.
 
 Copie o seguinte código e coloque no arquivo `src/pages/ProductPage.jsx`:
 ```js
