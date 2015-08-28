@@ -190,7 +190,7 @@ Para fazer o link para a página de produto, precisamos informar alguns dados pa
 
 Legal, agora você pode ir de uma página pra outra de forma rápida.
 
-### Ah, não... tem um bug! :
+### Ah, não... tem um bug! :anguished:
 
 Entretanto, temos um bug! Siga os passos para reproduzir:
 
