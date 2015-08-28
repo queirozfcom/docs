@@ -76,7 +76,7 @@ Uma loja guarda diversas configurações: quais apps estão instaladas e qual im
 
 Para desenvolvermos nossa primeira app, precisaremos criar um novo workspace.
 
-Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces), clique em "Novo workspace" e crie um workspace com o seu nome.xw
+Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces), clique em "Novo workspace" e crie um workspace com o seu nome.
 
 ### Sandbox
 
