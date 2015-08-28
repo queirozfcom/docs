@@ -57,11 +57,11 @@ import { dispatcher } from 'sdk';
 
 let components = [
   {
-    name: 'HomePage@vtex.my-first-app',
+    name: 'HomePage@alphateam.my-first-app',
     constructor: HomePage
   },
   {
-    name: 'ProductPage@vtex.my-first-app',
+    name: 'ProductPage@alphateam.my-first-app',
     constructor: ProductPage
   }
 ];
@@ -108,11 +108,11 @@ A View representa os componentes React. O dispatcher é a unidade centralizadora
 ```js
 let components = [
   {
-    name: 'HomePage@vtex.my-first-app',
+    name: 'HomePage@alphateam.my-first-app',
     constructor: HomePage
   },
   {
-    name: 'ProductPage@vtex.my-first-app',
+    name: 'ProductPage@alphateam.my-first-app',
     constructor: ProductPage
   }
 ];
