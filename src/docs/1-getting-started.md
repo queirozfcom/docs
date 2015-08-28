@@ -17,7 +17,7 @@ Os pacotes yo ([Yeoman](http://yeoman.io/)) e [generator-vtex](https://github.co
 
 O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt). O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você publique apps na Gallery e desenvolva localmente.
 
-Para isso e para ver suas alterações, é necessário instalar um cookie específico em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
+Para isso e para ver suas alterações, é necessário criar um cookie específico em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
 
 Caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
 
