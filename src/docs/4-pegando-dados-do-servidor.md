@@ -26,10 +26,10 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 }
 ```
 
-Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetros que ele recebe são:
+Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetros que ela recebe são:
 
 - **locator**: identificador do resource que será usado. Neste caso estamos usando um resource do SDK chamado "product", responsável por pegar um produto da API
-- **params**: são os parâmetros necessários para o resource. O resource "product" precisa do parâmetro "slug", pegamos esse dado fornecido pela rota
+- **params**: são os parâmetros necessários para o resource. O resource "product" precisa do parâmetro "slug", e pegamos esse dado fornecido pela rota
 
 O `resourceBinding` liga uma rota a uma chamada a API.
 
@@ -76,9 +76,9 @@ Veja que estamos usando a função `getIn`. Isso é um método de objetos do Imm
 
 ## Uma rápida explicação sobre o Immutable em 30 segundos
 
-Todas as stores fornecidas pelo SDK usam a biblioteca [Immutable](http://facebook.github.io/immutable-js/). Como o nome já dá pistas, ela permite criar objetos imutáveis. Com isso ganhamos duas vantagens:
+Todas as stores fornecidas pelo SDK usam a biblioteca [Immutable](http://facebook.github.io/immutable-js/). Como o nome já indica, ela permite criar objetos imutáveis. Com isso ganhamos duas vantagens:
 
-1. Comparação de objetos de forma extremamente eficiente (em tempo [O(1)](https://en.wikipedia.org/wiki/Analysis_of_algorithms#Orders_of_growth))
+1. Comparação de objetos de forma extremamente eficiente (em tempo O(1))
 2. Segurança de que nenhuma outra parte do código vai alterar o objeto que você está usando
 
 Imagine o seguinte objeto da ContextStore:
@@ -154,11 +154,11 @@ export default ProductPage;
 
 ```
 
-O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, porém, ele intercepta o comportamento do browser e faz com que apenas mude o componente React renderizado na página. Veja funcionando no browser!
+O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, porém intercepta o comportamento do browser e faz com que apenas o componente React renderizado na página mude. Veja funcionando no browser!
 
 Também precisamos de um link na home para a página de produto.
 
-Copie e cole o código abaixo no arquivo `src/pages/HomePage.jsx`:
+Copie o código no arquivo `src/pages/HomePage.jsx`:
 
 ```js
 import React from 'react';
@@ -180,7 +180,7 @@ export default HomePage;
 
 ```
 
-Para linkar para a página de produto, precisamos informar alguns dados para que o componente `Link` consiga montar a URL.
+Para fazer o link para a página de produto, precisamos informar alguns dados para que o componente `Link` consiga montar a URL.
 
 Legal, agora você pode ir de uma página pra outra de forma rápida.
 
@@ -280,4 +280,4 @@ Tente exibir outras informações do Produto na página! (Dica: dê um `console.
 
 ---
 
-Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBinding` e como pegar dados de uma página assíncronamente.
+Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBinding` e como pegar dados de uma página de forma assíncrona.
