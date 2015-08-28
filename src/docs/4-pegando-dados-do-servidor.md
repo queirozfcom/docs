@@ -158,7 +158,7 @@ O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, p
 
 Também precisamos de um link na home para a página de produto.
 
-Copie o código no arquivo `src/pages/HomePage.jsx`:
+Copie e cole o código abaixo no arquivo `src/pages/HomePage.jsx`:
 
 ```js
 import React from 'react';
