@@ -192,7 +192,7 @@ Para resolver tudo isso, usamos a ferramenta de build Webpack e uma estrutura de
 
 ### Nova estrutura de pastas
 
-Não se apague ao seu app agora, vamos apagar toda essa estrutura e começá-lo do zero com essa nova estrutura de desenvolvimento.
+Não se apague à sua app agora, vamos apagar toda essa estrutura e começá-la do zero com essa nova estrutura de desenvolvimento.
 
 Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
 
