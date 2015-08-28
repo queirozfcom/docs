@@ -378,10 +378,10 @@ export default ProductPage;
 Nada deve acontecer. Isso acontece, pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage". Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
 
 ```js
-// Importando componentes que respondem por uma página
+// Importa componentes que respondem por uma página
 import HomePage from 'pages/HomePage';
 import ProductPage from 'pages/ProductPage';
-// Importando dispatcher do SDK
+// Importa dispatcher do SDK
 import { dispatcher } from 'sdk';
 
 let components = [
@@ -395,7 +395,7 @@ let components = [
   }
 ];
 
-// Chamando action que registra os componentes
+// Chama a action que registra os componentes
 dispatcher.actions.ComponentActions.register(components);
 
 // Não preste atenção nisso, é algo que temos que colocar para o hot loader funcionar
@@ -408,7 +408,7 @@ if (module.hot) {
 ```
 
 ```js
-// Importando componentes que respondem por uma página
+// Importa componentes que respondem por uma página
 import HomePage from 'pages/HomePage';
 import ProductPage from 'pages/ProductPage';
 ```
@@ -416,7 +416,7 @@ import ProductPage from 'pages/ProductPage';
 Primeiro, importamos os componentes de página usando a sintaxe da versão ES6 do Javascript. O componente é importado de "pages/ProductPage" e seu construtor é inserido na variável `ProductPage`.
 
 ```js
-// Importando dispatcher do SDK
+// Importa o dispatcher do SDK
 import { dispatcher } from 'sdk';
 ```
 
@@ -446,7 +446,7 @@ let components = [
   }
 ];
 
-// Chamando action que registra os componentes
+// Chama a action que registra os componentes
 dispatcher.actions.ComponentActions.register(components);
 ```
 
@@ -477,17 +477,16 @@ import { dispatcher } from 'sdk';
 
 class ProductPage extends React.Component {
   render() {
-    // Pegamos o estado atual da ContextStore
+    // Pega o estado atual da ContextStore
     let context = dispatcher.stores.ContextStore.getState();
-    // Pegamos o parametro slug da rota
+    // Pega o parametro slug da rota
     let slug = context.getIn(['route', 'params', 'slug']);
 
-    // Pegamos o estado atual da ProductStore
+    // Pega o estado atual da ProductStore
     let ProductStore = dispatcher.stores.ProductStore.getState();
-    // Pegamos o produto com o slug da rota
+    // Pega o produto com o slug da rota
     let product = ProductStore.get(slug);
 
-    // Caso o produto exista na ProductStore pegamos o seu nome, caso contrário, deixamos como "carregando..."
     let productName = product ? product.name : 'carregando...';
 
     return (
