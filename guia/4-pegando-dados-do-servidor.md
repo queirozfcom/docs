@@ -125,7 +125,7 @@ Conseguimos!
 
 Vamos criar um link para a home para que possamos testar mais facilmente.
 
-Copie o código:
+Substitua o código do arquivo `src/pages/ProductPage.jsx` por:
 
 ```js
 import React from 'react';
@@ -157,7 +157,6 @@ class ProductPage extends React.Component {
 }
 
 export default ProductPage;
-
 ```
 
 O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, porém intercepta o comportamento do browser e faz com que apenas o componente React renderizado na página mude. Veja funcionando no browser!
