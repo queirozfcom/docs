@@ -216,7 +216,6 @@ Vamos alterar o componente "BannerEditor" para que ele salve as configurações 
 
 ```js
 import React from 'react';
-import { dispatcher } from 'sdk';
 
 class BannerEditor extends React.Component {
   constructor(props) {
