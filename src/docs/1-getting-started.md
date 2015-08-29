@@ -52,11 +52,11 @@ Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos
 
 ### components/
 
-Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront. Veja mais na seção [blablabla](#).
+Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront.
 
 ### resources/
 
-Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de componentes e no código Javascript. Veja mais em [blablabla](#).
+Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de componentes e no código Javascript.
 
 ### meta.json
 
