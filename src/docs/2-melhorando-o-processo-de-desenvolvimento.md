@@ -139,9 +139,9 @@ Dessa forma, o Toolbelt se encarrega de rodar o Webpack e fazer o upload dos arq
 
 ## Mais rápido! Mais rápido!
 
-Ainda não estamos rápido o suficiente, vamos usar um dos grandes diferenciais do combo Webpack+React, o hot-loader.
+Ainda não estamos rápidos o suficiente, vamos usar um dos grandes diferenciais do combo Webpack+React, o hot-loader.
 
-Pare o Toolbelt que está rodando e ligue o novamente com a flag `--server`:
+Pare o Toolbelt que está rodando e ligue-o novamente com a flag `--server`:
 ```
 vtex watch nomedasandbox --server
 ```
