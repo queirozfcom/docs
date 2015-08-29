@@ -1,4 +1,4 @@
-# Começando com react
+# Setup
 
 Instale o pacote node `generator-react-webpack`:
 
