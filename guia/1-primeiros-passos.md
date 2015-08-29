@@ -36,6 +36,8 @@ Rode o seguinte comando para iniciar o `generator-vtex`:
 yo vtex:storefront --simple
 ```
 
+Em algumas instalações do node, o comando acima pode dar erro. Tente rodar o comando com `sudo`.
+
 Este processo irá criar a estrutura de pastas e arquivos iniciais de sua App.
 
 ## Estrutura de pastas
