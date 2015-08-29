@@ -1,4 +1,4 @@
-# Getting Started
+# Primeiros Passos
 
 ## Setup
 
@@ -176,6 +176,6 @@ O Toolbelt está escutando qualquer modificação feita nos arquivos de sua app.
 
 ---
 
-Você completou o "Getting Started"! Você já sabe utilizar as ferramentas e está pronto para dar o próximo passo.
+Você completou o "Primeiros Passos"! Você já sabe utilizar as ferramentas e está pronto para dar o próximo passo.
 
 Próximo passo: [Melhorando o processo de desenvolvimento](2-melhorando-o-processo-de-desenvolvimento.md)
