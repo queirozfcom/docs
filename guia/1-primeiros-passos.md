@@ -120,11 +120,21 @@ Primeiro, entre na URL da loja no ambiente de desenvolvimento:
 
 Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome ("F12" ou "command+option+i") e clique na aba "Cookies", clique com o botão direito do mouse e, em seguida, em "Add new cookie".
 
-Crie o cookie do workspace:
+Vamos criar dois cookie, um para o workspace e outro para a sandbox.
+
+#### Criando o cookie do workspace
+
+Crie o cookie do workspace.
 
 Nome|Valor
 ---|---
 vtex_workspace|nomedomeuworkspace
+
+Lembre-se que os cookies devem ser editados na página:
+
+[http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
+
+#### Criando o cookie da sandbox
 
 Para criar o cookie da sandbox, vamos precisar de:
 
