@@ -24,7 +24,10 @@ Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e d
 yo vtex:storefront
 ```
 
-Crie a app com o nome "my-first-app", e "alphateam" como vendor.
+Responda o generator com:
+- "my-first-app"
+- "My first app"
+- "alphateam"
 
 Você verá que algumas pastas e arquivos foram criados e as dependências do node foram instaladas. Sua app agora deve parecer com isso:
 
