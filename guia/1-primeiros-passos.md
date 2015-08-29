@@ -130,9 +130,13 @@ Nome|Valor
 ---|---
 vtex_workspace|nomedomeuworkspace
 
-Lembre-se que os cookies devem ser editados na página:
+Lembre-se que:
 
-[http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
+- Os cookies devem ser editados na página: [http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
+- O workspace deve ser criado:
+
+> Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces), clique em "Novo workspace" e crie um workspace com o seu nome.
+
 
 #### Criando o cookie da sandbox
 
@@ -154,11 +158,11 @@ Nome|Valor
 ---|---
 vtex_sandbox|alphateam/nome-da-sandbox=my-first-app
 
+Até então, as coisas não estão funcionando! Agora que temos tudo pronto para pôr a mão na massa, vamos ver o tão esperado "Hello World!".
+
 ## Hello World!
 
-Agora que temos tudo pronto para pôr a mão na massa, vamos ver o tão esperado "Hello World!".
-
-Abra o terminal na pasta da app e digite:
+Vamos subir a nossa app na sandbox. Abra o terminal na pasta da app e digite:
 
 ```sh
 vtex watch nomedasandbox
