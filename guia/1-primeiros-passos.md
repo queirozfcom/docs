@@ -72,7 +72,7 @@ Todas as apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas
 
 ### .vtexignore
 
-Esse arquivo é usado pelo Toolbelt. Aqui estão listados quais arquivos e pastas não devem ser enviados para a Gallery.
+Esse arquivo é usado pelo Toolbelt. Aqui estão listados quais arquivos e pastas não devem ser enviados para a Gallery. Caso seja familiar com o git, ele funciona da mesma forma que o `.gitignore`.
 
 ## Workspaces e Sandbox
 
