@@ -112,7 +112,7 @@ Esse arquivo possui todas as configurações do Webpack.
 
 Para fazer o build do projeto vamos usar o Webpack.
 
-Abra o terminal na pasta de sua app e digite:
+Abra o terminal na pasta de sua app e rode o webpack (por padrão, ele está dando watch na pasta `src/`):
 ```sh
 webpack
 ```
@@ -121,7 +121,7 @@ Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. 
 
 Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos enviá-los para a sandbox.
 
-Digite no terminal:
+Cancele o processo do webpack ou abra outra aba do terminal e digite:
 
 ```sh
 vtex watch nomedasandbox
