@@ -112,7 +112,7 @@ class Banner extends React.Component {
   // Definimos algumas propriedades necessárias para que o Storefront Editor consiga fazer a mágica
   static storefront = {
     // O valor da propriedade "name" deve ser o mesmo valor da propriedade name no momento do registro do componente
-    name: 'Banner@vtex.my-first-app',
+    name: 'Banner@alphateam.my-first-app',
     // Esse é o nome que o lojista vai ver na interface para identificar o componente
     title: 'Banner'
   }
@@ -174,7 +174,7 @@ import { dispatcher } from 'sdk';
 
 let components = [
   {
-    name: 'BannerEditor@vtex.my-first-app',
+    name: 'BannerEditor@alphateam.my-first-app',
     constructor: BannerEditor
   }
 ];
@@ -279,7 +279,7 @@ import { editable, dispatcher } from 'sdk';
 @editable(dispatcher)
 class Banner extends React.Component {  
   static storefront = {
-    name: 'Banner@vtex.my-first-app',
+    name: 'Banner@alphateam.my-first-app',
     title: 'Banner'
   }
 
