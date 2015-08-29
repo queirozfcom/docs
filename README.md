@@ -1,44 +1,27 @@
-# VTEX Storefront Docs
+# Apps
 
-1. Apps e Gallery
-   1.1 Aprenda o básico
-    - O que é o Storefront Framework?
-    - O que é a Gallery?
-    - O que são Apps?
-      - Estrutura de uma App
-      - Crie a sua primeira app
-          * Criando um componente
-          * Definindo uma rota
-          * Registrando um componente
-      - Criando uma sandbox
-      - Testando uma app
-      - Publicando sua primeira app
+## O que são Apps
 
-   1.2 Desenvolvendo uma app de tema do zero
-       - layout.html
-       - Rotas default
-       - Areas
-       - Roles
-   1.3 Thinking in VTEX Apps  
-      - Como modelar um problema no paradigma de apps
-   1.4 Distribuição
-       - Como monetizar sua App
-       - Publicando sua app
+Para apresentarmos o Storefront, é fundamental falarmos do conceito de App, que é peça-chave na nova arquitetura da VTEX. Uma App é uma aplicação ou sistema que desempenha uma funcionalidade quando instalada em uma loja VTEX. O layout de uma loja nada mais é que uma App de Tema instalada na conta da loja.
 
-2. Guias
-   2.1 Tecnologias
-        - React
-        - Flux
-        - Liquid
-   2.2 App de tema e componentes
-   2.4 Resources
+Apps trazem autonomia para lojistas, ao permitir que adicionem novas funcionalidades e customizem o design da loja sem depender diretamente de desenvolvimento por terceiros: a instalação de apps é no Storefront completamente plug & play.
 
-3. Storefront SDK
+Por outro lado, o desenvolvimento e comercialização de Apps permitem à agências e desenvolvedores diversificar seu portfolio de produtos e serviços com um sistema de instalação e cobrança sem dores de cabeça.
 
-4. Tools
-  4.1 Toolbelt
+As apps podem trazer diversas funcionalidades para o site da loja: uma app de reviews que permite a um cliente avaliar produtos e ler avaliações de terceiros ou até mesmo uma nova app de tema para mudar todo o layout de sua loja em um só clique.
 
-5. References
-   3.1 Lista de Areas
-   3.2 Lista de Roles
-   3.3 Lista de Resources VTEX
+## Gallery
+
+A VTEX Gallery permite que desenvolvedores e agências publiquem apps — gratuitos ou pagos — que podem ser facilmente encontrados e instalados por lojistas da VTEX.
+
+Apps disponibilizados na Gallery são mais poderosos que as antigas extensões da VTEX Store, pois oferecem funcionalidades que podem interagir com todos os sistemas da VTEX.
+
+## Storefront Framework
+
+A nova base de desenvolvimento de aplicativos da plataforma VTEX é o StoreFront Framework, que permite a desenvolvedores e agências criar apps e temas editáveis que podem ser instalados automaticamente na loja e configuradas pelo usuário no Storefront CMS.
+
+## Storefront Editor
+
+Com o Storefront Editor, o usuário lojista pode acessar seu site em modo de edição e configurar seus componentes — seja a imagem de um banner, a quantidade de produtos em uma prateleira ou alguma opção de layout do tema.
+
+Como o Storefront possui uma natureza modular, o modo de edição de duas lojas podem ser completamente diferentes, dependendo dos apps e componentes instalados por cada uma.
