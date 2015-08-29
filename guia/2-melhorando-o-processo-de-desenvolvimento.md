@@ -153,6 +153,8 @@ Essa opção liga um servidor local, o Webpack Dev Server, que permite utilizar 
 
 [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
 
+Como mudamos de domínio, devemos configurar os cookies de sandbox e workspace novamente.
+
 Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja as mudanças aplicadas sem dar reload na página.
 
 ---
