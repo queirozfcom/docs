@@ -93,7 +93,7 @@ Nesse caso a definição desse componente será ainda mais simples, crie o arqui
 
 ### Registrando o componente
 
-Você pode ler como registrar um componente em [Criando uma nova página](3-criando-uma-nova-pagina.md#registrando-um-componente).
+Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) o componente Banner no arquivo `src/my-first-app.jsx`.
 
 ### Usando "editable" e adicionando informações ao componente
 
