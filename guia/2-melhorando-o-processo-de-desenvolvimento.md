@@ -2,9 +2,9 @@
 
 Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX é bem estranho. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
 
-Para resolver tudo isso, usamos a ferramenta de build Webpack e uma estrutura de desenvolvimento opinionada que usa ES7, eslint, LESS, react-hot-loader e Webpack:
+Para resolver tudo isso, usamos a ferramenta de build Webpack e uma estrutura de desenvolvimento opinionada que usa ES6 (e até o 7!), eslint, LESS, react-hot-loader e Webpack:
 
- - ES7 é a mais recente versão do Javascript que será lançada em 2016, então já estamos escrevendo mirando para o futuro. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES7 para a versão atual do Javascript.
+ - ES6 é a mais recente versão do Javascript que foi lançada em 2015, então já estamos escrevendo. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES6 para a versão do Javascript que a maioria dos browsers entende, que é o ES5.
 
  - eslint é uma ferramenta que padroniza como o código deve ser escrito.
 
@@ -131,7 +131,7 @@ E confira tudo funcionando no browser.
 
 ## Toolbelt ao resgate
 
-Ganhamos a facilidade de escrever em ES7, JSX, LESS, minificar, etc, mas agora temos dois processos rodando, o watch do Toolbelt e o Webpack. Pensando em facilitar ainda mais o desenvolvimento, o Toobelt possui uma opção para quem usa Webpack.
+Ganhamos a facilidade de escrever em ES6, JSX, LESS, minificar, etc, mas agora temos dois processos rodando, o watch do Toolbelt e o Webpack. Pensando em facilitar ainda mais o desenvolvimento, o Toobelt possui uma opção para quem usa Webpack.
 
 Abra o terminal na pasta de sua app e digite:
 ```sh
