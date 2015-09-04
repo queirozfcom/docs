@@ -1,16 +1,6 @@
-# Usando ES7
+# Usando ES6
 
 ## Alterando algumas configurações
-
-Vamos alterar algumas coisas para que possamos usar o ES7.
-
-Abra o arquivo `webpack.config.js` e altere a linha 47 para:
-
-```
-loader: 'react-hot!babel-loader?stage=0'
-```
-
-Com isso, poderemos usar os recursos novos da linguagem Javascript.
 
 Altere o código de `src/components/TesteApp.js` para:
 
@@ -35,9 +25,9 @@ export default TesteApp;
 React.render(<TesteApp />, document.getElementById('content')); // jshint ignore:line
 ```
 
-## Entendendo ES7
+## Entendendo ES6
 
-Veja que estamos usando `class`, `import`, `export` e outras coisas muito legais do ES7, versão do Javascript que será lançada em 2016.
+Veja que estamos usando `class`, `import`, `export` e outras coisas muito legais do ES6, versão do Javascript que foi lançada em 2015.
 
 ### import
 
@@ -75,6 +65,6 @@ Javascript agora provê classes de forma nativa. Leia mais sobre ela na document
 
 ---
 
-Você completou o "Usando ES7"! Agora vamos introduzir alguns conceitos do React.
+Você completou o "Usando ES6"! Agora vamos introduzir alguns conceitos do React.
 
 Próximo passo: [Conceitos do React](3-conceitos-do-react.md)

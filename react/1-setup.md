@@ -37,4 +37,4 @@ Ele irá buildar o projeto e abrir uma aba do seu navegador.
 
 Você completou o "Setup"! No próximo passo vamos entender o código.
 
-Próximo passo: [Usando ES7](2-usando-es7.md)
+Próximo passo: [Usando ES6](2-usando-es6.md)
