@@ -41,20 +41,20 @@ Carregue a página de produto no browser ([http://basedevmkp.local.myvtex.com:30
 
 Vamos fazer com que o nosso código React acesse essa store e imprima o nome do produto na página.
 
-Copie o seguinte código e coloque no arquivo `src/pages/ProductPage.jsx`:
+Copie o seguinte código e coloque no arquivo `src/pages/ProductPage/ProductPage.js`:
 ```js
 import React from 'react';
-import { dispatcher } from 'sdk';
+import { stores } from 'sdk';
 
 class ProductPage extends React.Component {
   render() {
     // Pega o estado atual da ContextStore
-    let context = dispatcher.stores.ContextStore.getState();
+    let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
     let slug = context.getIn(['route', 'params', 'slug']);
 
     // Pega o estado atual da ProductStore
-    let ProductStore = dispatcher.stores.ProductStore.getState();
+    let ProductStore = stores.ProductStore.getState();
     // Pega o produto com o slug da rota
     let product = ProductStore.get(slug);
 
@@ -125,23 +125,23 @@ Conseguimos!
 
 Vamos criar um link para a home para que possamos testar mais facilmente.
 
-Substitua o código do arquivo `src/pages/ProductPage.jsx` por:
+Substitua o código do arquivo `src/pages/ProductPage/ProductPage.js` por:
 
 ```js
 import React from 'react';
-import { dispatcher } from 'sdk';
-// Importa o component Link fornecido pelo React Router
+import { stores } from 'sdk';
+// Importa o component React "Link" fornecido pela biblioteca "React Router"
 import { Link } from 'react-router';
 
 class ProductPage extends React.Component {
   render() {
     // Pega o estado atual da ContextStore
-    let context = dispatcher.stores.ContextStore.getState();
+    let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
     let slug = context.getIn(['route', 'params', 'slug']);
 
     // Pega o estado atual da ProductStore
-    let ProductStore = dispatcher.stores.ProductStore.getState();
+    let ProductStore = stores.ProductStore.getState();
     // Pega o produto com o slug da rota
     let product = ProductStore.get(slug);
 
@@ -163,18 +163,20 @@ O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, p
 
 Também precisamos de um link na home para a página de produto.
 
-Copie e cole o código abaixo no arquivo `src/pages/HomePage.jsx`:
+Copie e cole o código abaixo no arquivo `src/pages/HomePage/HomePage.js`:
 
 ```js
 import React from 'react';
-import style from 'styles/style.less'; // eslint-disable-line
+import 'styles/style.less';
+import HelloWorld from 'components/HelloWorld/HelloWorld';
 import { Link } from 'react-router';
 
 class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello world!</h1>
+        <HelloWorld />
+        <p className="message">Crie, construa, inove!</p>
         <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
       </div>
     );
@@ -211,44 +213,43 @@ O que precisamos fazer é pegar os recursos associados a rota que iremos abrir, 
 
 ### Carregando resources de forma assíncronamente
 
-Abra o arquivo `src/pages/ProductPage.jsx` e substitua o conteúdo pelo seguinte código:
+Abra o arquivo `src/pages/ProductPage/ProductPage.js` e substitua o conteúdo pelo seguinte código:
 
 ```js
 import React from 'react';
-import { dispatcher } from 'sdk';
-// Importa o component Link fornecido pelo React Router
+import { stores, actions } from 'sdk';
 import { Link } from 'react-router';
 
 class ProductPage extends React.Component {
   // Define o state default do component
   state = {
     // Pega o estado atual da "ProductStore" (provavelmente aqui ela está sem o dado do produto)
-    ProductStore: dispatcher.stores.ProductStore.getState()
+    ProductStore: stores.ProductStore.getState()
   }
 
   componentWillMount() {
     // Escuta as mudanças da "ProductStore", registramos o método "onChange" como callback
-    dispatcher.stores.ProductStore.listen(this.onChange);
+    stores.ProductStore.listen(this.onChange);
 
     // Pega o contexto do site
-    let context = dispatcher.stores.ContextStore.getState();
+    let context = stores.ContextStore.getState();
     // Pega o pathname da rota
     let pathname = context.getIn(['route', 'pathname']);
 
     // Caso a "ResourceStore" não tenha os resources da pagina carregada
-    if (!dispatcher.stores.ResourceStore.getState().get(pathname)) {
+    if (!stores.ResourceStore.getState().get(pathname)) {
       // Pega os parametros da página, (o método "toJS" transforma um objeto Immutable em um objeto Javascript)
       let params = context.getIn(['route', 'params']).toJS(); // { slug: 'short-balneario'}
       // Pede os resources da página "product" passando os parâmetros necessários (neste caso o slug)
       // Essa action faz uma chamada AJAX ao servidor do Storefront
-      dispatcher.actions.ResourceActions.getRouteResources(pathname, 'product', params);
+      actions.ResourceActions.getRouteResources(pathname, 'product', params);
     }
   }
 
   // O React chamará esse método quando o componente está saindo da tela
   componentWillUnmount() {
     // Para de escutar as mudanças
-    dispatcher.stores.ProductStore.unlisten(this.onChange);
+    stores.ProductStore.unlisten(this.onChange);
   }
 
   // Esse método será chamado toda vez que a "ProductStore" mudar
@@ -256,13 +257,13 @@ class ProductPage extends React.Component {
     // Muda o estado do componente, isso fará com que ele renderize novamente
     this.setState({
       // Pega o estado atual da store (provavelmente agora ela terá os dados do produto)
-      ProductStore: dispatcher.stores.ProductStore.getState()
+      ProductStore: stores.ProductStore.getState()
     });
   }
 
   render() {
     // Pega o estado atual da ContextStore
-    let context = dispatcher.stores.ContextStore.getState();
+    let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
     let slug = context.getIn(['route', 'params', 'slug']);
 

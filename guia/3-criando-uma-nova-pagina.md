@@ -5,9 +5,41 @@ Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o s
 - **route**: O componente com nome "HomePage" da sua app (nesse caso "alphateam.my-first-app") irá atender o path `/` e ela será identificada no código como "home"
 - **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
 
-### Criando o arquivo de definição do componente
+### Gerando os arquivos de uma nova página
 
-Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome de "ProductPage.json" e coloque o seguinte JSON:
+Vamos usar novamente o generator, dessa vez, para gerar os arquivos necessários para se criar uma nova página.
+
+Abra o terminal na pasta do seu projeto e digite:
+```
+yo vtex:component
+```
+E responda as perguntas com:
+- "Page"
+- "ProductPage"
+- "product"
+- "/:product/p"
+- "y"
+
+Ele acabou de criar os arquivos:
+
+- `src/pages/ProductPage/ProductPage.js`
+- `src/pages/ProductPage/index.js`
+- `storefront/components/ProductPage.json`
+
+E alterou o `webpack.config.js`.
+
+Entre na URL:
+
+[http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
+
+Você deve ver um texto na tela:
+> My new component ProductPage!
+
+Está tudo funcionando! Agora, vamos explicar o que cada arquivo gerado faz.
+
+### Arquivo de definição do componente
+
+O arquivo gerado na pasta `storefront/components`, `ProductPage.json`, define informações importantes para o servidor. Ele tem o seguinte conteúdo:
 
 ```json
 {
@@ -16,24 +48,20 @@ Vamos agora criar um novo arquivo na pasta `storefront/components`, dê o nome d
     "path": "/:slug/p"
   },
   "assets": [
-    "my-first-app.js"
+    "common.js",
+    "ProductPage.js"
   ]
 }
 ```
 
-Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/short-balneario/p". Note a notação ":slug", significa que esse valor é variável.
+Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/short-balneario/p". Observe a notação ":slug", significa que esse valor é variável.
 
-A propriedade `assets` usa o mesmo arquivo que a "HomePage" pois o Webpack faz o build de toda a aplicação em um único arquivo.
+A propriedade `assets` indica quais os arquivos necessários para a página. O Webpack gera arquivos separados para cada página (por ex: `HomePage.js` e `ProductPage.js`) e um arquivo que possui os módulos comum a todas elas (`common.js`).
 
-Entre na URL:
 
-[http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
+### O componente React da página
 
-Veja que a página está em branco. Isso acontece pois ainda não escrevemos um componente React para atender a essa rota — vamos criá-lo agora.
-
-### Criando o componente React da página
-
-Crie o arquivo `ProductPage.jsx` na pasta `src/pages/` com o seguinte código:
+O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
 
 ```js
 import React from 'react';
@@ -41,7 +69,7 @@ import React from 'react';
 class ProductPage extends React.Component {
   render() {
     return (
-      <h1>Essa é a página de produto!</h1>
+      <h1>My new component ProductPage!</h1>
     );
   }
 }
@@ -50,24 +78,17 @@ export default ProductPage;
 
 ```
 
-Nada deve acontecer. Isso acontece, pois nosso arquivo principal `src/my-first-app.jsx` não está importando o componente "ProductPage".
+### O arquivo principal da página
 
-### Registrando um componente
-
-Abra o arquivo `src/my-first-app.jsx` e substitua o conteúdo pelo seguinte código:
+O arquivo `src/pages/ProductPage/index.js` é o arquivo principal da página. O seu código Javascript começa nesse arquivo.
 
 ```js
-// Importa componentes que respondem por uma página
-import HomePage from 'pages/HomePage';
-import ProductPage from 'pages/ProductPage';
-// Importa dispatcher do SDK
-import { dispatcher } from 'sdk';
+// Importa as actions do SDK
+import { actions } from 'sdk';
+// Importa o componente React
+import ProductPage from './ProductPage';
 
 let components = [
-  {
-    name: 'HomePage@alphateam.my-first-app',
-    constructor: HomePage
-  },
   {
     name: 'ProductPage@alphateam.my-first-app',
     constructor: ProductPage
@@ -75,7 +96,7 @@ let components = [
 ];
 
 // Chama a action que registra os componentes
-dispatcher.actions.ComponentActions.register(components);
+actions.ComponentActions.register(components);
 
 // Não preste atenção nisso, é algo que temos que colocar para o hot loader funcionar
 // Enable react hot loading with external React
@@ -87,19 +108,17 @@ if (module.hot) {
 ```
 
 ```js
-// Importa componentes que respondem por uma página
-import HomePage from 'pages/HomePage';
-import ProductPage from 'pages/ProductPage';
+// Importa as actions do SDK
+import { actions } from 'sdk';
+// Importa o componente React
+import ProductPage from './ProductPage';
 ```
 
-Primeiro, importamos os componentes de página usando a sintaxe da versão ES6 do Javascript. O componente é importado de "pages/ProductPage" e seu construtor é inserido na variável `ProductPage`.
+Primeiro, importamos as `actions` do Storefront SDK e o componente React usando a sintaxe da versão ES6 do Javascript.
 
-```js
-// Importa o dispatcher do SDK
-import { dispatcher } from 'sdk';
-```
+O componente é importado do arquivo em "./ProductPage" e seu construtor é inserido na variável `ProductPage`.
 
-Depois pegamos apenas a variável `dispatcher` da biblioteca SDK. Essa variável guarda o *dispatcher*, um objeto conceituado pelo [Flux](https://facebook.github.io/flux/docs/overview.html#structure-and-data-flow).
+O Storefront SDK está disponível no contexto da página, por isso, não precisamos especificar o local do arquivo (como fizemos com `./ProductPage`), usamos apenas `'sdk'`. Dele nós pegamos apenas a variável `actions`. Essa variável guarda todas as *actions*, um objeto conceituado pelo [Flux](https://facebook.github.io/flux/docs/overview.html#structure-and-data-flow).
 
 ---
 
@@ -109,16 +128,12 @@ O Flux é uma arquitetura que define como os dados são transmitidos por toda a 
 
 ![Flux](https://facebook.github.io/flux/img/flux-simple-f8-diagram-with-client-action-1300w.png)
 
-A View representa os componentes React. O dispatcher é a unidade centralizadora: ele liga as actions às stores. As stores são onde os dados estão armazenados, e os componentes podem ouvir mudanças de uma store. As actions fornecem funções que os componentes podem chamar, fazendo com que os dados das stores mudem. Atenção: as funções das actions não retornam resultados, elas apenas fazem com que as stores mudem e, como os componentes escutam as mudanças das stores, os componentes pegam esses novos dados.
+A *View* representa os componentes React. O *dispatcher* é a unidade centralizadora: ele liga as *actions* às *stores*. As *stores* são onde os dados estão armazenados, e os componentes podem ouvir mudanças de uma *store*. As *actions* fornecem funções que os componentes podem chamar, fazendo com que os dados das *stores* mudem. Atenção: as funções das *actions* não retornam resultados, elas apenas fazem com que as *stores* mudem e, como os componentes escutam as mudanças das *stores*, eles são renderizados novamente com os dados atualizados.
 
 ---
 
 ```js
 let components = [
-  {
-    name: 'HomePage@alphateam.my-first-app',
-    constructor: HomePage
-  },
   {
     name: 'ProductPage@alphateam.my-first-app',
     constructor: ProductPage
@@ -126,10 +141,10 @@ let components = [
 ];
 
 // Chama a action que registra os componentes
-dispatcher.actions.ComponentActions.register(components);
+actions.ComponentActions.register(components);
 ```
 
-Estamos chamando a action `register` da "ComponentActions". Essa action faz com que os componentes sejam registrados na "ComponentStore". Ao registrar os componentes, o SDK consegue pegar o componente na store e, quando a rota do componente é aberta, ele renderiza o componente associado.
+Estamos chamando a *action* `register` da `ComponentActions`. Essa *action* faz com que os componentes sejam registrados na `ComponentStore`. Ao registrar os componentes, o Storefront SDK consegue pegar o componente na *store* e, quando a rota do componente é aberta, ele renderiza o componente associado.
 
 Atualize a página do browser para ver as modificações (o hot loader funciona apenas para alterações em componentes React). Você deve agora ver a página de produto!
 
@@ -139,7 +154,7 @@ Para criar uma nova página você precisa:
 
 - Criar um arquivo JSON com o nome do componente React que irá responder pela rota em `storefront/components/`
 - Criar um componente React em `src/pages/`
-- Registrar o componente React utilizando a action "ComponentActions.register"
+- Registrar o componente React utilizando a *action* `ComponentActions.register`
 
 ---
 

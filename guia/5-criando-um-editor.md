@@ -18,7 +18,7 @@ Abra a URL da loja:
 
 ### Criando o componente Banner
 
-Vamos criar um componente React para o Banner. Crie o arquivo `src/components/Banner.jsx` e copie o seguinte código:
+Vamos criar um componente React para o Banner. Crie o arquivo `src/components/Banner/Banner.js` e copie o seguinte código:
 
 ```js
 import React from 'react';
@@ -40,23 +40,24 @@ export default Banner;
 
 É um componente simples que exibe uma imagem.
 
-Vá para o componente `src/pages/HomePage.jsx` e copie o código:
+Vá para o componente `src/pages/HomePage/HomePage.js` e copie o código:
 
 ```js
 import React from 'react';
-import style from 'styles/style.less'; // eslint-disable-line
+import './HomePage.less';
+import HelloWorld from 'components/HelloWorld/HelloWorld';
 import { Link } from 'react-router';
-// Importa o componente Banner
-import Banner from 'components/Banner';
+// Importa o componente "Banner"
+import Banner from 'components/Banner/Banner';
 
 class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello world!</h1>
-
         <Banner/>
 
+        <HelloWorld />
+        <p className="message">Crie, construa, inove!</p>
         <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
       </div>
     );
@@ -66,16 +67,17 @@ class HomePage extends React.Component {
 export default HomePage;
 ```
 
-Mudamos o componente "HomePage" para que o "Banner" seja exibido na tela, confira em: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
+Mudamos o componente "HomePage" para que o "Banner" seja renderizado na tela.
+
+Confira em: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
 
 ## Transformando um componente comum em editável
 
 Para que o Storefront Editor consiga identificar componentes editáveis na página precisamos fazer duas coisas:
 
 - Criar a definição de componente em `storefront/components/`
-- Registrar o componente para que outra parte do código consiga usar o componente
-- Usar a anotação "editable" fornecida pelo SDK
-- Adicionar informações ao componente React
+- Registrar o componente com `ComponentActions.register` para que outra parte do código consiga usar o componente
+- Usar o decorador `@storefront` fornecido pelo Storefront SDK
 
 ### Criando o arquivo de definição do componente
 
@@ -86,37 +88,61 @@ Nesse caso a definição desse componente será ainda mais simples, crie o arqui
 ```
 {
   "assets": [
-    "my-first-app.js"
+    "common.js",
+    "HomePage.js"
   ]
 }
 ```
 
+Note que colocamos o arquivo `HomePage.js`, já que o componente é inserido no processo de minificação dentro do mesmo arquivo que o componente "HomePage".
+
 ### Registrando o componente
 
-Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) o componente Banner no arquivo `src/my-first-app.jsx`.
+Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/pages/HomePage/HomePage.js`.
 
-### Usando "editable" e adicionando informações ao componente
+```js
+import { actions } from 'sdk';
+import HomePage from './HomePage';
+import Banner from 'components/Banner/Banner';
 
-Vamos agora aprender a usar a anotação "editable".
+let component = [
+  {
+    name: 'HomePage@alphateam.my-first-app',
+    constructor: HomePage
+  },
+  {
+    name: 'Banner@alphateam.my-first-app',
+    constructor: Banner
+  }
+];
 
-Copie o seguinte código no arquivo `src/components/Banner.jsx`:
+actions.ComponentActions.register(component);
+
+// Enable react hot loading with external React
+// see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
+if (module.hot) {
+  window.RootInstanceProvider = require('react-hot-loader/Injection').RootInstanceProvider;
+}
+```
+
+### Usando `@storefront` e adicionando informações ao componente
+
+Vamos agora aprender a usar o decorador `@storefront`.
+
+Copie o seguinte código no arquivo `src/components/Banner/Banner.js`:
 
 ```js
 import React from 'react';
-// Importa a anotação "editable" e o "dispatcher" do SDK
-import { editable, dispatcher } from 'sdk';
+// Importa o decorador "storefront" do SDK
+import { storefront } from 'sdk';
 
-// Anota a classe Banner com "editable" passando o "dispatcher" como parâmetro
-@editable(dispatcher)
+// Decora a classe "Banner" com "storefront"
+@storefront({
+  name: 'Banner@alphateam.my-first-app', // Deve ser o mesmo valor da propriedade "name" no momento do registro do componente
+  title: 'Banner', // Nome do componente que será apresentado para o usuário (lojista)
+  editable: true // indica que o componente é editável
+})
 class Banner extends React.Component {
-  // Definimos algumas propriedades necessárias para que o Storefront Editor consiga fazer a mágica
-  static storefront = {
-    // O valor da propriedade "name" deve ser o mesmo valor da propriedade name no momento do registro do componente
-    name: 'Banner@alphateam.my-first-app',
-    // Esse é o nome que o lojista vai ver na interface para identificar o componente
-    title: 'Banner'
-  }
-
   render() {
     let imageUrl = 'http://i.imgur.com/jbBNeR3.jpg';
 
@@ -135,7 +161,7 @@ Abra a URL: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.m
 
 ## Criando o componente de edição
 
-Vamos criar nosso primeiro componente na pasta `src/editors/`. Crie o componente chamado `BannerEditor.jsx` com o código:
+Vamos criar nosso primeiro componente na pasta `src/editors/BannerEditor/`. Crie o componente chamado `BannerEditor.js` com o código:
 
 ```js
 import React from 'react';
@@ -166,11 +192,11 @@ export default BannerEditor;
 
 É definido por convenção que todos os componentes editors tenham o nome com o sufixo "Editor", ex: "BannerEditor".
 
-Vamos registrar o componente de edição no arquivo `src/my-first-app-editor.jsx` para que o Storefront Editor consiga acessá-lo. Copie o código:
+Vamos registrar o componente de edição no arquivo `src/editors/index.js` para que o Storefront Editor consiga acessá-lo. Copie o código:
 
 ```js
-import BannerEditor from 'editors/BannerEditor';
-import { dispatcher } from 'sdk';
+import { actions } from 'sdk';
+import BannerEditor from './BannerEditor/BannerEditor';
 
 let components = [
   {
@@ -179,7 +205,7 @@ let components = [
   }
 ];
 
-dispatcher.actions.ComponentActions.register(components);
+actions.ComponentActions.register(components);
 ```
 
 Abra a URL: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/) e clique no botão de edição. O componente de edição será aberto na tela.
@@ -198,17 +224,17 @@ Altere o método `render` da "HomePage":
 render() {
   return (
     <div>
-      <h1>Hello world!</h1>
-
       <Banner id="banner-1" route="home"/>
 
+      <HelloWorld />
+      <p className="message">Crie, construa, inove!</p>
       <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
     </div>
   );
 }
 ```
 
-Observe que atribuímos o id "banner-1" e passamos o nome da rota da página. Esses dois parâmetros (`id` e `route`) formam a identificação única do componente no Storefront.
+Observe que atribuímos o id "banner-1" e passamos o nome da rota. Esses dois parâmetros (`id` e `route`) formam a identificação única do componente no Storefront.
 
 #### Ajustando o componente editor
 
@@ -273,18 +299,21 @@ Por fim, vamos pegar as configurações salvas na Gallery e usá-las no componen
 
 ```js
 import React from 'react';
-import { editable, dispatcher } from 'sdk';
+import { storefront } from 'sdk';
 
-@editable(dispatcher)
-class Banner extends React.Component {  
-  static storefront = {
-    name: 'Banner@alphateam.my-first-app',
-    title: 'Banner'
-  }
-
+@storefront({
+  name: 'Banner@alphateam.my-first-app',
+  title: 'Banner',
+  editable: true
+})
+class Banner extends React.Component {
   render() {
-    let settings = this.props.settings;
-    let imageUrl = settings ? settings.get('imageUrl') : 'http://i.imgur.com/jbBNeR3.jpg';
+    let imageUrl = 'http://i.imgur.com/jbBNeR3.jpg';
+
+    // Pega as configurações do componente
+    if (this.props.settings) {
+      imageUrl = settings.get('imageUrl');
+    }
 
     return (
       <div className="banner">
@@ -297,7 +326,7 @@ class Banner extends React.Component {
 export default Banner;
 ```
 
-O componente com a anotação "editable" recebe suas configurações automaticamente pela prop "settings".
+O componente com a decorador `@storefront` recebe suas configurações automaticamente pela prop `settings`.
 
 ---
 

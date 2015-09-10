@@ -26,8 +26,9 @@ yo vtex:storefront
 
 Responda o generator com:
 - "my-first-app"
-- "My first app"
 - "alphateam"
+- "yes" (ou "y")
+- "yes" (ou "y")
 
 Você verá que algumas pastas e arquivos foram criados e as dependências do node foram instaladas. Sua app agora deve parecer com isso:
 
@@ -38,10 +39,7 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 │   ├── components/
 │   ├── editors/
 │   ├── pages/
-│   ├── styles/
-│   ├── utils/
-│   ├── my-first-app-editor.jsx
-│   └── my-first-app.jsx
+│   └── utils/
 ├── storefront/
 │   ├── assets/
 │   ├── components/
@@ -72,21 +70,9 @@ Aqui ficam os componentes que são usados para criar editores: componentes que f
 
 Os arquivos nesta pasta são componentes React responsáveis por responder por uma rota.
 
-### src/styles/
-
-Os arquivos LESS ficam dentro dessa pasta.
-
 ### src/utils/
 
-Arquivos Javascript que não se encaixam nas outras pastas.
-
-### src/my-first-app.jsx
-
-O principal arquivo da aplicação, o ponto de partida de sua app.
-
-### src/my-first-app-editor.jsx
-
-O arquivo da aplicação voltado para os componentes editores.
+Componentes React utilitários e outros arquivos Javascript.
 
 ### .eslintrc
 
@@ -155,7 +141,7 @@ Essa opção liga um servidor local, o Webpack Dev Server, que permite utilizar 
 
 Como mudamos de domínio, de `beta.myvtex.com` para `local.myvtex.com`, devemos configurar os cookies de sandbox e workspace novamente.
 
-Faça uma alteração no componente `HomePage.jsx` ou em um arquivo CSS e veja as mudanças aplicadas sem dar reload na página.
+Faça uma alteração no componente `HomePage.js` ou em um arquivo CSS e veja as mudanças aplicadas sem dar reload na página.
 
 ---
 

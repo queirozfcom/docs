@@ -17,7 +17,7 @@ Responda as perguntas do generator:
 - Não inclua o "react-router"
 - Não use nenhuma arquitetura
 - Use LESS
-- Use a extensão ".jsx (deprecated)"
+- Use a extensão ".js"
 
 Ele irá instalar as dependências, isso pode levar alguns minutos.
 
