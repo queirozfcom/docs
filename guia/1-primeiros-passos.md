@@ -36,7 +36,7 @@ Rode o seguinte comando para iniciar o `generator-vtex`:
 yo vtex:storefront --simple
 ```
 
-Em algumas instalações do node, o comando acima pode dar erro. Tente rodar o comando com `sudo`.
+Em algumas instalações do node, o comando acima pode dar erro. Se tiver problemas, rode o comando com `sudo`.
 
 Este processo irá criar a estrutura de pastas e arquivos iniciais de sua App.
 
@@ -80,7 +80,7 @@ Precisamos de duas coisas para criar um ambiente de desenvolvimento: um workspac
 
 ### Workspace
 
-Uma loja guarda diversas configurações: quais apps estão instaladas e qual imagem deve aparecer no banner da home, por exemplo. Este conjunto de configurações fica em um workspace. O workspace de produção chama-se `master`. Para fazer uma alteração no workspace de produção, é preciso fazer as alterações em um novo workspace e, em seguida, promover esse workspace para `master`.
+Uma loja possui diversas configurações: quais apps estão instaladas e qual imagem deve aparecer no banner da home, por exemplo. Este conjunto de configurações fica guardada em um workspace. O workspace de produção chama-se `master`. Para fazer uma alteração no workspace de produção, é preciso fazer as alterações em um novo workspace e, em seguida, promover esse workspace para `master`.
 
 Para desenvolvermos nossa primeira app, precisaremos criar um novo workspace.
 
@@ -88,14 +88,14 @@ Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin
 
 ### Sandbox
 
-É um ambiente de desenvolvimento de apps. Para entender como uma sandbox funciona, devemos entender primeiro como a Gallery funciona.
+A Sandbox é um ambiente de desenvolvimento de apps. Para entender como funciona, devemos entender primeiro como a Gallery funciona.
 
 Este é o fluxo de dados de uma loja no StoreFront:
 
 1. Usuário abre uma página da loja
 2. Servidor verifica quais apps estão instaladas
 3. Servidor processa os arquivos das apps que estão armazenadas na Gallery
-4. Servidor responde a página para o usuário
+4. Servidor responde com a página para o usuário
 
 A sandbox cria uma espécie de Gallery temporária e privada para facilitar o desenvolvimento de apps. Sem ela, um desenvolvedor teria que lançar uma versão nova de sua app na Gallery e instalar a app para ver as mudanças.
 
@@ -108,7 +108,7 @@ Quando o desenvolvedor usa uma sandbox, o fluxo é o seguinte:
 3. Servidor processa os arquivos das apps que estão armazenadas na Gallery
 4. Servidor responde a página para o usuário
 
-A sandbox é ótima e ela será sua nova amiga!
+A sandbox é ótima! Ela será sua nova amiga :)
 
 ### Ativando o workspace e a sandbox
 
@@ -118,9 +118,9 @@ Primeiro, entre na URL da loja no ambiente de desenvolvimento:
 
 [http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
 
-Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome ("F12" ou "command+option+i") e clique na aba "Cookies", clique com o botão direito do mouse e, em seguida, em "Add new cookie".
+Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome (`F12` ou `command+option+i`), escolha a aba "Cookies", clique com o botão direito do mouse e em seguida, "Add new cookie".
 
-Vamos criar dois cookie, um para o workspace e outro para a sandbox.
+Vamos criar dois cookies, um para o workspace e outro para a sandbox.
 
 #### Criando o cookie do workspace
 
