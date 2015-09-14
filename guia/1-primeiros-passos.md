@@ -67,7 +67,7 @@ Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de comp
 
 ### meta.json
 
-Todas as apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas diversas informações sobre sua app como o nome (`name`), nome amigável (`title`), descrição (`description`), depedências de outras apps (`dependencies`) e quais serviços são usados (`schemas`).
+Todas as apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas diversas informações sobre sua app como o nome (`name`), nome amigável (`title`), descrição (`description`) e depedências de outras apps (`dependencies`).
 
 ### .vtexignore
 
