@@ -24,9 +24,9 @@ A VTEX Gallery permite que desenvolvedores e agências publiquem apps — gratui
 
 Apps disponibilizados na Gallery são mais poderosos que as antigas extensões da VTEX Store, pois oferecem funcionalidades que podem interagir com todos os sistemas da VTEX.
 
-### Storefront Framework
+### Storefront
 
-A nova base de desenvolvimento de aplicativos da plataforma VTEX é o StoreFront Framework, que permite a desenvolvedores e agências criar apps e temas editáveis que podem ser instalados automaticamente na loja e configuradas pelo usuário no Storefront CMS.
+A nova base de desenvolvimento de aplicativos da plataforma VTEX é o StoreFront, que permite a desenvolvedores e agências criar apps e temas editáveis que podem ser instalados automaticamente na loja e configuradas pelo usuário no Storefront Editor.
 
 ### Storefront Editor
 
