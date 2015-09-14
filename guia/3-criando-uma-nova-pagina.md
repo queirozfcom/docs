@@ -2,12 +2,13 @@
 
 Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
 
-- **route**: O componente com nome "HomePage" da sua app (nesse caso "alphateam.my-first-app") irá atender o path `/` e ela será identificada no código como "home"
-- **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página, e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar nessa página
+- **route**: O componente de sua app com nome "HomePage" (neste caso "alphateam.my-first-app") irá atender o path `/` e será identificado no código como "home".
+
+- **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar na página.
 
 ### Gerando os arquivos de uma nova página
 
-Vamos usar novamente o generator, dessa vez, para gerar os arquivos necessários para se criar uma nova página.
+Vamos usar novamente o generator: dessa vez, para gerar os arquivos necessários para se criar uma nova página.
 
 Abra o terminal na pasta do seu projeto e digite:
 ```
@@ -20,22 +21,20 @@ E responda as perguntas com:
 - "/:product/p"
 - "y"
 
-Ele acabou de criar os arquivos:
+O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 
 - `src/pages/ProductPage/ProductPage.js`
 - `src/pages/ProductPage/index.js`
 - `storefront/components/ProductPage.json`
 
-E alterou o `webpack.config.js`.
-
-Entre na URL:
+Para ver o componente gerado, entre na URL:
 
 [http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
 
 Você deve ver um texto na tela:
 > My new component ProductPage!
 
-Está tudo funcionando! Agora, vamos explicar o que cada arquivo gerado faz.
+Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gerados faz.
 
 ### Arquivo de definição do componente
 
