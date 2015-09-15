@@ -181,7 +181,7 @@ U storefront/components/HomePage.json
 
 O que o Toobelt acabou de fazer foi:
 
-- Ler o arquivo `meta.json` e o vendor e o nome da sua app
+- Ler do arquivo `meta.json`, o nome e o vendor de sua app
 - Ler o arquivo `.vtexignore` e guardar quais arquivos ela não deve fazer upload
 - Upload de todos os arquivos que não estão na lista de arquivos do `.vtexignore`
 
