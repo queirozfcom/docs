@@ -168,7 +168,7 @@ Copie e cole o código abaixo no arquivo `src/pages/HomePage/HomePage.js`:
 
 ```js
 import React from 'react';
-import 'styles/style.less';
+import './HomePage.less';
 import HelloWorld from 'components/HelloWorld/HelloWorld';
 import { Link } from 'react-router';
 
