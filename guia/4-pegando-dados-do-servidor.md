@@ -23,7 +23,8 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
     }
   },
   "assets": [
-    "my-first-app.js"
+    "common.js",
+    "ProductPage.js"
   ]
 }
 ```
