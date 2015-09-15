@@ -27,7 +27,7 @@ E responda as perguntas com:
 - "Page"
 - "ProductPage"
 - "product"
-- "/:product/p"
+- "/:slug/p"
 - "y"
 
 O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
