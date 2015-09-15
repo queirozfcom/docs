@@ -25,13 +25,12 @@ Caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://ch
 
 Vamos criar nossa primeira app no Storefront. Crie uma pasta com o nome "my-first-app" e abra o terminal nela.
 
-Responda o generator com:
+Rode o `generator-vtex`, o responda com:
 
 - Dê o nome de "my-first-app"
-- Coloque "My first app" como friendly name
 - Digite "alphateam" como vendor
 
-Rode o seguinte comando para iniciar o `generator-vtex`:
+Use o seguinte comando para iniciá-lo:
 ```sh
 yo vtex:storefront --simple
 ```
