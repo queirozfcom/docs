@@ -312,7 +312,7 @@ class Banner extends React.Component {
 
     // Pega as configurações do componente
     if (this.props.settings) {
-      imageUrl = settings.get('imageUrl');
+      imageUrl = this.props.settings.get('imageUrl');
     }
 
     return (
