@@ -98,7 +98,7 @@ Note que colocamos o arquivo `HomePage.js`, já que o componente é inserido no 
 
 ### Registrando o componente
 
-Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/pages/HomePage/HomePage.js`.
+Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/pages/HomePage/index.js`.
 
 ```js
 import { actions } from 'sdk';
