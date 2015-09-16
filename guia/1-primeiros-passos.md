@@ -184,7 +184,7 @@ U storefront/components/HomePage.json
 ... files uploaded
 ```
 
-O que o Toobelt acabou de fazer foi:
+O que o Toolbelt acabou de fazer foi:
 
 - Ler do arquivo `meta.json`, o nome e o vendor de sua app
 - Ler o arquivo `.vtexignore` e guardar quais arquivos ela não deve fazer upload
