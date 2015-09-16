@@ -10,15 +10,6 @@ Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o s
 
 Vamos usar novamente o generator: dessa vez, para gerar os arquivos necessários para se criar uma nova página.
 
-----
-### Oi, pessoal de SP!
-
-Foi encontrado um bug e já foi corrigido. Por favor instalar o generator novamente:
-```
-npm install -g generator-vtex
-```
-----
-
 Abra o terminal na pasta do seu projeto e digite:
 ```
 yo vtex:component
