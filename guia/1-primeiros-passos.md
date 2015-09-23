@@ -1,31 +1,5 @@
 # Primeiros Passos
 
-## Setup
-
-Para começar, instale o [node](https://gist.github.com/brenoc/534729c806dc0d4ca917) em sua máquina.
-
-Abra o terminal e instale alguns pacotes que serão úteis nesse guia:
-
-```sh
-npm install -g yo generator-vtex
-npm install -g vtex
-```
-
-No caso de erro na instalação, use `sudo`.
-
-Em alguns casos no Windows, pode dar o erro `ECONNRESET`, para solucionar digite no terminal:
-```
-npm config set registry http://registry.npmjs.org/
-```
-
-Os pacotes yo ([Yeoman](http://yeoman.io/)) e [generator-vtex](https://github.com/vtex/generator-vtex/) são pacotes que geram a estrutura de pastas de apps automaticamente.
-
-O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt). O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você publique apps na Gallery e desenvolva localmente.
-
-Para isso e para ver suas alterações, é necessário criar um cookie específico em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
-
-Caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
-
 ## Criando a primeira app
 
 Vamos criar nossa primeira app no Storefront. Crie uma pasta com o nome "my-first-app" e abra o terminal nela.
