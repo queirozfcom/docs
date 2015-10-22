@@ -230,12 +230,13 @@ import { stores, actions } from 'sdk';
 import { Link } from 'react-router';
 
 class ProductPage extends React.Component {
-  // Define o state default do component
-  state = {
-    product: null
-  }
+  constructor(props){
+    super(props);
 
-  componentWillMount() {
+    this.state = {
+      product: stores.ProductStore.getState().get(this.props.params.slug)
+    }
+
     // Escuta as mudanças da "ProductStore", registramos o método "onChange" como callback
     stores.ProductStore.listen(this.onChange);
 
