@@ -245,7 +245,7 @@ class ProductPage extends React.Component {
     if (!stores.ResourceStore.getState().get(currentURL)) {
       // Pede os resources da página "product" passando os parâmetros necessários (neste caso o slug)
       // Essa action faz uma chamada AJAX ao servidor do Storefront
-      actions.ResourceActions.getRouteResources(pathname, 'product', this.props.params);
+      actions.ResourceActions.getRouteResources(currentURL, 'product', this.props.params);
     }
   }
 
@@ -273,7 +273,7 @@ class ProductPage extends React.Component {
     return (
       <div>
         <h1>Essa é a página do produto: {productName}</h1>
-        <Link to="home">Ir para a home</Link>
+        <Link to="/">Ir para a home</Link>
       </div>
     );
   }
