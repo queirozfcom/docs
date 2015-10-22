@@ -10,11 +10,11 @@ Para ter uma boa introdução ao React, recomendamos fazer o [tutorial oficial](
 
 Vamos usar diversas ferramentas desenvolvidas em node, para isso, e essencial que o tenha instalado no computador.
 
-[Instruções de como instalar o node.](https://todo)
+[Instruções de como instalar o node.](https://gist.github.com/brenoc/534729c806dc0d4ca917)
 
 ### Windows
 
-Caso use o Windows, instale o [Git Bash](https://todo) e o [ConEmu](https://todo), eles facilitam o uso do terminal. Depois configure o ConEmu para usar o Git Bash ([instruções](https://todo)).
+Caso use o Windows, instale o [Git Bash](https://git-for-windows.github.io/) e o [ConEmu](https://conemu.github.io/), eles facilitam o uso do terminal. Depois configure o ConEmu para usar o Git Bash ([instruções](https://gist.github.com/brenoc/fb704b6217fa24e26c97)).
 
 ## Pacotes Node
 
