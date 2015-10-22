@@ -100,7 +100,7 @@ Para fazer o build do projeto vamos usar o Webpack.
 
 Abra o terminal na pasta de sua app e rode o webpack (por padrão, ele está dando watch na pasta `src/`):
 ```sh
-webpack
+./node_modules/.bin/webpack
 ```
 
 Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. Todos eles são códigos Javascript minificados com respectivos *source maps* (arquivos que facilitam debugar o código em ferramentas como o Chrome Developer Tools). Perceba que mesmo tendo arquivos LESS no código fonte, nos arquivos gerados existem apenas arquivos Javascript. O Webpack coloca todo o código CSS dentro do Javascript para se alavancar do cache do browser. Ele também se encarrega de inserir o CSS no código HTML, fazendo com que tudo funcione normalmente.
