@@ -224,26 +224,20 @@ import { Link } from 'react-router';
 class ProductPage extends React.Component {
   // Define o state default do component
   state = {
-    // Pega o estado atual da "ProductStore" (provavelmente aqui ela está sem o dado do produto)
-    ProductStore: stores.ProductStore.getState()
+    product: null
   }
 
   componentWillMount() {
     // Escuta as mudanças da "ProductStore", registramos o método "onChange" como callback
     stores.ProductStore.listen(this.onChange);
 
-    // Pega o contexto do site
-    let context = stores.ContextStore.getState();
-    // Pega o pathname da rota
-    let pathname = context.getIn(['route', 'pathname']);
-
+    // Pega o path atual
+    let currentURL = (window.location.pathname + window.location.search);
     // Caso a "ResourceStore" não tenha os resources da pagina carregada
-    if (!stores.ResourceStore.getState().get(pathname)) {
-      // Pega os parametros da página, (o método "toJS" transforma um objeto Immutable em um objeto Javascript)
-      let params = context.getIn(['route', 'params']).toJS(); // { slug: 'short-balneario'}
+    if (!stores.ResourceStore.getState().get(currentURL)) {
       // Pede os resources da página "product" passando os parâmetros necessários (neste caso o slug)
       // Essa action faz uma chamada AJAX ao servidor do Storefront
-      actions.ResourceActions.getRouteResources(pathname, 'product', params);
+      actions.ResourceActions.getRouteResources(pathname, 'product', this.props.params);
     }
   }
 
@@ -258,18 +252,13 @@ class ProductPage extends React.Component {
     // Muda o estado do componente, isso fará com que ele renderize novamente
     this.setState({
       // Pega o estado atual da store (provavelmente agora ela terá os dados do produto)
-      ProductStore: stores.ProductStore.getState()
+      product: stores.ProductStore.getState().get(this.props.params.slug)
     });
   }
 
   render() {
-    // Pega o estado atual da ContextStore
-    let context = stores.ContextStore.getState();
-    // Pega o parametro slug da rota
-    let slug = context.getIn(['route', 'params', 'slug']);
-
-    // Pega o produto com o slug da rota
-    let product = this.state.ProductStore.get(slug);
+      // Pega o produto com o slug da rota
+    let product = this.state.product;
 
     let productName = product ? product.name : 'carregando...';
 
