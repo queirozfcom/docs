@@ -73,7 +73,7 @@ export default ProductPage;
 
 ```
 
-Veja que estamos usando a função `getIn`. Isso é um método de objetos do Immutable.
+Veja que estamos usando a função `get`. Isso é um método de objetos do Immutable.
 
 > Mas o quê?
 
@@ -86,31 +86,39 @@ Todas as stores fornecidas pelo SDK usam a biblioteca [Immutable](http://faceboo
 1. Comparação de objetos de forma extremamente eficiente (em tempo [O(1)](https://en.wikipedia.org/wiki/Analysis_of_algorithms#Orders_of_growth))
 2. Segurança de que nenhuma outra parte do código vai alterar o objeto que você está usando
 
-Imagine o seguinte objeto da ContextStore:
+Imagine o seguinte objeto da ProdutStore:
 
 ```js
-var context = ContextStore.getState();
+var products = ProductStore.getState();
 // {
-//   "accountName": "basedevmkp",
-//   "route": {
-//     "params": {
-//       "slug": "short-balneario"
+//   "camisa-polo": {
+//     "name": "Camisa Polo",
+//     "slug": "camisa-polo",
+//     "brand": {
+//       "name": "Lacoste",
+//       "slug": "lacoste"
 //     }
+//     ...
+//   },
+//   "meia-branca": {
+//     "name": "Meia branca",
+//     "slug": "meia-branca",
+//     ...
 //   }
 // }
 ```
 
-Para pegarmos o valor da propriedade accountName:
+Para pegarmos os dados do produto "camisa-polo":
 
 Em um JSON| Em um objeto Immutable
 ---|---
-`context.accountName`|`context.get('accountName')`
+`products["camisa-polo"]`|`products.get('camisa-polo')`
 
-Para pegarmos o valor da propriedade slug:
+Para pegarmos o nome da marca da "camisa-polo":
 
 Em um JSON| Em um objeto Immutable
 ---|---
-`context.route.params.slug`|`context.getIn(['route', 'params', 'slug'])`
+`products["camisa-polo"].brand.name`|`products.getIn(['camisa-polo', 'brand', 'name'])`
 
 Para este guia, essas informações são o suficiente. Porém, existem outros métodos bastante úteis: você pode ler sobre eles na [documentação do Immutable](http://facebook.github.io/immutable-js/docs/).
 
