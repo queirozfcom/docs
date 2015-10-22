@@ -58,7 +58,7 @@ class HomePage extends React.Component {
 
         <HelloWorld />
         <p className="message">Crie, construa, inove!</p>
-        <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
+        <Link to="/short-balneario/p">Ver produto Short Balneário</Link>
       </div>
     );
   }
@@ -117,12 +117,6 @@ let component = [
 ];
 
 actions.ComponentActions.register(component);
-
-// Enable react hot loading with external React
-// see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
-if (module.hot) {
-  window.RootInstanceProvider = require('react-hot-loader/Injection').RootInstanceProvider;
-}
 ```
 
 ### Usando `@storefront` e adicionando informações ao componente
@@ -228,7 +222,7 @@ render() {
 
       <HelloWorld />
       <p className="message">Crie, construa, inove!</p>
-      <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
+      <Link to="/short-balneario/p">Ver produto Short Balneário</Link>
     </div>
   );
 }

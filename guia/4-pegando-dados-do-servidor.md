@@ -49,8 +49,6 @@ import { stores } from 'sdk';
 
 class ProductPage extends React.Component {
   render() {
-    // Pega o estado atual da ContextStore
-    let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
     let slug = this.props.params.slug;
 
@@ -144,8 +142,6 @@ import { Link } from 'react-router';
 
 class ProductPage extends React.Component {
   render() {
-    // Pega o estado atual da ContextStore
-    let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
     let slug = this.props.params.slug;
 
