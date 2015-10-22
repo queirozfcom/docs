@@ -52,7 +52,7 @@ class ProductPage extends React.Component {
     // Pega o estado atual da ContextStore
     let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
-    let slug = context.getIn(['route', 'params', 'slug']);
+    let slug = this.props.params.slug;
 
     // Pega o estado atual da ProductStore
     let ProductStore = stores.ProductStore.getState();
@@ -139,7 +139,7 @@ class ProductPage extends React.Component {
     // Pega o estado atual da ContextStore
     let context = stores.ContextStore.getState();
     // Pega o parametro slug da rota
-    let slug = context.getIn(['route', 'params', 'slug']);
+    let slug = this.props.params.slug;
 
     // Pega o estado atual da ProductStore
     let ProductStore = stores.ProductStore.getState();
@@ -151,7 +151,7 @@ class ProductPage extends React.Component {
     return (
       <div>
         <h1>Essa é a página do produto: {productName}</h1>
-        <Link to="home">Ir para a home</Link>
+        <Link to="/">Ir para a home</Link>
       </div>
     );
   }
@@ -178,7 +178,7 @@ class HomePage extends React.Component {
       <div>
         <HelloWorld />
         <p className="message">Crie, construa, inove!</p>
-        <Link to="product" params={{slug: 'short-balneario'}}>Ver produto Short Balneário</Link>
+        <Link to="/short-balneario/p">Ver produto Short Balneário</Link>
       </div>
     );
   }
