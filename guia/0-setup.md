@@ -64,13 +64,6 @@ vtex
 
 O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt). O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você publique apps na Gallery e desenvolva localmente.
 
-
-## Extensão de edição de cookies
-
-Para o desenvolvimento de apps é necessário criar alguns cookies em seu browser. Para facilitar este processo, instale alguma extensão de edição de cookies no browser.
-
-Caso esteja usando o Google Chrome, recomendamos a [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog).
-
 ## Atom (opcional)
 
 Recomendamos o uso do editor de texto open-source [Atom](http://atom.io) para o desenvolvimento. Caso prefira usar o Sublime ou outro editor de texto, tudo bem.
