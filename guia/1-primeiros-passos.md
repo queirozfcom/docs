@@ -106,7 +106,7 @@ Vamos subir a nossa app na sandbox. Abra o terminal na pasta da app e digite:
 vtex watch
 ```
 
-Ao fazer o login, use `basedevmkp` como account e prossiga com suas credencias da VTEX posteriormente.
+Ao fazer o login, use `basedevmkp` como account e prossiga com suas credenciais da VTEX posteriormente.
 
 Após fazer o login, verá que o Toolbelt mostrará uma linda mensagem e algo assim:
 
