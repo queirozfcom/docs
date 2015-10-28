@@ -90,51 +90,11 @@ A sandbox é ótima! Ela será sua nova amiga :)
 
 ### Ativando o workspace e a sandbox
 
-Para ativar o workspace e sua sandbox você deve adicionar dois cookies em seu browser. Isso é necessário para que o servidor verifique qual é a sua sandbox e quais apps estão sendo desenvolvidos nela.
+Para ativar o workspace e sua sandbox você não precisa fazer **nada**. Não, não é uma pegadinha!
 
-Primeiro, entre na URL da loja no ambiente de desenvolvimento:
+Quando você usa o comando necessário para observar seus arquivos e mandá-los para o servidor, fazemos diversas inferências baseados nos seus dados de login e a única coisa que você precisa fazer é clicar/copiar uma URL que o Toolbelt mostra pra você quando termina de enviar seus arquivos.
 
-[http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
-
-Caso você tenha instalado a extensão [Cookie Inspector](https://chrome.google.com/webstore/detail/cookie-inspector/jgbbilmfbammlbbhmmgaagdkbkepnijn?utm_source=chrome-app-launcher-info-dialog), abra o Developer Tools do Chrome (`F12` ou `command+option+i`), escolha a aba "Cookies", clique com o botão direito do mouse e em seguida, "Add new cookie".
-
-Vamos criar dois cookies, um para o workspace e outro para a sandbox.
-
-#### Criando o cookie do workspace
-
-Crie o cookie do workspace.
-
-Nome|Valor
----|---
-vtex_workspace|nomedomeuworkspace
-
-Lembre-se que:
-
-- Os cookies devem ser editados na página: [http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
-- O workspace deve ser criado:
-
-> Vá até [o admin de workspaces](http://basedevmkp.vtexcommercebeta.com.br/admin/gallery#/workspaces), clique em "Novo workspace" e crie um workspace com o seu nome.
-
-
-#### Criando o cookie da sandbox
-
-Para criar o cookie da sandbox, vamos precisar de:
-
-- Nome do `vendor` da app. Neste caso usaremos "alphateam"
-- Nome da sua sandbox. Fique à vontade pra escolher (ele deve ser único!)
-- Nome da sua app. Usaremos "my-first-app"
-
-O formato do cookie:
-
-Nome|Valor
----|---
-vtex_sandbox|`nome-do-vendor/nome-da-sandbox=nome-da-app`
-
-Logo, deve ficar algo assim (certifique-se de colocar o nome da sua sandbox):
-
-Nome|Valor
----|---
-vtex_sandbox|alphateam/nome-da-sandbox=my-first-app
+---
 
 Até então, as coisas não estão funcionando! Agora que temos tudo pronto para pôr a mão na massa, vamos ver o tão esperado "Hello World!".
 
@@ -143,19 +103,23 @@ Até então, as coisas não estão funcionando! Agora que temos tudo pronto para
 Vamos subir a nossa app na sandbox. Abra o terminal na pasta da app e digite:
 
 ```sh
-vtex watch nomedasandbox
+vtex watch
 ```
+
+Ao fazer o login, use `basedevmkp` como account e prossiga com suas credencias da VTEX posteriormente.
 
 Após fazer o login, verá que o Toolbelt mostrará uma linda mensagem e algo assim:
 
 ```
-Watching nomedasandbox
+Watching nomedasuaapp
 
 U meta.json
 U storefront/assets/index.js
 U storefront/components/HomePage.json
 
 ... files uploaded
+
+Your URL: http://basedevmkp.beta.myvtex.com/?workspace=sb_seuemail
 ```
 
 O que o Toolbelt acabou de fazer foi:

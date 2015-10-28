@@ -110,7 +110,7 @@ Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos enviá
 Cancele o processo do webpack ou abra outra aba do terminal e digite:
 
 ```sh
-vtex watch nomedasandbox
+vtex watch
 ```
 
 E confira tudo funcionando no browser.
@@ -121,7 +121,7 @@ Ganhamos a facilidade de escrever em ES6, JSX, LESS, minificar, etc, mas agora t
 
 Abra o terminal na pasta de sua app e digite:
 ```sh
-vtex watch nomedasandbox --webpack
+vtex watch --webpack
 ```
 
 Dessa forma, o Toolbelt se encarrega de rodar o Webpack e fazer o upload dos arquivos.
@@ -132,14 +132,10 @@ Ainda não estamos rápidos o suficiente, vamos usar um dos grandes diferenciais
 
 Pare o Toolbelt que está rodando e ligue-o novamente com a flag `--server`:
 ```
-vtex watch nomedasandbox --server
+vtex watch --server
 ```
 
-Essa opção liga um servidor local, o Webpack Dev Server, que permite utilizar o hot-loader. Normalmente quando desenvolvemos em servidores locais acessamos URLs como `http://localhost:3000/`, no nosso caso, vamos usar a URL:
-
-[http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
-
-Como mudamos de domínio, de `beta.myvtex.com` para `local.myvtex.com`, devemos configurar os cookies de sandbox e workspace novamente.
+Essa opção liga um servidor local, o Webpack Dev Server, que permite utilizar o hot-loader. Normalmente quando desenvolvemos em servidores locais acessamos URLs como `http://localhost:3000/`, no nosso caso, vamos usar a URL que Toolbelt disponibiliza para nós no terminal.
 
 Faça uma alteração no componente `HomePage.js` ou em um arquivo CSS e veja as mudanças aplicadas sem dar reload na página.
 
