@@ -106,6 +106,8 @@ Vamos subir a nossa app na sandbox. Abra o terminal na pasta da app e digite:
 vtex watch
 ```
 
+Note que ao rodar o comando ele irá pedir que você faça um login. Isso é necessário para que possamos enviar os arquivos para a Gallery. Não se preocupe, uma vez logado seu acesso tem duração de 24 horas.
+
 Ao fazer o login, use `basedevmkp` como account e prossiga com suas credenciais da VTEX posteriormente.
 
 Após fazer o login, verá que o Toolbelt mostrará uma linda mensagem e algo assim:
