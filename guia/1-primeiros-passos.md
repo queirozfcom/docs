@@ -86,11 +86,7 @@ O que o Toolbelt acabou de fazer foi:
 - Ler o arquivo `.vtexignore` e guardar quais arquivos ela não deve fazer upload
 - Upload de todos os arquivos que não estão na lista de arquivos do `.vtexignore`
 
-Estes arquivos vão parar dentro da pasta "alphateam.my-first-app", que é o identificador único de uma app dentro da sua sandbox.
-
-Abra a URL da loja em desenvolvimento:
-
-[http://basedevmkp.beta.myvtex.com/](http://basedevmkp.beta.myvtex.com/)
+Abra a URL da loja em desenvolvimento clicando ou copiando o link disponibilizado pelo Toolbelt.
 
 Você deve estar vendo "Hello World!" escrito na tela.
 
