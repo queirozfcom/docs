@@ -58,7 +58,7 @@ Até então, as coisas não estão funcionando! Agora que temos tudo pronto para
 
 ## Hello World!
 
-Vamos subir a nossa app na sandbox. Abra o terminal na pasta da app e digite:
+Vamos subir a nossa app na Gallery. Abra o terminal na pasta da app e digite:
 
 ```sh
 vtex watch
@@ -94,7 +94,7 @@ Abra a URL da loja em desenvolvimento:
 
 Você deve estar vendo "Hello World!" escrito na tela.
 
-O Toolbelt está escutando qualquer modificação feita nos arquivos de sua app. Podemos testar isso abrindo o arquivo `assets/index.js` e alterando o texto "Hello World!". Salve o arquivo. Verá que o Toolbelt fez o upload para a sandbox. Note também que a página deu refresh, isso acontece automaticamente por conta do sistema de livereload.
+O Toolbelt está escutando qualquer modificação feita nos arquivos de sua app. Podemos testar isso abrindo o arquivo `assets/index.js` e alterando o texto "Hello World!". Salve o arquivo. Verá que o Toolbelt fez o upload para a Gallery. Note também que a página deu refresh, isso acontece automaticamente por conta do sistema de livereload.
 
 ---
 
