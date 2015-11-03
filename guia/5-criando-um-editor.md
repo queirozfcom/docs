@@ -8,11 +8,11 @@ O que nos deixa animado sobre os editors é a possibilidade do desenvolvedor da 
 
 Primeiro vamos instalar o app "storefront-editor", ele é responsável por gerar toda a interface de edição. Para instalar abra a URL:
 
-[http://basedevmkp.beta.myvtex.com/admin/gallery#/apps](http://basedevmkp.beta.myvtex.com/admin/gallery#/apps)
+[http://sualoja.beta.myvtex.com/admin/gallery#/apps](http://sualoja.beta.myvtex.com/admin/gallery#/apps)
 
 Abra a URL da loja:
 
-[http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
+[http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/)
 
 É possivel visualizar a interface do Storefront Editor, os lojistas poderão editar a loja clicando no ícone de lápis no canto direito. Nesse momento, nada acontece se clicarmos nesse botão. Vamos construir o primeiro componente editável para que algo aconteça.
 
@@ -69,7 +69,7 @@ export default HomePage;
 
 Mudamos o componente "HomePage" para que o "Banner" seja renderizado na tela.
 
-Confira em: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/)
+Confira em: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/)
 
 ## Transformando um componente comum em editável
 
@@ -151,7 +151,7 @@ class Banner extends React.Component {
 export default Banner;
 ```
 
-Abra a URL: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/) e clique no botão de edição. Veja que o Storefront Editor agora consegue identificar o seu componente como editável.
+Abra a URL: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/) e clique no botão de edição. Veja que o Storefront Editor agora consegue identificar o seu componente como editável.
 
 ## Criando o componente de edição
 
@@ -202,7 +202,7 @@ let components = [
 actions.ComponentActions.register(components);
 ```
 
-Abra a URL: [http://basedevmkp.local.myvtex.com:3000/](http://basedevmkp.local.myvtex.com:3000/) e clique no botão de edição. O componente de edição será aberto na tela.
+Abra a URL: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/) e clique no botão de edição. O componente de edição será aberto na tela.
 
 ### Salvando configurações
 
