@@ -82,6 +82,25 @@ Abra a Settings > Packages e procure por "language-babel", clique no botão "Set
 
 ---
 
+## Sublime Text (opcional)
+
+Caso prefira usar o [Sublime Text](http://www.sublimetext.com/) em seu Workflow, sem problemas. Também podemos facilitar sua vida instalando alguns packages.
+
+### Pacotes Sublime
+
+Abra a tela de comandos digitando `cmd+shift+p` no Mac OS X, ou `ctrl+shift+p` no Linux/Window. Depois digite:
+
+```sh
+Package Control: Install Package
+```
+E procure pelos pacotes:
+
+```sh
+Babel SublimeLinter SublimeLinter-contrib-eslint
+```
+
+---
+
 Você completou o "Setup"! Agora você está preparado para por a mão na massa!
 
 Próximo passo: [Primeiros passos](1-primeiros-passos.md)
