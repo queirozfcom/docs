@@ -79,7 +79,7 @@ U storefront/components/HomePage.json
 
 ... files uploaded
 
-Your URL: http://basedevmkp.beta.myvtex.com/?workspace=sb_seuemail
+Your URL: http://sualoja.beta.myvtex.com/?workspace=sb_seuemail
 ```
 
 O que o Toolbelt acabou de fazer foi:
