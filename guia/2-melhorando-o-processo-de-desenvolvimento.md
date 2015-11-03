@@ -84,7 +84,7 @@ Arquivo importante caso use git, ferramenta de versionamento de código.
 
 ### .vtexignore
 
-O `.vtexignore` impede que arquivos sejam enviados para a Gallery/Sandbox desnecessariamente. Note que a pasta `src/` está incluida nessa lista, pois esse é o código fonte não processado: o que queremos enviar são apenas os arquivos gerados pelo Webpack, que são arquivos compilados, minificados e otimizados que vão morar dentro da pasta `storefront/assets/`.
+O `.vtexignore` impede que arquivos sejam enviados para a Gallery desnecessariamente. Note que a pasta `src/` está incluida nessa lista, pois esse é o código fonte não processado: o que queremos enviar são apenas os arquivos gerados pelo Webpack, que são arquivos compilados, minificados e otimizados que vão morar dentro da pasta `storefront/assets/`.
 
 ### package.json
 
@@ -105,7 +105,7 @@ Abra o terminal na pasta de sua app e rode o webpack (por padrão, ele está dan
 
 Você pode ver que quatro arquivos foram criados na pasta `storefront/assets/`. Todos eles são códigos Javascript minificados com respectivos *source maps* (arquivos que facilitam debugar o código em ferramentas como o Chrome Developer Tools). Perceba que mesmo tendo arquivos LESS no código fonte, nos arquivos gerados existem apenas arquivos Javascript. O Webpack coloca todo o código CSS dentro do Javascript para se alavancar do cache do browser. Ele também se encarrega de inserir o CSS no código HTML, fazendo com que tudo funcione normalmente.
 
-Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos enviá-los para a sandbox.
+Agora que temos os arquivos dentro da pasta `storefront/assets/`, podemos enviá-los para a Gallery.
 
 Cancele o processo do webpack ou abra outra aba do terminal e digite:
 
