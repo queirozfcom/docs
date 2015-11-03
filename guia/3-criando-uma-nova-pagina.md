@@ -29,7 +29,7 @@ O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 
 Para ver o componente gerado, entre na URL:
 
-[http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
+[http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)
 
 Você deve ver um texto na tela:
 > My new component ProductPage!
@@ -60,7 +60,7 @@ A propriedade `assets` indica quais os arquivos necessários para a página. O W
 
 ### O componente React da página
 
-O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
+O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto. 
 
 ```js
 import React from 'react';

@@ -36,7 +36,7 @@ Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetro
 
 O `resourceBinding` liga uma rota a uma chamada a API.
 
-Carregue a página de produto no browser ([http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
+Carregue a página de produto no browser ([http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
 
 ### Criando o componente React da página
 
@@ -124,7 +124,7 @@ Para este guia, essas informações são o suficiente. Porém, existem outros m�
 
 Finalmente, abra a página no browser e veja o nome na tela:
 
-[http://basedevmkp.local.myvtex.com:3000/short-balneario/p](http://basedevmkp.local.myvtex.com:3000/short-balneario/p)
+[http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)
 
 Conseguimos!
 
