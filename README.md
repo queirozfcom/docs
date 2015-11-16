@@ -1,18 +1,18 @@
-# Rebel
+# Storefront
 
-Rebel é o novo framework de desenvolvimento de aplicativos e lojas da VTEX.
+Storefront é o novo framework de desenvolvimento de aplicativos e lojas da VTEX.
 
-Além de oferecer uma gama de novas ferramentas para desenvolvedores, ele vem acompanhado do Rebel CMS, um novo editor que permite aos usuários da plataforma editarem e configurarem suas lojas de maneira rápida e simplificada.
+Além de oferecer uma gama de novas ferramentas para desenvolvedores, ele vem acompanhado do Storefront CMS, um novo editor que permite aos usuários da plataforma editarem e configurarem suas lojas de maneira rápida e simplificada.
 
-O Rebel e o Rebel Editor ainda estão em fase de testes, mas substituirão o atual Portal da VTEX.
+O Storefront e o Storefront Editor ainda estão em fase de testes, mas substituirão o atual Portal da VTEX.
 
 ## Apps
 
 ### O que são Apps
 
-Para apresentarmos o Rebel, é fundamental falarmos do conceito de App, que é peça-chave na nova arquitetura da VTEX. Uma App é uma aplicação ou sistema que desempenha uma funcionalidade quando instalada em uma loja VTEX. O layout de uma loja nada mais é que uma App de Tema instalada na conta da loja.
+Para apresentarmos o Storefront, é fundamental falarmos do conceito de App, que é peça-chave na nova arquitetura da VTEX. Uma App é uma aplicação ou sistema que desempenha uma funcionalidade quando instalada em uma loja VTEX. O layout de uma loja nada mais é que uma App de Tema instalada na conta da loja.
 
-Apps trazem autonomia para lojistas, ao permitir que adicionem novas funcionalidades e customizem o design da loja sem depender diretamente de desenvolvimento por terceiros: a instalação de apps é no Rebel completamente plug & play.
+Apps trazem autonomia para lojistas, ao permitir que adicionem novas funcionalidades e customizem o design da loja sem depender diretamente de desenvolvimento por terceiros: a instalação de apps é no Storefront completamente plug & play.
 
 Por outro lado, o desenvolvimento e comercialização de Apps permitem à agências e desenvolvedores diversificar seu portfolio de produtos e serviços com um sistema de instalação e cobrança sem dores de cabeça.
 
@@ -24,12 +24,12 @@ A VTEX Gallery permite que desenvolvedores e agências publiquem apps — gratui
 
 Apps disponibilizados na Gallery são mais poderosos que as antigas extensões da VTEX Store, pois oferecem funcionalidades que podem interagir com todos os sistemas da VTEX.
 
-### Rebel
+### Storefront
 
-A nova base de desenvolvimento de aplicativos da plataforma VTEX é o Rebel, que permite a desenvolvedores e agências criar apps e temas editáveis que podem ser instalados automaticamente na loja e configuradas pelo usuário no Rebel Editor.
+A nova base de desenvolvimento de aplicativos da plataforma VTEX é o Storefront, que permite a desenvolvedores e agências criar apps e temas editáveis que podem ser instalados automaticamente na loja e configuradas pelo usuário no Storefront Editor.
 
-### Rebel Editor
+### Storefront Editor
 
-Com o Rebel Editor, o usuário lojista pode acessar seu site em modo de edição e configurar seus componentes — seja a imagem de um banner, a quantidade de produtos em uma prateleira ou alguma opção de layout do tema.
+Com o Storefront Editor, o usuário lojista pode acessar seu site em modo de edição e configurar seus componentes — seja a imagem de um banner, a quantidade de produtos em uma prateleira ou alguma opção de layout do tema.
 
-Como o Rebel possui uma natureza modular, o modo de edição de duas lojas podem ser completamente diferentes, dependendo dos apps e componentes instalados por cada uma.
+Como o Storefront possui uma natureza modular, o modo de edição de duas lojas podem ser completamente diferentes, dependendo dos apps e componentes instalados por cada uma.
