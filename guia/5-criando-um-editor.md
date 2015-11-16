@@ -175,7 +175,7 @@ class BannerEditor extends React.Component {
           <input id="url" className="form-control" type="url" placeholder="URL"/>
         </form>
 
-        <ActionBar/>
+        <ActionBar title={this.props.title}/>
       </div>
     );
   }
@@ -273,7 +273,7 @@ class BannerEditor extends React.Component {
                  value={this.state.imageUrl} onChange={this.changeImageUrl} placeholder="URL"/>
         </form>
 
-        <ActionBar onSave={this.handleSave.bind(this)}/>
+        <ActionBar title={this.props.title} onSave={this.handleSave.bind(this)}/>
       </div>
     );
   }
