@@ -10,25 +10,30 @@ Criamos o cenário abaixo apenas para ilustrar o fluxo de desenvolvimento -- voc
 
 Digamos que você queira desenvolver uma app para que usuários deixem Reviews em cada produto da loja -- chamaremos ela de **Product Review**. Entre as funcionalidades da app, uma delas seria exibir uma caixa com as reviews existentes na página de produto.
 
-[Gráfico com app de review aparecendo na página de produto]
+![Gráfico com app de review aparecendo na página de produto](app_de_review_instalada.png)
+
 
 Para visualizar sua app durante o desenvolvimento, você subirá sua App em uma Sandbox, que permite apenas ao seu usuário visualizar as alterações em desenvolvimento.
 
 Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo com `vtex watch -w`. Sua App já estará instalada na sua loja, exclusivamente em sua Sandbox.
 
-[Gráfico mostrando o fluxo do toolbelt subindo a app]
 
-> Mas como faço para que minha App apareça em minha página de produto?
+![Gráfico mostrando o fluxo do toolbelt subindo a app](toolbelt_dando_watch.png)
 
-[Gráfico mostrando o fluxo do toolbelt subindo a app aparecendo na loja]
-
+> OK, agora a App está instalada em minha loja (na Sandbox)... mas como faço para que apareça em minha página de produto?
 
 Isto depende de como o Tema da sua loja (também uma App) foi desenvolvido:
 
- - Caso seu Tema seja **[Flexível (CONCEITO PENDENTE)](#)** e possua um componente `Área` na página de produto, basta entrar no `Modo CMS` e configurar sua página de produto para exibir sua App **Product Review**.
+ - Caso sua loja use um **[Tema Flexível](#)** (CONCEITO PENDENTE) e possua um componente `Área` na página de produto, basta entrar no `Modo CMS` e configurar sua página de produto para exibir sua App em desenvolvimento. Lembre-se que ela só está instalada em sua Sandbox, ou seja, ninguém mais poderá vê-la!
 
-[Gráfico mostrando edição da página de produto e seleção do review]
+![Gráfico mostrando edição da página de produto e seleção do review](adicionando_a_app_na_area.png)
 
- - Caso seu tema tenha não seja `Flexível`, você precisará de seu código-fonte para editá-lo localmente. Neste caso, você deverá [importar o App (GUIA PENDENTE)](#) dentro de seu Tema e rodar o Tema em uma segunda instância do Toolbelt.
+ - Caso seu tema tenha não seja `Flexível`, você precisará de seu código-fonte para editá-lo localmente. Neste caso, você deverá importar a App dentro de seu Tema e rodar o Tema em uma segunda instância do Toolbelt.
 
-[Gráfico mostrando dois terminais rodando com tema e app sendo pushed]
+ Veja nosso guia para aprender a [importar uma App como dependência em seu Tema](#) **(GUIA PENDENTE)**.
+
+![Gráfico mostrando dois terminais rodando com tema e app sendo pushed](subindo_tema_e_app_pelo_toolbelt.png)
+
+---
+
+Ao terminar o desenvolvimento de sua App, você pode usar o comando `vtex publish` para deixá-la disponível a lojas na Gallery. Saiba mais sobre este processo em [Finalizando e Publicando sua App](#) (**GUIA PENDENTE**).
