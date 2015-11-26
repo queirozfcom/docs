@@ -34,4 +34,4 @@ Como o Storefront possui uma natureza modular, o modo de edição de duas lojas 
 
 Toolbelt é uma ferramenta de linha de comando criada para melhorar sua experiência de desenvolvimento de Apps para o Storefront.
 
-Com ele é possível dar `watch` na pasta de seu projeto e ver todas as alterações aparecendo em seu browser em tempo real. Além disso, ele também possui um comando `publish`, para publicar sua App na Gallery quando estiver pronta.
+Com ele é possível dar `watch` na pasta de seu projeto e ver todas as alterações aparecendo no browser em tempo real. Além disso, ele também possui um comando `publish`, para publicar sua App na Gallery quando estiver pronta.

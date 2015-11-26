@@ -1,5 +1,34 @@
 # Ambiente de Desenvolvimento
 
-O ambiente de desenvolvimento do Storefront envolve mais de uma ferramenta e foi pensado para garantir mais velocidade e praticidade para devs, mas garantindo que as apps possam ser devidamente validadas antes de ir para produção.
+O ambiente de desenvolvimento do Storefront foi pensado para garantir mais velocidade e praticidade para desenvolvedores, garantindo que suas apps possam ser facilmente validadas antes de ir para produção.
 
-  
+Depois de rodar o [setup inicial](1-setup-inicial.md) em seu projeto, você irá usar o Toolbelt para visualizar sua app rodando sobre um ambiente de testes durante o desenvolvimento.
+
+Criamos o cenário abaixo apenas para ilustrar o fluxo de desenvolvimento -- você pode vê-lo com mais detalhes em nosso tutorial, [Criando sua Primeira App](3-criando-sua-primeira-app.md).
+
+---
+
+Digamos que você queira desenvolver uma app para que usuários deixem Reviews em cada produto da loja -- chamaremos ela de **Product Review**. Entre as funcionalidades da app, uma delas seria exibir uma caixa com as reviews existentes na página de produto.
+
+[Gráfico com app de review aparecendo na página de produto]
+
+Para visualizar sua app durante o desenvolvimento, você subirá sua App em uma Sandbox, que permite apenas ao seu usuário visualizar as alterações em desenvolvimento.
+
+Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo com `vtex watch -w`. Sua App já estará instalada na sua loja, exclusivamente em sua Sandbox.
+
+[Gráfico mostrando o fluxo do toolbelt subindo a app]
+
+> Mas como faço para que minha App apareça em minha página de produto?
+
+[Gráfico mostrando o fluxo do toolbelt subindo a app aparecendo na loja]
+
+
+Isto depende de como o Tema da sua loja (também uma App) foi desenvolvido:
+
+ - Caso seu Tema seja **[Flexível (CONCEITO PENDENTE)](#)** e possua um componente `Área` na página de produto, basta entrar no `Modo CMS` e configurar sua página de produto para exibir sua App **Product Review**.
+
+[Gráfico mostrando edição da página de produto e seleção do review]
+
+ - Caso seu tema tenha não seja `Flexível`, você precisará de seu código-fonte para editá-lo localmente. Neste caso, você deverá [importar o App (GUIA PENDENTE)](#) dentro de seu Tema e rodar o Tema em uma segunda instância do Toolbelt.
+
+[Gráfico mostrando dois terminais rodando com tema e app sendo pushed]
