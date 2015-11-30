@@ -47,7 +47,7 @@ yo
 
 ### Generator VTEX
 
-O [generator-vtex](https://github.com/vtex/generator-vtex/) é um gerador de estrutura de pastas para apps VTEX. Ao rodar o Generator você terá toda a estrutura básica necessária para começar a desenvolver sua app.
+O [generator-vtex](https://github.com/vtex/generator-vtex/) é um gerador de estrutura de pastas para apps VTEX. Ao rodar o Generator você terá toda a estrutura básica necessária para começar a desenvolver seu App.
 
 ```sh
 npm install -g generator-vtex
@@ -63,7 +63,7 @@ yo vtex
 
 O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt).
 
-O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva sua app localmente vendo mudanças no browser em tempo real, além de publicar suas apps na Gallery quando estiverem prontas para ir para produção.
+O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva seu App localmente vendo mudanças no browser em tempo real, além de publicar suas apps na Gallery quando estiverem prontas para ir para produção.
 
 ```sh
 npm install -g vtex
