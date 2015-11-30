@@ -15,7 +15,7 @@ Digamos que você queira desenvolver uma app para que usuários deixem Reviews e
 
 Para visualizar a App em sua loja durante o desenvolvimento, você irá subi-la em uma **Sandbox**, que permite que apenas seu usuário visualizar as alterações em desenvolvimento.
 
-Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo com o comando `vtex watch`. Sua App já estará instalada na sua loja, exclusivamente em sua Sandbox. Saiba mais sobre o Toolbelt em sua [documentação oficial](https://www.npmjs.com/package/vtex).
+Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo com o comando `watch`. Sua App já estará instalada na sua loja, exclusivamente em sua Sandbox. Saiba mais sobre o Toolbelt em sua [documentação oficial](https://www.npmjs.com/package/vtex).
 
 > OK, agora a App está instalada em minha loja (na Sandbox)... mas como faço para que apareça de fato em minha página de produto?
 
@@ -23,7 +23,7 @@ Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo co
 
 Isto depende de como o Tema da sua loja (que também é uma App!) foi desenvolvido:
 
- - Caso sua loja use um **[Tema Flexível](#)** (CONCEITO PENDENTE) e possua um componente `Área` na página de produto, basta entrar no `Modo de Edição` e configurar sua `Área` para exibir a App desejada dentro dela.
+ - Caso sua loja use um **[Tema Flexível](../2_conceitos/tema-flexivel.md)** e possua um componente `Área` na página de produto, basta entrar no `Modo de Edição` e configurar sua `Área` para exibir a App desejada dentro dela.
 
  Lembre-se que a App só está instalada na Sandbox, então outros usuários não poderão vê-la.
 
@@ -31,10 +31,10 @@ Isto depende de como o Tema da sua loja (que também é uma App!) foi desenvolvi
 
  - Caso seu tema não seja `Flexível`, você precisará do seu código-fonte para editá-lo localmente. Neste caso, você deverá importar a App dentro de seu Tema e rodar o Tema em uma segunda instância do Toolbelt, como exemplificado no esquema abaixo.
 
- Veja nosso guia para aprender a [importar uma App como dependência em seu Tema](#) **(GUIA PENDENTE)**.
+ Veja nosso guia para aprender a [importar uma App como dependência em seu Tema](4-importar-uma-app-como-dependencia.md).
 
 ![Gráfico mostrando dois terminais rodando com tema e app sendo pushed](pagina_produto_app-e-tema-pelo-toolbelt.png)
 
 ---
 
-Ao terminar o desenvolvimento de sua App, você pode usar o comando `vtex publish` para deixá-la disponível a lojas na Gallery. Saiba mais sobre este processo em [Finalizando e Publicando sua App](#) (**GUIA PENDENTE**).
+Ao terminar o desenvolvimento de sua App, você pode usar o comando `vtex publish` para deixá-la disponível a lojas na Gallery. Saiba mais sobre este processo em [Finalizando e Publicando sua App](5-finalizando-e-publicando-sua-app.md).

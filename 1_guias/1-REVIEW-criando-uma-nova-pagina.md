@@ -1,6 +1,8 @@
 # Criando uma página
 
-Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
+Este guia tem como objetivo a criação de um novo modelo página no Storefront que responda a uma rota — por exemplo, uma página de categoria ou de busca.
+
+Para começar, vamos dar uma olhada no arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
 
 - **route**: O componente de sua app com nome "HomePage" (neste caso "alphateam.my-first-app") irá atender o path `/` e será identificado no código como "home".
 
@@ -15,11 +17,11 @@ Abra o terminal na pasta do seu projeto e digite:
 yo vtex:component
 ```
 E responda as perguntas com:
-- "Page"
-- "ProductPage"
-- "product"
-- "/:slug/p"
-- "y"
+- `Page`
+- `ProductPage`
+- `product`
+- `/:slug/p`
+- `y`
 
 O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 
@@ -34,7 +36,7 @@ Para ver o componente gerado, entre na URL:
 Você deve ver um texto na tela:
 > My new component ProductPage!
 
-Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gerados faz.
+Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gerados faz:
 
 ### Arquivo de definição do componente
 
@@ -60,7 +62,7 @@ A propriedade `assets` indica quais os arquivos necessários para a página. O W
 
 ### O componente React da página
 
-O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto. 
+O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
 
 ```js
 import React from 'react';

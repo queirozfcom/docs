@@ -1,22 +1,24 @@
 # Melhorando o processo de desenvolvimento
 
-Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX é bem estranho. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
+Se você fez o tutorial [Criando sua primeira App](/3-criando-sua-primeira-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
 
-Para resolver tudo isso, usamos a ferramenta de build Webpack e uma estrutura de desenvolvimento opinionada que usa ES6 (e até o 7!), eslint, LESS, react-hot-loader e Webpack:
+Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
 
- - ES6 é a mais recente versão do Javascript que foi lançada em 2015, então já estamos escrevendo. Mas não esquecemos do IE8! Usamos o Babel, uma ferramenta que transforma o código ES6 para a versão do Javascript que a maioria dos browsers entende, que é o ES5.
+Para resolver tudo isso, usamos a ferramenta de build [Webpack](https://webpack.github.io/) e uma estrutura de desenvolvimento opinionada que usa ES6 (e até o 7!), eslint, LESS/Sass e react-hot-loader. Em detalhes:
 
- - eslint é uma ferramenta que padroniza como o código deve ser escrito.
+ - ES6 é a mais recente versão do Javascript que foi lançada em 2015, então já estamos escrevendo. Muitos browsers ainda não são compatíveis com ES6, mas não se preocupe! Usamos o Babel, uma ferramenta que transforma o código Javascript ES6 para a versão ES5, compatível com os browsers de hoje.
 
- - LESS é o pré-processador CSS escolhido pelo VTEX Lab, também um dos mais usados pela comunidade front-end.
+ - Eslint é uma ferramenta que padroniza como o código deve ser escrito.
 
- - O `react-hot-loader` é uma espécie de livereload 2.0 que, ao invés de recarregar toda a página, atualiza apenas o componente React que foi modificado. Isso faz com que o ciclo de desenvolvimento seja *muito* mais rápido.
+ - Você pode escolher entre LESS e Sass como pré-processador CSS para seus componentes.
+
+ - O react-hot-loader é uma espécie de livereload avançado que, ao invés de recarregar toda a página, atualiza apenas o componente React que foi modificado. Isso faz com que o ciclo de desenvolvimento seja *muito* mais rápido.
 
  - Por fim, o Webpack agrega todas essas ferramentas e faz todas funcionarem como mágica, além de minificar imagens, SVGs, Javascript e CSS.
 
 ## Nova estrutura de pastas
 
-Não se apegue à sua app agora, vamos apagar toda essa estrutura e começá-la do zero com essa nova estrutura de desenvolvimento.
+Neste guia vamos apagar toda a estrutura criada no Tutorial básico e começá-la do zero com essa nova estrutura de desenvolvimento.
 
 Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
 
@@ -25,10 +27,10 @@ yo vtex:storefront
 ```
 
 Responda o generator com:
-- "my-first-app"
-- "alphateam"
-- "yes" (ou "y")
-- "yes" (ou "y")
+- `my-first-app`
+- `nome-da-sua-loja`
+- `yes` (ou `y`)
+- `yes` (ou `y`)
 
 Você verá que algumas pastas e arquivos foram criados e as dependências do node foram instaladas. Sua app agora deve parecer com isso:
 
@@ -130,7 +132,7 @@ Dessa forma, o Toolbelt se encarrega de rodar o Webpack e fazer o upload dos arq
 
 Ainda não estamos rápidos o suficiente, vamos usar um dos grandes diferenciais do combo Webpack+React, o hot-loader.
 
-Pare o Toolbelt que está rodando e ligue-o novamente com a flag `--server`:
+Pare o Toolbelt que está rodando e ligue-o novamente com a flag `--server` (ou `-s`):
 ```
 vtex watch --server
 ```
