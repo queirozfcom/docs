@@ -123,3 +123,5 @@ Babel SublimeLinter SublimeLinter-contrib-eslint
 Você completou o Setup inicial do Storefront. Agora você já pode colocar a mão na massa e começar uma app do zero ou customizar uma já existente.
 
 Saiba mais sobre o [ambiente de desenvolvimento](2-ambiente-de-desenvolvimento.md) do Storefront, veja nosso [Tutorial](3-criando-sua-primeira-app.md) para aprender a desenvolver uma App básica ou cheque nossos guias para necessidades mais específicas.
+
+Caso busque informações sobre uso avançado do Storefront, veja [a documentação de nosso SDK](http://vtex-apps.github.io/storefront-sdk/).
