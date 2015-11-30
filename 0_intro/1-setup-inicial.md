@@ -6,7 +6,7 @@ Para ter uma boa introdução ao React, recomendamos fazer o [tutorial oficial](
 
 Você precisará instalar:
 
- - [Node.js](#node-js) (^1.2.2)
+ - [Node.js](#node-js)
  - [Pacotes Node](#pacotes-node)
  - [Yeoman](#yeoman)
  - [Generator VTEX](#generator-vtex)
