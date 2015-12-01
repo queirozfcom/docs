@@ -6,16 +6,16 @@ Para ter uma boa introdução ao React, recomendamos fazer o [tutorial oficial](
 
 Você precisará instalar:
 
- - [Node.js](#node-js)
+ - [Node.js](#nodejs)
  - [Pacotes Node](#pacotes-node)
  - [Yeoman](#yeoman)
  - [Generator VTEX](#generator-vtex)
  - [VTEX Toolbelt](#vtex-toolbelt)
 
 
- - [Configurações específicas para Windows](#configuracoes-para-windows)
- - [Atom (Opcional)](#atom)
- - [Sublime Text (Opcional)](#sublime-text)
+ - [Configurações específicas para Windows](#configurações-para-windows)
+ - [Atom (Opcional)](#atom-opcional)
+ - [Sublime Text (Opcional)](#sublime-text-opcional)
 
 ---
 
@@ -29,7 +29,7 @@ O Storefront usa diversas ferramentas desenvolvidas em Node.js (ou Node), por is
 
 Vamos instalar alguns pacotes Node que usaremos para desenvolver apps no Storefront. Esses pacotes são disponibilizados pelo [NPM](https://www.npmjs.com/) (Node Package Manager).
 
-Caso encontre algum erro durante a instalação de pacotes do Node, leia: [Solução de erros comuns durante a instalação de pacotes node](solucao-de-erros-comuns-durante-a-instalacao-de-pacotes-node.md)
+Caso encontre algum erro durante a instalação de pacotes do Node, leia: [Solução de erros comuns durante a instalação de pacotes node](https://github.com/vtex-apps/docs/blob/refactor/new-docs/1_guias/solucao-de-erros-comuns-durante-a-instalacao-de-pacotes-node.md)
 
 ### Yeoman
 
@@ -122,6 +122,6 @@ Babel SublimeLinter SublimeLinter-contrib-eslint
 
 Você completou o Setup inicial do Storefront. Agora você já pode colocar a mão na massa e começar uma app do zero ou customizar uma já existente.
 
-Saiba mais sobre o [ambiente de desenvolvimento](2-ambiente-de-desenvolvimento.md) do Storefront, veja nosso [Tutorial](3-criando-sua-primeira-app.md) para aprender a desenvolver uma App básica ou cheque nossos guias para necessidades mais específicas.
+Saiba mais sobre o [ambiente de desenvolvimento](4-ambiente-de-desenvolvimento.md) do Storefront, veja nosso [Tutorial](2-criando-sua-primeira-app.md) para aprender a desenvolver uma App básica ou cheque nossos guias para necessidades mais específicas.
 
 Caso busque informações sobre uso avançado do Storefront, veja [a documentação de nosso SDK](http://vtex-apps.github.io/storefront-sdk/).
