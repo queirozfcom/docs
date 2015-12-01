@@ -2,13 +2,13 @@
 
 Se você fez o tutorial [Criando sua primeira App](/3-criando-sua-primeira-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
 
-Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou SASS.
+Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou Sass.
 
 Para resolver tudo isso, usamos a ferramenta de build [Webpack](https://webpack.github.io/) e uma estrutura de desenvolvimento opinionada que usa ES6 (e até o 7!), eslint, LESS/Sass e react-hot-loader. Em detalhes:
 
  - ES6 é a mais recente versão do Javascript que foi lançada em 2015, então já estamos escrevendo. Muitos browsers ainda não são compatíveis com ES6, mas não se preocupe! Usamos o Babel, uma ferramenta que transforma o código Javascript ES6 para a versão ES5, compatível com os browsers de hoje.
 
- - Eslint é uma ferramenta que padroniza como o código deve ser escrito.
+ - ESlint é uma ferramenta que padroniza como o código deve ser escrito.
 
  - Você pode escolher entre LESS e Sass como pré-processador CSS para seus componentes.
 
@@ -44,7 +44,9 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 │   └── utils/
 ├── storefront/
 │   ├── assets/
+│   ├── areas/
 │   ├── components/
+│   ├── routes/
 │   └── resources/
 ├── .eslintrc
 ├── .gitignore
