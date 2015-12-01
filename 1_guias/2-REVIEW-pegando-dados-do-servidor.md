@@ -12,15 +12,9 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 
 ```json
 {
-  "route": {
-    "name": "product",
-    "path": "/:slug/p"
-  },
   "resourceBinding": {
     "locator": "product@vtex.storefront-sdk",
-    "params": {
-      "slug": "{{ route.slug }}"
-    }
+    "relativePath": "/{{ account }}/products/{{ route.slug }}"
   },
   "assets": [
     "common.js",
@@ -32,11 +26,11 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetros que ela recebe são:
 
 - **locator**: identificador do resource que será usado. Neste caso estamos usando um resource do SDK chamado "product", responsável por pegar um produto da API
-- **params**: são os parâmetros necessários para o resource. O resource "product" precisa do parâmetro "slug", e pegamos esse dado fornecido pela rota
+- **relativePath**: é o complemento necessário para a URL de locator definida. Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/acount-name-da-loja/nome-do-produto`.
 
 O `resourceBinding` liga uma rota a uma chamada a API.
 
-Carregue a página de produto no browser ([http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
+Carregue a página de produto no browser ([http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
 
 ### Criando o componente React da página
 
@@ -124,7 +118,7 @@ Para este guia, essas informações são o suficiente. Porém, existem outros m�
 
 Finalmente, abra a página no browser e veja o nome na tela:
 
-[http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)
+[http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)
 
 Conseguimos!
 
@@ -182,7 +176,7 @@ class HomePage extends React.Component {
       <div>
         <HelloWorld />
         <p className="message">Crie, construa, inove!</p>
-        <Link to="/short-balneario/p">Ver produto Short Balneário</Link>
+        <Link to="/moto-x/p">Ver produto Moto X</Link>
       </div>
     );
   }
