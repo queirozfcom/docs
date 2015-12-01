@@ -1,6 +1,6 @@
 # Melhorando o processo de desenvolvimento
 
-Se você fez o tutorial [Criando sua primeira App](/3-criando-sua-primeira-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
+Se você fez o tutorial [Criando sua primeira App](/2-criando-sua-primeira-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
 
 Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou Sass.
 
@@ -149,4 +149,4 @@ Faça uma alteração no componente `HomePage.js` ou em um arquivo CSS e veja as
 
 Você completou o "Melhorando o processo de desenvolvimento"! Agora estamos desenvolvendo de forma eficiente e produtiva.
 
-Próximo passo: [Criando uma nova página](3-criando-uma-nova-pagina.md)
+Próximo passo: [Criando uma nova página](1-criando-uma-nova-pagina.md)
