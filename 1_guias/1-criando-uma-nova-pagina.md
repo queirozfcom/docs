@@ -39,7 +39,7 @@ O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 
 Para ver o componente gerado, entre na URL:
 
-[http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)
+[http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)
 
 Você deve ver um texto na tela:
 > My new component ProductPage!
@@ -74,7 +74,7 @@ Os arquivos gerados `storefront/routes/product.json`, `storefront/components/Pro
 }
 ```
 
-Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/short-balneario/p". Observe a notação ":slug", significa que esse valor é variável.
+Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/moto-x/p". Observe a notação ":slug", significa que esse valor é variável.
 
 A propriedade `assets` indica quais os arquivos necessários para a página. O Webpack gera arquivos separados para cada página (por ex: `HomePage.js` e `ProductPage.js`) e um arquivo que possui os módulos comum a todas elas (`common.js`).
 
