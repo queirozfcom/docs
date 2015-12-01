@@ -1,6 +1,6 @@
-# Criando sua Primeira App
+# Criando seu Primeiro App
 
-Vamos criar nossa primeira app no Storefront. Crie uma pasta com o nome "my-first-app" e abra o terminal nela.
+Vamos criar nosso primeiro app no Storefront. Crie uma pasta com o nome `nome-do-seu-app` e abra o terminal nela.
 
 Rode o `generator-vtex` com o seguinte comando:
 ```sh
@@ -9,8 +9,8 @@ yo vtex:storefront --simple
 
 E responda as perguntas com:
 
-- Dê o nome de "nomedoseuapp"
-- Digite "alphateam" como vendor
+- Dê o nome de `nome-do-seu-app`
+- Digite `nome-da-sua-agencia` como vendor
 
 Em algumas instalações do node, o comando acima pode dar erro. Se tiver problemas, rode o comando com `sudo`.
 
@@ -58,7 +58,7 @@ Todas os Apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas
 
 ### .vtexignore
 
-Esse arquivo é usado pelo Toolbelt. Aqui estão listados quais arquivos e pastas não devem ser enviados para a Gallery. Caso seja familiar com o git, ele funciona da mesma forma que o `.gitignore`.
+Esse arquivo é usado pelo Toolbelt. Aqui estão listados quais arquivos e pastas não devem ser enviados para a Gallery. Caso seja familiar com o git, ele funciona da mesma forma que o `.gitignore` — caso queira saber mais, veja a [documentação oficial do Git](https://git-scm.com/docs/gitignore#_pattern_format).
 
 ---
 
