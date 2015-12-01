@@ -281,4 +281,4 @@ Tente exibir outras informações do Produto na página! (Dica: dê um `console.
 
 Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBinding` e como pegar dados de uma página de forma assíncrona.
 
-Próximo passo: [Criando um editor](5-criando-um-editor.md)
+Próximo passo: [Criando um editor](3-criando-um-editor.md)
