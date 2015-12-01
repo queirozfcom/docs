@@ -24,7 +24,9 @@ Um App no Storefront tem as seguintes pastas e arquivos:
 .
 ├── storefront/
 │   ├── assets/
+│   ├── areas/
 │   ├── components/
+│   ├── routes/
 │   └── resources/
 ├── .vtexignore
 └── meta.json
@@ -34,9 +36,17 @@ Um App no Storefront tem as seguintes pastas e arquivos:
 
 Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos Javascript, CSS, imagens, SVG, fontes, etc.
 
+### areas/
+
+Nessa pasta moram as áreas definidas pelos componentes e também os componentes registrados disponíveis para uma determinada área.
+
 ### components/
 
 Nessa pasta moram as definições de componentes usadas pelo servidor do Storefront.
+
+### routes/
+
+Nessa pasta moram as definições de rotas das páginas.
 
 ### resources/
 
@@ -64,7 +74,7 @@ vtex watch
 
 Note que ao rodar o comando ele irá pedir que você faça um login. Isso é necessário para que possamos enviar os arquivos para a Gallery. Não se preocupe, uma vez logado seu acesso tem duração de 24 horas.
 
-Ao fazer o login, use `basedevmkp` como account e prossiga com suas credenciais da VTEX posteriormente.
+Ao fazer o login, use `dreamstore` como account e prossiga com suas credenciais da VTEX posteriormente.
 
 Após fazer o login, verá que o Toolbelt mostrará uma linda mensagem e algo assim:
 
@@ -74,6 +84,8 @@ Watching nomedoseuapp
 U meta.json
 U storefront/assets/index.js
 U storefront/components/HomePage.json
+U storefront/areas/home.json
+U storefront/routes/home.json
 
 ... files uploaded
 
