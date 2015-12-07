@@ -1,10 +1,18 @@
 # Criando uma página
 
-Abra o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
+Este guia tem como objetivo a criação de um novo modelo página no Storefront que responda a uma rota — por exemplo, uma página de categoria ou de busca.
 
-- **route**: O componente de sua app com nome "HomePage" (neste caso "alphateam.my-first-app") irá atender o path `/` e será identificado no código como "home".
+Para começar, vamos dar uma olhada no arquivo `storefront/routes/home.json`. Esse arquivo fala para o servidor as seguintes informações:
+
+- **path**: Definimos uma rota para o path `/` e será identificado no código como "home" (nome do arquivo).
+
+Agora, vejamos o arquivo `storefront/components/HomePage.json`. Esse arquivo fala para o servidor as seguintes informações:
 
 - **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar na página.
+
+Por fim, vamos inspecionar o arquivo `storefront/areas/home.json`. Esse arquivo fala para o servidor as seguintes informações:
+
+- **component**: Definimos o componente responsável por atender à rota "home". Perceba que temos uma convenção de usar o mesmo nome de arquivo para ambos, isso é importante pois é assim que o servidor consegue identificar qual componente atende a qual rota.
 
 ### Gerando os arquivos de uma nova página
 
@@ -15,37 +23,43 @@ Abra o terminal na pasta do seu projeto e digite:
 yo vtex:component
 ```
 E responda as perguntas com:
-- "Page"
-- "ProductPage"
-- "product"
-- "/:slug/p"
-- "y"
+- `Page`
+- `ProductPage`
+- `product`
+- `/:slug/p`
+- `y`
 
 O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 
 - `src/pages/ProductPage/ProductPage.js`
 - `src/pages/ProductPage/index.js`
 - `storefront/components/ProductPage.json`
+- `storefront/areas/product.json`
+- `storefront/routes/product.json`
 
 Para ver o componente gerado, entre na URL:
 
-[http://sualoja.local.myvtex.com:3000/short-balneario/p](http://sualoja.local.myvtex.com:3000/short-balneario/p)
+[http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)
 
 Você deve ver um texto na tela:
 > My new component ProductPage!
 
-Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gerados faz.
+Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gerados faz:
 
 ### Arquivo de definição do componente
 
-O arquivo gerado na pasta `storefront/components`, `ProductPage.json`, define informações importantes para o servidor. Ele tem o seguinte conteúdo:
+Os arquivos gerados `storefront/routes/product.json`, `storefront/components/ProductPage.json`, `storefront/areas/product.json`, definem informações importantes para o servidor. Eles tem o seguinte conteúdo:
 
+**routes/product.json**
 ```json
 {
-  "route": {
-    "name": "product",
-    "path": "/:slug/p"
-  },
+  "path": "/:slug/p"
+}
+```
+
+**components/product.json**
+```json
+{
   "assets": [
     "common.js",
     "ProductPage.js"
@@ -53,14 +67,21 @@ O arquivo gerado na pasta `storefront/components`, `ProductPage.json`, define in
 }
 ```
 
-Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/short-balneario/p". Observe a notação ":slug", significa que esse valor é variável.
+**areas/product.json**
+```json
+{
+  "component": "ProductPage@nome-da-sua-empresa.nome-da-sua-app"
+}
+```
+
+Estamos criando uma página chamada "product", que será aberta quando o usuário digitar algo como "/moto-x/p". Observe a notação ":slug", significa que esse valor é variável.
 
 A propriedade `assets` indica quais os arquivos necessários para a página. O Webpack gera arquivos separados para cada página (por ex: `HomePage.js` e `ProductPage.js`) e um arquivo que possui os módulos comum a todas elas (`common.js`).
 
 
 ### O componente React da página
 
-O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto. 
+O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
 
 ```js
 import React from 'react';
@@ -96,14 +117,6 @@ let components = [
 
 // Chama a action que registra os componentes
 actions.ComponentActions.register(components);
-
-// Não preste atenção nisso, é algo que temos que colocar para o hot loader funcionar
-// Enable react hot loading with external React
-// see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
-if (module.hot) {
-  window.RootInstanceProvider = require('react-hot-loader/Injection').RootInstanceProvider;
-}
-
 ```
 
 ```js
@@ -134,7 +147,7 @@ A *View* representa os componentes React. O *dispatcher* é a unidade centraliza
 ```js
 let components = [
   {
-    name: 'ProductPage@alphateam.my-first-app',
+    name: 'ProductPage@nome-do-seu-vendor.nome-da-sua-app',
     constructor: ProductPage
   }
 ];
@@ -151,7 +164,9 @@ Atualize a página do browser para ver as modificações (o hot loader funciona 
 
 Para criar uma nova página você precisa:
 
-- Criar um arquivo JSON com o nome do componente React que irá responder pela rota em `storefront/components/`
+- Criar o arquivo JSON que define a rota em `storefront/routes/`
+- Criar o arquivo JSON que define o componente em `storefront/components/`
+- Criar o arquivo JSON que define qual componente responderá pela rota em `storefront/areas/`
 - Criar um componente React em `src/pages/`
 - Registrar o componente React utilizando a *action* `ComponentActions.register`
 
@@ -159,4 +174,4 @@ Para criar uma nova página você precisa:
 
 Você completou o "Criando uma nova página"! Você já sabe como criar uma página e registrar componentes.
 
-Próximo passo: [Pegando dados do servidor](4-pegando-dados-do-servidor.md)
+Próximo passo: [Pegando dados do servidor](2-pegando-dados-do-servidor.md)

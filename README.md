@@ -12,9 +12,9 @@ O Storefront e o Storefront Editor ainda estão em fase de testes, mas substitui
 
 Para apresentarmos o Storefront, é fundamental falarmos do conceito de App, que é peça-chave na nova arquitetura da VTEX. Uma App é uma aplicação ou sistema que desempenha uma funcionalidade quando instalada em uma loja VTEX. O layout de uma loja nada mais é que uma App de Tema instalada na conta da loja.
 
-Apps trazem autonomia para lojistas, ao permitir que adicionem novas funcionalidades e customizem o design da loja sem depender diretamente de desenvolvimento por terceiros: a instalação de apps é no Storefront completamente plug & play.
+Apps trazem autonomia para lojistas ao permitir que adicionem novas funcionalidades e customizem o design da loja sem depender diretamente de desenvolvimento por terceiros: a instalação de apps no Storefront é completamente plug & play.
 
-Por outro lado, o desenvolvimento e comercialização de Apps permitem à agências e desenvolvedores diversificar seu portfolio de produtos e serviços com um sistema de instalação e cobrança sem dores de cabeça.
+Por outro lado, o desenvolvimento e comercialização de Apps permitem à agências e desenvolvedores diversificar seu portfólio de produtos e serviços com um sistema de instalação e cobrança sem dores de cabeça.
 
 As apps podem trazer diversas funcionalidades para o site da loja: uma app de reviews que permite a um cliente avaliar produtos e ler avaliações de terceiros ou até mesmo uma nova app de tema para mudar todo o layout de sua loja em um só clique.
 
