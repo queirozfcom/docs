@@ -28,7 +28,7 @@ yo vtex:storefront
 
 Responda o generator com:
 - `my-first-app`
-- `nome-da-sua-loja`
+- `nome-da-sua-empresa`
 - `yes` (ou `y`)
 - `yes` (ou `y`)
 

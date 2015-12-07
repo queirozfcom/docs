@@ -4,9 +4,9 @@
 
 Storefront é o novo framework de desenvolvimento de aplicativos e lojas da VTEX.
 
-Além de oferecer uma gama de novas ferramentas para desenvolvedores, ele vem acompanhado do Storefront Editor, um novo CMS que permite aos usuários da plataforma editarem e configurarem suas lojas de maneira rápida e simplificada.
+Ele traz uma gama de melhorias para os desenvolvedores da plataoforma, como: documentação como melhores práticas para desenvolvimento de single page applications, carregamento de arquivos de forma otimizada, integração com APIs da VTEX e um framework completamente novo baseado em React.
 
-O Storefront e o Storefront Editor ainda estão em fase de testes, mas ao entrarem em produção substituirão o atual Portal da VTEX.
+O Storefront ainda está em fase de testes, mas ao entrar em produção substituirá o atual Portal da VTEX.
 
 ### Apps
 
@@ -26,7 +26,9 @@ Apps disponibilizados na Gallery são mais poderosos que as antigas extensões d
 
 ### Editor
 
-Com o Storefront Editor, o usuário lojista pode acessar seu site em modo de edição e configurar seus componentes — seja um texto estático em uma página do site, a imagem de um banner, a quantidade de produtos em uma prateleira ou alguma opção de layout do tema.
+O Storefront Editor é uma app disponível para os usuários administradores que adiciona uma interface de edição sobre sua loja.
+
+Com ele o lojista pode acessar seu site em modo de edição e configurar seus componentes — seja um texto estático em uma página do site, a imagem de um banner, a quantidade de produtos em uma prateleira ou alguma opção de layout do tema.
 
 Como o Storefront possui uma natureza modular, o modo de edição de duas lojas podem ser completamente diferentes, dependendo dos Apps e componentes instalados por cada uma.
 

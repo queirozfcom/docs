@@ -1,6 +1,8 @@
 # Ambiente de Desenvolvimento
 
-  O ambiente de desenvolvimento do Storefront foi pensado para garantir mais velocidade e praticidade para desenvolvedores, garantindo que seus apps possam ser facilmente validadas antes de ir para produção.
+O ambiente de desenvolvimento do Storefront foi pensado para garantir mais velocidade e praticidade para desenvolvedores, garantindo que seus apps possam ser facilmente validadas antes de ir para produção.
+
+Apps adicionadas ou alteradas em seu ambiente de desenvolvimento **nunca aparecerão em produção** — apenas quando forem publicadas na Gallery.
 
 Depois de rodar o [setup inicial](1-setup-inicial.md) em seu projeto, você irá usar o Toolbelt para visualizar seu App rodando sobre um ambiente de testes durante o desenvolvimento.
 
@@ -13,11 +15,11 @@ Digamos que você queira desenvolver um App para que usuários deixem Reviews em
 ![Gráfico com app de review aparecendo na página de produto](pagina_produto_com_app.png)
 
 
-Para visualizar o App em sua loja durante o desenvolvimento, você irá subi-la em um **ambiente de desenvolvimento**, que permite que apenas seu usuário visualizar as alterações em desenvolvimento.
+Para visualizar o App em sua loja durante o desenvolvimento, você irá subi-la em um **ambiente de desenvolvimento**, que permite que apenas seu usuário possa visualizar as alterações em desenvolvimento.
 
 Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo com o comando `watch`. seu App já estará instalada na sua loja, exclusivamente em seu ambiente de desenvolvimento. Saiba mais sobre o Toolbelt em sua [documentação oficial](https://github.com/vtex/toolbelt).
 
-> OK, agora o App está instalada em minha loja (em ambiente de desenvolvimento)... mas como faço para que apareça de fato em minha página de produto?
+> OK, agora o App está no ambiente de desenvolvimento de minha loja... mas como faço para que apareça de fato em minha página de produto?
 
 ![Gráfico mostrando o fluxo do toolbelt subindo o App](pagina_produto_terminal.png)
 
@@ -25,7 +27,7 @@ Isto depende de como o Tema da sua loja (que também é um App!) foi desenvolvid
 
  - Caso sua loja use um **[Tema Flexível](../2_conceitos/tema-flexivel.md)** e possua um componente **Área** na página de produto, basta entrar no **Modo de Edição** e configurar sua Área para exibir o App desejada dentro dela.
 
- Lembre-se que o App só está instalada no ambiente de desenvolvimento, então outros usuários não poderão vê-la.
+ Lembre-se que o App só estará no ambiente de desenvolvimento, então outros usuários não poderão vê-la.
 
 ![Gráfico mostrando edição da página de produto e seleção do review](pagina_produto_adicionando-app.png)
 

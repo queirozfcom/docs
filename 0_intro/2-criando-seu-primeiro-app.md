@@ -10,7 +10,7 @@ yo vtex:storefront --simple
 E responda as perguntas com:
 
 - Dê o nome de `nome-do-seu-app`
-- Digite `nome-da-sua-agencia` como vendor
+- Digite `nome-da-sua-empresa` como vendor
 
 Em algumas instalações do node, o comando acima pode dar erro. Se tiver problemas, rode o comando com `sudo`.
 
@@ -38,7 +38,7 @@ Aqui ficam todos os arquivos que podem ser acessados publicamente, como arquivos
 
 ### areas/
 
-Nessa pasta moram as áreas definidas pelos componentes e também os componentes registrados disponíveis para uma determinada área.
+Aqui ficam definidos quais componentes são responsáveis pela renderização de uma página e onde um componente deve se encaixar na estrutura do site.
 
 ### components/
 
@@ -46,7 +46,7 @@ Nessa pasta moram as definições de componentes usadas pelo servidor do Storefr
 
 ### routes/
 
-Nessa pasta moram as definições de rotas das páginas.
+Os arquivos dessa página definem novas rotas.
 
 ### resources/
 
@@ -99,6 +99,10 @@ O que o Toolbelt acabou de fazer foi:
 - Upload de todos os arquivos que não estão na lista de arquivos do `.vtexignore`
 
 Abra a URL da loja em desenvolvimento clicando ou copiando o link disponibilizado pelo Toolbelt.
+
+>**(?)**
+>
+>`/?workspace=sb_seuemail` é uma querystring que aponta seu browser para o ambiente de desenvolvimento ao invés do site em produção
 
 Você deve estar vendo "Hello World!" escrito na tela.
 

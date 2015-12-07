@@ -70,7 +70,7 @@ Os arquivos gerados `storefront/routes/product.json`, `storefront/components/Pro
 **areas/product.json**
 ```json
 {
-  "component": "ProductPage@nome-do-seu-vendor.nome-da-sua-app"
+  "component": "ProductPage@nome-da-sua-empresa.nome-da-sua-app"
 }
 ```
 
