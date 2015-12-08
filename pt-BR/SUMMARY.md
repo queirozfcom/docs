@@ -13,4 +13,4 @@
   - [Importar um app como dependência](/1_guias/4-NEW-importar-um-app-como-dependencia.md)
   - [Publicando seu app](/1_guias/5-NEW-finalizando-e-publicando-seu-app.md)
   - [Mantendo um app já existente](/1_guias/6-NEW-editando-um-app-ja-existente.md)
-- [Glossário](/Glossary.md)
+- [Glossário](/GLOSSARY.md)
