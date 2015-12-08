@@ -4,7 +4,7 @@
   - [Conceitos básicos](/introducao/README.md)
   - [Setup inicial](/introducao/setup-inicial.md)
   - [Criando seu primeiro app](/introducao/criando-seu-primeiro-app.md)
-  - [Melhorando o processo de desenvolvimento](/introducao/melhorando-o-processo-de-desenvolvimento.md)
+  - [Melhorando o desenvolvimento](/introducao/melhorando-o-desenvolvimento.md)
   - [Ambiente de desenvolvimento](/introducao/ambiente-de-desenvolvimento.md)
 - [Guias](/guias/README.md)
   - [Criando uma nova página](/guias/criando-uma-nova-pagina.md)
