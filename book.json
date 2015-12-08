@@ -1,0 +1,10 @@
+{
+  "gitbook": "2.6.4",
+  "plugins": ["-highlight"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/vtex-apps/docs/tree/master/",
+      "label": "Edit This Page"
+    }
+  }
+}

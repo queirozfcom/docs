@@ -1,0 +1,30 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "description": "VTEX platform docs",
+  "scripts": {
+    "clean": "rimraf _book",
+    "prepare": "gitbook install",
+    "build": "npm run prepare && gitbook build . -g vtex-apps/docs",
+    "watch": "npm run prepare && gitbook serve .",
+    "publish": "npm run clean && npm run build && cd _book && git init && git commit --allow-empty -m 'Update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'Update book' && git push git@github.com:vtex-apps/docs gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtex-apps/docs.git"
+  },
+  "keywords": [
+    "vtex",
+    "docs"
+  ],
+  "author": "Breno Calazans <breno@vtex.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vtex-apps/docs/issues"
+  },
+  "homepage": "https://github.com/vtex-apps/docs#readme",
+  "devDependencies": {
+    "gitbook-cli": "^1.0.1",
+    "rimraf": "^2.4.4"
+  }
+}
