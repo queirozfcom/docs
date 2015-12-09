@@ -1,4 +1,4 @@
-## Table of Contents
+## Índice
 
 - [Intro](/introducao/README.md)
   - [Conceitos básicos](/introducao/README.md)
@@ -13,4 +13,4 @@
   - [Dependências de apps](/guias/dependencias-de-apps.md)
   - [Publicando seu app](/guias/publicando-seu-app.md)
   - [Mantendo um app](/guias/mantendo-um-app.md)
-- [Glossário](/GLOSSARY.md)
+- [Glossário](/GLOSSARIO.md)
