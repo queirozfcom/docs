@@ -1,7 +1,7 @@
 ## Table of Contents
 
 - [Intro](/introducao/README.md)
-  - [Conceitos básicos](/introducao/README.md)
+  - [Conceitos básicos](/introducao/conceitos-basicos.md)
   - [Setup inicial](/introducao/setup-inicial.md)
   - [Criando seu primeiro app](/introducao/criando-seu-primeiro-app.md)
   - [Melhorando o desenvolvimento](/introducao/melhorando-o-desenvolvimento.md)
