@@ -8,14 +8,14 @@ Você precisará instalar:
 
  - [Node.js](#nodejs)
  - [Pacotes Node](#pacotes-node)
- - [Yeoman](#yeoman)
- - [Generator VTEX](#generator-vtex)
- - [VTEX Toolbelt](#vtex-toolbelt)
+  - [Yeoman](#yeoman)
+  - [Generator VTEX](#generator-vtex)
+  - [VTEX Toolbelt](#vtex-toolbelt)
 
-
- - [Configurações específicas para Windows](#configurações-para-windows)
- - [Atom (Opcional)](#atom-opcional)
- - [Sublime Text (Opcional)](#sublime-text-opcional)
+- [Recomendações](#recomendações)
+ - [Ferramentas para o Windows](#ferramentas-para-o-windows)
+ - [Atom](#atom)
+ - [Sublime Text](#sublime-text)
 
 ---
 
@@ -27,13 +27,13 @@ O Storefront usa diversas ferramentas desenvolvidas em Node.js (ou Node), por is
 
 ## Pacotes Node
 
-Vamos instalar alguns pacotes Node que usaremos para desenvolver apps no Storefront. Esses pacotes são disponibilizados pelo [NPM](https://www.npmjs.com/) (Node Package Manager).
+Vamos instalar alguns pacotes Node que usaremos para desenvolver apps no Storefront. Esses pacotes são disponibilizados pelo [npm](https://www.npmjs.com/)(Node Package Manager).
 
 Caso encontre algum erro durante a instalação de pacotes do Node, leia: [Solução de erros comuns durante a instalação de pacotes node](https://github.com/vtex-apps/docs/blob/refactor/new-docs/1_guias/solucao-de-erros-comuns-durante-a-instalacao-de-pacotes-node.md)
 
 ### Yeoman
 
-O pacote yo ([Yeoman](http://yeoman.io/)) é uma ferramenta que permite criar e rodar geradores de estrutura de pastas e código, como o Generator VTEX. Para instalar:
+O pacote yo ([Yeoman](http://yeoman.io/)) é uma ferramenta que permite criar e rodar geradores de estrutura de pastas e código, como o Generator VTEX. Para instalar, digite no terminal:
 
 ```sh
 npm install -g yo
@@ -77,11 +77,15 @@ vtex
 
 ---
 
-### Configurações para Windows
+## Recomendações
 
-Caso use o Windows, instale o [Git Bash](https://git-for-windows.github.io/) e o [ConEmu](https://conemu.github.io/), eles facilitam o uso do terminal. Depois configure o ConEmu para usar o Git Bash ([instruções](https://gist.github.com/brenoc/fb704b6217fa24e26c97)).
+Não é obrigatório, mas recomendamos a instalação e utilização das ferramentas abaixo.
 
-## Atom (opcional)
+## Ferramentas para o Windows
+
+Caso use o Windows, é recomendado a instalação do [Git Bash](https://git-for-windows.github.io/) e do [ConEmu](https://conemu.github.io/), já que eles melhoram a experiência de uso de linha de comando. Depois de instalar o ConEmu, configure-o para usar o Git Bash ([instruções](https://gist.github.com/brenoc/fb704b6217fa24e26c97)).
+
+## Atom
 
 Recomendamos o uso do editor de texto open-source [Atom](http://atom.io) para o desenvolvimento, mas caso prefira usar o Sublime ou outro editor de texto, não há problema.
 
@@ -97,9 +101,8 @@ apm install language-babel linter linter-eslint
 
 Abra `Settings > Packages` e procure por "language-babel" e clique no botão "Settings". Desmarque a checkbox "Transpile on save" e no campo "Babel stage" digite "0". Ao fechar a aba de Settings, as configurações serão salvas automaticamente.
 
----
 
-## Sublime Text (opcional)
+## Sublime Text
 
 Caso prefira usar o [Sublime Text](http://www.sublimetext.com/) em seu Workflow, sem problemas. Também podemos facilitar sua vida instalando alguns packages.
 
