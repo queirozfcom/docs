@@ -14,11 +14,11 @@ E responda as perguntas com:
 
 Em algumas instalações do node, o comando acima pode dar erro. Se tiver problemas, rode o comando com `sudo`.
 
-Este processo irá criar a estrutura de pastas e arquivos iniciais de seu App.
+Este processo irá criar a estrutura de pastas e arquivos iniciais de seu app.
 
 ## Estrutura de pastas
 
-Um App no Storefront tem as seguintes pastas e arquivos:
+Um app no Storefront tem as seguintes pastas e arquivos:
 
 ```
 .
@@ -54,7 +54,7 @@ Esses arquivos definem chamadas a APIs, usaremos os recursos em arquivos de comp
 
 ### meta.json
 
-Todas os Apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas diversas informações sobre seu App como o nome (`name`), nome amigável (`title`), descrição (`description`) e depedências de outros Apps (`dependencies`).
+Todas os apps na Gallery precisam do arquivo `meta.json`. Nele ficam registradas diversas informações sobre seu app como o nome (`name`), nome amigável (`title`), descrição (`description`) e depedências de outros apps (`dependencies`).
 
 ### .vtexignore
 
@@ -66,7 +66,7 @@ Até então, as coisas não estão funcionando! Agora que temos tudo pronto para
 
 ## Hello World!
 
-Vamos subir nosso App na Gallery. Abra o terminal na pasta do App e digite:
+Vamos subir nosso app na Gallery. Abra o terminal na pasta do app e digite:
 
 ```sh
 vtex watch
@@ -94,7 +94,7 @@ Your URL: http://sualoja.beta.myvtex.com/?workspace=sb_seuemail
 
 O que o Toolbelt acabou de fazer foi:
 
-- Ler do arquivo `meta.json`, o nome e o vendor de seu App
+- Ler do arquivo `meta.json`, o nome e o vendor de seu app
 - Ler o arquivo `.vtexignore` e guardar quais arquivos ela não deve fazer upload
 - Upload de todos os arquivos que não estão na lista de arquivos do `.vtexignore`
 
@@ -106,4 +106,4 @@ Abra a URL da loja em desenvolvimento clicando ou copiando o link disponibilizad
 
 Você deve estar vendo "Hello World!" escrito na tela.
 
-O Toolbelt está escutando qualquer modificação feita nos arquivos de seu App. Podemos testar isso abrindo o arquivo `assets/index.js` e alterando o texto "Hello World!". Salve o arquivo. Verá que o Toolbelt fez o upload para a Gallery. Note também que a página deu refresh, isso acontece automaticamente por conta do sistema de livereload.
+O Toolbelt está escutando qualquer modificação feita nos arquivos de seu app. Podemos testar isso abrindo o arquivo `assets/index.js` e alterando o texto "Hello World!". Salve o arquivo. Verá que o Toolbelt fez o upload para a Gallery. Note também que a página deu refresh, isso acontece automaticamente por conta do sistema de livereload.

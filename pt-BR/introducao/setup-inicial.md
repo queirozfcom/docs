@@ -1,6 +1,6 @@
 # Setup Inicial
 
-Para começar a desenvolver para o Storefront é necessário que tenha uma noção básica de React e que seu ambiente de desenvolvimento tenha alguns pacotes instalados.
+Para começar a desenvolver para o Storefront é necessário que tenha uma noção básica de React e que seu ambiente de desenvolvimento tenha alguns pacotes node instalados.
 
 Para ter uma boa introdução ao React, recomendamos fazer o [tutorial oficial](http://facebook.github.io/react/docs/tutorial.html). É bem divertido!
 
@@ -47,7 +47,7 @@ yo
 
 ### Generator VTEX
 
-O [generator-vtex](https://github.com/vtex/generator-vtex/) é um gerador de estrutura de pastas para apps VTEX. Ao rodar o Generator você terá toda a estrutura básica necessária para começar a desenvolver seu App.
+O [generator-vtex](https://github.com/vtex/generator-vtex/) é um gerador de estrutura de pastas para apps VTEX. Ao rodar o Generator você terá toda a estrutura básica necessária para começar a desenvolver seu app.
 
 ```sh
 npm install -g generator-vtex
@@ -63,7 +63,7 @@ yo vtex
 
 O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt).
 
-O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva seu App localmente vendo mudanças no browser em tempo real, além de publicar suas apps na Gallery quando estiverem prontas para ir para produção.
+O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva seu app localmente vendo mudanças no browser em tempo real, além de publicar seus apps na Gallery quando estiverem prontas para ir para produção.
 
 ```sh
 npm install -g vtex
@@ -122,6 +122,6 @@ Babel SublimeLinter SublimeLinter-contrib-eslint
 
 Você completou o Setup inicial do Storefront. Agora você já pode colocar a mão na massa e começar uma app do zero ou customizar uma já existente.
 
-Saiba mais sobre o [ambiente de desenvolvimento](4-ambiente-de-desenvolvimento.md) do Storefront, veja nosso [Tutorial](2-criando-sua-primeira-app.md) para aprender a desenvolver uma App básica ou cheque nossos guias para necessidades mais específicas.
+Saiba mais sobre o [ambiente de desenvolvimento](4-ambiente-de-desenvolvimento.md) do Storefront, veja nosso [Tutorial](2-criando-seu-primeiro-app.md) para aprender a desenvolver um app básico ou cheque nossos guias para necessidades mais específicas.
 
 Caso busque informações sobre uso avançado do Storefront, veja [a documentação de nosso SDK](http://vtex-apps.github.io/storefront-sdk/).

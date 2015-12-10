@@ -1,8 +1,8 @@
 # Melhorando o processo de desenvolvimento
 
-Se você fez o tutorial [Criando sua primeira App](/2-criando-sua-primeira-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
+Se você fez o tutorial [Criando seu primeiro app](/2-criando-seu-primeiro-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
 
-Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que sua app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou Sass.
+Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que seu app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou Sass.
 
 Para resolver tudo isso, usamos a ferramenta de build [Webpack](https://webpack.github.io/) e uma estrutura de desenvolvimento opinionada que usa ES6 (e até o 7!), eslint, LESS/Sass e react-hot-loader. Em detalhes:
 
@@ -20,7 +20,7 @@ Para resolver tudo isso, usamos a ferramenta de build [Webpack](https://webpack.
 
 Neste guia vamos apagar toda a estrutura criada no Tutorial básico e começá-la do zero com essa nova estrutura de desenvolvimento.
 
-Apague todos os arquivos da pasta de sua app. Abra o terminal na mesma pasta e digite:
+Apague todos os arquivos da pasta de seu app. Abra o terminal na mesma pasta e digite:
 
 ```sh
 yo vtex:storefront
@@ -32,7 +32,7 @@ Responda o generator com:
 - `yes` (ou `y`)
 - `yes` (ou `y`)
 
-Você verá que algumas pastas e arquivos foram criados e as dependências do node foram instaladas. Sua app agora deve parecer com isso:
+Você verá que algumas pastas e arquivos foram criados e as dependências do node foram instaladas. Seu app agora deve parecer com isso:
 
 ```
 .
@@ -104,7 +104,7 @@ Esse arquivo possui todas as configurações do Webpack.
 
 Para fazer o build do projeto vamos usar o Webpack.
 
-Abra o terminal na pasta de sua app e rode o webpack (por padrão, ele está dando watch na pasta `src/`):
+Abra o terminal na pasta de seu app e rode o webpack (por padrão, ele está dando watch na pasta `src/`):
 ```sh
 ./node_modules/.bin/webpack
 ```
@@ -125,7 +125,7 @@ E confira tudo funcionando no browser.
 
 Ganhamos a facilidade de escrever em ES6, JSX, LESS, minificar, etc, mas agora temos dois processos rodando, o watch do Toolbelt e o Webpack. Pensando em facilitar ainda mais o desenvolvimento, o Toobelt possui uma opção para quem usa Webpack.
 
-Abra o terminal na pasta de sua app e digite:
+Abra o terminal na pasta de seu app e digite:
 ```sh
 vtex watch --webpack
 ```
