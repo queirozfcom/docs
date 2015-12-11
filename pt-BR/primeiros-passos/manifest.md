@@ -1,20 +1,30 @@
-# Criando seu Primeiro App
+# Criando um Manifest
 
-Vamos criar nosso primeiro app no Storefront. Crie uma pasta com o nome `nome-do-seu-app` e abra o terminal nela.
+Vamos criar nosso primeiro app no Storefront.
 
-Rode o `generator-vtex` com o seguinte comando:
-```sh
-yo vtex:storefront --simple
+Cria uma pasta para o app. Nesta pasta crie um arquivo chamado `meta.json`.
+
+## meta.json
+
+Este arquivo é o arquivo fundamental de uma app VTEX. Nele é definido o nome, descrição, versão e outras informações importantes sobre a app.
+
+Exemplo:
+```json
+{
+  "name": "storefront-theme",
+  "vendor": "vtex",
+  "version": "0.7.0",
+  "title": "Default Storefront theme",
+  "dependencies": {
+    "vtex.storefront": "0",
+    "vtex.editor":"0.x",
+    "vtex.banner": "0.x"
+  }
+}
 ```
 
-E responda as perguntas com:
+Este é o arquivo `meta.json` do app [vtex.storefront-theme](https://github.com/vtex-apps/theme). Note que ele definiu diversos atributos.
 
-- Dê o nome de `nome-do-seu-app`
-- Digite `nome-da-sua-empresa` como vendor
-
-Em algumas instalações do node, o comando acima pode dar erro. Se tiver problemas, rode o comando com `sudo`.
-
-Este processo irá criar a estrutura de pastas e arquivos iniciais de seu app.
 
 ## Estrutura de pastas
 

@@ -1,4 +1,4 @@
-# Setup Inicial
+# Setup
 
 Para começar a desenvolver para o Storefront é necessário que tenha uma noção básica de React e que seu ambiente de desenvolvimento tenha alguns pacotes node instalados.
 
@@ -6,11 +6,8 @@ Para ter uma boa introdução ao React, recomendamos fazer o [tutorial oficial](
 
 Você precisará instalar:
 
- - [Node.js](#nodejs)
- - [Pacotes Node](#pacotes-node)
-  - [Yeoman](#yeoman)
-  - [Generator VTEX](#generator-vtex)
-  - [VTEX Toolbelt](#vtex-toolbelt)
+- [Node.js](#nodejs)
+- [VTEX Toolbelt](#vtex-toolbelt)
 
 - [Recomendações](#recomendações)
  - [Ferramentas para o Windows](#ferramentas-para-o-windows)
@@ -27,37 +24,9 @@ O Storefront usa diversas ferramentas desenvolvidas em Node.js (ou Node), por is
 
 ## Pacotes Node
 
-Vamos instalar alguns pacotes Node que usaremos para desenvolver apps no Storefront. Esses pacotes são disponibilizados pelo [npm](https://www.npmjs.com/)(Node Package Manager).
+Vamos instalar alguns pacotes Node que usaremos para desenvolver apps no Storefront. Esses pacotes são disponibilizados pelo [npm](https://www.npmjs.com/) (Node Package Manager).
 
-Caso encontre algum erro durante a instalação de pacotes do Node, leia: [Solução de erros comuns durante a instalação de pacotes node](https://github.com/vtex-apps/docs/blob/refactor/new-docs/1_guias/solucao-de-erros-comuns-durante-a-instalacao-de-pacotes-node.md)
-
-### Yeoman
-
-O pacote yo ([Yeoman](http://yeoman.io/)) é uma ferramenta que permite criar e rodar geradores de estrutura de pastas e código, como o Generator VTEX. Para instalar, digite no terminal:
-
-```sh
-npm install -g yo
-```
-
-Verifique se o pacote yo (chamado de Yeoman) foi instalado corretamente digitando:
-
-```sh
-yo
-```
-
-### Generator VTEX
-
-O [generator-vtex](https://github.com/vtex/generator-vtex/) é um gerador de estrutura de pastas para apps VTEX. Ao rodar o Generator você terá toda a estrutura básica necessária para começar a desenvolver seu app.
-
-```sh
-npm install -g generator-vtex
-```
-
-Verifique se o pacote generator-vtex foi instalado corretamente digitando:
-
-```sh
-yo vtex
-```
+Caso encontre algum erro durante a instalação de pacotes do Node, leia: [Solução de erros comuns durante a instalação de pacotes node](./solucao-de-erros-comuns-durante-a-instalacao-de-pacotes-node.md)
 
 ### VTEX Toolbelt
 

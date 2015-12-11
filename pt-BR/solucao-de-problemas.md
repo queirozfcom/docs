@@ -1,4 +1,4 @@
-# Solução de erros comuns durante a instalação de pacotes node
+# Solução de problemas
 
 # Mac e Linux
 
