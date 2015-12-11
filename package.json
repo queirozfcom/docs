@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "VTEX platform docs",
   "scripts": {
+    "start": "npm run watch",
     "clean": "rimraf _book",
     "prepare": "gitbook install",
     "build": "npm run prepare && gitbook build . -g vtex-apps/docs",
