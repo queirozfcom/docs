@@ -9,7 +9,7 @@
   - [Setup](/primeiros-passos/setup.md)
   - [Manifest](/primeiros-passos/manifest.md)
   - [Componente React](/primeiros-passos/componente-react.md)
-  - [Definição de Componente](/primeiros-passos/definicao-de-componente.md)
+  - [Descritor do Componente](/primeiros-passos/descritor-do-componente.md)
   - [Rota](/primeiros-passos/rota.md)
   - [Area](/primeiros-passos/area.md)
   - [Ambiente de desenvolvimento](/primeiros-passos/ambiente-de-desenvolvimento.md)
