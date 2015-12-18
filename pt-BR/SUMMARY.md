@@ -7,7 +7,7 @@
   - [Exemplos](/introducao/exemplos.md)
 - [Primeiros Passos](/primeiros-passos/README.md)
   - [Setup](/primeiros-passos/setup.md)
-  - [Manifest](/primeiros-passos/manifesto.md)
+  - [Manifest](/primeiros-passos/manifest.md)
   - [Componente React](/primeiros-passos/componente-react.md)
   - [Definição de Componente](/primeiros-passos/definicao-de-componente.md)
   - [Rota](/primeiros-passos/rota.md)
