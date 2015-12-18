@@ -1,36 +1,16 @@
 # Setup
 
-Para começar a desenvolver para o Storefront é necessário que tenha uma noção básica de React e que seu ambiente de desenvolvimento tenha alguns pacotes node instalados.
-
-Para ter uma boa introdução ao React, recomendamos fazer o [tutorial oficial](http://facebook.github.io/react/docs/tutorial.html). É bem divertido!
-
-Você precisará instalar:
-
-- [Node.js](#nodejs)
-- [VTEX Toolbelt](#vtex-toolbelt)
-
-- [Recomendações](#recomendações)
- - [Ferramentas para o Windows](#ferramentas-para-o-windows)
- - [Atom](#atom)
- - [Sublime Text](#sublime-text)
-
----
+Para desenvolver apps na VTEX você precisará instalar o node, npm e o VTEX Toolbelt.
 
 ## Node.js
 
-O Storefront usa diversas ferramentas desenvolvidas em Node.js (ou Node), por isso é essencial que o tenha instalado no computador. O Node.JS é uma runtime de desenvolvimento baseada em Javascript. Saiba mais sobre o Node em sua [página oficial](https://nodejs.org/).
+O Storefront usa diversas ferramentas desenvolvidas em Node.js (ou Node), por isso é essencial que o tenha instalado no computador. O Node.js é uma runtime de desenvolvimento baseada em Javascript. Saiba mais sobre o Node em sua [página oficial](https://nodejs.org/).
 
 [Instruções de como instalar o node.](https://gist.github.com/brenoc/534729c806dc0d4ca917)
 
-## Pacotes Node
-
-Vamos instalar alguns pacotes Node que usaremos para desenvolver apps no Storefront. Esses pacotes são disponibilizados pelo [npm](https://www.npmjs.com/) (Node Package Manager).
-
-Caso encontre algum erro durante a instalação de pacotes do Node, leia: [Solução de erros comuns durante a instalação de pacotes node](./solucao-de-erros-comuns-durante-a-instalacao-de-pacotes-node.md)
-
 ### VTEX Toolbelt
 
-O pacote `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt).
+O pacote Node `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github.com/vtex/toolbelt).
 
 O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva seu app localmente vendo mudanças no browser em tempo real, além de publicar seus apps na Gallery quando estiverem prontas para ir para produção.
 
@@ -44,11 +24,13 @@ Verifique se o Toolbelt foi instalado corretamente digitando:
 vtex
 ```
 
+Caso encontre algum erro durante a instalação, leia: [Solução de erros comuns durante a instalação de pacotes node](../solucao-de-problemas.md)
+
 ---
 
-## Recomendações
+## Algumas recomendações
 
-Não é obrigatório, mas recomendamos a instalação e utilização das ferramentas abaixo.
+As ferramentas abaixo não são obrigatórias, mas acreditamos que elas facilitem o desenvolvimento.
 
 ## Ferramentas para o Windows
 
@@ -92,8 +74,4 @@ Babel SublimeLinter SublimeLinter-contrib-eslint
 
 ### Próximos Passos
 
-Você completou o Setup inicial do Storefront. Agora você já pode colocar a mão na massa e começar uma app do zero ou customizar uma já existente.
-
-Saiba mais sobre o [ambiente de desenvolvimento](4-ambiente-de-desenvolvimento.md) do Storefront, veja nosso [Tutorial](2-criando-seu-primeiro-app.md) para aprender a desenvolver um app básico ou cheque nossos guias para necessidades mais específicas.
-
-Caso busque informações sobre uso avançado do Storefront, veja [a documentação de nosso SDK](http://vtex-apps.github.io/storefront-sdk/).
+Você completou o setup inicial do Storefront. Agora estamos prontos para por mão na massa! Começe o seu app [definindo um manifest](manifest.md).
