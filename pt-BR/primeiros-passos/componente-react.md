@@ -1,6 +1,6 @@
 # Componente React
 
-Vamos criar nosso primeiro componente React no Storefront. Esse componete será responsável pela renderização da página home.
+Vamos criar nosso primeiro componente React no Storefront. Esse componente será responsável pela renderização da home.
 
 Crie a pasta `storefront`. Tudo que estiver dentro dessa pasta será interpretado pelo Storefront (app "vtex.storefront"). Iremos pouco a pouco apresentando o que o Storefront oferece e quais pastas e arquivos devem ser criados.
 
