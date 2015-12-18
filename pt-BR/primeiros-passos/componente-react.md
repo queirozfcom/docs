@@ -1,0 +1,63 @@
+# Componente React
+
+Vamos criar nosso primeiro componente React no Storefront. Esse componete será responsável pela renderização da página home.
+
+Crie a pasta `storefront`. Tudo que estiver dentro dessa pasta será interpretado pelo Storefront (app "vtex.storefront"). Iremos pouco a pouco apresentando o que o Storefront oferece e quais pastas e arquivos devem ser criados.
+
+Crie a pasta `assets` dentro da pasta `storefront`.
+
+Você deve ter algo assim:
+
+```sh
+.
+├── manifest.json
+└── storefront/
+    └── assets/
+```
+
+Em `assets` devem ficar todos os arquivos Javascript, CSS, imagens e fontes. Crie o arquivo `HomePage.jsx` dentro dela com um componente React simples:
+
+### `HomePage.jsx`
+
+```js
+class HomePage extends React.Component {
+  render() {
+    return (
+      <h1>Hello world!</h1>
+    );
+  }
+}
+
+const components = [
+  {
+    name: 'HomePage@vtex.my-first-app',
+    constructor: HomePage
+  }
+];
+
+storefront.sdk.ComponentActions.register(components);
+```
+
+Como ele é um arquivo que contém código JSX, devemos compila-lo.
+
+Instale o babel com: `npm install babel-cli`. Para usa-lo digite:
+
+```sh
+babel ./storefront/assets/**.jsx --out-dir .
+```
+
+O Babel gera o arquivo `HomePage.js` com o código compilado.
+
+## Recapitulando
+
+Na plataforma VTEX existem apps de serviço, o Storefront é um deles. Um app de serviço exerce suas funções apenas nos arquivos que estão dentro de sua pasta. A pasta `storefront` possui sua estrutura própria.
+
+Na pasta `storefront/assets/` ficam todos os arquivos estáticos de seu app que serão consumidos pelo Storefront.
+
+Criamos um arquivo Javascript que usa novos recursos da linguagem Javascript (ES6) e JSX. Compilamos usando o Babel para Javascript atual (ES5).
+
+---
+
+### Próximos Passos
+
+Criamos nosso primeiro asset, um componente React. Vamos agora criar sua [definição de componente](definicao-de-componente.md).
