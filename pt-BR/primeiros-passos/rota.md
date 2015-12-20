@@ -43,4 +43,4 @@ A rota de nome `home`, irá atender a URL `https://www.loja.com/`.
 
 ### Próximos passos
 
-Criamos a rota `home`. Vamos agora atribuir qual ...
+Criamos a rota `home`. Vamos agora [associar um componente React a rota](associar-componente-a-rota.md).

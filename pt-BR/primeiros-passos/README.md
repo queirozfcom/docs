@@ -11,5 +11,6 @@ Nesse guia, nos iremos mostrar como criar um primeiro app simples.
 - [Componente React](componente-react.md)
 - [Definição de Componente](definicao-de-componente.md)
 - [Rota](rota.md)
+- [Associar componente a rota](associar-componente-a-rota.md)
 - [Area](area.md)
 - [Ambiente de desenvolvimento](ambiente-de-desenvolvimento.md)

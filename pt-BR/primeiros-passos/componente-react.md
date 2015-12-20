@@ -60,4 +60,4 @@ Criamos um arquivo Javascript que usa novos recursos da linguagem Javascript (ES
 
 ### Próximos Passos
 
-Criamos nosso primeiro asset, um componente React. Vamos agora criar sua [definição de componente](definicao-de-componente.md).
+Criamos nosso primeiro asset, um componente React. Vamos agora criar o [descritor do componente](descritor-do-componente.md).

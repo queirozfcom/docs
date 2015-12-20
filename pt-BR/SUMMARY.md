@@ -11,6 +11,7 @@
   - [Componente React](/primeiros-passos/componente-react.md)
   - [Descritor do Componente](/primeiros-passos/descritor-do-componente.md)
   - [Rota](/primeiros-passos/rota.md)
+  - [Associar componente a rota](/associar-componente-a-rota.md)
   - [Area](/primeiros-passos/area.md)
   - [Ambiente de desenvolvimento](/primeiros-passos/ambiente-de-desenvolvimento.md)
 - [Avançado](/avancado/README.md)

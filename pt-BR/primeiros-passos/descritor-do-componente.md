@@ -33,4 +33,4 @@ No passo anterior criamos um componente React. Agora definimos quais são os arq
 
 ### Próximos Passos
 
-Criamos nosso primeiro arquivo de configuração, o descritor do componente. Vamos agora criar a sua [rota](definicao-de-componente.md).
+Criamos nosso primeiro arquivo de configuração, o descritor do componente. Vamos agora criar a sua [rota](rota.md).
