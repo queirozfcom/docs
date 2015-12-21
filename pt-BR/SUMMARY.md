@@ -12,6 +12,8 @@
   - [Descritor do Componente](/primeiros-passos/descritor-do-componente.md)
   - [Rota](/primeiros-passos/rota.md)
   - [Area](/primeiros-passos/area.md)
+  - [Toolbelt](/primeiros-passos/toolbelt.md)
+  - [Registro do Componente](/primeiros-passos/registro-do-componente.md)
 - [Avançado](/avancado/README.md)
   - [Ambiente de desenvolvimento](/avancado/ambiente-de-desenvolvimento.md)
   - [Pegando Dados do Servidor](/avancado/pegando-dados-do-servidor.md)

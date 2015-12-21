@@ -27,15 +27,6 @@ class HomePage extends React.Component {
     );
   }
 }
-
-const components = [
-  {
-    name: 'HomePage@vtex.my-first-app',
-    constructor: HomePage
-  }
-];
-
-storefront.sdk.ComponentActions.register(components);
 ```
 
 Como ele é um arquivo que contém código JSX, devemos compila-lo.
