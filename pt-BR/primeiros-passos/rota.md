@@ -1,14 +1,27 @@
 # Rota
 
-Vamos criar um arquivo de rota. Uma rota representa um caminho para encontrar uma URL.
+Queremos que nosso site atenda a URL `/`, chamaremos essa página de "home". Para isso, precisamos criar um arquivo de rota. Uma rota representa um caminho para encontrar uma URL.
 
-Exemplo do arquivo de rota da página de produto:
+Crie a pasta `routes` dentro de `storefront`. Você terá algo assim:
 
-### `product.json`
+```sh
+├── manifest.json
+└── storefront/
+    ├── assets/
+    │   ├── HomePage.js
+    │   └── HomePage.jsx
+    ├── components/
+    │   └── HomePage.json
+    └── routes/
+```
+
+Crie o arquivo `home.json` dentro desta pasta. Diferente dos componentes, a convenção para os nomes de arquivos de rotas é kebab-case.
+
+### `home.json`
 
 ```json
 {
-  "path": "/:slug/p"
+  "path": "/"
 }
 ```
 
@@ -27,20 +40,14 @@ _/**\*\***/c_|www.loja.com_/**camisetas/lisas**/c_|www.loja.com/contato
 
 ---
 
-Crie o arquivo `home.json` em `storefront/routes/` com:
+## Recapitulando
 
-### `home.json`
+Quando queremos que o app responda por uma rota, devemos criar um arquivo de rota dentro da pasta `storefront/routes/`. O nome da rota é o nome do arquivo.
 
-```json
-{
-  "path": "/"
-}
-```
-
-A rota de nome `home`, irá atender a URL `https://www.loja.com/`.
+No exemplo foi criado o arquivo `home.json` com a propriedade `path` sendo `/`. Por conta disso, quando o usuário acessar a URL `https://www.loja.com/` a página "home" será carregada.
 
 ---
 
 ### Próximos passos
 
-Criamos a rota `home`. Vamos agora [associar um componente React a rota](associar-componente-a-rota.md).
+Criamos a rota `home`. Vamos agora associar um componente React uma a rota [criando uma area](area.md).
