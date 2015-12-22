@@ -40,4 +40,4 @@ Ao abrir a página `www.loja.com/`, a rota "home" atende a esta URL. O Stoferont
 
 ### Próximos passos
 
-Estamos quase prontos para visualizar nossa primeira página. Vamos aprender a [usar o Toolbelt](toolbelt.md)
+Estamos quase prontos para visualizar nossa primeira página. Vamos aprender a [usar o Toolbelt](toolbelt.md).
