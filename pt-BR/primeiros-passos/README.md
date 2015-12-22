@@ -14,3 +14,4 @@ Nesse guia, nos iremos mostrar como criar um primeiro app simples.
 - [Area](area.md)
 - [Toolbelt](toolbelt.md)
 - [Registro de Componente](registro-de-componente.md)
+- [Exemplo: HomePage](exemplo-homepage.md)

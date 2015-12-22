@@ -14,6 +14,7 @@
   - [Area](/primeiros-passos/area.md)
   - [Toolbelt](/primeiros-passos/toolbelt.md)
   - [Registro de Componente](/primeiros-passos/registro-de-componente.md)
+  - [Exemplo: HomePage](/primeiros-passos/exemplo-homepage.md)
 - [Avançado](/avancado/README.md)
   - [Ambiente de desenvolvimento](/avancado/ambiente-de-desenvolvimento.md)
   - [Pegando Dados do Servidor](/avancado/pegando-dados-do-servidor.md)
