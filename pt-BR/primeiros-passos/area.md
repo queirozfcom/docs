@@ -25,7 +25,7 @@ Em `areas` crie o arquivo `home.json`. O nome desse arquivo de área deve ser ig
 
 ```json
 {
-  "component": "HomePage@vtex.my-first-app"
+  "component": "HomePage@mycompany.my-first-app"
 }
 ```
 

@@ -56,7 +56,7 @@ Crie o seu manifest.json com:
 ```json
 {
   "name": "my-first-app",
-  "vendor": "vtex",
+  "vendor": "mycompany",
   "title": "My first app",
   "description": "My first app using Storefront",
   "version": "0.0.0",
