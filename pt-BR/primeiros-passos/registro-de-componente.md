@@ -1,4 +1,4 @@
-## Registro do Componente
+## Registro de Componente
 
 ```js
 const components = [

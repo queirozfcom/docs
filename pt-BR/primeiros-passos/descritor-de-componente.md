@@ -1,4 +1,4 @@
-# Descritor do Componente
+# Descritor de Componente
 
 Agora vamos criar o  primeiro arquivo de configuração, o **descritor** do componente. Este descritor é responsável por dizer ao Storefront o que o componente React precisa para ser carregado.
 
