@@ -4,9 +4,9 @@ O ambiente de desenvolvimento do Storefront foi pensado para garantir mais veloc
 
 Apps adicionados ou alteradas em seu ambiente de desenvolvimento **nunca aparecerão em produção** — apenas quando forem publicadas na Gallery.
 
-Depois de rodar o [setup inicial](1-setup-inicial.md) em seu projeto, você irá usar o Toolbelt para visualizar seu app rodando sobre um ambiente de testes durante o desenvolvimento.
+Depois de rodar o [setup inicial](primeiros-passos/setup.md) em seu projeto, você irá usar o Toolbelt para visualizar seu app rodando sobre um ambiente de testes durante o desenvolvimento.
 
-Criamos o cenário abaixo apenas para ilustrar o fluxo de desenvolvimento -- você pode vê-lo na prática em nosso tutorial, [Criando seu Primeiro App](2-criando-seu-primeiro-app.md).
+Criamos o cenário abaixo apenas para ilustrar o fluxo de desenvolvimento -- você pode vê-lo na prática no tutorial básico de [Primeiros Passos](../primeiros-passos).
 
 ---
 
@@ -25,7 +25,7 @@ Para isso, é preciso fazer login com suas credenciais no Toolbelt e rodá-lo co
 
 Isto depende de como o tema da sua loja (que também é um app!) foi desenvolvido:
 
- - Caso sua loja use um **[Tema Flexível](../2_conceitos/tema-flexivel.md)** e possua um componente **Área** na página de produto, basta entrar no **Modo de Edição** e configurar sua Área para exibir o app desejada dentro dela.
+ - Caso sua loja use um tema `Flexível` e possua um componente **Área** na página de produto, basta entrar no **Modo de Edição** e configurar sua Área para exibir o app desejada dentro dela.
 
  Lembre-se que o app só estará no ambiente de desenvolvimento, então outros usuários não poderão vê-la.
 
@@ -33,10 +33,8 @@ Isto depende de como o tema da sua loja (que também é um app!) foi desenvolvid
 
  - Caso seu tema não seja `Flexível`, você precisará do seu código-fonte para editá-lo localmente. Neste caso, você deverá importar o app dentro de seu tema e rodar o Tema em uma segunda instância do Toolbelt, como exemplificado no esquema abaixo.
 
- Veja nosso guia para aprender a [importar um app como dependência em seu tema](../1_guias/4-importar-um-app-como-dependencia.md).
-
 ![Gráfico mostrando dois terminais rodando com tema e app sendo pushed](pagina_produto_app-e-tema-pelo-toolbelt.png)
 
 ---
 
-Ao terminar o desenvolvimento de seu app, você pode usar o comando `vtex publish` para deixá-lo disponível a lojas pela Gallery. Saiba mais sobre este processo em [Finalizando e Publicando seu App](../1_guias/5-finalizando-e-publicando-seu-app.md).
+Ao terminar o desenvolvimento de seu app, você pode usar o comando `vtex publish` para deixá-lo disponível a lojas pela Gallery.
