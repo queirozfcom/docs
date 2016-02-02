@@ -74,4 +74,4 @@ Babel SublimeLinter SublimeLinter-contrib-eslint
 
 ### Próximos Passos
 
-Você completou o setup inicial do Storefront. Agora estamos prontos para por mão na massa! Começe o seu app [definindo um manifest](manifest.md).
+Você completou o setup inicial do Storefront. Agora estamos prontos para por mão na massa! Comece o seu app [definindo um manifest](manifest.md).

@@ -2,7 +2,7 @@
 
 Storefront é o novo framework de desenvolvimento de aplicativos e lojas da VTEX.
 
-Ele traz uma gama de melhorias para os desenvolvedores da plataforma, como: as melhores práticas para desenvolvimento de single page applications, carregamento de arquivos de forma otimizada, integração com APIs da VTEX e um totalmente baseado em React.
+Ele traz uma gama de melhorias para os desenvolvedores da plataforma, como: as melhores práticas para desenvolvimento de single page applications, carregamento de arquivos de forma otimizada, integração com APIs da VTEX e um framework totalmente baseado em [React](https://facebook.github.io/react/).
 
 
 ## Editor

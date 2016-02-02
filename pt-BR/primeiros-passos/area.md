@@ -7,7 +7,7 @@ Esta associação é feita através de uma configuração. As configurações fi
 Crie a pasta `areas` dentro da pasta `storefront`. Você terá algo assim:
 
 ```sh
-├── manifest.json
+├── meta.json
 └── storefront/
     ├── areas/
     ├── assets/

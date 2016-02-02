@@ -2,7 +2,7 @@
 
 Este é o código fonte completo do pequeno app que construímos durante o [guia de primeiros passos](README.md).
 
-### `manifest.json`
+### `meta.json`
 
 ```json
 {

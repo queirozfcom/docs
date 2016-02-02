@@ -5,7 +5,7 @@ Queremos que nosso site atenda a URL `/`, chamaremos essa página de "home". Par
 Crie a pasta `routes` dentro de `storefront`. Você terá algo assim:
 
 ```sh
-├── manifest.json
+├── meta.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js

@@ -2,9 +2,9 @@
 
 Vamos criar nosso primeiro app no Storefront.
 
-Cria uma pasta para o app. Nesta pasta crie um arquivo chamado `manifest.json`.
+Cria uma pasta para o app. Nesta pasta crie um arquivo chamado `meta.json`.
 
-## manifest.json
+## meta.json
 
 Este é um arquivo fundamental de uma app VTEX. Nele é definido o nome, descrição, versão e outras informações importantes sobre o app.
 
@@ -51,7 +51,7 @@ Aqui são listados os apps que seu app tem como dependência.
 
 ---
 
-Crie o seu manifest.json com:
+Crie o seu meta.json com:
 
 ```json
 {
@@ -73,4 +73,4 @@ Ao desenvolver um app no Storefront você **deve** colocar "vtex.storefront" e "
 
 ### Próximos Passos
 
-Agora seu app está identificado e pronto para ser desenvolvido. Vamos criar nosso [primeiro componente React](componente-react.md).
+Agora seu app está identificado e pronto para ser desenvolvido. Vamos criar o [package.json](package.md).

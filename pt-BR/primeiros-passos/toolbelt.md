@@ -1,6 +1,7 @@
 # Toolbelt
 
-O Toolbelt é a ferramenta que você irá utilizar durante o desenvolvimento de apps. O Toolbelt consiste basicamente de 4 comandos:
+O Toolbelt é a ferramenta que você irá utilizar durante o desenvolvimento de apps.
+O Toolbelt consiste basicamente de 4 comandos:
 
 - `vtex login` e `vtex logout`
 - `vtex watch`
@@ -28,9 +29,23 @@ Quando seu app tiver pronto, basta usar o comando `publish` para publicá-lo na 
 
 Rode `vtex login` para se logar no ambiente de desenvolvimento.
 
+```sh
+$ vtex login
+Please log in with your VTEX credentials:
+account: dreamstore // nossa loja de teste
+login: email@dominio.com  // seu email registrado na loja de teste. Email padrão geralmente usado nas outras lojas.
+password - ******
+```
+
 Após fazer login, rode o comando `vtex watch` para enviar os arquivos para o ambiente de desenvolvimento.
 
 Por fim, abra a URL que o Toolbelt mostra em seu terminal.
+
+`http://{account}.beta.myvtex.com/?workspace=sb_email@domonio.com`
+
+## Workspace de desenvolvimento
+O queryString `?workspace=sb_email@domonio.com` da URL indica ao servidor qual o workspace deseja acessar.
+O seu workspace de desenvolvimento **sempre** será vinculado ao e-mail do comando `vtex watch`.
 
 Você deve ter visto uma tela de erro. Vamos explicar e corrigir no próximo passo.
 

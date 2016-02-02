@@ -10,7 +10,7 @@ Você deve ter algo assim:
 
 ```sh
 .
-├── manifest.json
+├── meta.json
 └── storefront/
     └── assets/
 ```
@@ -20,6 +20,8 @@ Em `assets` devem ficar todos os arquivos Javascript, CSS, imagens e fontes. Cri
 ### `HomePage.jsx`
 
 ```js
+import React from 'react';
+
 class HomePage extends React.Component {
   render() {
     return (
@@ -51,4 +53,4 @@ Criamos um arquivo Javascript que usa novos recursos da linguagem Javascript (ES
 
 ### Próximos Passos
 
-Criamos nosso primeiro asset, um componente React. Vamos agora criar o [descritor do componente](descritor-do-componente.md).
+Criamos nosso primeiro asset, um componente React. Vamos agora criar o [descritor do componente](descritor-de-componente.html).

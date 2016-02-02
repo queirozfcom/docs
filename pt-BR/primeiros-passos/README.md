@@ -8,6 +8,7 @@ Nesse guia, nos iremos mostrar como criar um primeiro app simples.
 
 - [Setup](setup.md)
 - [Manifest](manifest.md)
+- [Package.json](package.md)
 - [Componente React](componente-react.md)
 - [Descritor de Componente](descritor-de-componente.md)
 - [Rota](rota.md)

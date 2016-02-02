@@ -8,6 +8,7 @@
 - [Primeiros Passos](/primeiros-passos/README.md)
   - [Setup](/primeiros-passos/setup.md)
   - [Manifest](/primeiros-passos/manifest.md)
+  - [Package.json](/primeiros-passos/package.md)
   - [Componente React](/primeiros-passos/componente-react.md)
   - [Descritor de Componente](/primeiros-passos/descritor-de-componente.md)
   - [Rota](/primeiros-passos/rota.md)
