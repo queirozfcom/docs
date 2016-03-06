@@ -2,7 +2,7 @@
 
 Nesse guia vamos aprender a fazer um componente Banner em que o usuário pode trocar a imagem usando uma interface amigável. As interfaces de edição de componentes são chamadas de editors.
 
-O que nos deixa animado sobre os editors é a possibilidade do desenvolvedor da loja ter autonomia para criar interfaces administrativas da maneira que achar melhor.
+O que nos deixa animados sobre os editors é a possibilidade do desenvolvedor da loja ter autonomia para criar interfaces administrativas da maneira que achar melhor.
 
 ### Instalando o Storefront Editor
 
@@ -40,7 +40,7 @@ export default Banner;
 
 É um componente simples que exibe uma imagem.
 
-Vá para o componente `src/pages/HomePage/HomePage.js` e copie o código:
+Vá para o componente `src/components/HomePage/HomePage.js` e copie o código:
 
 ```js
 import React from 'react';
@@ -81,7 +81,7 @@ Para que o Storefront Editor consiga identificar componentes editáveis na pági
 
 ### Criando o arquivo de definição do componente
 
-Já aprendemos a criar um arquivo de definição de um componente com rotas em [Criando uma nova página](3-criando-uma-nova-pagina.md#criando-o-arquivo-de-definição-do-componente).
+Já aprendemos a criar um arquivo de definição de um componente com rotas em [Criando uma nova página](/criando-uma-nova-pagina.md#criando-o-arquivo-de-definição-do-componente).
 
 Nesse caso a definição desse componente será ainda mais simples, crie o arquivo `storefront/components/Banner.json` com:
 
@@ -98,7 +98,7 @@ Note que colocamos o arquivo `HomePage.js`, já que o componente é inserido no 
 
 ### Registrando o componente
 
-Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/pages/HomePage/index.js`.
+Precisamos [registrar](/criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/components/HomePage/index.js`.
 
 ```js
 import { actions } from 'sdk';
@@ -107,11 +107,11 @@ import Banner from 'components/Banner/Banner';
 
 let component = [
   {
-    name: 'HomePage@alphateam.my-first-app',
+    name: 'HomePage@amycompany.my-first-app',
     constructor: HomePage
   },
   {
-    name: 'Banner@alphateam.my-first-app',
+    name: 'Banner@mycompany.my-first-app',
     constructor: Banner
   }
 ];
