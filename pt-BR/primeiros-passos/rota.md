@@ -50,4 +50,4 @@ No exemplo foi criado o arquivo `home.json` com a propriedade `path` sendo `/`. 
 
 ### Próximos passos
 
-Criamos a rota `home`. Vamos agora associar um componente React uma a rota [criando uma area](area.md).
+Criamos a rota `home`. Vamos agora associar um componente React uma a rota [configurando o componente Root](root.md).
