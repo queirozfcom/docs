@@ -15,7 +15,7 @@ Crie a pasta `routes` dentro de `storefront`. Você terá algo assim:
     └── routes/
 ```
 
-Crie o arquivo `home.json` dentro desta pasta. Diferente dos componentes, a convenção para os nomes de arquivos de rotas é kebab-case.
+Crie o arquivo `home.json` dentro desta pasta. Diferente dos componentes, a convenção para os nomes de arquivos de rotas é [kebab-case](http://c2.com/cgi/wiki?KebabCase).
 
 ### `home.json`
 
@@ -27,7 +27,7 @@ Crie o arquivo `home.json` dentro desta pasta. Diferente dos componentes, a conv
 
 ### path
 
-O arquivo de rotas só possui a propriedade `path`. Nela é esperado para quais paths a rota irá atender.
+O arquivo de rotas só possui a propriedade `path`. Nela é esperado para qual path a rota irá atender.
 
 Exemplo de paths e quais rotas ela atende:
 

@@ -11,7 +11,7 @@ O Toolbelt consiste basicamente de 4 comandos:
 
 Como o próprio nome já diz, são comandos de login e logout no ambiente de desenvolvimento.
 
-Você pode desenvolver apenas um loja por vez.
+Você pode desenvolver em apenas um loja por vez.
 
 ### `watch`
 

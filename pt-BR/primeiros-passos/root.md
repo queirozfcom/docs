@@ -34,9 +34,9 @@ Em `storefront/routes` crie a pasta `home/Root@storefront-sdk` com o arquivo `co
     │   └── HomePage.json
     ├── settings/
     │   └── routes/
-    |         └── home/
-    |               └── Root@storefront-sdk/
-    |                                   └── content.json
+    |       └── home/
+    |           └── Root@storefront-sdk/
+    |               └── content.json
     └── routes/
         └── home.json
 ```
