@@ -46,8 +46,8 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 │   ├── components/
 │   ├── routes/
 |   ├── settings/
-|   |       ├── components/
-|   |       └── routes/
+|   |   ├── components/
+|   |   └── routes/
 │   └── resources/
 ├── .eslintrc
 ├── .gitignore
