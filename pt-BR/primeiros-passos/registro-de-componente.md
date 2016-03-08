@@ -10,9 +10,10 @@ Isso significa que o componente React que responde pela rota "home" não está r
 
 Uma das tarefas do Storefront é carregar os arquivos necessários para renderizar a página.
 
-Definimos no arquivo `storefront/areas/home.json`, o componente `HomePage@mycompany.my-first-app`. Por conta disso, os arquivos desse componente foram inseridos na página. Você pode ver no código fonte do browser que o arquivo `HomePage.js` de fato está lá.
+Definimos no arquivo `storefront/settings/routes/home/Root@storefront-sdk/content.json`, o componente `HomePage@mycompany.my-first-app`.
+Por conta disso, os arquivos desse componente foram inseridos na página. Você pode ver no código fonte do browser que o arquivo `HomePage.js` de fato está lá.
 
-Para o React realizar a renderização precisamos fornecer as referência dos componentes React. Para isso, existe a ComponentStore. Ela é uma *store* da arquitetura de dados  [*Flux*](https://facebook.github.io/flux/docs/overview.html) e é usada como registro de todas as referencias dos componentes da loja.
+Para o React realizar a renderização precisamos fornecer as referências dos componentes React. Para isso, existe a ComponentStore. Ela é uma *store* da arquitetura de dados  [*Flux*](https://facebook.github.io/flux/docs/overview.html) e é usada como registro de todas as referências dos componentes da loja.
 
 Para mudar o dado de uma *store* na arquitetura Flux devemos chamar uma *action*.
 
@@ -31,7 +32,7 @@ class HomePage extends React.Component {
 
 const components = [
   {
-    name: 'HomePage@vtex.my-first-app',
+    name: 'HomePage@mycompany.my-first-app',
     constructor: HomePage
   }
 ];

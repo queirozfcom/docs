@@ -12,10 +12,16 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 
 ```json
 {
-  "resourceBinding": {
-    "locator": "product@vtex.storefront-sdk",
-    "relativePath": "/{{ account }}/products/{{ route.slug }}"
-  },
+  "resourceBindings": [
+    {
+      "locator": "search@vtex.storefront-sdk",
+      "relativePath": "/products",
+      "queryParams": {
+        "pageSize": 5
+      },
+      "bindTo": "products@vtex"
+    }
+  ],
   "assets": [
     "common.js",
     "ProductPage.js"
@@ -23,12 +29,21 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 }
 ```
 
-Veja que inserimos uma nova propriedade chamada `resourceBinding`. Os parâmetros que ela recebe são:
+Veja que inserimos uma nova propriedade chamada `resourceBindings`. Os parâmetros que ela recebe são:
 
-- **locator**: identificador do resource que será usado. Neste caso estamos usando um resource do SDK chamado "product", responsável por pegar um produto da API
-- **relativePath**: é o complemento necessário para a URL de locator definida. Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/acount-name-da-loja/nome-do-produto`.
+- **locator**: identificador do resource que será usado. Neste caso estamos usando um resource do SDK chamado ["search"](https://github.com/vtex-apps/storefront-sdk/blob/master/storefront/resources/search.json), responsável por prover o base-endpoint da chamada.
 
-O `resourceBinding` liga uma rota a uma chamada a API.
+- **relativePath**: é o complemento necessário para a URL de locator definida. 
+  * Os paths também podem conter **variáveis**:  _"/\{\{ account }}/products/\{\{ route.slug }}/"_
+
+Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/acount-name-da-loja/nome-do-produto`.
+
+- **bindTo**: É o nome da chave que o resource irá receber na store do Storefront SDK.
+
+- **queryParams**: São os parametros que serão repassados na query string durante a chamada.
+
+
+O `resourceBindings` liga uma rota a uma chamada a API. Voce pode declarar quantos `bindings` quiser, portanto, diferentes dados podem ser pré-carregados para uma mesma página.
 
 Carregue a página de produto no browser ([http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
 
@@ -126,7 +141,7 @@ Conseguimos!
 
 Vamos criar um link para a home para que possamos testar mais facilmente.
 
-Substitua o código do arquivo `src/pages/ProductPage/ProductPage.js` por:
+Substitua o código do arquivo `src/components/ProductPage/ProductPage.js` por:
 
 ```js
 import React from 'react';
@@ -162,7 +177,7 @@ O componente link gera uma tag `<a>` com o atributo `href` para a URL da rota, p
 
 Também precisamos de um link na home para a página de produto.
 
-Copie e cole o código abaixo no arquivo `src/pages/HomePage/HomePage.js`:
+Copie e cole o código abaixo no arquivo `src/components/HomePage/HomePage.js`:
 
 ```js
 import React from 'react';
@@ -212,7 +227,7 @@ O que precisamos fazer é pegar os recursos associados a rota que iremos abrir, 
 
 ### Carregando resources de forma assíncronamente
 
-Abra o arquivo `src/pages/ProductPage/ProductPage.js` e substitua o conteúdo pelo seguinte código:
+Abra o arquivo `src/components/ProductPage/ProductPage.js` e substitua o conteúdo pelo seguinte código:
 
 ```js
 import React from 'react';
@@ -279,6 +294,12 @@ Tente exibir outras informações do Produto na página! (Dica: dê um `console.
 
 ---
 
-Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBinding` e como pegar dados de uma página de forma assíncrona.
+## Recapitulando
 
-Próximo passo: [Criando um editor](3-criando-um-editor.md)
+Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBindings` e como obter dados de uma página de forma assíncrona.
+
+---
+
+## Próximos passos
+
+Agora vamos aprender a [salvar dados no servidor](/salvando-dados-no-servidor.md).

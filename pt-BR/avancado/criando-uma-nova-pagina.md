@@ -1,6 +1,6 @@
 # Criando uma página
 
-Este guia tem como objetivo a criação de um novo modelo página no Storefront que responda a uma rota — por exemplo, uma página de categoria ou de busca.
+Este guia tem como objetivo a criação de um novo modelo de página no Storefront que responda a uma rota — por exemplo, uma página de categoria ou de busca.
 
 Para começar, vamos dar uma olhada no arquivo `storefront/routes/home.json`. Esse arquivo fala para o servidor as seguintes informações:
 
@@ -10,9 +10,12 @@ Agora, vejamos o arquivo `storefront/components/HomePage.json`. Esse arquivo fal
 
 - **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar na página.
 
-Por fim, vamos inspecionar o arquivo `storefront/areas/home.json`. Esse arquivo fala para o servidor as seguintes informações:
+Por fim, vamos inspecionar o arquivo `storefront/settings/routes/home/Root@storefront-sdk/content.json`. 
+O componente Root é o ponto de entrada para o carregamento de componentes de qualquer rota, toda rota precisa ter um Root configurado.
 
-- **component**: Definimos o componente responsável por atender à rota "home". Perceba que temos uma convenção de usar o mesmo nome de arquivo para ambos, isso é importante pois é assim que o servidor consegue identificar qual componente atende a qual rota.
+Esse arquivo fala para o servidor as seguintes informações:
+
+- **component**: Definimos o componente responsável por atender ao conteúdo do Root. Neste caso, o componente ProductPage.
 
 ### Gerando os arquivos de uma nova página
 
@@ -31,10 +34,10 @@ E responda as perguntas com:
 
 O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 
-- `src/pages/ProductPage/ProductPage.js`
-- `src/pages/ProductPage/index.js`
+- `src/components/ProductPage/ProductPage.js`
+- `src/components/ProductPage/index.js`
 - `storefront/components/ProductPage.json`
-- `storefront/areas/product.json`
+- `storefront/settings/routes/product/Root@storefront-sdk/content.json`
 - `storefront/routes/product.json`
 
 Para ver o componente gerado, entre na URL:
@@ -48,7 +51,7 @@ Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gera
 
 ### Arquivo de definição do componente
 
-Os arquivos gerados `storefront/routes/product.json`, `storefront/components/ProductPage.json`, `storefront/areas/product.json`, definem informações importantes para o servidor. Eles tem o seguinte conteúdo:
+Os arquivos gerados `storefront/routes/product.json`, `storefront/components/ProductPage.json`, `storefront/settings/routes/product/Root@storefront-sdk/content.json`, definem informações importantes para o servidor. Eles tem o seguinte conteúdo:
 
 **routes/product.json**
 ```json
@@ -67,7 +70,7 @@ Os arquivos gerados `storefront/routes/product.json`, `storefront/components/Pro
 }
 ```
 
-**areas/product.json**
+**storefront/settings/routes/product/Root@storefront-sdk/content.json**
 ```json
 {
   "component": "ProductPage@nome-da-sua-empresa.nome-da-sua-app"
@@ -81,7 +84,7 @@ A propriedade `assets` indica quais os arquivos necessários para a página. O W
 
 ### O componente React da página
 
-O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
+O arquivo `src/components/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
 
 ```js
 import React from 'react';
@@ -89,18 +92,19 @@ import React from 'react';
 class ProductPage extends React.Component {
   render() {
     return (
-      <h1>My new component ProductPage!</h1>
+      <div>
+        <h1>My new component ProductPage!</h1>
+      </div>
     );
   }
 }
 
 export default ProductPage;
-
 ```
 
 ### O arquivo principal da página
 
-O arquivo `src/pages/ProductPage/index.js` é o arquivo principal da página. O seu código Javascript começa nesse arquivo.
+O arquivo `src/components/ProductPage/index.js` é o arquivo principal da página. O seu código Javascript começa nesse arquivo.
 
 ```js
 // Importa as actions do SDK
@@ -110,7 +114,7 @@ import ProductPage from './ProductPage';
 
 let components = [
   {
-    name: 'ProductPage@alphateam.my-first-app',
+    name: 'ProductPage@mycompany.my-first-app',
     constructor: ProductPage
   }
 ];
@@ -160,18 +164,21 @@ Estamos chamando a *action* `register` da `ComponentActions`. Essa *action* faz 
 
 Atualize a página do browser para ver as modificações (o hot loader funciona apenas para alterações em componentes React). Você deve agora ver a página de produto!
 
+---
+
 ## Recapitulando
 
 Para criar uma nova página você precisa:
 
 - Criar o arquivo JSON que define a rota em `storefront/routes/`
 - Criar o arquivo JSON que define o componente em `storefront/components/`
-- Criar o arquivo JSON que define qual componente responderá pela rota em `storefront/areas/`
-- Criar um componente React em `src/pages/`
+- Criar o arquivo JSON que define qual componente responderá pela rota em `storefront/settings/routes/product/Root@storefront-sdk/content.json`
+- Criar um componente React em `src/components/`
 - Registrar o componente React utilizando a *action* `ComponentActions.register`
 
 ---
 
-Você completou o "Criando uma nova página"! Você já sabe como criar uma página e registrar componentes.
 
-Próximo passo: [Pegando dados do servidor](2-pegando-dados-do-servidor.md)
+## Próximos Passos
+
+Você completou o "Criando uma nova página"! Você já sabe como criar uma página e registrar componentes. Agora vamos aprender como [criar um editor](/criando-um-editor.md).

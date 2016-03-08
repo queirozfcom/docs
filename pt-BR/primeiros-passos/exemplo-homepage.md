@@ -57,7 +57,7 @@ storefront.sdk.actions.ComponentActions.register(components);
 }
 ```
 
-### `storefront/areas/home.json`
+### `storefront/settings/routes/home/Root@storefront-sdk/content.json`
 
 ```json
 {

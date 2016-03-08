@@ -1,6 +1,6 @@
 # Melhorando o processo de desenvolvimento
 
-Se você fez o tutorial [Criando seu primeiro app](/2-criando-seu-primeiro-app.md), já conhece o fluxo de desenvolvimento básico do Storefront.
+Se você fez o tutorial [Primeiros passos](/primeiros-passos.md), já conhece o fluxo de desenvolvimento básico do Storefront.
 
 Apesar de funcionar bem, essa forma de desenvolvimento pode se tornar tediosa à medida que seu app começa a crescer. Arquivos Javascript e CSS começam a se proliferar e escrever React sem JSX não é ideal. Além disso, nosso código não está minificado e não estamos usando nenhum pré-processador de CSS, como LESS ou Sass.
 
@@ -12,7 +12,7 @@ Para resolver tudo isso, usamos a ferramenta de build [Webpack](https://webpack.
 
  - Você pode escolher entre LESS e Sass como pré-processador CSS para seus componentes.
 
- - O react-hot-loader é uma espécie de livereload avançado que, ao invés de recarregar toda a página, atualiza apenas o componente React que foi modificado. Isso faz com que o ciclo de desenvolvimento seja *muito* mais rápido.
+ - O react-hot-loader é uma espécie de livereload avançado que, ao invés de recarregar toda a página, atualiza apenas o componente React que foi modificado. Isso faz com que o ciclo de desenvolvimento seja **muito** mais rápido.
 
  - Por fim, o Webpack agrega todas essas ferramentas e faz todas funcionarem como mágica, além de minificar imagens, SVGs, Javascript e CSS.
 
@@ -40,13 +40,14 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 │   ├── assets/
 │   ├── components/
 │   ├── editors/
-│   ├── pages/
 │   └── utils/
 ├── storefront/
 │   ├── assets/
-│   ├── areas/
 │   ├── components/
 │   ├── routes/
+|   ├── settings/
+|   |   ├── components/
+|   |   └── routes/
 │   └── resources/
 ├── .eslintrc
 ├── .gitignore
@@ -58,45 +59,63 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 
 Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da pasta `src/`. Não mexeremos mais na pasta `storefront/assets/`, já que o Webpack se encarregará de colocar os arquivos processados nela.
 
-### src/assets/
+## Arquivos de desenvolvimento
+
+#### src/assets/
 
 Aqui ficam todos os assets que não são Javascript ou CSS — como imagens e SVGs.
 
-### src/components/
+#### src/components/
 
-Nessa pasta moram grande parte dos componentes React.
+Nessa pasta moram todos os componentes React da app.
 
-### src/editors/
+#### src/editors/
 
 Aqui ficam os componentes que são usados para criar editores: componentes que formam as interfaces que o administrador da loja irá usar para configurar um componente.
 
-### src/pages/
-
-Os arquivos nesta pasta são componentes React responsáveis por responder por uma rota.
-
-### src/utils/
+#### src/utils/
 
 Componentes React utilitários e outros arquivos Javascript.
 
-### .eslintrc
+## Arquivos de configuração
+
+#### storefront/components/
+
+Ficam todas os descritores dos componentes, meta-arquivos que indicam como um componente deve ser carregado, onde pode ser carregado e quais são as suas dependências.
+
+#### storefront/routes/
+
+Nessa pasta estão as configurações de rota: nome da rota e o path relacionado. Por exemplo, podemos dizer que a rota de nome "home" esta associada ao path "/".
+
+#### storefront/settings/
+
+Nesta pasta ficam todas as configurações **default** dos componentes da app.
+
+* `storefront/settings/components/`: Ficam todas as configurações globais de componentes da app. Se quero que Banner@vtex.banner tenha o mesmo comportamento para toda a loja é aqui que devo configurá-lo.
+
+* `storefront/settings/routes/`: Ficam todas as configurações dos componentes de uma página. É como dizer que para uma página específica o componente possui um set de configurações que podem não ser iguais ao de outras páginas.
+
+## Arquivos do projeto
+
+#### .eslintrc
 
 Arquivo de configuração do eslint.
 
-### .gitignore
+#### .gitignore
 
 Arquivo importante caso use git, ferramenta de versionamento de código.
 
-### .vtexignore
+#### .vtexignore
 
 O `.vtexignore` impede que arquivos sejam enviados para a Gallery desnecessariamente. Note que a pasta `src/` está incluida nessa lista, pois esse é o código fonte não processado: o que queremos enviar são apenas os arquivos gerados pelo Webpack, que são arquivos compilados, minificados e otimizados que vão morar dentro da pasta `storefront/assets/`.
 
 O `.vtexignore` usa uma sintaxe idêntica ao `.gitignore` — caso queira saber mais, veja a [documentação oficial do Git](https://git-scm.com/docs/gitignore#_pattern_format).
 
-### package.json
+#### package.json
 
 Arquivo necessário para projetos Javascript que usam o npm, o package manager de Javascript.
 
-### webpack.config.js
+#### webpack.config.js
 
 Esse arquivo possui todas as configurações do Webpack.
 
@@ -147,6 +166,11 @@ Faça uma alteração no componente `HomePage.js` ou em um arquivo CSS e veja as
 
 ---
 
+### Recaptulando
+
 Você completou o "Melhorando o processo de desenvolvimento"! Agora estamos desenvolvendo de forma eficiente e produtiva.
 
-Próximo passo: [Criando uma nova página](1-criando-uma-nova-pagina.md)
+---
+### Próximos passos
+
+Antes de colocar a mão na massa vamos entender um pouco melhor [como o ambiente de desenvolvimento funciona](/como-funciona-o-ambiente-de-desenvolvimento.md).

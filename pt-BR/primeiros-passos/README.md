@@ -12,7 +12,7 @@ Nesse guia, nos iremos mostrar como criar um primeiro app simples.
 - [Componente React](componente-react.md)
 - [Descritor de Componente](descritor-de-componente.md)
 - [Rota](rota.md)
-- [Area](area.md)
+- [Componente Root](root.md)
 - [Toolbelt](toolbelt.md)
 - [Registro de Componente](registro-de-componente.md)
 - [Exemplo: HomePage](exemplo-homepage.md)

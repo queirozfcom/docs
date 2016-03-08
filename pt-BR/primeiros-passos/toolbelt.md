@@ -11,7 +11,7 @@ O Toolbelt consiste basicamente de 4 comandos:
 
 Como o próprio nome já diz, são comandos de login e logout no ambiente de desenvolvimento.
 
-Você pode desenvolver apenas um loja por vez.
+Você pode desenvolver em apenas um loja por vez.
 
 ### `watch`
 
@@ -44,8 +44,9 @@ Por fim, abra a URL que o Toolbelt mostra em seu terminal.
 `http://{account}.beta.myvtex.com/?workspace=sb_email@domonio.com`
 
 ## Workspace de desenvolvimento
+
 O queryString `?workspace=sb_email@domonio.com` da URL indica ao servidor qual o workspace deseja acessar.
-O seu workspace de desenvolvimento **sempre** será vinculado ao e-mail do comando `vtex watch`.
+O seu workspace de desenvolvimento **sempre** será vinculado ao e-mail que você escreveu no `vtex login`.
 
 Você deve ter visto uma tela de erro. Vamos explicar e corrigir no próximo passo.
 
