@@ -14,9 +14,9 @@ O trecho abaixo configura somente o componente `Shelf@vtex.shelf` que está dent
 └── storefront/
     ├── settings/
     │   └── routes/
-    |         └── home/
-    |               └── HomePage@vtex.theme/
-    |                                   └── shelf.json
+    |       └── home/
+    |           └── HomePage@vtex.theme/
+    |               └── shelf.json
     └── routes/
         └── home.json
 ```
@@ -24,9 +24,9 @@ O trecho abaixo configura somente o componente `Shelf@vtex.shelf` que está dent
 `storefront/settings/routes/home/HomePage@vtex.theme/shelf.json`
 ```json
 {
-   "components": "Shelf@vtex.shelf",
+   "component": "Shelf@vtex.shelf",
    "settings": {
-        "title": "This is amazing shelf!"
+        "title": "This is an amazing shelf!"
    }
 }
 ```
@@ -43,11 +43,11 @@ Com esse raciocínio seria possível alterar um componente de um placeholder den
 └── storefront/
     ├── settings/
     │   └── routes/
-    |         └── home/
-    |               └── HomePage@vtex.theme/
-    |                           ├── shelf/
-    |                           |       └──product.json   
-    |                           └── shelf.json
+    |       └── home/
+    |           └── HomePage@vtex.theme/
+    |               └── shelf/
+    |                   └── product.json   
+    |                       └── shelf.json
     └── routes/
         └── home.json
 ```
@@ -55,17 +55,16 @@ Com esse raciocínio seria possível alterar um componente de um placeholder den
 `storefront/settings/routes/home/HomePage@vtex.theme/shelf/product.json`
 ```json
 {
-   "components": "Product@vtex.shelf",
+   "component": "Product@vtex.shelf",
    "settings": {
-        "show-price": true
+        "showPrice": true
    }
 }
 ```
 
 ### Configurando componente para toda a página
 
-Nós podemos também adicionar configurações para todos os componentes `Shelf@vtex.shelf` que
-aparecem na página como comportamentos _globais por página_. No exemplo abaixo estamos dizendo que para todas as shelf's os placeholders `product-list` terão as mesma configuração.
+Nós podemos também adicionar configurações para todos os componentes `Shelf@vtex.shelf` que aparecem na página como comportamentos _globais por página_. No exemplo abaixo estamos dizendo que para todas as shelfs os placeholders `product-list` terão a mesma configuração.
 
 `storefront/settings/routes/home/Shelf@vtex.shelf`
 ```sh
@@ -75,21 +74,21 @@ aparecem na página como comportamentos _globais por página_. No exemplo abaixo
     │   └── routes/
     |         └── home/
     |               ├── Shelf@vtex.shelf/
-    |               |               └──product-list.json    
+    |               |   └── product-list.json    
     |               └── HomePage@vtex.theme/
-    |                           ├── shelf/
-    |                           |       └──product.json   
-    |                           └── shelf.json
+    |                   └── shelf/
+    |                       ├── product.json   
+    |                       └── shelf.json
     └── routes/
 ```
 
 `storefront/settings/routes/home/Shelf@vtex.shelf/product-list.json`
 ```json
 {
-   "components": "ProductList@vtex.shelf",
+   "component": "ProductList@vtex.shelf",
    "settings": {
         "quantity": 5,
-        "scroll": true
+        "scroll": true,
         "arrows": {
             "right": "blue",
             "left": "red"
@@ -105,12 +104,12 @@ Nos passos anteriores conhecemos o poder dos [pontos de extensão](ponto-de-exte
 
 Quando extendemos uma app também herdamos as suas configurações _default_. Desta forma, podemos sobrescrever as configurações que quisermos.
 
-Ao sobrescrever estas configurações temos uma ordem de precedencia: o mais específico sempre vence. Desta forma, configurações mais locais sempre irão ganhar de configurações default da app.
+Ao sobrescrever estas configurações temos uma ordem de precedência: o mais específico sempre vence. Assim, configurações mais locais sempre irão ganhar de configurações default da app.
 
-Com isso, temos os níveis de precedencia das configurações entre apps: 
+Com isso, temos os níveis de precedência das configurações entre apps: 
 
-1. Configurações feitas pelo _usuário_ são mais importantes que configurações _default da página_
-2. Configurações _default da página_ tem precendencia sobre configurações _globais da página_
+1. Configurações feitas pelo _usuário_ são mais importantes que configurações da _página_
+2. Configurações da _página_ tem precendencia sobre configurações _globais de componentes_
 
 ---
 

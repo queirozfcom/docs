@@ -9,15 +9,15 @@ Apps podem se alavancar de outras apps para criar funcionalidades, portanto, é 
 Mas as vezes você pode querer modificar somente um valor e usar todas as configurações restantes,
 em outros casos irá querer que uma app tenha o mesmo comportamento em todas as páginas da loja. 
 
-O escopo de configuração serve para definir o alcance que as configurações (`somente na página` ou `global`) de uma app e como ocorre a sobreposição das configurações entre apps.
+O escopo de configuração serve para definir o alcance das configurações (`somente na página` ou `global`) de uma app e como ocorre a sobreposição das configurações entre apps.
 
-O que nos deixa animados sobre *escopo de configuração* é que você pode alterar o comportamento de de uma parte muito específica da app sem afetar o restante, por exemplo, o componente que exibe o preço. Pode também dizer que a configuração de um componente só vale em uma página ou alterar seu comportamento para ser o mesmo em toda a loja.
+O que nos deixa animados sobre *escopo de configuração* é que você pode alterar o comportamento de uma parte muito específica da app sem afetar o restante.Por exemplo, o componente que exibe o preço. Pode também dizer que a configuração de um componente só vale em uma página ou alterar seu comportamento para ser o mesmo em toda a loja.
 
-As configurações de uma app sempre ficam na pasta `storefront/settings` e estão dividas por _configuração de rota_ ou _componentes_.
+As configurações de uma app sempre ficam na pasta `storefront/settings` e estão dividas por _configurações de rotas_ e _configurações de componentes_.
 
 ## Configurações default
 
-Definem um estado inicial que posteriormente podem ser alteradas pelo usuário através de um admin.
+Definem um estado inicial que posteriormente podem ser alteradas pelo usuário através de um editor.
 
 ## Configuração default de rota
 
@@ -25,4 +25,4 @@ Servem para configurar os componentes de uma rota específica.
 
 ## Configuração default de componentes
 
-Servem para configurar globalmente todos os componentes da app. 
+Servem para configurar globalmente todos os componentes da app.

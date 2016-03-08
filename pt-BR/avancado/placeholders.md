@@ -19,7 +19,7 @@ class Banner extends React.Component {
   }
 
   render() {
-    let imageUrl = this.props.imageUrl;
+    let imageUrl = this.state.imageUrl;
 
     return (
       <div className="banner">
@@ -45,11 +45,9 @@ const Placeholder = stores.ComponentStore.state.getIn(['Placeholder@vtex.storefr
 class HomePage extends React.Component {
 
   render() {
-    let imageUrl = this.props.imageUrl;
-    let banner = "banner";
     return (
       <div className="theme">
-        <Placeholder id={banner}/>
+        <Placeholder id="banner"/>
       </div>
     );
   }
@@ -68,14 +66,17 @@ e "Banner".
 ```json
 { 
   "assets": [
+    "common.js",
     "HomePage.js"
   ]
+}
 ```
 
 `storefront/componentes/Banner.json`
 ```json
 {
   "assets": [
+    "common.js",
     "Banner.js"
   ]
 }
@@ -83,18 +84,30 @@ e "Banner".
 
 ### Registrando o componente
 
-Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) os componentes "HomePage" e Banner" no arquivo `src/components/index.js`.
+Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) os componentes "HomePage" e Banner".
 
+
+`src/components/HomePage.js`
 ```js
 import { actions } from 'sdk';
 import HomePage from './HomePage';
-import Banner from './Banner';
 
 let component = [
   {
     name: 'HomePage@mycompany.my-first-app',
     constructor: HomePage
-  },
+  }
+];
+
+actions.ComponentActions.register(component);
+```
+
+`src/components/Banner.js`
+```js
+import { actions } from 'sdk';
+import Banner from './Banner';
+
+let component = [
   {
     name: 'Banner@mycompany.my-first-app',
     constructor: Banner
@@ -105,6 +118,7 @@ actions.ComponentActions.register(component);
 ```
 
 ### Registrando o componente Root
+
 Precisamos [registrar o componente Root](primeiros-passos/root.md) e [configurar o componente HomePage](3-criando-uma-nova-pagina.md) para rota "home".
 
 ### Configurando um ponto de extensão
@@ -127,7 +141,7 @@ Você está criando uma **configuração padrão** para um placeholder da sua ap
 
 O trecho acima significa que na rota _"home"_ no componente _"HomePage@mycompany.my-first-app"_ o placeholder de id _"banner"_ é ocupado pelo componente _"Banner@mycompany.my-app"_.
 
-É importante dizer que estas configurações podem ser sobrescritas pelo usuário, desde que tenha um admin que permita fazer isso. 
+É importante dizer que estas configurações podem ser sobrescritas pelo usuário, desde que tenha um editor que permita fazer isso. 
 
 ### Visualizando alterações
 
@@ -141,4 +155,4 @@ O _placeholder_ é um recurso fundamental para a extensibilidade do Storefront, 
 
 Esta flexibilidade permite a troca rápida de componentes entre diferentes apps em uma página. Para isso, basta alterar a configuração do placeholder que é vinculalda a um `id` único por página.
 
-Toda app pode ter **configurações padrão** para os seus componentes, portanto, qualquer placeholder recebe uma configuração padrão que poderá ser alterada pelo usuário através de um admin.
+Toda app pode ter **configurações padrão** para os seus componentes, portanto, qualquer placeholder recebe uma configuração padrão que poderá ser alterada pelo usuário através de um editor.

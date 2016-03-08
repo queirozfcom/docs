@@ -14,11 +14,11 @@ Isso significa que todos os componentes `DefaultTemplate@vtex.theme` nesta app p
     ├── meta.json
     └── storefront/
         └── settings/
-           └── components/
+            └── components/
                 └── DefaultTemplate@vtex.theme/
-                                          ├── header.json
-                                          ├── body.json
-                                          └── footer.json
+                    ├── header.json
+                    ├── body.json
+                    └── footer.json
 ```
 
 `storefront/settings/components/DefaultTemplate@vtex.theme/header.json`
@@ -27,7 +27,7 @@ Isso significa que todos os componentes `DefaultTemplate@vtex.theme` nesta app p
   "component": "Header@vtex.header",
   "settings": {
     "background": "blue",
-    "categories": ['winter', 'summer', 'fall']
+    "categories": ["winter", "summer", "fall"]
   }
 }
 ```
@@ -63,18 +63,18 @@ reutilizados por todas as páginas (`header` e `footer`).
     ├── settings/
     |   ├── components/
     |   |     └── DefaultTemplate@vtex.theme/
-    |   |                               ├── header.json
-    |   |                               ├── body.json
-    |   |                               └── footer.json
+    |   |         ├── header.json
+    |   |         ├── body.json
+    |   |         └── footer.json
     │   └── routes/
-    |         └── home/
-    |         |      ├── DefaultTemplate@vtex.theme/
-    |         |      |                       └── body.json
-    |         |      └── HomePage@vtex.theme/
-    |         └── product/
-    |               ├── DefaultTemplate@vtex.theme/
-    |               |                       └── body.json
-    |               └── ProductPage@vtex.theme/
+    |       └── home/
+    |       |   ├── DefaultTemplate@vtex.theme/
+    |       |   |   └── body.json
+    |       |   └── HomePage@vtex.theme/
+    |       └── product/
+    |           ├── DefaultTemplate@vtex.theme/
+    |           |   └── body.json
+    |           └── ProductPage@vtex.theme/
     |
     └── routes/
 ```
@@ -82,7 +82,7 @@ reutilizados por todas as páginas (`header` e `footer`).
 `storefront/settings/home/DefaultTemplate@vtex.theme/body.json`
 ```json
 {
-    "components": "HomePage@vtex.theme"
+    "component": "HomePage@vtex.theme"
 }
 ```
 
@@ -93,11 +93,11 @@ No final, os componentes `HomePage@vtex.theme` e `ProductPage@vtex.theme` terão
 
 ## Recapitulando
 
-Nos passos anteriores descobrimos os níveis de precedencia das configurações entre apps: 
+Nos passos anteriores descobrimos os níveis de precedência das configurações entre apps: 
 
-1. Configurações feitas pelo _usuário_ são mais importantes que configurações _default da página_
-2. Configurações _default da página_ tem precendencia sobre configurações _globais da página_
-3. Configurações _default da página_ ganham quando comparadas com _globais da app_
+1. Configurações feitas pelo _usuário_ são mais importantes que configurações da _página_
+2. Configurações _da página_ tem precendencia sobre configurações _globais de componentes_
+3. Configurações da _página_ ganham quando comparadas com _globais da app_
 
 Agora aprendemos como declarar configurações de um componente globalmente e reutilizá-las nas páginas. O escopo global é uma poderosa ferramenta para evitar o retrabalho e centralizar responsabilidades.
 
