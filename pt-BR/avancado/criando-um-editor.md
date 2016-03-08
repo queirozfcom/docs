@@ -4,9 +4,9 @@ Nesse guia vamos aprender a fazer um componente Banner em que o usuário pode tr
 
 O que nos deixa animados sobre os editors é a possibilidade do desenvolvedor da loja ter autonomia para criar interfaces administrativas da maneira que achar melhor.
 
-### Instalando o Storefront Editor
+### Instalando o Editor
 
-Primeiro vamos instalar o app "storefront-editor", ele é responsável por gerar toda a interface de edição. Para instalar abra a URL:
+Primeiro vamos instalar o app "editor", ele é responsável por gerar toda a interface de edição. Para instalar abra a URL:
 
 [http://sualoja.beta.myvtex.com/admin/gallery#/apps](http://sualoja.beta.myvtex.com/admin/gallery#/apps)
 
@@ -14,7 +14,7 @@ Abra a URL da loja:
 
 [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/)
 
-É possivel visualizar a interface do Storefront Editor, os lojistas poderão editar a loja clicando no ícone de lápis no canto direito. Nesse momento, nada acontece se clicarmos nesse botão. Vamos construir o primeiro componente editável para que algo aconteça.
+É possivel visualizar a interface do Editor, os lojistas poderão editar a loja clicando no ícone de lápis no canto direito. Nesse momento, nada acontece se clicarmos nesse botão. Vamos construir o primeiro componente editável para que algo aconteça.
 
 ### Criando o componente Banner
 
@@ -73,11 +73,11 @@ Confira em: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.
 
 ## Transformando um componente comum em editável
 
-Para que o Storefront Editor consiga identificar componentes editáveis na página precisamos fazer duas coisas:
+Para que o Editor consiga identificar componentes editáveis na página precisamos fazer duas coisas:
 
 - Criar a definição de componente em `storefront/components/`
 - Registrar o componente com `ComponentActions.register` para que outra parte do código consiga usar o componente
-- Usar o decorador `@storefront` fornecido pelo Storefront SDK
+- Usar o decorador `@editable` fornecido pelo Editor
 
 ### Criando o arquivo de definição do componente
 
@@ -107,7 +107,7 @@ import Banner from 'components/Banner/Banner';
 
 let component = [
   {
-    name: 'HomePage@amycompany.my-first-app',
+    name: 'HomePage@mycompany.my-first-app',
     constructor: HomePage
   },
   {
@@ -119,19 +119,19 @@ let component = [
 actions.ComponentActions.register(component);
 ```
 
-### Usando `@storefront` e adicionando informações ao componente
+### Usando `@editable` e adicionando informações ao componente
 
-Vamos agora aprender a usar o decorador `@storefront`.
+Vamos agora aprender a usar o decorador `@editable`.
 
 Copie o seguinte código no arquivo `src/components/Banner/Banner.js`:
 
 ```js
 import React from 'react';
-// Importa o decorador "storefront" do SDK
-import { storefront } from 'sdk';
+// Importa o decorador "editable" do SDK
+import { editable } from 'editor';
 
-// Decora a classe "Banner" com "storefront"
-@storefront({
+// Decora a classe "Banner" com "editable"
+@editable ({
   name: 'Banner@alphateam.my-first-app', // Deve ser o mesmo valor da propriedade "name" no momento do registro do componente
   title: 'Banner', // Nome do componente que será apresentado para o usuário (lojista)
   editable: true // indica que o componente é editável
@@ -151,7 +151,7 @@ class Banner extends React.Component {
 export default Banner;
 ```
 
-Abra a URL: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/) e clique no botão de edição. Veja que o Storefront Editor agora consegue identificar o seu componente como editável.
+Abra a URL: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/) e clique no botão de edição. Veja que o Editor agora consegue identificar o seu componente como editável.
 
 ## Criando o componente de edição
 
@@ -162,7 +162,7 @@ import React from 'react';
 
 class BannerEditor extends React.Component {
   render() {
-    // Esse é o componente que exibe os botões de "Cancelar" e "Salvar" do Storefront Editor
+    // Esse é o componente que exibe os botões de "Cancelar" e "Salvar" do Editor
     // Um editor deve sempre renderizar esse componente
     let ActionBar = this.props.actionBar;
 
@@ -186,7 +186,7 @@ export default BannerEditor;
 
 É definido por convenção que todos os componentes editors tenham o nome com o sufixo "Editor", ex: "BannerEditor".
 
-Vamos registrar o componente de edição no arquivo `src/editors/index.js` para que o Storefront Editor consiga acessá-lo. Copie o código:
+Vamos registrar o componente de edição no arquivo `src/editors/index.js` para que o Editor consiga acessá-lo. Copie o código:
 
 ```js
 import { actions } from 'sdk';
@@ -218,7 +218,7 @@ Altere o método `render` da "HomePage":
 render() {
   return (
     <div>
-      <Banner id="banner-1" route="home"/>
+      <Banner id="banner-1" />
 
       <HelloWorld />
       <p className="message">Crie, construa, inove!</p>
@@ -228,7 +228,7 @@ render() {
 }
 ```
 
-Observe que atribuímos o id "banner-1" e passamos o nome da rota. Esses dois parâmetros (`id` e `route`) formam a identificação única do componente no Storefront.
+Observe que atribuímos o id "banner-1" e passamos o nome da rota. Esses dois parâmetros (`id`) formam a identificação única do componente no Storefront.
 
 #### Ajustando o componente editor
 
@@ -293,10 +293,10 @@ Por fim, vamos pegar as configurações salvas na Gallery e usá-las no componen
 
 ```js
 import React from 'react';
-import { storefront } from 'sdk';
+import { editable } from 'editor';
 
-@storefront({
-  name: 'Banner@alphateam.my-first-app',
+@editable({
+  name: 'Banner@mycompany.my-first-app',
   title: 'Banner',
   editable: true
 })
@@ -320,7 +320,7 @@ class Banner extends React.Component {
 export default Banner;
 ```
 
-O componente com a decorador `@storefront` recebe suas configurações automaticamente pela prop `settings`.
+O componente com a decorador `@editable` recebe suas configurações automaticamente pela prop `settings`.
 
 ---
 
