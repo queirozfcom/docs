@@ -1,6 +1,6 @@
 # Criando uma página
 
-Este guia tem como objetivo a criação de um novo modelo página no Storefront que responda a uma rota — por exemplo, uma página de categoria ou de busca.
+Este guia tem como objetivo a criação de um novo modelo de página no Storefront que responda a uma rota — por exemplo, uma página de categoria ou de busca.
 
 Para começar, vamos dar uma olhada no arquivo `storefront/routes/home.json`. Esse arquivo fala para o servidor as seguintes informações:
 
@@ -84,7 +84,7 @@ A propriedade `assets` indica quais os arquivos necessários para a página. O W
 
 ### O componente React da página
 
-O arquivo `src/pages/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
+O arquivo `src/components/ProductPage/ProductPage.js` é o componente React que responde pela rota de produto.
 
 ```js
 import React from 'react';
@@ -174,7 +174,7 @@ Para criar uma nova página você precisa:
 - Criar o arquivo JSON que define o componente em `storefront/components/`
 - Criar o arquivo JSON que define qual componente responderá pela rota em `storefront/settings/routes/product/Root@storefront-sdk/content.json`
 - Criar um componente React em `src/components/`
-- Registrar o componente React utilizando a *action* `ComponentActions.register`storefront/settings/routes/product/Root@storefront-sdk/content.json
+- Registrar o componente React utilizando a *action* `ComponentActions.register`
 
 ---
 
