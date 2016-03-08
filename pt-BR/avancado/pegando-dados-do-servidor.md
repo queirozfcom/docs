@@ -15,7 +15,7 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
   "resourceBindings": [
     {
       "locator": "search@vtex.storefront-sdk",
-      "relativePath": "/{{ account }}/products/{{ route.slug }}",
+      "relativePath": "/products",
       "queryParams": {
         "pageSize": 5
       },
@@ -32,10 +32,18 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
 Veja que inserimos uma nova propriedade chamada `resourceBindings`. Os parâmetros que ela recebe são:
 
 - **locator**: identificador do resource que será usado. Neste caso estamos usando um resource do SDK chamado ["search"](https://github.com/vtex-apps/storefront-sdk/blob/master/storefront/resources/search.json), responsável por prover o base-endpoint da chamada.
-- 
-- **relativePath**: é o complemento necessário para a URL de locator definida. Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/acount-name-da-loja/nome-do-produto`.
 
-O `resourceBindings` liga uma rota a uma chamada a API. Voce pode declarar quantos `bindigs` quiser, portanto, diferentes dados podem ser pré-carregados para uma mesma página.
+- **relativePath**: é o complemento necessário para a URL de locator definida. 
+  * Os paths também podem conter **variáveis**:  _"/\{\{ account }}/products/\{\{ route.slug }}/"_
+
+Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/acount-name-da-loja/nome-do-produto`.
+
+- **bindTo**: É o nome da chave que o resource irá receber na store do Storefront SDK.
+
+- **queryParams**: São os parametros que serão repassados na query string durante a chamada.
+
+
+O `resourceBindings` liga uma rota a uma chamada a API. Voce pode declarar quantos `bindings` quiser, portanto, diferentes dados podem ser pré-carregados para uma mesma página.
 
 Carregue a página de produto no browser ([http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
 
