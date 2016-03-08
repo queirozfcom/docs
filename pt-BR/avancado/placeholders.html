@@ -1,0 +1,923 @@
+<!DOCTYPE HTML>
+<html lang="pt" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Placeholders | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../avancado/escopo-de-configuracao.html" />
+    
+    
+    <link rel="prev" href="../avancado/ponto-de-extensao.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.4.1"
+        data-chapter-title="Placeholders"
+        data-filepath="avancado/placeholders.md"
+        data-basepath=".."
+        data-revision="Tue Mar 08 2016 12:42:08 GMT-0300 (BRT)"
+        data-innerlanguage="pt-BR">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introdução
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introducao/index.html">
+            
+                
+                    <a href="../introducao/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introdução
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introducao/a-plataforma.html">
+            
+                
+                    <a href="../introducao/a-plataforma.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        A Plataforma
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introducao/storefront.html">
+            
+                
+                    <a href="../introducao/storefront.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Storefront
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introducao/ecossistema.html">
+            
+                
+                    <a href="../introducao/ecossistema.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Ecossistema
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="introducao/exemplos.html">
+            
+            <span><b>1.4.</b> Exemplos</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="primeiros-passos/index.html">
+            
+                
+                    <a href="../primeiros-passos/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Primeiros Passos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="primeiros-passos/setup.html">
+            
+                
+                    <a href="../primeiros-passos/setup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="primeiros-passos/manifest.html">
+            
+                
+                    <a href="../primeiros-passos/manifest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Manifest
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="primeiros-passos/package.html">
+            
+                
+                    <a href="../primeiros-passos/package.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Package.json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="primeiros-passos/componente-react.html">
+            
+                
+                    <a href="../primeiros-passos/componente-react.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Componente React
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="primeiros-passos/descritor-de-componente.html">
+            
+                
+                    <a href="../primeiros-passos/descritor-de-componente.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Descritor de Componente
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="primeiros-passos/rota.html">
+            
+                
+                    <a href="../primeiros-passos/rota.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Rota
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="primeiros-passos/root.html">
+            
+                
+                    <a href="../primeiros-passos/root.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Componente Root
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="primeiros-passos/toolbelt.html">
+            
+                
+                    <a href="../primeiros-passos/toolbelt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Toolbelt
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="primeiros-passos/registro-de-componente.html">
+            
+                
+                    <a href="../primeiros-passos/registro-de-componente.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Registro de Componente
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="primeiros-passos/exemplo-homepage.html">
+            
+                
+                    <a href="../primeiros-passos/exemplo-homepage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Exemplo: HomePage
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="avancado/index.html">
+            
+                
+                    <a href="../avancado/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Avançado
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="avancado/ambiente-de-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/ambiente-de-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ambiente de desenvolvimento
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="avancado/melhorando-o-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/melhorando-o-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        Melhorando o Desenvolvimento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="avancado/como-funciona-o-ambiente-de-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/como-funciona-o-ambiente-de-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        Como funciona o ambiente de desenvolvimento
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="avancado/criando-uma-nova-pagina.html">
+            
+                
+                    <a href="../avancado/criando-uma-nova-pagina.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Criando um nova página
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="avancado/criando-um-editor.html">
+            
+                
+                    <a href="../avancado/criando-um-editor.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Criando um Editor
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="avancado/ponto-de-extensao.html">
+            
+                
+                    <a href="../avancado/ponto-de-extensao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Pontos de extensão
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.4.1" data-path="avancado/placeholders.html">
+            
+                
+                    <a href="../avancado/placeholders.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        Placeholders
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="avancado/escopo-de-configuracao.html">
+            
+                
+                    <a href="../avancado/escopo-de-configuracao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        Escopo de configuração
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.2.1" data-path="avancado/configurado-pelo-usuario.html">
+            
+                
+                    <a href="../avancado/configurado-pelo-usuario.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.1.</b>
+                        
+                        Configurado pelo usuario
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.2" data-path="avancado/escopo-da-pagina.html">
+            
+                
+                    <a href="../avancado/escopo-da-pagina.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.2.</b>
+                        
+                        Escopo da página
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.3" data-path="avancado/escopo-global.html">
+            
+                
+                    <a href="../avancado/escopo-global.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.3.</b>
+                        
+                        Escopo global
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="avancado/extendendo-uma-app.html">
+            
+            <span><b>3.4.3.</b> Extendendo uma app</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.3.1" data-path="implements.html">
+            
+            <span><b>3.4.3.1.</b> Implements</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="avancado/pegando-dados-do-servidor.html">
+            
+                
+                    <a href="../avancado/pegando-dados-do-servidor.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Pegando Dados do Servidor
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="avancado/salvando-dados-do-servidor.html">
+            
+            <span><b>3.6.</b> Salvando Dados do Servidor</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="avancado/dependencias-de-apps.html">
+            
+            <span><b>3.7.</b> Dependências de Apps</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="avancado/publicando-seu-app.html">
+            
+            <span><b>3.8.</b> Publicando seu App</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="avancado/mantendo-um-app.html">
+            
+            <span><b>3.9.</b> Mantendo um App</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="tutoriais/index.html">
+            
+            <span><b>4.</b> Tutoriais</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="tutoriais/criando-um-tema.html">
+            
+            <span><b>4.1.</b> Criando um App de Tema</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="tutoriais/criando-um-app-de-componente.html">
+            
+            <span><b>4.2.</b> Criando um App de Componente</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="tutoriais/criando-um-admin.html">
+            
+            <span><b>4.3.</b> Criando um App de Admin</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="GLOSSARY.html">
+            
+                
+                    <a href="../GLOSSARY.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Glossário
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="solucao-de-problemas.html">
+            
+                
+                    <a href="../solucao-de-problemas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Solução de Problemas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="referencia-da-api/index.html">
+            
+            <span><b>7.</b> Referência da API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="referencia-da-api/manifest.json.html">
+            
+                
+                    <a href="../referencia-da-api/manifest.json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        manifest.json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="referencia-da-api/areas.html">
+            
+            <span><b>7.2.</b> areas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="referencia-da-api/assets.html">
+            
+            <span><b>7.3.</b> assets</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="referencia-da-api/components.html">
+            
+            <span><b>7.4.</b> components</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="referencia-da-api/resources.html">
+            
+            <span><b>7.5.</b> resources</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="referencia-da-api/routes.html">
+            
+            <span><b>7.6.</b> routes</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Publicado com GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Glossário"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="placeholders">Placeholders</h1>
+<p>Um <strong>placeholder</strong> &#xE9; um <em>ponto de extens&#xE3;o</em> entre apps. Basicamente ele determina um lugar na p&#xE1;gina onde componentes poder&#xE3;o entrar.</p>
+<p>Os placeholders permitem que desenvolvedores componham suas apps com apps de terceiros ao mesmo tempo que d&#xE1; liberdade para o usu&#xE1;rio substitu&#xED;-las.</p>
+<h3 id="criando-um-placeholder-para-o-banner">Criando um placeholder para o Banner</h3>
+<p>Vamos criar um componente React para o Banner. Crie o arquivo <code>src/components/Banner/Banner.js</code> e copie o seguinte c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Banner</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+
+  constructor(props) {
+    <span class="hljs-keyword">super</span>(props);
+    <span class="hljs-keyword">this</span>.state = <span class="hljs-keyword">this</span>.props.settings ? <span class="hljs-keyword">this</span>.props.settings.toJS() : {};
+  }
+
+  render() {
+    <span class="hljs-keyword">let</span> imageUrl = <span class="hljs-keyword">this</span>.state.imageUrl;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;banner&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">{imageUrl}</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">{200}</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Banner;
+</code></pre>
+<p>&#xC9; um componente simples que exibe uma imagem.</p>
+<p>V&#xE1; para o componente <code>src/components/HomePage/HomePage.js</code> e copie o c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { stores } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+
+<span class="hljs-keyword">const</span> Placeholder = stores.ComponentStore.state.getIn([<span class="hljs-string">&apos;Placeholder@vtex.storefront-sdk&apos;</span>, <span class="hljs-string">&apos;constructor&apos;</span>]);
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomePage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;theme&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Placeholder</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;banner&quot;</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> HomePage;
+</code></pre>
+<p>Voc&#xEA; est&#xE1; criando um espa&#xE7;o (<code>placeholder</code>) no componente HomePage que pode ser preenchido por um componente com <code>id</code> &quot;banner&quot;.</p>
+<h3 id="descrevendo-o-componente">Descrevendo o componente</h3>
+<p>&#xC9; preciso <a href="primeiros-passos/descritor-de-componente">descrever</a> os componentes &quot;HomePage&quot;
+e &quot;Banner&quot;.</p>
+<p><code>storefront/componentes/HomePage.json</code></p>
+<pre><code class="lang-json">{ 
+  <span class="hljs-string">&quot;assets&quot;</span>: [
+    <span class="hljs-string">&quot;common.js&quot;</span>,
+    <span class="hljs-string">&quot;HomePage.js&quot;</span>
+  ]
+}
+</code></pre>
+<p><code>storefront/componentes/Banner.json</code></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;assets&quot;</span>: [
+    <span class="hljs-string">&quot;common.js&quot;</span>,
+    <span class="hljs-string">&quot;Banner.js&quot;</span>
+  ]
+}
+</code></pre>
+<h3 id="registrando-o-componente">Registrando o componente</h3>
+<p>Precisamos <a href="3-criando-uma-nova-pagina.md#registrando-um-componente">registrar</a> os componentes &quot;HomePage&quot; e Banner&quot;.</p>
+<p><code>src/components/HomePage.js</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { actions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+<span class="hljs-keyword">import</span> HomePage <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./HomePage&apos;</span>;
+
+<span class="hljs-keyword">let</span> component = [
+  {
+    name: <span class="hljs-string">&apos;HomePage@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>,
+    constructor: HomePage
+  }
+];
+
+actions.ComponentActions.register(component);
+</code></pre>
+<p><code>src/components/Banner.js</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { actions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+<span class="hljs-keyword">import</span> Banner <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Banner&apos;</span>;
+
+<span class="hljs-keyword">let</span> component = [
+  {
+    name: <span class="hljs-string">&apos;Banner@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>,
+    constructor: Banner
+  }
+];
+
+actions.ComponentActions.register(component);
+</code></pre>
+<h3 id="registrando-o-componente-root">Registrando o componente Root</h3>
+<p>Precisamos <a href="primeiros-passos/root.md">registrar o componente Root</a> e <a href="3-criando-uma-nova-pagina.md">configurar o componente HomePage</a> para rota &quot;home&quot;.</p>
+<h3 id="configurando-um-ponto-de-extens&#xE3;o">Configurando um ponto de extens&#xE3;o</h3>
+<p>Todo placeholder deve obrigatoriamente ter um <strong>id</strong> &#xFA;nico. O identificador possibilita
+que um ponto espec&#xED;fico na p&#xE1;gina seja reconhecido e configurado por qualquer <a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>. Neste caso o valor do id &#xE9; &quot;banner&quot;.</p>
+<p>Crie o arquivo <code>storefront/settings/routes/home/HomePage@mycompany.my-first-app/banner.json</code></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-string">&quot;Banner@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&quot;</span>,
+  <span class="hljs-string">&quot;settings&quot;</span>: {
+      <span class="hljs-string">&quot;imageUrl&quot;</span>: <span class="hljs-string">&quot;http://i.imgur.com/jbBNeR3.jpg&quot;</span>
+  }
+}
+</code></pre>
+<p>Voc&#xEA; est&#xE1; criando uma <strong>configura&#xE7;&#xE3;o padr&#xE3;o</strong> para um placeholder da sua <a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>.</p>
+<p>O trecho acima significa que na rota <em>&quot;home&quot;</em> no componente <em>&quot;HomePage@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&quot;</em> o placeholder de id <em>&quot;banner&quot;</em> &#xE9; ocupado pelo componente <em>&quot;Banner@mycompany.my-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&quot;</em>.</p>
+<p>&#xC9; importante dizer que estas configura&#xE7;&#xF5;es podem ser sobrescritas pelo usu&#xE1;rio, desde que tenha um editor que permita fazer isso. </p>
+<h3 id="visualizando-altera&#xE7;&#xF5;es">Visualizando altera&#xE7;&#xF5;es</h3>
+<p>Digite no terminal o comando <code>vtex watch -s</code> e abra a URL <a href="http://sualoja.local.myvtex.com:3000/" target="_blank">http://sualoja.local.myvtex.com:3000/</a>. Voc&#xEA; deve visualizar a imagem da configura&#xE7;&#xE3;o do banner renderizada.</p>
+<hr>
+<h2 id="recapitulando">Recapitulando</h2>
+<p>O <em>placeholder</em> &#xE9; um recurso fundamental para a extensibilidade do Storefront, sua fun&#xE7;&#xE3;o &#xE9; marcar um lugar na p&#xE1;gina onde componentes poder&#xE3;o entrar.</p>
+<p>Esta flexibilidade permite a troca r&#xE1;pida de componentes entre diferentes apps em uma p&#xE1;gina. Para isso, basta alterar a configura&#xE7;&#xE3;o do placeholder que &#xE9; vinculalda a um <code>id</code> &#xFA;nico por p&#xE1;gina.</p>
+<p>Toda <a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a> pode ter <strong>configura&#xE7;&#xF5;es padr&#xE3;o</strong> para os seus componentes, portanto, qualquer placeholder recebe uma configura&#xE7;&#xE3;o padr&#xE3;o que poder&#xE1; ser alterada pelo usu&#xE1;rio atrav&#xE9;s de um editor.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../avancado/ponto-de-extensao.html" class="navigation navigation-prev " aria-label="Previous page: Pontos de extensão"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../avancado/escopo-de-configuracao.html" class="navigation navigation-next " aria-label="Next page: Escopo de configuração"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"edit-link":{"base":"https://github.com/vtex-apps/docs/tree/master/","label":"Edit This Page"},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

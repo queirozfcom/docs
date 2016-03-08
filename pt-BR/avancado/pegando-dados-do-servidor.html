@@ -1,0 +1,1082 @@
+<!DOCTYPE HTML>
+<html lang="pt" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Pegando Dados do Servidor | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../GLOSSARY.html" />
+    
+    
+    <link rel="prev" href="../avancado/escopo-global.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.5"
+        data-chapter-title="Pegando Dados do Servidor"
+        data-filepath="avancado/pegando-dados-do-servidor.md"
+        data-basepath=".."
+        data-revision="Tue Mar 08 2016 12:42:08 GMT-0300 (BRT)"
+        data-innerlanguage="pt-BR">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introdução
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introducao/index.html">
+            
+                
+                    <a href="../introducao/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introdução
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introducao/a-plataforma.html">
+            
+                
+                    <a href="../introducao/a-plataforma.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        A Plataforma
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introducao/storefront.html">
+            
+                
+                    <a href="../introducao/storefront.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Storefront
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introducao/ecossistema.html">
+            
+                
+                    <a href="../introducao/ecossistema.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Ecossistema
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="introducao/exemplos.html">
+            
+            <span><b>1.4.</b> Exemplos</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="primeiros-passos/index.html">
+            
+                
+                    <a href="../primeiros-passos/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Primeiros Passos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="primeiros-passos/setup.html">
+            
+                
+                    <a href="../primeiros-passos/setup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="primeiros-passos/manifest.html">
+            
+                
+                    <a href="../primeiros-passos/manifest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Manifest
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="primeiros-passos/package.html">
+            
+                
+                    <a href="../primeiros-passos/package.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Package.json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="primeiros-passos/componente-react.html">
+            
+                
+                    <a href="../primeiros-passos/componente-react.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Componente React
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="primeiros-passos/descritor-de-componente.html">
+            
+                
+                    <a href="../primeiros-passos/descritor-de-componente.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Descritor de Componente
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="primeiros-passos/rota.html">
+            
+                
+                    <a href="../primeiros-passos/rota.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Rota
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="primeiros-passos/root.html">
+            
+                
+                    <a href="../primeiros-passos/root.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Componente Root
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="primeiros-passos/toolbelt.html">
+            
+                
+                    <a href="../primeiros-passos/toolbelt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Toolbelt
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="primeiros-passos/registro-de-componente.html">
+            
+                
+                    <a href="../primeiros-passos/registro-de-componente.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Registro de Componente
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="primeiros-passos/exemplo-homepage.html">
+            
+                
+                    <a href="../primeiros-passos/exemplo-homepage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Exemplo: HomePage
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="avancado/index.html">
+            
+                
+                    <a href="../avancado/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Avançado
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="avancado/ambiente-de-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/ambiente-de-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ambiente de desenvolvimento
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="avancado/melhorando-o-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/melhorando-o-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        Melhorando o Desenvolvimento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="avancado/como-funciona-o-ambiente-de-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/como-funciona-o-ambiente-de-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        Como funciona o ambiente de desenvolvimento
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="avancado/criando-uma-nova-pagina.html">
+            
+                
+                    <a href="../avancado/criando-uma-nova-pagina.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Criando um nova página
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="avancado/criando-um-editor.html">
+            
+                
+                    <a href="../avancado/criando-um-editor.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Criando um Editor
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="avancado/ponto-de-extensao.html">
+            
+                
+                    <a href="../avancado/ponto-de-extensao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Pontos de extensão
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="avancado/placeholders.html">
+            
+                
+                    <a href="../avancado/placeholders.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        Placeholders
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="avancado/escopo-de-configuracao.html">
+            
+                
+                    <a href="../avancado/escopo-de-configuracao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        Escopo de configuração
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.2.1" data-path="avancado/configurado-pelo-usuario.html">
+            
+                
+                    <a href="../avancado/configurado-pelo-usuario.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.1.</b>
+                        
+                        Configurado pelo usuario
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.2" data-path="avancado/escopo-da-pagina.html">
+            
+                
+                    <a href="../avancado/escopo-da-pagina.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.2.</b>
+                        
+                        Escopo da página
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.3" data-path="avancado/escopo-global.html">
+            
+                
+                    <a href="../avancado/escopo-global.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.3.</b>
+                        
+                        Escopo global
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="avancado/extendendo-uma-app.html">
+            
+            <span><b>3.4.3.</b> Extendendo uma app</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.3.1" data-path="implements.html">
+            
+            <span><b>3.4.3.1.</b> Implements</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="avancado/pegando-dados-do-servidor.html">
+            
+                
+                    <a href="../avancado/pegando-dados-do-servidor.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Pegando Dados do Servidor
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="avancado/salvando-dados-do-servidor.html">
+            
+            <span><b>3.6.</b> Salvando Dados do Servidor</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="avancado/dependencias-de-apps.html">
+            
+            <span><b>3.7.</b> Dependências de Apps</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="avancado/publicando-seu-app.html">
+            
+            <span><b>3.8.</b> Publicando seu App</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="avancado/mantendo-um-app.html">
+            
+            <span><b>3.9.</b> Mantendo um App</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="tutoriais/index.html">
+            
+            <span><b>4.</b> Tutoriais</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="tutoriais/criando-um-tema.html">
+            
+            <span><b>4.1.</b> Criando um App de Tema</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="tutoriais/criando-um-app-de-componente.html">
+            
+            <span><b>4.2.</b> Criando um App de Componente</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="tutoriais/criando-um-admin.html">
+            
+            <span><b>4.3.</b> Criando um App de Admin</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="GLOSSARY.html">
+            
+                
+                    <a href="../GLOSSARY.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Glossário
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="solucao-de-problemas.html">
+            
+                
+                    <a href="../solucao-de-problemas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Solução de Problemas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="referencia-da-api/index.html">
+            
+            <span><b>7.</b> Referência da API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="referencia-da-api/manifest.json.html">
+            
+                
+                    <a href="../referencia-da-api/manifest.json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        manifest.json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="referencia-da-api/areas.html">
+            
+            <span><b>7.2.</b> areas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="referencia-da-api/assets.html">
+            
+            <span><b>7.3.</b> assets</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="referencia-da-api/components.html">
+            
+            <span><b>7.4.</b> components</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="referencia-da-api/resources.html">
+            
+            <span><b>7.5.</b> resources</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="referencia-da-api/routes.html">
+            
+            <span><b>7.6.</b> routes</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Publicado com GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Glossário"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="pegando-dados-do-servidor">Pegando dados do servidor</h1>
+<p>Temos duas p&#xE1;ginas: a home e a p&#xE1;gina de produto.</p>
+<blockquote>
+<p>Mas o que &#xE9; uma pagina de produto sem produtos?</p>
+</blockquote>
+<p>Vamos aprender a pegar dados da API pra preencher essa p&#xE1;gina.</p>
+<h3 id="criando-o-arquivo-de-defini&#xE7;&#xE3;o-do-componente">Criando o arquivo de defini&#xE7;&#xE3;o do componente</h3>
+<p>Copie o JSON e coloque no arquivo <code>storefront/components/ProductPage.json</code>:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;resourceBindings&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;locator&quot;</span>: <span class="hljs-string">&quot;search@vtex.storefront-sdk&quot;</span>,
+      <span class="hljs-string">&quot;relativePath&quot;</span>: <span class="hljs-string">&quot;/products&quot;</span>,
+      <span class="hljs-string">&quot;queryParams&quot;</span>: {
+        <span class="hljs-string">&quot;pageSize&quot;</span>: <span class="hljs-number">5</span>
+      },
+      <span class="hljs-string">&quot;bindTo&quot;</span>: <span class="hljs-string">&quot;products@vtex&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;assets&quot;</span>: [
+    <span class="hljs-string">&quot;common.js&quot;</span>,
+    <span class="hljs-string">&quot;ProductPage.js&quot;</span>
+  ]
+}
+</code></pre>
+<p>Veja que inserimos uma nova propriedade chamada <code>resourceBindings</code>. Os par&#xE2;metros que ela recebe s&#xE3;o:</p>
+<ul>
+<li><p><strong>locator</strong>: identificador do resource que ser&#xE1; usado. Neste caso estamos usando um resource do SDK chamado <a href="https://github.com/vtex-apps/storefront-sdk/blob/master/storefront/resources/search.json" target="_blank">&quot;search&quot;</a>, respons&#xE1;vel por prover o base-endpoint da chamada.</p>
+</li>
+<li><p><strong>relativePath</strong>: &#xE9; o complemento necess&#xE1;rio para a URL de locator definida. </p>
+<ul>
+<li>Os paths tamb&#xE9;m podem conter <strong>vari&#xE1;veis</strong>:  <em>&quot;/{{ account }}/products/{{ route.slug }}/&quot;</em></li>
+</ul>
+</li>
+</ul>
+<p>Imagine que voc&#xEA; tem uma API com a URL <code>http://minhapi.com.br</code>, o <code>relativePath</code> complementa essa URL tendo como resultado <code>http://minhaapi.com.br/acount-name-da-loja/nome-do-produto</code>.</p>
+<ul>
+<li><p><strong>bindTo</strong>: &#xC9; o nome da chave que o resource ir&#xE1; receber na store do Storefront SDK.</p>
+</li>
+<li><p><strong>queryParams</strong>: S&#xE3;o os parametros que ser&#xE3;o repassados na query string durante a chamada.</p>
+</li>
+</ul>
+<p>O <code>resourceBindings</code> liga uma rota a uma chamada a API. Voce pode declarar quantos <code>bindings</code> quiser, portanto, diferentes dados podem ser pr&#xE9;-carregados para uma mesma p&#xE1;gina.</p>
+<p>Carregue a p&#xE1;gina de produto no browser (<a href="http://sualoja.local.myvtex.com:3000/moto-x/p" target="_blank">http://sualoja.local.myvtex.com:3000/moto-x/p</a>), clique com o bot&#xE3;o direito do mouse e veja o c&#xF3;digo fonte. Voc&#xEA; pode ver que os dados do produto est&#xE3;o impressos na p&#xE1;gina. O SDK pega esses dados automaticamente e os insere dentro da store &quot;ProductStore&quot;.</p>
+<h3 id="criando-o-componente-react-da-p&#xE1;gina">Criando o componente React da p&#xE1;gina</h3>
+<p>Vamos fazer com que o nosso c&#xF3;digo React acesse essa store e imprima o nome do produto na p&#xE1;gina.</p>
+<p>Copie o seguinte c&#xF3;digo e coloque no arquivo <code>src/pages/ProductPage/ProductPage.js</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { stores } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProductPage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-comment">// Pega o parametro slug da rota</span>
+    <span class="hljs-keyword">let</span> slug = <span class="hljs-keyword">this</span>.props.params.slug;
+
+    <span class="hljs-comment">// Pega o estado atual da ProductStore</span>
+    <span class="hljs-keyword">let</span> ProductStore = stores.ProductStore.getState();
+    <span class="hljs-comment">// Pega o produto com o slug da rota</span>
+    <span class="hljs-keyword">let</span> product = ProductStore.get(slug);
+
+    <span class="hljs-keyword">let</span> productName = product ? product.name : <span class="hljs-string">&apos;carregando...&apos;</span>;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Essa &#xE9; a p&#xE1;gina do produto: {productName}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ProductPage;
+</code></pre>
+<p>Veja que estamos usando a fun&#xE7;&#xE3;o <code>get</code>. Isso &#xE9; um m&#xE9;todo de objetos do Immutable.</p>
+<blockquote>
+<p>Mas o qu&#xEA;?</p>
+</blockquote>
+<hr>
+<h2 id="uma-r&#xE1;pida-explica&#xE7;&#xE3;o-sobre-o-immutable-em-30-segundos">Uma r&#xE1;pida explica&#xE7;&#xE3;o sobre o Immutable em 30 segundos</h2>
+<p>Todas as stores fornecidas pelo SDK usam a biblioteca <a href="http://facebook.github.io/immutable-js/" target="_blank">Immutable</a>. Como o nome j&#xE1; indica, ela permite criar objetos imut&#xE1;veis. Com isso ganhamos duas vantagens:</p>
+<ol>
+<li>Compara&#xE7;&#xE3;o de objetos de forma extremamente eficiente (em tempo <a href="https://en.wikipedia.org/wiki/Analysis_of_algorithms#Orders_of_growth" target="_blank">O(1)</a>)</li>
+<li>Seguran&#xE7;a de que nenhuma outra parte do c&#xF3;digo vai alterar o objeto que voc&#xEA; est&#xE1; usando</li>
+</ol>
+<p>Imagine o seguinte objeto da ProdutStore:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> products = ProductStore.getState();
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   &quot;camisa-polo&quot;: {</span>
+<span class="hljs-comment">//     &quot;name&quot;: &quot;Camisa Polo&quot;,</span>
+<span class="hljs-comment">//     &quot;slug&quot;: &quot;camisa-polo&quot;,</span>
+<span class="hljs-comment">//     &quot;brand&quot;: {</span>
+<span class="hljs-comment">//       &quot;name&quot;: &quot;Lacoste&quot;,</span>
+<span class="hljs-comment">//       &quot;slug&quot;: &quot;lacoste&quot;</span>
+<span class="hljs-comment">//     }</span>
+<span class="hljs-comment">//     ...</span>
+<span class="hljs-comment">//   },</span>
+<span class="hljs-comment">//   &quot;meia-branca&quot;: {</span>
+<span class="hljs-comment">//     &quot;name&quot;: &quot;Meia branca&quot;,</span>
+<span class="hljs-comment">//     &quot;slug&quot;: &quot;meia-branca&quot;,</span>
+<span class="hljs-comment">//     ...</span>
+<span class="hljs-comment">//   }</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<p>Para pegarmos os dados do produto &quot;camisa-polo&quot;:</p>
+<table>
+<thead>
+<tr>
+<th>Em um JSON</th>
+<th>Em um objeto Immutable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>products[&quot;camisa-polo&quot;]</code></td>
+<td><code>products.get(&apos;camisa-polo&apos;)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Para pegarmos o nome da marca da &quot;camisa-polo&quot;:</p>
+<table>
+<thead>
+<tr>
+<th>Em um JSON</th>
+<th>Em um objeto Immutable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>products[&quot;camisa-polo&quot;].brand.name</code></td>
+<td><code>products.getIn([&apos;camisa-polo&apos;, &apos;brand&apos;, &apos;name&apos;])</code></td>
+</tr>
+</tbody>
+</table>
+<p>Para este guia, essas informa&#xE7;&#xF5;es s&#xE3;o o suficiente. Por&#xE9;m, existem outros m&#xE9;todos bastante &#xFA;teis: voc&#xEA; pode ler sobre eles na <a href="http://facebook.github.io/immutable-js/docs/" target="_blank">documenta&#xE7;&#xE3;o do Immutable</a>.</p>
+<hr>
+<p>Finalmente, abra a p&#xE1;gina no browser e veja o nome na tela:</p>
+<p><a href="http://sualoja.local.myvtex.com:3000/moto-x/p" target="_blank">http://sualoja.local.myvtex.com:3000/moto-x/p</a></p>
+<p>Conseguimos!</p>
+<h3 id="criando-um-link-entre-as-p&#xE1;ginas">Criando um link entre as p&#xE1;ginas</h3>
+<p>Vamos criar um link para a home para que possamos testar mais facilmente.</p>
+<p>Substitua o c&#xF3;digo do arquivo <code>src/components/ProductPage/ProductPage.js</code> por:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { stores } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+<span class="hljs-comment">// Importa o component React &quot;Link&quot; fornecido pela biblioteca &quot;React Router&quot;</span>
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProductPage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-comment">// Pega o parametro slug da rota</span>
+    <span class="hljs-keyword">let</span> slug = <span class="hljs-keyword">this</span>.props.params.slug;
+
+    <span class="hljs-comment">// Pega o estado atual da ProductStore</span>
+    <span class="hljs-keyword">let</span> ProductStore = stores.ProductStore.getState();
+    <span class="hljs-comment">// Pega o produto com o slug da rota</span>
+    <span class="hljs-keyword">let</span> product = ProductStore.get(slug);
+
+    <span class="hljs-keyword">let</span> productName = product ? product.name : <span class="hljs-string">&apos;carregando...&apos;</span>;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Essa &#xE9; a p&#xE1;gina do produto: {productName}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/&quot;</span>&gt;</span>Ir para a home<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ProductPage;
+</code></pre>
+<p>O componente link gera uma tag <code>&lt;a&gt;</code> com o atributo <code>href</code> para a URL da rota, por&#xE9;m intercepta o comportamento do browser e faz com que apenas o componente React renderizado na p&#xE1;gina mude. Veja funcionando no browser!</p>
+<p>Tamb&#xE9;m precisamos de um link na home para a p&#xE1;gina de produto.</p>
+<p>Copie e cole o c&#xF3;digo abaixo no arquivo <code>src/components/HomePage/HomePage.js</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./HomePage.less&apos;</span>;
+<span class="hljs-keyword">import</span> HelloWorld <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;components/HelloWorld/HelloWorld&apos;</span>;
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomePage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">HelloWorld</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;message&quot;</span>&gt;</span>Crie, construa, inove!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/moto-x/p&quot;</span>&gt;</span>Ver produto Moto X<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> HomePage;
+</code></pre>
+<p>Para fazer o link para a p&#xE1;gina de produto, precisamos informar alguns dados para que o componente <code>Link</code> consiga montar a URL.</p>
+<p>Legal, agora voc&#xEA; pode ir de uma p&#xE1;gina pra outra de forma r&#xE1;pida.</p>
+<h3 id="ah-n&#xE3;o-tem-um-bug-anguished">Ah, n&#xE3;o... tem um bug! :anguished:</h3>
+<p>Entretanto, temos um bug! Siga os passos para reproduzir:</p>
+<ul>
+<li>Abra a p&#xE1;gina home</li>
+<li>De um refresh no browser</li>
+<li>Navegue at&#xE9; a p&#xE1;gina de produto</li>
+<li>O p&#xE1;gina de produto mostra &quot;carregando...&quot; e n&#xE3;o mostra a p&#xE1;gina de produto</li>
+</ul>
+<blockquote>
+<p>Por que isso acontece?</p>
+</blockquote>
+<p>Quando o usu&#xE1;rio carrega a p&#xE1;gina de produto, o seguinte acontece:</p>
+<ul>
+<li>O servidor coloca os dados diretamente no HTML da p&#xE1;gina por conta do <code>resourceBinding</code></li>
+<li>O SDK pega esses dados e coloca na &quot;ProductStore&quot;</li>
+</ul>
+<p>Por&#xE9;m, quando o usu&#xE1;rio carrega a p&#xE1;gina home, como ela n&#xE3;o tem <code>resourceBinding</code>, o servidor n&#xE3;o coloca os dados da p&#xE1;gina de produto que iremos abrir e, com isso, a &quot;ProductStore&quot; fica vazia.</p>
+<p>O que precisamos fazer &#xE9; pegar os recursos associados a rota que iremos abrir, ou seja, quando o usu&#xE1;rio abrir a p&#xE1;gina de produto, fazemos um request AJAX para o servidor pedindo os recursos da rota. Quando o AJAX terminar, a &quot;ProductStore&quot; ser&#xE1; automaticamente preenchida com os dados do produto.</p>
+<h3 id="carregando-resources-de-forma-ass&#xED;ncronamente">Carregando resources de forma ass&#xED;ncronamente</h3>
+<p>Abra o arquivo <code>src/components/ProductPage/ProductPage.js</code> e substitua o conte&#xFA;do pelo seguinte c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { stores, actions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProductPage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  constructor(props){
+    <span class="hljs-keyword">super</span>(props);
+
+    <span class="hljs-keyword">this</span>.state = {
+      product: stores.ProductStore.getState().get(<span class="hljs-keyword">this</span>.props.params.slug)
+    }
+
+    <span class="hljs-comment">// Escuta as mudan&#xE7;as da &quot;ProductStore&quot;, registramos o m&#xE9;todo &quot;onChange&quot; como callback</span>
+    stores.ProductStore.listen(<span class="hljs-keyword">this</span>.onChange);
+
+    <span class="hljs-comment">// Pega o path atual</span>
+    <span class="hljs-keyword">let</span> currentURL = (<span class="hljs-built_in">window</span>.location.pathname + <span class="hljs-built_in">window</span>.location.search);
+    <span class="hljs-comment">// Caso a &quot;ResourceStore&quot; n&#xE3;o tenha os resources da pagina carregada</span>
+    <span class="hljs-keyword">if</span> (!stores.ResourceStore.getState().get(currentURL)) {
+      <span class="hljs-comment">// Pede os resources da p&#xE1;gina &quot;product&quot; passando os par&#xE2;metros necess&#xE1;rios (neste caso o slug)</span>
+      <span class="hljs-comment">// Essa action faz uma chamada AJAX ao servidor do Storefront</span>
+      actions.ResourceActions.getRouteResources(currentURL, <span class="hljs-string">&apos;product&apos;</span>, <span class="hljs-keyword">this</span>.props.params);
+    }
+  }
+
+  <span class="hljs-comment">// O React chamar&#xE1; esse m&#xE9;todo quando o componente est&#xE1; saindo da tela</span>
+  componentWillUnmount() {
+    <span class="hljs-comment">// Para de escutar as mudan&#xE7;as</span>
+    stores.ProductStore.unlisten(<span class="hljs-keyword">this</span>.onChange);
+  }
+
+  <span class="hljs-comment">// Esse m&#xE9;todo ser&#xE1; chamado toda vez que a &quot;ProductStore&quot; mudar</span>
+  onChange = () =&gt; {
+    <span class="hljs-comment">// Muda o estado do componente, isso far&#xE1; com que ele renderize novamente</span>
+    <span class="hljs-keyword">this</span>.setState({
+      <span class="hljs-comment">// Pega o estado atual da store (provavelmente agora ela ter&#xE1; os dados do produto)</span>
+      product: stores.ProductStore.getState().get(<span class="hljs-keyword">this</span>.props.params.slug)
+    });
+  }
+
+  render() {
+      <span class="hljs-comment">// Pega o produto com o slug da rota</span>
+    <span class="hljs-keyword">let</span> product = <span class="hljs-keyword">this</span>.state.product;
+
+    <span class="hljs-keyword">let</span> productName = product ? product.name : <span class="hljs-string">&apos;carregando...&apos;</span>;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Essa &#xE9; a p&#xE1;gina do produto: {productName}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/&quot;</span>&gt;</span>Ir para a home<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ProductPage;
+</code></pre>
+<p>Bug corrigido! A navega&#xE7;&#xE3;o entre as p&#xE1;ginas agora funciona perfeitamente.</p>
+<p>Tente exibir outras informa&#xE7;&#xF5;es do Produto na p&#xE1;gina! (Dica: d&#xEA; um <code>console.log(product)</code> para saber quais propriedades est&#xE3;o dispon&#xED;veis)</p>
+<hr>
+<h2 id="recapitulando">Recapitulando</h2>
+<p>Voc&#xEA; completou o &quot;Pegando dados do servidor&quot;! Voc&#xEA; aprendeu a usar <code>resourceBindings</code> e como obter dados de uma p&#xE1;gina de forma ass&#xED;ncrona.</p>
+<hr>
+<h2 id="pr&#xF3;ximos-passos">Pr&#xF3;ximos passos</h2>
+<p>Agora vamos aprender a <a href="salvando-dados-no-servidor.md">salvar dados no servidor</a>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../avancado/escopo-global.html" class="navigation navigation-prev " aria-label="Previous page: Escopo global"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../GLOSSARY.html" class="navigation navigation-next " aria-label="Next page: Glossário"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"edit-link":{"base":"https://github.com/vtex-apps/docs/tree/master/","label":"Edit This Page"},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

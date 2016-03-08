@@ -1,0 +1,1069 @@
+<!DOCTYPE HTML>
+<html lang="pt" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Criando um Editor | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../avancado/ponto-de-extensao.html" />
+    
+    
+    <link rel="prev" href="../avancado/criando-uma-nova-pagina.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.3"
+        data-chapter-title="Criando um Editor"
+        data-filepath="avancado/criando-um-editor.md"
+        data-basepath=".."
+        data-revision="Tue Mar 08 2016 12:42:08 GMT-0300 (BRT)"
+        data-innerlanguage="pt-BR">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introdução
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="introducao/index.html">
+            
+                
+                    <a href="../introducao/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Introdução
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="introducao/a-plataforma.html">
+            
+                
+                    <a href="../introducao/a-plataforma.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        A Plataforma
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introducao/storefront.html">
+            
+                
+                    <a href="../introducao/storefront.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Storefront
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introducao/ecossistema.html">
+            
+                
+                    <a href="../introducao/ecossistema.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Ecossistema
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="introducao/exemplos.html">
+            
+            <span><b>1.4.</b> Exemplos</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="primeiros-passos/index.html">
+            
+                
+                    <a href="../primeiros-passos/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Primeiros Passos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="primeiros-passos/setup.html">
+            
+                
+                    <a href="../primeiros-passos/setup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Setup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="primeiros-passos/manifest.html">
+            
+                
+                    <a href="../primeiros-passos/manifest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Manifest
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="primeiros-passos/package.html">
+            
+                
+                    <a href="../primeiros-passos/package.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Package.json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="primeiros-passos/componente-react.html">
+            
+                
+                    <a href="../primeiros-passos/componente-react.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Componente React
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="primeiros-passos/descritor-de-componente.html">
+            
+                
+                    <a href="../primeiros-passos/descritor-de-componente.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Descritor de Componente
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="primeiros-passos/rota.html">
+            
+                
+                    <a href="../primeiros-passos/rota.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Rota
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="primeiros-passos/root.html">
+            
+                
+                    <a href="../primeiros-passos/root.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Componente Root
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="primeiros-passos/toolbelt.html">
+            
+                
+                    <a href="../primeiros-passos/toolbelt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        Toolbelt
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="primeiros-passos/registro-de-componente.html">
+            
+                
+                    <a href="../primeiros-passos/registro-de-componente.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        Registro de Componente
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="primeiros-passos/exemplo-homepage.html">
+            
+                
+                    <a href="../primeiros-passos/exemplo-homepage.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        Exemplo: HomePage
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="avancado/index.html">
+            
+                
+                    <a href="../avancado/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Avançado
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="avancado/ambiente-de-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/ambiente-de-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ambiente de desenvolvimento
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="avancado/melhorando-o-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/melhorando-o-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        Melhorando o Desenvolvimento
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="avancado/como-funciona-o-ambiente-de-desenvolvimento.html">
+            
+                
+                    <a href="../avancado/como-funciona-o-ambiente-de-desenvolvimento.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        Como funciona o ambiente de desenvolvimento
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="avancado/criando-uma-nova-pagina.html">
+            
+                
+                    <a href="../avancado/criando-uma-nova-pagina.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Criando um nova página
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="avancado/criando-um-editor.html">
+            
+                
+                    <a href="../avancado/criando-um-editor.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Criando um Editor
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="avancado/ponto-de-extensao.html">
+            
+                
+                    <a href="../avancado/ponto-de-extensao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Pontos de extensão
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="avancado/placeholders.html">
+            
+                
+                    <a href="../avancado/placeholders.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        Placeholders
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="avancado/escopo-de-configuracao.html">
+            
+                
+                    <a href="../avancado/escopo-de-configuracao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        Escopo de configuração
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.2.1" data-path="avancado/configurado-pelo-usuario.html">
+            
+                
+                    <a href="../avancado/configurado-pelo-usuario.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.1.</b>
+                        
+                        Configurado pelo usuario
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.2" data-path="avancado/escopo-da-pagina.html">
+            
+                
+                    <a href="../avancado/escopo-da-pagina.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.2.</b>
+                        
+                        Escopo da página
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2.3" data-path="avancado/escopo-global.html">
+            
+                
+                    <a href="../avancado/escopo-global.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.3.</b>
+                        
+                        Escopo global
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="avancado/extendendo-uma-app.html">
+            
+            <span><b>3.4.3.</b> Extendendo uma app</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.3.1" data-path="implements.html">
+            
+            <span><b>3.4.3.1.</b> Implements</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="avancado/pegando-dados-do-servidor.html">
+            
+                
+                    <a href="../avancado/pegando-dados-do-servidor.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Pegando Dados do Servidor
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="avancado/salvando-dados-do-servidor.html">
+            
+            <span><b>3.6.</b> Salvando Dados do Servidor</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="avancado/dependencias-de-apps.html">
+            
+            <span><b>3.7.</b> Dependências de Apps</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="avancado/publicando-seu-app.html">
+            
+            <span><b>3.8.</b> Publicando seu App</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="avancado/mantendo-um-app.html">
+            
+            <span><b>3.9.</b> Mantendo um App</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="tutoriais/index.html">
+            
+            <span><b>4.</b> Tutoriais</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="tutoriais/criando-um-tema.html">
+            
+            <span><b>4.1.</b> Criando um App de Tema</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="tutoriais/criando-um-app-de-componente.html">
+            
+            <span><b>4.2.</b> Criando um App de Componente</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="tutoriais/criando-um-admin.html">
+            
+            <span><b>4.3.</b> Criando um App de Admin</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="GLOSSARY.html">
+            
+                
+                    <a href="../GLOSSARY.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Glossário
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="solucao-de-problemas.html">
+            
+                
+                    <a href="../solucao-de-problemas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Solução de Problemas
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="referencia-da-api/index.html">
+            
+            <span><b>7.</b> Referência da API</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="referencia-da-api/manifest.json.html">
+            
+                
+                    <a href="../referencia-da-api/manifest.json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        manifest.json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="referencia-da-api/areas.html">
+            
+            <span><b>7.2.</b> areas</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="referencia-da-api/assets.html">
+            
+            <span><b>7.3.</b> assets</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="referencia-da-api/components.html">
+            
+            <span><b>7.4.</b> components</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="referencia-da-api/resources.html">
+            
+            <span><b>7.5.</b> resources</span>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="referencia-da-api/routes.html">
+            
+            <span><b>7.6.</b> routes</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Publicado com GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Glossário"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="criando-um-editor">Criando um editor</h1>
+<p>Nesse guia vamos aprender a fazer um componente Banner em que o usu&#xE1;rio pode trocar a imagem usando uma interface amig&#xE1;vel. As interfaces de edi&#xE7;&#xE3;o de componentes s&#xE3;o chamadas de editors.</p>
+<p>O que nos deixa animados sobre os editors &#xE9; a possibilidade do desenvolvedor da loja ter autonomia para criar interfaces administrativas da maneira que achar melhor.</p>
+<h3 id="instalando-o-editor">Instalando o Editor</h3>
+<p>Primeiro vamos instalar o <a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a> &quot;editor&quot;, ele &#xE9; respons&#xE1;vel por gerar toda a interface de edi&#xE7;&#xE3;o. Para instalar abra a URL:</p>
+<p><a href="http://sualoja.beta.myvtex.com/admin/gallery#/apps" target="_blank">http://sualoja.beta.myvtex.com/admin/gallery#/apps</a></p>
+<p>Abra a URL da loja:</p>
+<p><a href="http://sualoja.local.myvtex.com:3000/" target="_blank">http://sualoja.local.myvtex.com:3000/</a></p>
+<p>&#xC9; possivel visualizar a interface do Editor, os lojistas poder&#xE3;o editar a loja clicando no &#xED;cone de l&#xE1;pis no canto direito. Nesse momento, nada acontece se clicarmos nesse bot&#xE3;o. Vamos construir o primeiro componente edit&#xE1;vel para que algo aconte&#xE7;a.</p>
+<h3 id="criando-o-componente-banner">Criando o componente Banner</h3>
+<p>Vamos criar um componente React para o Banner. Crie o arquivo <code>src/components/Banner/Banner.js</code> e copie o seguinte c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Banner</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">let</span> imageUrl = <span class="hljs-string">&apos;http://i.imgur.com/jbBNeR3.jpg&apos;</span>;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;banner&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">{imageUrl}</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">{200}</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Banner;
+</code></pre>
+<p>&#xC9; um componente simples que exibe uma imagem.</p>
+<p>V&#xE1; para o componente <code>src/components/HomePage/HomePage.js</code> e copie o c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./HomePage.less&apos;</span>;
+<span class="hljs-keyword">import</span> HelloWorld <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;components/HelloWorld/HelloWorld&apos;</span>;
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>;
+<span class="hljs-comment">// Importa o componente &quot;Banner&quot;</span>
+<span class="hljs-keyword">import</span> Banner <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;components/Banner/Banner&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomePage</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Banner</span>/&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">HelloWorld</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;message&quot;</span>&gt;</span>Crie, construa, inove!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/short-balneario/p&quot;</span>&gt;</span>Ver produto Short Balne&#xE1;rio<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> HomePage;
+</code></pre>
+<p>Mudamos o componente &quot;HomePage&quot; para que o &quot;Banner&quot; seja renderizado na tela.</p>
+<p>Confira em: <a href="http://sualoja.local.myvtex.com:3000/" target="_blank">http://sualoja.local.myvtex.com:3000/</a></p>
+<h2 id="transformando-um-componente-comum-em-edit&#xE1;vel">Transformando um componente comum em edit&#xE1;vel</h2>
+<p>Para que o Editor consiga identificar componentes edit&#xE1;veis na p&#xE1;gina precisamos fazer duas coisas:</p>
+<ul>
+<li>Criar a defini&#xE7;&#xE3;o de componente em <code>storefront/components/</code></li>
+<li>Registrar o componente com <code>ComponentActions.register</code> para que outra parte do c&#xF3;digo consiga usar o componente</li>
+<li>Usar o decorador <code>@editable</code> fornecido pelo Editor</li>
+</ul>
+<h3 id="criando-o-arquivo-de-defini&#xE7;&#xE3;o-do-componente">Criando o arquivo de defini&#xE7;&#xE3;o do componente</h3>
+<p>J&#xE1; aprendemos a criar um arquivo de defini&#xE7;&#xE3;o de um componente com rotas em <a href="criando-uma-nova-pagina.html#criando-o-arquivo-de-defini&#xE7;&#xE3;o-do-componente">Criando uma nova p&#xE1;gina</a>.</p>
+<p>Nesse caso a defini&#xE7;&#xE3;o desse componente ser&#xE1; ainda mais simples, crie o arquivo <code>storefront/components/Banner.json</code> com:</p>
+<pre><code>{
+  &quot;assets&quot;: [
+    &quot;common.js&quot;,
+    &quot;HomePage.js&quot;
+  ]
+}
+</code></pre><p>Note que colocamos o arquivo <code>HomePage.js</code>, j&#xE1; que o componente &#xE9; inserido no processo de minifica&#xE7;&#xE3;o dentro do mesmo arquivo que o componente &quot;HomePage&quot;.</p>
+<h3 id="registrando-o-componente">Registrando o componente</h3>
+<p>Precisamos <a href="criando-uma-nova-pagina.html#registrando-um-componente">registrar</a> o componente &quot;Banner&quot; no arquivo <code>src/components/HomePage/index.js</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { actions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+<span class="hljs-keyword">import</span> HomePage <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./HomePage&apos;</span>;
+<span class="hljs-keyword">import</span> Banner <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;components/Banner/Banner&apos;</span>;
+
+<span class="hljs-keyword">let</span> component = [
+  {
+    name: <span class="hljs-string">&apos;HomePage@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>,
+    constructor: HomePage
+  },
+  {
+    name: <span class="hljs-string">&apos;Banner@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>,
+    constructor: Banner
+  }
+];
+
+actions.ComponentActions.register(component);
+</code></pre>
+<h3 id="usando-editable-e-adicionando-informa&#xE7;&#xF5;es-ao-componente">Usando <code>@editable</code> e adicionando informa&#xE7;&#xF5;es ao componente</h3>
+<p>Vamos agora aprender a usar o decorador <code>@editable</code>.</p>
+<p>Copie o seguinte c&#xF3;digo no arquivo <code>src/components/Banner/Banner.js</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-comment">// Importa o decorador &quot;editable&quot; do SDK</span>
+<span class="hljs-keyword">import</span> { editable } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;editor&apos;</span>;
+
+<span class="hljs-comment">// Decora a classe &quot;Banner&quot; com &quot;editable&quot;</span>
+@editable ({
+  name: <span class="hljs-string">&apos;Banner@alphateam.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>, <span class="hljs-comment">// Deve ser o mesmo valor da propriedade &quot;name&quot; no momento do registro do componente</span>
+  title: <span class="hljs-string">&apos;Banner&apos;</span>, <span class="hljs-comment">// Nome do componente que ser&#xE1; apresentado para o usu&#xE1;rio (lojista)</span>
+  editable: <span class="hljs-literal">true</span> <span class="hljs-comment">// indica que o componente &#xE9; edit&#xE1;vel</span>
+})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Banner</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">let</span> imageUrl = <span class="hljs-string">&apos;http://i.imgur.com/jbBNeR3.jpg&apos;</span>;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;banner&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">{imageUrl}</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">{200}</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Banner;
+</code></pre>
+<p>Abra a URL: <a href="http://sualoja.local.myvtex.com:3000/" target="_blank">http://sualoja.local.myvtex.com:3000/</a> e clique no bot&#xE3;o de edi&#xE7;&#xE3;o. Veja que o Editor agora consegue identificar o seu componente como edit&#xE1;vel.</p>
+<h2 id="criando-o-componente-de-edi&#xE7;&#xE3;o">Criando o componente de edi&#xE7;&#xE3;o</h2>
+<p>Vamos criar nosso primeiro componente na pasta <code>src/editors/BannerEditor/</code>. Crie o componente chamado <code>BannerEditor.js</code> com o c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BannerEditor</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-comment">// Esse &#xE9; o componente que exibe os bot&#xF5;es de &quot;Cancelar&quot; e &quot;Salvar&quot; do Editor</span>
+    <span class="hljs-comment">// Um editor deve sempre renderizar esse componente</span>
+    <span class="hljs-keyword">let</span> ActionBar = <span class="hljs-keyword">this</span>.props.actionBar;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;http://i.imgur.com/jbBNeR3.jpg&quot;</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">{200}</span>/&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">htmlFor</span>=<span class="hljs-value">&quot;url&quot;</span>&gt;</span>URL da imagem<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;url&quot;</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;form-control&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;url&quot;</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;URL&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">ActionBar</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{this.props.title}</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> BannerEditor;
+</code></pre>
+<p>&#xC9; definido por conven&#xE7;&#xE3;o que todos os componentes editors tenham o nome com o sufixo &quot;Editor&quot;, ex: &quot;BannerEditor&quot;.</p>
+<p>Vamos registrar o componente de edi&#xE7;&#xE3;o no arquivo <code>src/editors/index.js</code> para que o Editor consiga acess&#xE1;-lo. Copie o c&#xF3;digo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { actions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sdk&apos;</span>;
+<span class="hljs-keyword">import</span> BannerEditor <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./BannerEditor/BannerEditor&apos;</span>;
+
+<span class="hljs-keyword">let</span> components = [
+  {
+    name: <span class="hljs-string">&apos;BannerEditor@alphateam.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>,
+    constructor: BannerEditor
+  }
+];
+
+actions.ComponentActions.register(components);
+</code></pre>
+<p>Abra a URL: <a href="http://sualoja.local.myvtex.com:3000/" target="_blank">http://sualoja.local.myvtex.com:3000/</a> e clique no bot&#xE3;o de edi&#xE7;&#xE3;o. O componente de edi&#xE7;&#xE3;o ser&#xE1; aberto na tela.</p>
+<h3 id="salvando-configura&#xE7;&#xF5;es">Salvando configura&#xE7;&#xF5;es</h3>
+<p>Como est&#xE1; agora, o editor n&#xE3;o edita nada no site. Precisamos salvar o formul&#xE1;rio do editor em algum lugar. A Gallery &#xE9; justamente um reposit&#xF3;rio de configura&#xE7;&#xF5;es, ela &#xE9; perfeita para isso! Vamos incrementar os componentes para salvar as configura&#xE7;&#xF5;es do Banner l&#xE1;.</p>
+<p>Para isso, o Banner deve ter um identificador &#xFA;nico na Gallery para que ningu&#xE9;m sobrescreva essas configura&#xE7;&#xF5;es.</p>
+<h4 id="atribuindo-um-identificador-ao-componente-banner">Atribuindo um identificador ao componente Banner</h4>
+<p>Altere o m&#xE9;todo <code>render</code> da &quot;HomePage&quot;:</p>
+<pre><code class="lang-js">render() {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Banner</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;banner-1&quot;</span> /&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">HelloWorld</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;message&quot;</span>&gt;</span>Crie, construa, inove!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">Link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/short-balneario/p&quot;</span>&gt;</span>Ver produto Short Balne&#xE1;rio<span class="hljs-tag">&lt;/<span class="hljs-title">Link</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  )</span>;
+}
+</code></pre>
+<p>Observe que atribu&#xED;mos o id &quot;banner-1&quot; e passamos o nome da rota. Esses dois par&#xE2;metros (<code>id</code>) formam a identifica&#xE7;&#xE3;o &#xFA;nica do componente no Storefront.</p>
+<h4 id="ajustando-o-componente-editor">Ajustando o componente editor</h4>
+<p>Vamos alterar o componente &quot;BannerEditor&quot; para que ele salve as configura&#xE7;&#xF5;es na Gallery.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BannerEditor</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  constructor(props) {
+    <span class="hljs-keyword">super</span>(props);
+
+    <span class="hljs-comment">// O componente editor recebe as configura&#xE7;&#xF5;es do componente que est&#xE1; editando como props</span>
+    <span class="hljs-keyword">let</span> settings = <span class="hljs-keyword">this</span>.props.settings;
+    <span class="hljs-keyword">this</span>.state = {
+      imageUrl: settings ? settings.get(<span class="hljs-string">&apos;imageUrl&apos;</span>) : <span class="hljs-string">&apos;http://i.imgur.com/jbBNeR3.jpg&apos;</span>
+    };
+  }
+
+  handleSave = () =&gt; {
+    <span class="hljs-comment">// O componente editor recebe uma fun&#xE7;&#xE3;o que salva as configura&#xE7;&#xF5;es do componente na Gallery como props</span>
+    <span class="hljs-keyword">this</span>.props.saveSettings(<span class="hljs-keyword">this</span>.state);
+  }
+
+  changeImageUrl = (e) =&gt; {
+    <span class="hljs-keyword">let</span> value = e.target.value;
+    <span class="hljs-keyword">this</span>.setState({ imageUrl: value });
+  }
+
+  render() {
+    <span class="hljs-comment">// O componente &quot;ActionBar&quot; tem a prop &quot;onSave&quot; que chama a fun&#xE7;&#xE3;o passada como par&#xE2;metro</span>
+    <span class="hljs-comment">// quando o usu&#xE1;rio clica em &quot;Salvar&quot;</span>
+    <span class="hljs-keyword">let</span> ActionBar = <span class="hljs-keyword">this</span>.props.actionBar;
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">{this.state.imageUrl}</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">{200}</span>/&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">form</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">label</span> <span class="hljs-attribute">htmlFor</span>=<span class="hljs-value">&quot;url&quot;</span>&gt;</span>URL da imagem<span class="hljs-tag">&lt;/<span class="hljs-title">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;url&quot;</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;form-control&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;url&quot;</span>
+                 <span class="hljs-attribute">value</span>=<span class="hljs-value">{this.state.imageUrl}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.changeImageUrl}</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">&quot;URL&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">ActionBar</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">{this.props.title}</span> <span class="hljs-attribute">onSave</span>=<span class="hljs-value">{this.handleSave.bind(this)}</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> BannerEditor;
+</code></pre>
+<p>Note que fizemos tr&#xEA;s coisas:</p>
+<ul>
+<li>Usamos a prop &quot;settings&quot; para exibir as configura&#xE7;&#xF5;es atuais do Banner</li>
+<li>Criamos uma fun&#xE7;&#xE3;o (<code>this.handleSave</code>) que ser&#xE1; chamada ao clicar no bot&#xE3;o &quot;Salvar&quot;</li>
+<li>Usamos a prop &quot;saveSettings&quot; para salvar as configura&#xE7;&#xF5;es do componente na Gallery</li>
+</ul>
+<h4 id="exibindo-as-configura&#xE7;&#xF5;es-do-banner">Exibindo as configura&#xE7;&#xF5;es do Banner</h4>
+<p>Por fim, vamos pegar as configura&#xE7;&#xF5;es salvas na Gallery e us&#xE1;-las no componente.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { editable } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;editor&apos;</span>;
+
+@editable({
+  name: <span class="hljs-string">&apos;Banner@mycompany.my-first-<a href="../GLOSSARY.html#app" class="glossary-term" title="Um app (ou aplicativo) &#xE9; um pacote instal&#xE1;vel que adiciona funcionalidades &#xE0; sua loja e pode ser configurado pelos lojistas. Apps podem ser instalados pela Gallery ou j&#xE1; virem inclu&#xED;dos como depend&#xEA;ncia em outros Apps que voc&#xEA; instale.">app</a>&apos;</span>,
+  title: <span class="hljs-string">&apos;Banner&apos;</span>,
+  editable: <span class="hljs-literal">true</span>
+})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Banner</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">let</span> imageUrl = <span class="hljs-string">&apos;http://i.imgur.com/jbBNeR3.jpg&apos;</span>;
+
+    <span class="hljs-comment">// Pega as configura&#xE7;&#xF5;es do componente</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.settings) {
+      imageUrl = <span class="hljs-keyword">this</span>.props.settings.get(<span class="hljs-string">&apos;imageUrl&apos;</span>);
+    }
+
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">className</span>=<span class="hljs-value">&quot;banner&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">{imageUrl}</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">{200}</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    )</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Banner;
+</code></pre>
+<p>O componente com a decorador <code>@editable</code> recebe suas configura&#xE7;&#xF5;es automaticamente pela prop <code>settings</code>.</p>
+<hr>
+<p>Voc&#xEA; completou o &quot;Criando um editor&quot;!</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../avancado/criando-uma-nova-pagina.html" class="navigation navigation-prev " aria-label="Previous page: Criando um nova página"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../avancado/ponto-de-extensao.html" class="navigation navigation-next " aria-label="Next page: Pontos de extensão"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"edit-link":{"base":"https://github.com/vtex-apps/docs/tree/master/","label":"Edit This Page"},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
