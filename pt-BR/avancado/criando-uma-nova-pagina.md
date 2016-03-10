@@ -19,7 +19,7 @@ Esse arquivo fala para o servidor as seguintes informações:
 
 ### Gerando os arquivos de uma nova página
 
-Vamos usar novamente o generator: dessa vez, para gerar os arquivos necessários para se criar uma nova página.
+Vamos usar novamente o [vtex generator](../introducao/ecossistema.md): dessa vez, para gerar os arquivos necessários para se criar uma nova página.
 
 Abra o terminal na pasta do seu projeto e digite:
 ```
