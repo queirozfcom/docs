@@ -1,6 +1,6 @@
 # Componente Root
 
-Para que o Storefront saiba qual componente irá atender a uma determinada rota precisamos estabeler uma associação entre os dois: _rota_ e _componente_.
+Para que o Storefront saiba qual componente irá atender a uma determinada rota precisamos estabelecer uma associação entre os dois: _rota_ e _componente_.
 
 Esta associação é feita quando configuramos o componente nativo da plataforma: o `Root@vtex.storefront-sdk`.
 
