@@ -22,7 +22,7 @@ Crie a pasta `settings/routes/` dentro da pasta `storefront`. Você terá algo a
         └── home.json
 ```
 
-Em `storefront/routes` crie a pasta `home/Root@storefront-sdk` com o arquivo `content.json`.
+Em `storefront/routes` crie a pasta `home/Root@vtex.storefront-sdk` com o arquivo `content.json`.
 
 ```sh
 ├── meta.json
@@ -55,7 +55,7 @@ Agora você disse ao Storefront qual o componente entregar quando a _rota_ `home
 Nos passos anteriores nós criamos um componente React, declaramos quais são os recursos necessários no seu carregamento e criamos uma rota.
 Agora estabelecemos uma associação entre o componente e a rota.
 
-Ao abrir a página `www.loja.com/`, a rota "home" atende a esta URL. O Storefront **sempre** irá buscar o componente `Root@storefront-sdk` nas configurações da rota correspondente: "home" (`storefront/settings/routes/home/Root@storefront-sdk`).
+Ao abrir a página `www.loja.com/`, a rota "home" atende a esta URL. O Storefront **sempre** irá buscar o componente `Root@vtex.storefront-sdk` nas configurações da rota correspondente: "home" (`storefront/settings/routes/home/Root@storefront-sdk`).
 
 O `content` do Root expressa qual componente deve ser carregado para a rota: "HomePage@mycompany.my-first-app".
 
