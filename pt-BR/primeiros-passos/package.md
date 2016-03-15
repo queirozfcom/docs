@@ -25,7 +25,7 @@ Exemplo do package.json do app [vtex.storefront-theme](https://github.com/vtex-a
     "react": "^0.14.0"
   },
   "babel":{
-    "presets": ["react"]
+    "presets": ["react","es2015"]
   }
 }
 
