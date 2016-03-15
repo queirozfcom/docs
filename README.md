@@ -8,6 +8,12 @@ https://vtex-apps.github.io/docs/
 
 Please feel free to open an issue or a pull request!
 
+## Installing Gitbook
+
+```sh
+$ npm install -g gitbook-cli
+```
+
 ## Running Gitbook
 
 Run `npm start` and go to [http://localhost:4000](http://localhost:4000).
