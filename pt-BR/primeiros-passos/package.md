@@ -14,11 +14,12 @@ Você deve ter algo assim:
 
 Como precisamos do _React_ para renderizar o componente _HomePage_ vamos declarar como dependencia no arquivo.
 
-Exemplo do package.json do app [vtex.storefront-theme](https://github.com/vtex-apps/theme):
+Exemplo de um package.json mínimo para um projeto chamado `"sample-project"`. Você pode copiá-lo e adaptá-lo para seu uso. 
+
 ```json
 {
-  "name": "theme",
-  "description": "Default theme for new VTEX stores",
+  "name": "sample-project",
+  "description": "Sample project to showcase storefront functionality",
   "version": null,
   "private": true,
   "devDependencies": {
