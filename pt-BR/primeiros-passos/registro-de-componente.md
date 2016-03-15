@@ -10,7 +10,7 @@ Isso significa que o componente React que responde pela rota "home" não está r
 
 Uma das tarefas do Storefront é carregar os arquivos necessários para renderizar a página.
 
-Definimos no arquivo `storefront/settings/routes/home/Root@storefront-sdk/content.json`, o componente `HomePage@mycompany.my-first-app`.
+Definimos no arquivo `storefront/settings/routes/home/Root@vtex.storefront-sdk/content.json`, o componente `HomePage@mycompany.my-first-app`.
 Por conta disso, os arquivos desse componente foram inseridos na página. Você pode ver no código fonte do browser que o arquivo `HomePage.js` de fato está lá.
 
 Para o React realizar a renderização precisamos fornecer as referências dos componentes React. Para isso, existe a ComponentStore. Ela é uma *store* da arquitetura de dados  [*Flux*](https://facebook.github.io/flux/docs/overview.html) e é usada como registro de todas as referências dos componentes da loja.
@@ -25,7 +25,7 @@ Abra o arquivo `storefront/assets/HomePage.jsx` e vamos inserir a *action* que r
 class HomePage extends React.Component {
   render() {
     return (
-      <h1>Hello world!</h1>
+      <div><h1>Hello world!</h1></div>
     );
   }
 }

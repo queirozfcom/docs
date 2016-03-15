@@ -10,7 +10,7 @@ Agora, vejamos o arquivo `storefront/components/HomePage.json`. Esse arquivo fal
 
 - **assets**: Para que essa página funcione, os arquivos listados nessa propriedade devem estar inseridas na página e o servidor se encarregará de inserir os arquivos no HTML quando o usuário entrar na página.
 
-Por fim, vamos inspecionar o arquivo `storefront/settings/routes/home/Root@storefront-sdk/content.json`. 
+Por fim, vamos inspecionar o arquivo `storefront/settings/routes/home/Root@vtex.storefront-sdk/content.json`. 
 O componente Root é o ponto de entrada para o carregamento de componentes de qualquer rota, toda rota precisa ter um Root configurado.
 
 Esse arquivo fala para o servidor as seguintes informações:
@@ -37,7 +37,7 @@ O generator acabou de criar os arquivos abaixo e alterou o `webpack.config.js`.
 - `src/components/ProductPage/ProductPage.js`
 - `src/components/ProductPage/index.js`
 - `storefront/components/ProductPage.json`
-- `storefront/settings/routes/product/Root@storefront-sdk/content.json`
+- `storefront/settings/routes/product/Root@vtex.storefront-sdk/content.json`
 - `storefront/routes/product.json`
 
 Para ver o componente gerado, entre na URL:
@@ -51,7 +51,7 @@ Está tudo funcionando! Agora, vamos explicar o que cada um destes arquivos gera
 
 ### Arquivo de definição do componente
 
-Os arquivos gerados `storefront/routes/product.json`, `storefront/components/ProductPage.json`, `storefront/settings/routes/product/Root@storefront-sdk/content.json`, definem informações importantes para o servidor. Eles tem o seguinte conteúdo:
+Os arquivos gerados `storefront/routes/product.json`, `storefront/components/ProductPage.json`, `storefront/settings/routes/product/Root@vtex.storefront-sdk/content.json`, definem informações importantes para o servidor. Eles tem o seguinte conteúdo:
 
 **routes/product.json**
 ```json
@@ -70,7 +70,7 @@ Os arquivos gerados `storefront/routes/product.json`, `storefront/components/Pro
 }
 ```
 
-**storefront/settings/routes/product/Root@storefront-sdk/content.json**
+**storefront/settings/routes/product/Root@vtex.storefront-sdk/content.json**
 ```json
 {
   "component": "ProductPage@nome-da-sua-empresa.nome-da-sua-app"
@@ -172,7 +172,7 @@ Para criar uma nova página você precisa:
 
 - Criar o arquivo JSON que define a rota em `storefront/routes/`
 - Criar o arquivo JSON que define o componente em `storefront/components/`
-- Criar o arquivo JSON que define qual componente responderá pela rota em `storefront/settings/routes/product/Root@storefront-sdk/content.json`
+- Criar o arquivo JSON que define qual componente responderá pela rota em `storefront/settings/routes/product/Root@vtex.storefront-sdk/content.json`
 - Criar um componente React em `src/components/`
 - Registrar o componente React utilizando a *action* `ComponentActions.register`
 

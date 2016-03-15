@@ -24,7 +24,7 @@ Este é o código fonte completo do pequeno app que construímos durante o [guia
 class HomePage extends React.Component {
   render() {
     return (
-      <h1>Hello world!</h1>
+      <div><h1>Hello world!</h1></div>
     );
   }
 }
@@ -57,7 +57,7 @@ storefront.sdk.actions.ComponentActions.register(components);
 }
 ```
 
-### `storefront/settings/routes/home/Root@storefront-sdk/content.json`
+### `storefront/settings/routes/home/Root@vtex.storefront-sdk/content.json`
 
 ```json
 {

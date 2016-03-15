@@ -23,7 +23,7 @@ Em `assets` devem ficar todos os arquivos Javascript, CSS, imagens e fontes. Cri
 class HomePage extends React.Component {
   render() {
     return (
-      <h1>Hello world!</h1>
+      <div><h1>Hello world!</h1></div>
     );
   }
 }
