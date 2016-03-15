@@ -37,7 +37,7 @@ login: email@dominio.com  // seu email registrado na loja de teste. Email padrã
 password - ******
 ```
 
-Após fazer login, rode o comando `vtex watch` para enviar os arquivos para o ambiente de desenvolvimento.
+Após fazer login, rode o comando `vtex watch` (de dentro da pasta onde seu app está) para enviar os arquivos para o ambiente de desenvolvimento.
 
 Por fim, abra a URL que o Toolbelt mostra em seu terminal.
 

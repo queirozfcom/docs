@@ -69,7 +69,7 @@ Crie o seu meta.json com:
 
 Ao desenvolver um app no Storefront você **deve** colocar "vtex.storefront" e "vtex.storefront-sdk" como dependências.
 
-**Aviso:** Durante os exemplos da documentação, lembre-se sempre de substituir o "my-frist-app" e o "mycompany" com o nome que escolheu para o _name_ e _vendor_.
+**Aviso:** Durante os exemplos da documentação, lembre-se sempre de substituir o "my-first-app" e o "mycompany" com o nome que escolheu para o _name_ e _vendor_.
 
 ---
 

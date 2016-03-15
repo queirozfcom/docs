@@ -33,7 +33,9 @@ class HomePage extends React.Component {
 
 Como ele é um arquivo que contém código JSX, devemos compila-lo.
 
-Instale o babel com: `npm install babel-cli`. Para usa-lo digite:
+Instale o babel com: `npm install babel-cli`. É necessário também instalar um pacote extra para habilitar a integração com o React: `npm install babel-preset-react`.
+
+Para compilar o arquivo digite:
 
 ```sh
 babel ./storefront/assets/**.jsx --out-dir .

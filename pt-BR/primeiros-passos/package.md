@@ -1,9 +1,9 @@
 ### Package.json
 
-Usamos o [npm](https://www.npmjs.com/) como gerenciador de pacotes. Desta forma, voce pode com facilidade adicionar dependencias
+Usamos o [npm](https://www.npmjs.com/) como gerenciador de pacotes. Desta forma, voce pode com facilidade adicionar dependências
 aos diferentes pacotes disponibilizados.
 
-Crie  na pasta raíz o arquivo `package.json`.
+Crie  na pasta raiz o arquivo `package.json`.
 
 Você deve ter algo assim:
 
@@ -23,6 +23,9 @@ Exemplo do package.json do app [vtex.storefront-theme](https://github.com/vtex-a
   "private": true,
   "devDependencies": {
     "react": "^0.14.0"
+  },
+  "babel":{
+    "presets": ["react"]
   }
 }
 
