@@ -20,6 +20,13 @@ Para resolver tudo isso, usamos a ferramenta de build [Webpack](https://webpack.
 
 Neste guia vamos apagar toda a estrutura criada no Tutorial básico e começá-la do zero com essa nova estrutura de desenvolvimento.
 
+Para os passos a seguir, você deverá instalar os pacotes `yo` e `generator-vtex` (lembrando de usar `sudo` ou equivalente caso seja necessário):
+
+```sh
+$ npm install -g yo
+$ npm install -g generator-vtex
+```
+
 Apague todos os arquivos da pasta de seu app. Abra o terminal na mesma pasta e digite:
 
 ```sh
