@@ -10,7 +10,7 @@ Você deve ter algo assim:
 
 ```sh
 .
-├── meta.json
+├── manifest.json
 └── storefront/
     └── assets/
 ```

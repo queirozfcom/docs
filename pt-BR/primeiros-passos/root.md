@@ -9,7 +9,7 @@ O componente Root é o ponto de entrada para o carregamento de componentes de qu
 Crie a pasta `settings/routes/` dentro da pasta `storefront`. Você terá algo assim:
 
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js
@@ -25,7 +25,7 @@ Crie a pasta `settings/routes/` dentro da pasta `storefront`. Você terá algo a
 Em `storefront/routes` crie a pasta `home/Root@vtex.storefront-sdk` com o arquivo `content.json`.
 
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js

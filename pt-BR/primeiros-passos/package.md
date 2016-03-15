@@ -8,7 +8,7 @@ Crie  na pasta raiz o arquivo `package.json`.
 Você deve ter algo assim:
 
 ```sh
-├── meta.json
+├── manifest.json
 └── package.json
 ```
 

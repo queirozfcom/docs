@@ -11,7 +11,7 @@ Isso significa que todos os componentes `DefaultTemplate@vtex.theme` nesta app p
 
 `storefront/settings/DefaultTemplate@vtex.theme/`
 ```sh
-    ├── meta.json
+    ├── manifest.json
     └── storefront/
         └── settings/
             └── components/
@@ -58,7 +58,7 @@ reutilizados por todas as páginas (`header` e `footer`).
 
 `storefront/settings/home/DefaultTemplate@vtex.theme/`
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── settings/
     |   ├── components/

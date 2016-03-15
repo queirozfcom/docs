@@ -10,7 +10,7 @@ O trecho abaixo configura somente o componente `Shelf@vtex.shelf` que está dent
 
 `storefront/settings/routes/HomePage@vtex.theme`
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── settings/
     │   └── routes/
@@ -39,7 +39,7 @@ Com esse raciocínio seria possível alterar um componente de um placeholder den
 
 `storefront/settings/routes/home/HomePage@vtex.theme`
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── settings/
     │   └── routes/
@@ -68,7 +68,7 @@ Nós podemos também adicionar configurações para todos os componentes `Shelf@
 
 `storefront/settings/routes/home/Shelf@vtex.shelf`
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── settings/
     │   └── routes/

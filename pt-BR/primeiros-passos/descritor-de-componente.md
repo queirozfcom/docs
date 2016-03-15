@@ -5,7 +5,7 @@ Agora vamos criar o  primeiro arquivo de configuração, o **descritor** do comp
 Dentro da pasta `storefront`, crie a pasta `components`. Você terá algo assim:
 
 ```sh
-├── meta.json
+├── manifest.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js

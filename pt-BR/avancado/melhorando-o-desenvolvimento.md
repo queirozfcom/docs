@@ -59,7 +59,7 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 ├── .eslintrc
 ├── .gitignore
 ├── .vtexignore
-├── meta.json
+├── manifest.json
 ├── package.json
 └── webpack.config.js
 ```

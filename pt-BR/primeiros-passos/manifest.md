@@ -2,9 +2,9 @@
 
 Vamos criar nosso primeiro app no Storefront.
 
-Cria uma pasta para o app. Nesta pasta crie um arquivo chamado `meta.json`.
+Cria uma pasta para o app. Nesta pasta crie um arquivo chamado `manifest.json`.
 
-## meta.json
+## manifest.json
 
 Este é um arquivo fundamental de uma app VTEX. Nele é definido o nome, descrição, versão e outras informações importantes sobre o app.
 
@@ -51,7 +51,7 @@ Aqui são listados os apps que seu app tem como dependência.
 
 ---
 
-Crie o seu meta.json com:
+Crie o seu manifest.json com:
 
 ```json
 {
