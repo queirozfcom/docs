@@ -20,8 +20,6 @@ Em `assets` devem ficar todos os arquivos Javascript, CSS, imagens e fontes. Cri
 ### `HomePage.jsx`
 
 ```js
-import React from 'react';
-
 class HomePage extends React.Component {
   render() {
     return (
