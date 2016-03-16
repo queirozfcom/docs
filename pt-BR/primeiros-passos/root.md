@@ -35,7 +35,7 @@ Em `storefront/routes` crie a pasta `home/Root@vtex.storefront-sdk` com o arquiv
     ├── settings/
     │   └── routes/
     |       └── home/
-    |           └── Root@storefront-sdk/
+    |           └── Root@vtex.storefront-sdk/
     |               └── content.json
     └── routes/
         └── home.json
