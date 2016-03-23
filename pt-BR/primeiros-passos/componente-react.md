@@ -36,7 +36,7 @@ Instale o babel com: `npm install babel-cli`. É necessário também instalar do
 Para compilar o arquivo digite:
 
 ```sh
-babel ./storefront/assets/**.jsx --out-dir .
+node_modules/.bin/babel ./storefront/assets/**.jsx --out-dir .
 ```
 
 O Babel gera o arquivo `HomePage.js` com o código compilado, na mesma página onde estava o arquivo jsx.

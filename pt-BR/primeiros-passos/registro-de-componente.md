@@ -46,7 +46,7 @@ storefront.sdk.actions.ComponentActions.register(components);
 Rode novamente o Babel para transpilar o arquivo:
 
 ```sh
-babel ./storefront/assets/**.jsx --out-dir .
+node_modules/.bin/babel ./storefront/assets/**.jsx --out-dir .
 ```
 
 Por fim, rode o Toolbelt para enviar o novo código:
