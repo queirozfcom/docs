@@ -2,7 +2,9 @@
 
 # Mac e Linux
 
-Em alguns casos, em especial no Mac e no Linux, pode ser que seja necessário usar `sudo` para instalar os pacotes node. Em geral, a falta do `sudo` é a principal razão de erros do tipo `EACCES, permission denied`.  Então, antes de todo comando que começa com `npm install -g`, use `sudo npm install -g`.
+Em alguns casos, em especial no Mac e no Linux, pode ser que seja necessário usar `sudo` para instalar os pacotes node. 
+
+Em geral, a falta do `sudo` é a principal razão de erros do tipo `EACCES, permission denied`.  Então, antes de todo comando que começa com `npm install -g`, use `sudo npm install -g`.
 
 
 # Windows
