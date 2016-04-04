@@ -15,13 +15,13 @@ O pacote Node `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github
 O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva seu app localmente vendo mudanças no browser em tempo real, além de publicar seus apps na Gallery quando estiverem prontas para ir para produção.
 
 ```sh
-npm install -g vtex
+npm install -g vtex@beta
 ```
 
 Verifique se o Toolbelt foi instalado corretamente digitando:
 
 ```sh
-vtex
+vtex --version
 ```
 
 Caso encontre algum erro durante a instalação, leia: [Solução de erros comuns durante a instalação de pacotes node](../solucao-de-problemas.md)
