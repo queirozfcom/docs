@@ -44,11 +44,13 @@ Vá para o componente `src/components/HomePage/HomePage.js` e copie o código:
 
 ```js
 import React from 'react';
+import { stores } from 'sdk';
 import './HomePage.less';
 import HelloWorld from 'components/HelloWorld/HelloWorld';
-import { Link } from 'react-router';
 // Importa o componente "Banner"
 import Banner from 'components/Banner/Banner';
+
+const Link = stores.ComponentStore.getState().getIn(['Link@vtex.storefront-sdk', 'constructor']);
 
 class HomePage extends React.Component {
   render() {
