@@ -15,11 +15,8 @@ Copie o JSON e coloque no arquivo `storefront/components/ProductPage.json`:
   "resourceBindings": [
     {
       "locator": "search@vtex.storefront-sdk",
-      "relativePath": "/products",
-      "queryParams": {
-        "pageSize": 5
-      },
-      "bindTo": "products@vtex"
+      "relativePath": "/{{ account }}/products/{{ route.slug }}",
+      "bindTo": "product@vtex"
     }
   ],
   "assets": [
@@ -41,9 +38,79 @@ Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath
 - **bindTo**: É o nome da chave que o resource irá receber na store do Storefront SDK.
 
 - **queryParams**: São os parametros que serão repassados na query string durante a chamada.
+  * Aqui também é possível o uso de **variáveis**:
 
+```json
+"queryParams": {
+  "category": "{{ route.splat }}",
+  "brands": "{{ query.brands }}"
+}
+```
+
+> O **locator** e o **relativePath** deste exemplo são baseados na [Search API](http://api.vtex.com/doc/search-api/).
+
+> A **Search API** possui endpoints para obtenção de dados do catálogo da VTEX.
 
 O `resourceBindings` liga uma rota a uma chamada a API. Voce pode declarar quantos `bindings` quiser, portanto, diferentes dados podem ser pré-carregados para uma mesma página.
+
+### Sobre variáveis
+
+Falamos sobre **variáveis** anteriormente quando mencionamos o **relativePath** e o **queryParams**, mas o que exatamente são essas variáveis e de onde elas vêm?
+
+Abaixo temos uma tabela com uma descrição breve de cada variável disponível:
+
+Variável|Descrição
+---|---
+account|Essa variável possui o valor de qual o `accountName` da loja atual.
+route|Essa variável expõe valores que definidos nas rotas.
+query|Essa variável expõe valores de query string das rotas.
+
+#### Mas o que isso quer dizer?
+
+Vamos destrinchar o `resourceBindings` que acabamos de ver:
+
+```json
+{
+  "resourceBindings": [
+    {
+      "locator": "search@vtex.storefront-sdk",
+      "relativePath": "/{{ account }}/products/{{ route.slug }}",
+      "bindTo": "product@vtex"
+    }
+  ],
+  "assets": [
+    "common.js",
+    "ProductPage.js"
+  ]
+}
+```
+
+Estamos usando as variáveis `account` e `route.slug` para compor o **relativePath**.
+
+`account` nós já sabemos que se refere ao `accountName` atual, mas o que é esse `slug` dentro de `route`?
+
+Você se lembra que a descrição dizia que o route expõe valores definidos nas rotas? Então, o slug é um desses valores.
+
+O arquivo de rota atual deve ter o seguinte conteúdo:
+```json
+{
+  "path": "/:slug/p"
+}
+```
+
+Se o valor se chamasse `:product`, usariámos `route.product` para acessar esse valor em nosso `resourceBindings`.
+
+Já o **queryParams** serve para as query strings da rota! Se estamos na nossa rota de produto atual e ela possui uma ou mais query strings, podemos acessar esse valores usando a variável **query**.
+
+**Exemplo**:
+
+Vamos supor que nossa página de produto tem uma cor diferente se alguém altera o valor da query string **color**. Teríamos uma URL mais ou menos assim para acessar a página na cor vermelha: `/moto-x/p?color=red`.
+
+Para acessarmos esse valor digitamos `query.color`.
+
+E para finalizar, esses valores também ficam disponíveis na página através da prop **params** (`props.params`).
+
+---
 
 Carregue a página de produto no browser ([http://sualoja.local.myvtex.com:3000/moto-x/p](http://sualoja.local.myvtex.com:3000/moto-x/p)), clique com o botão direito do mouse e veja o código fonte. Você pode ver que os dados do produto estão impressos na página. O SDK pega esses dados automaticamente e os insere dentro da store "ProductStore".
 
@@ -66,11 +133,9 @@ class ProductPage extends React.Component {
     // Pega o produto com o slug da rota
     let product = ProductStore.get(slug);
 
-    let productName = product ? product.name : 'carregando...';
-
     return (
       <div>
-        <h1>Essa é a página do produto: {productName}</h1>
+        <h1>Essa é a página do produto: {product.name}</h1>
       </div>
     );
   }
@@ -146,8 +211,9 @@ Substitua o código do arquivo `src/components/ProductPage/ProductPage.js` por:
 ```js
 import React from 'react';
 import { stores } from 'sdk';
-// Importa o component React "Link" fornecido pela biblioteca "React Router"
-import { Link } from 'react-router';
+
+// Importa o component React "Link" fornecido pelo SDK
+const Link = stores.ComponentStore.getState().getIn(['Link@vtex.storefront-sdk', 'constructor']);
 
 class ProductPage extends React.Component {
   render() {
@@ -159,11 +225,9 @@ class ProductPage extends React.Component {
     // Pega o produto com o slug da rota
     let product = ProductStore.get(slug);
 
-    let productName = product ? product.name : 'carregando...';
-
     return (
       <div>
-        <h1>Essa é a página do produto: {productName}</h1>
+        <h1>Essa é a página do produto: {product.name}</h1>
         <Link to="/">Ir para a home</Link>
       </div>
     );
@@ -183,7 +247,8 @@ Copie e cole o código abaixo no arquivo `src/components/HomePage/HomePage.js`:
 import React from 'react';
 import './HomePage.less';
 import HelloWorld from 'components/HelloWorld/HelloWorld';
-import { Link } from 'react-router';
+
+const Link = stores.ComponentStore.getState().getIn(['Link@vtex.storefront-sdk', 'constructor']);
 
 class HomePage extends React.Component {
   render() {
@@ -205,98 +270,11 @@ Para fazer o link para a página de produto, precisamos informar alguns dados pa
 
 Legal, agora você pode ir de uma página pra outra de forma rápida.
 
-### Ah, não... tem um bug! :anguished:
-
-Entretanto, temos um bug! Siga os passos para reproduzir:
-
-- Abra a página home
-- De um refresh no browser
-- Navegue até a página de produto
-- O página de produto mostra "carregando..." e não mostra a página de produto
-
-> Por que isso acontece?
-
-Quando o usuário carrega a página de produto, o seguinte acontece:
-
-- O servidor coloca os dados diretamente no HTML da página por conta do `resourceBinding`
-- O SDK pega esses dados e coloca na "ProductStore"
-
-Porém, quando o usuário carrega a página home, como ela não tem `resourceBinding`, o servidor não coloca os dados da página de produto que iremos abrir e, com isso, a "ProductStore" fica vazia.
-
-O que precisamos fazer é pegar os recursos associados a rota que iremos abrir, ou seja, quando o usuário abrir a página de produto, fazemos um request AJAX para o servidor pedindo os recursos da rota. Quando o AJAX terminar, a "ProductStore" será automaticamente preenchida com os dados do produto.
-
-### Carregando resources de forma assíncronamente
-
-Abra o arquivo `src/components/ProductPage/ProductPage.js` e substitua o conteúdo pelo seguinte código:
-
-```js
-import React from 'react';
-import { stores, actions } from 'sdk';
-import { Link } from 'react-router';
-
-class ProductPage extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      product: stores.ProductStore.getState().get(this.props.params.slug)
-    }
-
-    // Escuta as mudanças da "ProductStore", registramos o método "onChange" como callback
-    stores.ProductStore.listen(this.onChange);
-
-    // Pega o path atual
-    let currentURL = (window.location.pathname + window.location.search);
-    // Caso a "ResourceStore" não tenha os resources da pagina carregada
-    if (!stores.ResourceStore.getState().get(currentURL)) {
-      // Pede os resources da página "product" passando os parâmetros necessários (neste caso o slug)
-      // Essa action faz uma chamada AJAX ao servidor do Storefront
-      actions.ResourceActions.getRouteResources(currentURL, 'product', this.props.params);
-    }
-  }
-
-  // O React chamará esse método quando o componente está saindo da tela
-  componentWillUnmount() {
-    // Para de escutar as mudanças
-    stores.ProductStore.unlisten(this.onChange);
-  }
-
-  // Esse método será chamado toda vez que a "ProductStore" mudar
-  onChange = () => {
-    // Muda o estado do componente, isso fará com que ele renderize novamente
-    this.setState({
-      // Pega o estado atual da store (provavelmente agora ela terá os dados do produto)
-      product: stores.ProductStore.getState().get(this.props.params.slug)
-    });
-  }
-
-  render() {
-      // Pega o produto com o slug da rota
-    let product = this.state.product;
-
-    let productName = product ? product.name : 'carregando...';
-
-    return (
-      <div>
-        <h1>Essa é a página do produto: {productName}</h1>
-        <Link to="/">Ir para a home</Link>
-      </div>
-    );
-  }
-}
-
-export default ProductPage;
-```
-
-Bug corrigido! A navegação entre as páginas agora funciona perfeitamente.
-
-Tente exibir outras informações do Produto na página! (Dica: dê um `console.log(product)` para saber quais propriedades estão disponíveis)
-
 ---
 
 ## Recapitulando
 
-Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBindings` e como obter dados de uma página de forma assíncrona.
+Você completou o "Pegando dados do servidor"! Você aprendeu a usar `resourceBindings` para obter dados de uma página.
 
 ---
 
