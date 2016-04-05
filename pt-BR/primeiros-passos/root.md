@@ -10,6 +10,7 @@ Crie a pasta `settings/routes/` dentro da pasta `storefront`. Você terá algo a
 
 ```sh
 ├── manifest.json
+├── package.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js
@@ -26,6 +27,7 @@ Em `storefront/routes` crie a pasta `home/Root@vtex.storefront-sdk` com o arquiv
 
 ```sh
 ├── manifest.json
+├── package.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js

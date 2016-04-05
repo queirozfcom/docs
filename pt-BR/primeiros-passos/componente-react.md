@@ -11,6 +11,7 @@ Você deve ter algo assim:
 ```sh
 .
 ├── manifest.json
+├── package.json
 └── storefront/
     └── assets/
 ```
@@ -23,7 +24,9 @@ Em `assets` devem ficar todos os arquivos Javascript, CSS, imagens e fontes. Cri
 class HomePage extends React.Component {
   render() {
     return (
-      <div><h1>Hello world!</h1></div>
+      <div>
+        <h1>Hello world!</h1>
+      </div>
     );
   }
 }
