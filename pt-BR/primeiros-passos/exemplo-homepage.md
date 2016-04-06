@@ -50,7 +50,7 @@ class HomePage extends React.Component {
 
 const components = [
   {
-    name: 'HomePage@vtex.my-first-app',
+    name: 'HomePage@mycompany.my-first-app',
     constructor: HomePage
   }
 ];
@@ -80,6 +80,6 @@ storefront.sdk.actions.ComponentActions.register(components);
 
 ```json
 {
-  "component": "HomePage@vtex.my-first-app"
+  "component": "HomePage@mycompany.my-first-app"
 }
 ```
