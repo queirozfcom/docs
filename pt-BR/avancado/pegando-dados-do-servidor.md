@@ -64,6 +64,7 @@ Variável|Descrição
 account|Essa variável possui o valor de qual o `accountName` da loja atual.
 route|Essa variável expõe valores que definidos nas rotas.
 query|Essa variável expõe valores de query string das rotas.
+settings|Essa variável expõe valores de configuração da sua app.
 
 #### Mas o que isso quer dizer?
 
@@ -100,7 +101,7 @@ O arquivo de rota atual deve ter o seguinte conteúdo:
 
 Se o valor se chamasse `:product`, usariámos `route.product` para acessar esse valor em nosso `resourceBindings`.
 
-Já o **queryParams** serve para as query strings da rota! Se estamos na nossa rota de produto atual e ela possui uma ou mais query strings, podemos acessar esse valores usando a variável **query**.
+Já o **queryParams** serve para as query strings da rota! Se estamos na nossa rota de produto atual e ela possui uma ou mais query strings, podemos acessar esses valores usando a variável **query**.
 
 **Exemplo**:
 
@@ -108,7 +109,33 @@ Vamos supor que nossa página de produto tem uma cor diferente se alguém altera
 
 Para acessarmos esse valor digitamos `query.color`.
 
-E para finalizar, esses valores também ficam disponíveis na página através da prop **params** (`props.params`).
+E se você quiser usar esses valores em seus componentes, eles também ficam disponíveis na página através da prop **params** (`props.params`).
+
+#### E as settings?
+
+As `settings` são os valores de configuração da sua app, essas configurações podem vir tanto de usuários quanto declarações de configurações padrão.
+
+Imagine que você possui uma app chamada `menu-com-produto` e essa app disponibiliza a chave `menuProduct` para que usuários possam colocar a **slug** do produto que eles desejam que apareça no menu. Como poderíamos usar esse valor no `resourceBindings`?
+
+```json
+{
+  "resourceBindings": [
+    {
+      "locator": "search@vtex.storefront-sdk",
+      "relativePath": "/{{ account }}/products/{{ settings.menuProduct }}",
+      "bindTo": "product@vtex"
+    }
+  ],
+  "assets": [
+    "common.js",
+    "MenuWithProduct.js"
+  ]
+}
+```
+
+Simples, não? Segue um princípio similar ao que foi descrito anteriormente.
+
+Esses valores também ficam disponíveis na sua app através da prop **settings** (`props.settings`).
 
 ---
 
