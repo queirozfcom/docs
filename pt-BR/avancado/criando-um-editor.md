@@ -44,11 +44,13 @@ Vá para o componente `src/components/HomePage/HomePage.js` e copie o código:
 
 ```js
 import React from 'react';
+import { stores } from 'sdk';
 import './HomePage.less';
 import HelloWorld from 'components/HelloWorld/HelloWorld';
-import { Link } from 'react-router';
 // Importa o componente "Banner"
 import Banner from 'components/Banner/Banner';
+
+const Link = stores.ComponentStore.getState().getIn(['Link@vtex.storefront-sdk', 'constructor']);
 
 class HomePage extends React.Component {
   render() {
@@ -132,7 +134,7 @@ import { editable } from 'editor';
 
 // Decora a classe "Banner" com "editable"
 @editable ({
-  name: 'Banner@alphateam.my-first-app', // Deve ser o mesmo valor da propriedade "name" no momento do registro do componente
+  name: 'Banner@mycompany.my-first-app', // Deve ser o mesmo valor da propriedade "name" no momento do registro do componente
   title: 'Banner', // Nome do componente que será apresentado para o usuário (lojista)
   editable: true // indica que o componente é editável
 })
@@ -194,7 +196,7 @@ import BannerEditor from './BannerEditor/BannerEditor';
 
 let components = [
   {
-    name: 'BannerEditor@alphateam.my-first-app',
+    name: 'BannerEditor@mycompany.my-first-app',
     constructor: BannerEditor
   }
 ];

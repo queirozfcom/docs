@@ -15,7 +15,7 @@ O pacote Node `vtex` é uma ferramenta que chamamos de [Toolbelt](https://github
 O Toolbelt é essencial para o desenvolvimento de apps, pois permite que você desenvolva seu app localmente vendo mudanças no browser em tempo real, além de publicar seus apps na Gallery quando estiverem prontas para ir para produção.
 
 ```sh
-npm install -g vtex
+npm install -g vtex@beta
 ```
 
 Verifique se o Toolbelt foi instalado corretamente digitando:
@@ -50,12 +50,14 @@ apm install language-babel linter linter-eslint
 
 ### Configurando o Atom
 
-Abra `Settings > Packages` e procure por "language-babel" e clique no botão "Settings". Desmarque a checkbox "Transpile on save" e no campo "Babel stage" digite "0". Ao fechar a aba de Settings, as configurações serão salvas automaticamente.
+Abra `Settings > Packages` e procure por "language-babel" e clique no botão "Settings". Desmarque a checkbox "Transpile on save". Ao fechar a aba de Settings, as configurações serão salvas automaticamente.
 
 
 ## Sublime Text
 
 Caso prefira usar o [Sublime Text](http://www.sublimetext.com/) em seu Workflow, sem problemas. Também podemos facilitar sua vida instalando alguns packages.
+
+> As instruções abaixo levam em conta que você possui o [Package Control](https://packagecontrol.io/) instalado em seu editor.
 
 ### Pacotes Sublime
 

@@ -2,7 +2,7 @@
 
 Este é o código fonte completo do pequeno app que construímos durante o [guia de primeiros passos](README.md).
 
-### `meta.json`
+### `manifest.json`
 
 ```json
 {
@@ -18,20 +18,39 @@ Este é o código fonte completo do pequeno app que construímos durante o [guia
 }
 ```
 
+### `package.json`
+
+```json
+{
+  "name": "sample-project",
+  "description": "Sample project to showcase storefront functionality",
+  "version": null,
+  "private": true,
+  "devDependencies": {
+    "react": "^0.14.0"
+  },
+  "babel":{
+    "presets": ["react","es2015"]
+  }
+}
+```
+
 ### `storefront/assets/HomePage.jsx`
 
 ```js
 class HomePage extends React.Component {
   render() {
     return (
-      <div><h1>Hello world!</h1></div>
+      <div>
+        <h1>Hello world!</h1>
+      </div>
     );
   }
 }
 
 const components = [
   {
-    name: 'HomePage@vtex.my-first-app',
+    name: 'HomePage@mycompany.my-first-app',
     constructor: HomePage
   }
 ];
@@ -61,6 +80,6 @@ storefront.sdk.actions.ComponentActions.register(components);
 
 ```json
 {
-  "component": "HomePage@vtex.my-first-app"
+  "component": "HomePage@mycompany.my-first-app"
 }
 ```

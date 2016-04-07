@@ -30,6 +30,7 @@
     - [Extendendo uma app](/avancado/extendendo-uma-app.md)
       + [Implements](implements.md)
   - [Pegando Dados do Servidor](/avancado/pegando-dados-do-servidor.md)
+  - [Criando um link entre as páginas](/avancado/criando-link-entre-paginas.md)
   - [Salvando Dados do Servidor](/avancado/salvando-dados-do-servidor.md)
   - [Dependências de Apps](/avancado/dependencias-de-apps.md)
   - [Publicando seu App](/avancado/publicando-seu-app.md)

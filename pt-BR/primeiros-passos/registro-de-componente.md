@@ -25,7 +25,9 @@ Abra o arquivo `storefront/assets/HomePage.jsx` e vamos inserir a *action* que r
 class HomePage extends React.Component {
   render() {
     return (
-      <div><h1>Hello world!</h1></div>
+      <div>
+        <h1>Hello world!</h1>
+      </div>
     );
   }
 }

@@ -6,6 +6,7 @@ Crie a pasta `routes` dentro de `storefront`. Você terá algo assim:
 
 ```sh
 ├── manifest.json
+├── package.json
 └── storefront/
     ├── assets/
     │   ├── HomePage.js

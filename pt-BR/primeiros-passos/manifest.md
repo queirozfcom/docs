@@ -27,7 +27,7 @@ Exemplo do manifest do app [vtex.storefront-theme](https://github.com/vtex-apps/
 
 ### vendor
 
-O vendor é o nome da conta que você pertence como desenvolvedor. Por exemplo, se você trabalha na VTEX, será "vtex", se você trabalha na Profite, provavelmente será "profite".
+O vendor é o nome da conta que você pertence como desenvolvedor. Por exemplo, se você trabalha na VTEX, será "vtex", se você trabalha na Profite, provavelmente será "profite". Lembramos que os nomes dos vendors podem ser _genéricos_, os exemplos são apenas uma ilustração.
 
 ### name
 

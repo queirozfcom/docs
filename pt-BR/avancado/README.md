@@ -11,6 +11,7 @@ Neste guia de consulta rápida iremos mostrar como criar admins, obter e persist
 - [Criando um editor](/criando-um-editor.md)
 - [Pontos de extensão](/pontos-de-extensao.md)
 - [Pegando dados do servidor](/pegando-dados-do-servidor.md)
+- [Criando um link entre as páginas](/criando-link-entre-paginas.md)
 - [Salvando dados do servidor](/salvando-dados-do-servidor.md)
 - [Dependencia de Apps](/dependencia-de-apps.md)
 - [Publicando seu App](/publicando-seu-app.md)
