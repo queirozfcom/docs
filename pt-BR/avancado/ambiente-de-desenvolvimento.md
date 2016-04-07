@@ -1,8 +1,8 @@
 # Ambiente de desenvolvimento
 
-A plataforma fornece um ambiente seguro para o desenvolvimento de aplicações. Desta forma, os desenvolvedores recebem feedback imediato do estado final da app durante a sua construção, podendo testar e corrigir bugs antes de publicarem uma nova versão.
+A plataforma fornece um ambiente seguro para o desenvolvimento de aplicações, permitindo que desenvolvedores possam trabalhar localmente testando e corrigindo bugs antes de publicarem uma nova versão.
 
-O desenvolvedor pode customizar e testar alterações simulando o comportamento de um lojista sem afetar a loja em produção. Além disso, não existe limite para a quantidade de apps que podem ser desenvolvidas paralelamente, permitindo em um mesmo ambiente mesclar apps em desenvolvimento com apps que já estão instaladas na loja.
+O desenvolvedor pode customizar e testar alterações simulando o comportamento de um lojista sem afetar a loja em produção, não existe limite para a quantidade de apps que podem ser desenvolvidas paralelamente. Em um mesmo ambiente é possível mesclar apps em desenvolvimento com apps que já estejam instaladas na loja.
 
-Nos próximos passos veremos como melhorar a experiencia de desenvolvimento e entenderemos conceitualmente como o ambiente de desenvolvimento funciona.
-
+## Próximos passos
+Nos próximos passos veremos como melhorar a experiência de desenvolvimento e entenderemos conceitualmente como o fluxo de desenvolvimento funciona.
