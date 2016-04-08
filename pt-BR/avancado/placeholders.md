@@ -87,7 +87,7 @@ e "Banner".
 Precisamos [registrar](3-criando-uma-nova-pagina.md#registrando-um-componente) os componentes "HomePage" e Banner".
 
 
-`src/components/HomePage.js`
+`src/components/HomePage/index.js`
 ```js
 import { actions } from 'sdk';
 import HomePage from './HomePage';
@@ -102,7 +102,7 @@ let component = [
 actions.ComponentActions.register(component);
 ```
 
-`src/components/Banner.js`
+`src/components/Banner/index.js`
 ```js
 import { actions } from 'sdk';
 import Banner from './Banner';
