@@ -38,11 +38,11 @@ Caso use o Windows, é recomendado a instalação do [Git Bash](https://git-for-
 
 ## Atom
 
-Recomendamos o uso do editor de texto open-source [Atom](http://atom.io) para o desenvolvimento, mas caso prefira usar o Sublime ou outro editor de texto, não há problema.
+Recomendamos o uso do editor de texto open-source [Atom](http://atom.io) para o desenvolvimento, mas caso prefira usar o [Sublime](https://www.youtube.com/watch?v=uvcyPpwwMvU&nohtml5=False) ou outro editor de texto, não há problema.
 
 ### Pacotes Atom
 
-O Atom oferece um repositório oficial de pacotes que aumentam suas funcionalidades. Para instalar os pacotes que usamos para desenvolvimento no Storefront, Abra o terminal e digite:
+O Atom oferece um repositório oficial de pacotes que aumentam suas funcionalidades. Para instalar os pacotes que usamos para desenvolvimento no Storefront. Abra o terminal e digite:
 
 ```sh
 apm install language-babel linter linter-eslint

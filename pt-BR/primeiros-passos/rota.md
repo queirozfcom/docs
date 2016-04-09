@@ -43,7 +43,7 @@ _/**\*\***/c_|www.loja.com_/**camisetas/lisas**/c_|www.loja.com/contato
 
 ## Recapitulando
 
-Quando queremos que o app responda por uma rota, devemos criar um arquivo de rota dentro da pasta `storefront/routes/`. O nome da rota é o nome do arquivo.
+Quando queremos que o app responda por uma rota, devemos criar um arquivo de rota dentro da pasta `storefront/routes/`. Por convenção o nome da rota é o nome do arquivo.
 
 No exemplo foi criado o arquivo `home.json` com a propriedade `path` sendo `/`. Por conta disso, quando o usuário acessar a URL `https://www.loja.com/` a página "home" será carregada.
 
