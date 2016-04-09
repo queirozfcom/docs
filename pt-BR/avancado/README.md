@@ -2,7 +2,7 @@
 
 Entraremos em conceitos mais específicos no desenvolvimento do Storefront. Esta etapa leva em consideração uma noção básica de React e dos [primeiros passos](primeiros-passos.md) para criar um app.
 
-Os tópicos não tem necessáriamente uma ordem cronológica, portanto, podem ser consultados de acordo com a necessidade do desenvolvedor. 
+Os tópicos não tem uma ordem cronológica, portanto, podem ser consultados de acordo com a necessidade do desenvolvedor. 
 
 Neste guia de consulta rápida iremos mostrar como criar admins, obter e persistir dados do servidor, bem como lidar com configurações fornececidas pelos usuários.
 
