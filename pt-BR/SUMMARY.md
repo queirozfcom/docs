@@ -18,7 +18,6 @@
 - [Avançado](/avancado/README.md)
   - [Ambiente de desenvolvimento](/avancado/ambiente-de-desenvolvimento.md)
     - [Melhorando o Desenvolvimento](/avancado/melhorando-o-desenvolvimento.md)
-    - [Como funciona o ambiente de desenvolvimento](/avancado/como-funciona-o-ambiente-de-desenvolvimento.md)
   - [Criando um nova página](/avancado/criando-uma-nova-pagina.md)
   - [Criando um Editor](/avancado/criando-um-editor.md)
   - [Pontos de extensão](/avancado/ponto-de-extensao.md)

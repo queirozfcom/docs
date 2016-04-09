@@ -14,7 +14,7 @@ Digamos que você queira desenvolver um app para que usuários deixem Reviews em
 
 ![Gráfico com app de review aparecendo na página de produto](pagina_produto_com_app.png)
 
-Para visualizar as alterações em sua loja você irá subir o app em um **ambiente de desenvolvimento**. O seu ambiente de desenvolvimento é fácil de ser acessado e compartilhado: adicione a queryString `?workspace=sb_email@domonio.com` para indicar qual o ambiente deseja acessar.
+Para visualizar as alterações em sua loja você irá subir o app em um **ambiente de desenvolvimento**. O seu ambiente de desenvolvimento é fácil de ser acessado e compartilhado: adicione a queryString `?workspace=sb_email@dominio.com` para indicar qual o ambiente deseja acessar.
 
 O seu ambiente de desenvolvimento **sempre** será vinculado ao e-mail que você escreveu no `vtex login`.
 
