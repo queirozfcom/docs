@@ -2,7 +2,7 @@
 
 Temos duas páginas: a home e a página de produto.
 
-> Mas o que é uma pagina de produto sem produtos?
+> Mas o que é uma página de produto sem produtos?
 
 Vamos aprender a pegar dados da API pra preencher essa página.
 
@@ -33,7 +33,7 @@ Veja que inserimos uma nova propriedade chamada `resourceBindings`. Os parâmetr
 - **relativePath**: é o complemento necessário para a URL de locator definida. 
   * Os paths também podem conter **variáveis**:  _"/\{\{ account }}/products/\{\{ route.slug }}/"_
 
-Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/acount-name-da-loja/nome-do-produto`.
+Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath` complementa essa URL tendo como resultado `http://minhaapi.com.br/account-name-da-loja/products/slug-do-produto`.
 
 - **bindTo**: É o nome da chave que o resource irá receber na store do Storefront SDK.
 
@@ -51,7 +51,7 @@ Imagine que você tem uma API com a URL `http://minhapi.com.br`, o `relativePath
 
 > A **Search API** possui endpoints para obtenção de dados do catálogo da VTEX.
 
-O `resourceBindings` liga uma rota a uma chamada a API. Voce pode declarar quantos `bindings` quiser, portanto, diferentes dados podem ser pré-carregados para uma mesma página.
+O `resourceBindings` liga uma rota a uma chamada a API. Você pode declarar quantos `bindings` quiser permitindo que diferentes dados sejam pré-carregados para uma mesma página.
 
 ### Sobre variáveis
 
@@ -230,6 +230,10 @@ Finalmente, abra a página no browser e veja o nome na tela:
 Conseguimos!
 
 ---
+
+## Exemplos
+
+O [Component Kit](../introducao/ecossistema.md) disponibiliza apps básicas para o início do desenvolvimento. Você pode encontrar mais exemplos de como obter dados do servidor nas apps [vtex.shelf](https://github.com/vtex-apps/shelf) e [vtex.product-list](https://github.com/vtex-apps/product-list).
 
 ## Recapitulando
 

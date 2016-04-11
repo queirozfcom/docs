@@ -1,6 +1,6 @@
 ### Package.json
 
-Usamos o [npm](https://www.npmjs.com/) como gerenciador de pacotes. Desta forma, voce pode com facilidade adicionar dependências
+Usamos o [npm](https://www.npmjs.com/) como gerenciador de pacotes. Desta forma, você pode com facilidade adicionar dependências
 aos diferentes pacotes disponibilizados.
 
 Crie  na pasta raiz o arquivo `package.json`.
@@ -12,7 +12,7 @@ Você deve ter algo assim:
 └── package.json
 ```
 
-Como precisamos do _React_ para renderizar o componente _HomePage_ vamos declarar como dependencia no arquivo.
+Como precisamos do _React_ para renderizar o componente _HomePage_ vamos declarar como dependência no arquivo.
 
 Exemplo de um package.json mínimo para um projeto chamado `"sample-project"`. Você pode copiá-lo e adaptá-lo para seu uso. 
 

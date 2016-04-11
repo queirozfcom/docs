@@ -27,7 +27,7 @@ Exemplo do manifest do app [vtex.storefront-theme](https://github.com/vtex-apps/
 
 ### vendor
 
-O vendor é o nome da conta que você pertence como desenvolvedor. Por exemplo, se você trabalha na VTEX, será "vtex", se você trabalha na Profite, provavelmente será "profite". Lembramos que os nomes dos vendors podem ser _genéricos_, os exemplos são apenas uma ilustração.
+O vendor é o nome da conta que você pertence como desenvolvedor. Por exemplo, se você trabalha na VTEX, será "vtex", se você trabalha na "Agencia N1", provavelmente será "agencia-n1". Lembramos que os nomes dos vendors podem ser _genéricos_, os exemplos são apenas uma ilustração.
 
 ### name
 
@@ -47,7 +47,7 @@ Descrição.
 
 ### dependencies
 
-Aqui são listados os apps que seu app tem como dependência. É importante dizer que as dependência declaradas no arquivo `manifest.json` **não fazem download do código fonte localmente**, são referências para apps que estão instaladas na loja.
+Aqui são listados os apps que seu app tem como dependência. É importante dizer que as dependências declaradas **não fazem download do código fonte localmente**, são referências para apps que estão publicadas na Gallery.
 
 ---
 

@@ -73,7 +73,7 @@ Os arquivos gerados `storefront/routes/product.json`, `storefront/components/Pro
 **storefront/settings/routes/product/Root@vtex.storefront-sdk/content.json**
 ```json
 {
-  "component": "ProductPage@nome-da-sua-empresa.nome-da-sua-app"
+  "component": "ProductPage@mycompany.my-first-app"
 }
 ```
 
@@ -151,7 +151,7 @@ A *View* representa os componentes React. O *dispatcher* é a unidade centraliza
 ```js
 let components = [
   {
-    name: 'ProductPage@nome-do-seu-vendor.nome-da-sua-app',
+    name: 'ProductPage@mycompany.my-first-app',
     constructor: ProductPage
   }
 ];

@@ -44,9 +44,7 @@ Você verá que algumas pastas e arquivos foram criados e as dependências do no
 ```
 .
 ├── src/
-│   ├── assets/
 │   ├── components/
-│   ├── editors/
 │   └── utils/
 ├── storefront/
 │   ├── assets/
@@ -68,17 +66,10 @@ Nessa nova estrutura, escreveremos a maior parte do nosso código dentro da past
 
 ## Arquivos de desenvolvimento
 
-#### src/assets/
-
-Aqui ficam todos os assets que não são Javascript ou CSS — como imagens e SVGs.
 
 #### src/components/
 
 Nessa pasta moram todos os componentes React da app.
-
-#### src/editors/
-
-Aqui ficam os componentes que são usados para criar editores: componentes que formam as interfaces que o administrador da loja irá usar para configurar um componente.
 
 #### src/utils/
 
@@ -88,7 +79,7 @@ Componentes React utilitários e outros arquivos Javascript.
 
 #### storefront/components/
 
-Ficam todas os descritores dos componentes, meta-arquivos que indicam como um componente deve ser carregado, onde pode ser carregado e quais são as suas dependências.
+Ficam todas os descritores dos componentes, meta-arquivos que indicam como um componente deve ser carregado, em quais páginas pode ser carregado e quais são as suas dependências.
 
 #### storefront/routes/
 
@@ -98,9 +89,7 @@ Nessa pasta estão as configurações de rota: nome da rota e o path relacionado
 
 Nesta pasta ficam todas as configurações **default** dos componentes da app.
 
-* `storefront/settings/components/`: Ficam todas as configurações globais de componentes da app. Se quero que Banner@vtex.banner tenha o mesmo comportamento para toda a loja é aqui que devo configurá-lo.
-
-* `storefront/settings/routes/`: Ficam todas as configurações dos componentes de uma página. É como dizer que para uma página específica o componente possui um set de configurações que podem não ser iguais ao de outras páginas.
+* `storefront/settings/routes/`: Ficam todas as configurações iniciais dos componentes de uma página. É como dizer que o componente que representa uma página possui um set de configurações padrão que podem ser posteriormente substituídas pelo usuário através de um admin.
 
 ## Arquivos do projeto
 
@@ -180,4 +169,4 @@ Você completou o "Melhorando o processo de desenvolvimento"! Agora estamos dese
 ---
 ### Próximos passos
 
-Antes de colocar a mão na massa vamos entender um pouco melhor [como o ambiente de desenvolvimento funciona](/como-funciona-o-ambiente-de-desenvolvimento.md).
+Agora vamos por a mão na massa e [criar uma nova página](/criando-uma-nova-pagina.md).

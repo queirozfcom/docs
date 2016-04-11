@@ -48,7 +48,9 @@ Você deverá ter visto **uma tela de erro**. Vamos explicar e corrigir no próx
 ## Workspace de desenvolvimento
 
 O queryString `?workspace=sb_email@dominio.com` da URL indica ao servidor qual o workspace deseja acessar.
-O seu workspace de desenvolvimento **sempre** será vinculado ao e-mail que você escreveu no `vtex login`.
+O workspace funciona como um ambiente isolado de desenvolvimento da loja, ele **sempre** será vinculado ao e-mail que você escreveu no `vtex login`.
+
+Desta forma, uma equipe pode trabalhar ao mesmo tempo no mesmo projeto sem que os colaboradores interfiram no trabalho um do outro.
 
 
 ---

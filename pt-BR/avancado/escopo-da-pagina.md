@@ -2,13 +2,13 @@
 
 As configurações que pertencem ao escopo de página são válidas somente para componentes vinculados a uma rota. Um dos benefícios é permitir que o comportamento de uma página seja totalmente diferente do restante da loja.
 
-A resolução das configurações é simples: ganha o mais específico. Isso quer dizer que se caso a app `Shelf@vtex.shelf` declarar uma configuração e no placeholder existir uma mesma chave, a do placeholder terá precedência.
+A resolução das configurações é simples: ganha o mais específico. Isso quer dizer que se caso a app `Shelf@vtex.shelf` possuir configurações inicias e no placeholder da página existir um `id` com a app `Shelf@vtex.shelf`, a configuração do placeholder terá precedência.
 
 ## Configurando um componente específico
 
 O trecho abaixo configura somente o componente `Shelf@vtex.shelf` que está dentro do [placeholder](placeholders.md) `shelf` no componente `HomePage@vtex.theme`.
 
-`storefront/settings/routes/HomePage@vtex.theme`
+`storefront/settings/routes/home/HomePage@vtex.theme`
 ```sh
 ├── manifest.json
 └── storefront/
@@ -102,14 +102,14 @@ Nós podemos também adicionar configurações para todos os componentes `Shelf@
 
 Nos passos anteriores conhecemos o poder dos [pontos de extensão](ponto-de-extensao.md) e aprendemos como usá-los através de [placeholders](placeholders.md).
 
-Quando extendemos uma app também herdamos as suas configurações _default_. Desta forma, podemos sobrescrever as configurações que quisermos.
+Quando extendemos um app também herdamos as suas configurações _default_. Desta forma, podemos sobrescrever as configurações que quisermos.
 
-Ao sobrescrever estas configurações temos uma ordem de precedência: o mais específico sempre vence. Assim, configurações mais locais sempre irão ganhar de configurações default da app.
+Ao sobrescrever estas configurações temos uma ordem de precedência: o mais específico sempre vence. Assim, configurações mais locais sempre irão ganhar de configurações _default_ da app.
 
 Com isso, temos os níveis de precedência das configurações entre apps: 
 
 1. Configurações feitas pelo _usuário_ são mais importantes que configurações da _página_
-2. Configurações da _página_ tem precendencia sobre configurações _globais de componentes_
+2. Configurações da _página_ tem precedência sobre configurações _globais de componentes_
 
 ---
 
