@@ -1,5 +1,12 @@
 # Criando um editor
 
+---
+### Atenção
+
+Esta documentação foi feita baseada na versão _beta_ (**não finalizada**) do [Editor](https://github.com/vtex-apps/editor), esta versão está em fase de testes, pode apresentar inconsistências e ser modificada sem aviso prévio.
+
+---
+
 Nesse guia vamos aprender a fazer um componente Banner em que o usuário pode trocar a imagem usando uma interface amigável. As interfaces de edição de componentes são chamadas de editors.
 
 O que nos deixa animados sobre os editors é a possibilidade do desenvolvedor da loja ter autonomia para criar interfaces administrativas da maneira que achar melhor.
@@ -8,13 +15,15 @@ O que nos deixa animados sobre os editors é a possibilidade do desenvolvedor da
 
 Primeiro vamos instalar o app "editor", ele é responsável por gerar toda a interface de edição. Para instalar abra a URL:
 
-[http://sualoja.beta.myvtex.com/admin/gallery#/apps](http://sualoja.beta.myvtex.com/admin/gallery#/apps)
+[http://sualoja.beta.myvtex.com/admin/app-store](http://sualoja.beta.myvtex.com/admin/app-store)
 
 Abra a URL da loja:
 
-[http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/)
+[http://sualoja.local.myvtex.com:3000/admin/storefront](http://sualoja.local.myvtex.com:3000/admin/storefront)
 
-É possivel visualizar a interface do Editor, os lojistas poderão editar a loja clicando no ícone de lápis no canto direito. Nesse momento, nada acontece se clicarmos nesse botão. Vamos construir o primeiro componente editável para que algo aconteça.
+É possível visualizar a interface de customização da loja, os lojistas poderão editar a loja clicando nos _placeholders_ destacados com cor azul. O botão de lápis no canto direito muda o estado de visualização.
+
+Nos passos seguintes vamos construir um componente editável da página.
 
 ### Criando o componente Banner
 
@@ -47,8 +56,6 @@ import React from 'react';
 import { stores } from 'sdk';
 import './HomePage.less';
 import HelloWorld from 'components/HelloWorld/HelloWorld';
-// Importa o componente "Banner"
-import Banner from 'components/Banner/Banner';
 
 const Link = stores.ComponentStore.getState().getIn(['Link@vtex.storefront-sdk', 'constructor']);
 
@@ -56,8 +63,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <Banner/>
-
+        <Placeholder id="banner"/>
         <HelloWorld />
         <p className="message">Crie, construa, inove!</p>
         <Link to="/short-balneario/p">Ver produto Short Balneário</Link>
@@ -69,9 +75,17 @@ class HomePage extends React.Component {
 export default HomePage;
 ```
 
-Mudamos o componente "HomePage" para que o "Banner" seja renderizado na tela.
+### Configurando um ponto de extensão
 
-Confira em: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/)
+Conforme aprendemos na configuração de um [placeholder](/avancado/placeholders.md) vamos adicionar um componente para ocupar a sua área.
+
+Crie o arquivo `storefront/settings/routes/home/HomePage@mycompany.my-first-app/banner.json`
+
+```json
+{
+  "component": "Banner@mycompany.my-first-app",
+}
+```
 
 ## Transformando um componente comum em editável
 
@@ -91,27 +105,22 @@ Nesse caso a definição desse componente será ainda mais simples, crie o arqui
 {
   "assets": [
     "common.js",
-    "HomePage.js"
+    "Banner.js",
+    "editors/index.js"
   ]
 }
 ```
 
-Note que colocamos o arquivo `HomePage.js`, já que o componente é inserido no processo de minificação dentro do mesmo arquivo que o componente "HomePage".
-
 ### Registrando o componente
 
-Precisamos [registrar](/criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/components/HomePage/index.js`.
+Precisamos [registrar](/criando-uma-nova-pagina.md#registrando-um-componente) o componente "Banner" no arquivo `src/components/Banner/index.js`.
+Lembrando que o mesmo deve ser feito com o componente `HomePage`.
 
 ```js
 import { actions } from 'sdk';
-import HomePage from './HomePage';
 import Banner from 'components/Banner/Banner';
 
 let component = [
-  {
-    name: 'HomePage@mycompany.my-first-app',
-    constructor: HomePage
-  },
   {
     name: 'Banner@mycompany.my-first-app',
     constructor: Banner
@@ -119,6 +128,22 @@ let component = [
 ];
 
 actions.ComponentActions.register(component);
+```
+
+### Adicione ao `webpack.config.js`
+
+```js
+{...}
+
+var config = {
+  entry: {
+    'HomePage': ['./src/components/HomePage/index.js'],
+    'Banner': ['./src/components/Banner/index.js'],
+    'editors/index': ['./src/editors/index.js']
+  }
+}
+
+{...}
 ```
 
 ### Usando `@editable` e adicionando informações ao componente
@@ -130,7 +155,7 @@ Copie o seguinte código no arquivo `src/components/Banner/Banner.js`:
 ```js
 import React from 'react';
 // Importa o decorador "editable" do SDK
-import { editable } from 'editor';
+import { editable } from 'vtex-editor';
 
 // Decora a classe "Banner" com "editable"
 @editable ({
@@ -153,7 +178,7 @@ class Banner extends React.Component {
 export default Banner;
 ```
 
-Abra a URL: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/) e clique no botão de edição. Veja que o Editor agora consegue identificar o seu componente como editável.
+Abra a URL: [http://sualoja.local.myvtex.com:3000/admin/storefront](http://sualoja.local.myvtex.com:3000/admin/storefront) e clique em cima do componente. Veja que o Editor agora consegue identificar o seu componente como editável.
 
 ## Criando o componente de edição
 
@@ -177,7 +202,7 @@ class BannerEditor extends React.Component {
           <input id="url" className="form-control" type="url" placeholder="URL"/>
         </form>
 
-        <ActionBar title={this.props.title}/>
+        <ActionBar id={this.props.componentProps.id} title={this.props.title}/>
       </div>
     );
   }
@@ -204,33 +229,11 @@ let components = [
 actions.ComponentActions.register(components);
 ```
 
-Abra a URL: [http://sualoja.local.myvtex.com:3000/](http://sualoja.local.myvtex.com:3000/) e clique no botão de edição. O componente de edição será aberto na tela.
+Abra a URL: [http://sualoja.local.myvtex.com:3000/admin/storefront](http://sualoja.local.myvtex.com:3000/admin/storefront) e clique sobre o componente na página. O componente de edição será aberto na tela lateral esquerda.
 
 ### Salvando configurações
 
 Como está agora, o editor não edita nada no site. Precisamos salvar o formulário do editor em algum lugar. A Gallery é justamente um repositório de configurações, ela é perfeita para isso! Vamos incrementar os componentes para salvar as configurações do Banner lá.
-
-Para isso, o Banner deve ter um identificador único na Gallery para que ninguém sobrescreva essas configurações.
-
-#### Atribuindo um identificador ao componente Banner
-
-Altere o método `render` da "HomePage":
-
-```js
-render() {
-  return (
-    <div>
-      <Banner id="banner-1" />
-
-      <HelloWorld />
-      <p className="message">Crie, construa, inove!</p>
-      <Link to="/short-balneario/p">Ver produto Short Balneário</Link>
-    </div>
-  );
-}
-```
-
-Observe que atribuímos o id "banner-1" e passamos o nome da rota. Esses dois parâmetros (`id`) formam a identificação única do componente no Storefront.
 
 #### Ajustando o componente editor
 
@@ -271,11 +274,17 @@ class BannerEditor extends React.Component {
 
         <form>
           <label htmlFor="url">URL da imagem</label>
-          <input id="url" className="form-control" type="url"
-                 value={this.state.imageUrl} onChange={this.changeImageUrl} placeholder="URL"/>
+          <input
+            id="url"
+            className="form-control"
+            type="url"
+            value={this.state.imageUrl}
+            onChange={this.changeImageUrl}
+            placeholder="URL"
+          />
         </form>
 
-        <ActionBar title={this.props.title} onSave={this.handleSave.bind(this)}/>
+        <ActionBar id={this.props.componentProps.id} onSave={this.handleSave.bind(this)}/>
       </div>
     );
   }
@@ -326,4 +335,6 @@ O componente com a decorador `@editable` recebe suas configurações automaticam
 
 ---
 
-Você completou o "Criando um editor"!
+## Recaptulando
+
+Aprendemos como criar um componente editável e carregá-lo na interface para o usuário, também descobrimos como atualizar o conteúdo dos nossos componentes após a atualização das suas configurações.
