@@ -11,8 +11,8 @@ Para publicar um app siga os passos:
 
 3. Digite o comando no terminal:
 
-    **Linux**: `NODE_ENV=production webpack`
+    **Linux**: `NODE_ENV=production node_modules/.bin/webpack`
 
-     **Windows**: `NODE_ENV=production node_modules/.bin/webpack`
+    **Windows**: `NODE_ENV=production node_modules/.bin/webpack`
 
 4. `vtex publish`
